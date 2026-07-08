@@ -1,11 +1,11 @@
 {
-  "version": "0.2.1",
-  "notes": "LocalBrain 0.2.1: one-click integration with Codex, OpenCode, Claude Code, and ScreenLex (via a Responses-API/Anthropic-Messages translation bridge in front of mlx_lm.server); fixed a CORS preflight bug that broke the built-in Chat page and any browser-based client behind the bridge; backend processes now reliably terminate on app quit. (0.2.1: corrected a UI copy issue in the Integrations page.)",
-  "pub_date": "2026-07-08",
+  "version": "0.3.0",
+  "notes": "LocalBrain 0.3.0: real in-app auto-update — the version number in the sidebar now checks GitHub for a newer release, downloads it, and installs it in place (no more manual DMG re-download). Also added one-click backup + restore for the Codex/OpenCode/Claude Code/ScreenLex integrations.",
+  "pub_date": "2026-07-08T06:03:30.000Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "",
-      "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v0.2.1/LocalBrain_0.2.1_aarch64.dmg"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQS9ZajYyZ2w0UXpKMDZEaUNoVjltbldjVVZuRGRQZ2JjZEhjdmtTNnpmN21rV3VVVWEzS1RBdjl5SkNDcTc0cldOTklxL0R6cE5tMWpNbm5NMnlBYWdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNDkwNTE3CWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6CmZuVERScTAxVWNrRHpSdkFnSFBsazN0RTVwczVxUUJjdjZHY0xhWjBWSTRZcXhjZFpTRmdKN0c5QnJjV25POTBUL2hPbURoOSsxb1E5cTVUVmNQZ0JBPT0K",
+      "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v0.3.0/LocalBrain.app.tar.gz"
     }
   }
 }
