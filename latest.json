@@ -1,11 +1,11 @@
 {
-  "version": "0.3.0",
-  "notes": "LocalBrain 0.3.0: real in-app auto-update — the version number in the sidebar now checks GitHub for a newer release, downloads it, and installs it in place (no more manual DMG re-download). Also added one-click backup + restore for the Codex/OpenCode/Claude Code/ScreenLex integrations.",
-  "pub_date": "2026-07-08T06:03:30.000Z",
+  "version": "0.3.1",
+  "notes": "LocalBrain 0.3.1: made the version number + 检查更新 (check-for-update) control prominent in the sidebar as a solid yellow pill, and moved the 一键恢复接入 (one-click restore) button to the top of the Integrations page so it is always visible.",
+  "pub_date": "2026-07-08T06:20:55.000Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQS9ZajYyZ2w0UXpKMDZEaUNoVjltbldjVVZuRGRQZ2JjZEhjdmtTNnpmN21rV3VVVWEzS1RBdjl5SkNDcTc0cldOTklxL0R6cE5tMWpNbm5NMnlBYWdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNDkwNTE3CWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6CmZuVERScTAxVWNrRHpSdkFnSFBsazN0RTVwczVxUUJjdjZHY0xhWjBWSTRZcXhjZFpTRmdKN0c5QnJjV25POTBUL2hPbURoOSsxb1E5cTVUVmNQZ0JBPT0K",
-      "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v0.3.0/LocalBrain.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQXljbFEzaWhxM3JjbVdMeEt1cFVRRVFpTk51RkMreGJrZHpwYkc0dlQ0REZQV3RLWWMxcXh1NUtCSVRBUmFJejkyQmw1L2xVSFIzVUh5OFRRZFY5T0F3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNDkxNjMxCWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6Cjd3dHJRbzdXTSs1ZFM2R1ZmZFZ2ekxabWdKRU9idUlUcnZac09JYnV4NUNwUDFpMFRTc29YNUsxYk1JeTJqSDdway8zMWZwbFZXeE1ld24yZldLV0FRPT0K",
+      "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v0.3.1/LocalBrain.app.tar.gz"
     }
   }
 }
