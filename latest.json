@@ -1,11 +1,11 @@
 {
-  "version": "0.3.1",
-  "notes": "LocalBrain 0.3.1: made the version number + 检查更新 (check-for-update) control prominent in the sidebar as a solid yellow pill, and moved the 一键恢复接入 (one-click restore) button to the top of the Integrations page so it is always visible.",
-  "pub_date": "2026-07-08T06:20:55.000Z",
+  "version": "0.3.2",
+  "notes": "LocalBrain 0.3.2: fixes tool/function calling for Codex, Claude Code, and OpenCode. The local model backend now launches with thinking disabled by default (--chat-template-args enable_thinking:false), so models emit real tool calls instead of narrating that they are about to. Applies to all three integrations since they share one backend.",
+  "pub_date": "2026-07-08T12:39:52.000Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQXljbFEzaWhxM3JjbVdMeEt1cFVRRVFpTk51RkMreGJrZHpwYkc0dlQ0REZQV3RLWWMxcXh1NUtCSVRBUmFJejkyQmw1L2xVSFIzVUh5OFRRZFY5T0F3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNDkxNjMxCWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6Cjd3dHJRbzdXTSs1ZFM2R1ZmZFZ2ekxabWdKRU9idUlUcnZac09JYnV4NUNwUDFpMFRTc29YNUsxYk1JeTJqSDdway8zMWZwbFZXeE1ld24yZldLV0FRPT0K",
-      "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v0.3.1/LocalBrain.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQXlxNzNIRGJTck1LK1dlRzN4c0ZHV1hacE1nTzFxZU5kclc3K3J2SXFvS0Y1dmE1eExvVWRwWDFiVkw4U3g5Ukx4Z2I0bVVVLzUvdWQzakJ4Y244MUFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNTE0MzUxCWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6CmxPSjFkQ0Frd3pzdTNlMU1WdTdPcGRKV3VCYU5vSTVORndDQkhTYkd0STZTTTBJQXhYbGUvMDdtWVVWd29kSWkvbVE1R014YUxBQ01LRTZ5eEQxL0NnPT0K",
+      "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v0.3.2/LocalBrain.app.tar.gz"
     }
   }
 }
