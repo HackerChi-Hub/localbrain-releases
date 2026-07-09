@@ -1,11 +1,11 @@
 {
-  "version": "0.3.2",
-  "notes": "LocalBrain 0.3.2: fixes tool/function calling for Codex, Claude Code, and OpenCode. The local model backend now launches with thinking disabled by default (--chat-template-args enable_thinking:false), so models emit real tool calls instead of narrating that they are about to. Applies to all three integrations since they share one backend.",
-  "pub_date": "2026-07-08T12:39:52.000Z",
+  "version": "0.3.3",
+  "notes": "修复: 切模型无法连接 + Qwen3.6 system 消息 + 搜索多引擎轮替 + SOCKS 代理泄露. 新增: 5 个 MCP server 打包.",
+  "pub_date": "2026-07-10",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQXlxNzNIRGJTck1LK1dlRzN4c0ZHV1hacE1nTzFxZU5kclc3K3J2SXFvS0Y1dmE1eExvVWRwWDFiVkw4U3g5Ukx4Z2I0bVVVLzUvdWQzakJ4Y244MUFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNTE0MzUxCWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6CmxPSjFkQ0Frd3pzdTNlMU1WdTdPcGRKV3VCYU5vSTVORndDQkhTYkd0STZTTTBJQXhYbGUvMDdtWVVWd29kSWkvbVE1R014YUxBQ01LRTZ5eEQxL0NnPT0K",
-      "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v0.3.2/LocalBrain.app.tar.gz"
+      "signature": "",
+      "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/main/LocalBrain_0.3.3_aarch64.dmg"
     }
   }
 }
