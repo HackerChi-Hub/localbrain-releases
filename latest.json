@@ -1,10 +1,10 @@
 {
   "version": "0.3.3",
-  "notes": "新增: Vision (VLM 端点) + Embeddings (/v1/embeddings) + VLM max-kv-size + bridge 连接重试 + updater 签名.",
-  "pub_date": "2026-07-10T08:29:49.000Z",
+  "notes": "修复: mcp_server_info 改用新 localbrain_mcps 包 (新 Mac 安装后 MCP '未就绪' bug).",
+  "pub_date": "2026-07-10T14:24:00.000Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQS85UTZCNUpNeFYzOXRCTlZlOXNNejlHdmRsQnpQY2hQQmpJa0M2V1ltSjVZQ0pUdUp2cWlOWUVzcHo1K1ZKZGYwRVl6TEE3N3pZQXJhclRyVDZKQ2dNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNjcyMTc3CWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6CkoxbHlEaTlDZ2hUZkVZbERXTTNDN01FaENHZDZPWEhybzhLcVdlekJNM1VTVzV3NkVxM0lrcm5vQllvai9DN1NUMmVzeDVweGsrVWluQ0svdWhocUFRPT0K",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQTZPMkRiU2dsUHhSSDErMlQ4WjhFckNTMEhyQWhqQ2VOZGpCckd0SGVhTEUwMC9mekZHMTlIR2JvYUVCQ2xQbnovaW1mZjJFZkhPVFN5SktwT2dnZWdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNjkzNDI2CWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6CjRXbEVFNGkxZ0JFenRNWEdKQy9jZEt0dFEzakw4L3lGaGMzRy9iRndvaUlpdytZQkdaYUsxYmJiRHFLejZGaUUxSVpXc2JTaVQxVmNqTDgrME9makF3PT0K",
       "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/main/LocalBrain_0.3.3_aarch64.dmg"
     }
   }
