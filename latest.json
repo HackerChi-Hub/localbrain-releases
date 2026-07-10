@@ -1,10 +1,10 @@
 {
   "version": "0.3.3",
-  "notes": "修复: 切模型无法连接 + Qwen3.6 system 消息 + 搜索多引擎轮替 + SOCKS 代理泄露. 新增: 5 个 MCP server 打包.",
-  "pub_date": "2026-07-10",
+  "notes": "修复: 切模型无法连接 + Qwen3.6 system 消息 + 搜索多引擎轮替 + SOCKS 代理泄露 + VLM max-kv-size + bridge 连接重试. 新增: 5 个 MCP server 打包 + updater 签名.",
+  "pub_date": "2026-07-10T04:03:34.000Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQXczbzlUejJOTlMxbFJ5TVB0b3Z2RytXcy9QWDBWNjlNd1lHYlJPQ09DRkhscjBxaGJlUVFUL0dvYXBFOU16K2lMYkw2Vlh5ZkZhTkYrU2pWdzdRTGdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNjU2MTcyCWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6CloxRll1a3pmTkpYcGRjN3dZeG42dFU5OWNtWkRIcG5BWWV0Yy94WEFweVZVYktOMm5PQnFUNU8va2pTa1lIWWJUb0ZpRmtubytTQXplZDZXdFB6Q0J3PT0K",
       "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/main/LocalBrain_0.3.3_aarch64.dmg"
     }
   }
