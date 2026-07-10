@@ -1,10 +1,10 @@
 {
   "version": "0.3.3",
   "notes": "新增: Vision (VLM 端点) + Embeddings (/v1/embeddings) + VLM max-kv-size + bridge 连接重试 + updater 签名.",
-  "pub_date": "2026-07-10T08:28:11.000Z",
+  "pub_date": "2026-07-10T08:29:49.000Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQXczbzlUejJOTlMxbFJ5TVB0b3Z2RytXcy9QWDBWNjlNd1lHYlJPQ09DRkhscjBxaGJlUVFUL0dvYXBFOU16K2lMYkw2Vlh5ZkZhTkYrU2pWdzdRTGdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNjU2MTcyCWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6CloxRll1a3pmTkpYcGRjN3dZeG42dFU5OWNtWkRIcG5BWWV0Yy94WEFweVZVYktOMm5PQnFUNU8va2pTa1lIWWJUb0ZpRmtubytTQXplZDZXdFB6Q0J3PT0K",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQS85UTZCNUpNeFYzOXRCTlZlOXNNejlHdmRsQnpQY2hQQmpJa0M2V1ltSjVZQ0pUdUp2cWlOWUVzcHo1K1ZKZGYwRVl6TEE3N3pZQXJhclRyVDZKQ2dNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNjcyMTc3CWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6CkoxbHlEaTlDZ2hUZkVZbERXTTNDN01FaENHZDZPWEhybzhLcVdlekJNM1VTVzV3NkVxM0lrcm5vQllvai9DN1NUMmVzeDVweGsrVWluQ0svdWhocUFRPT0K",
       "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/main/LocalBrain_0.3.3_aarch64.dmg"
     }
   }
