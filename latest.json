@@ -1,11 +1,11 @@
 {
-  "version": "0.3.3",
-  "notes": "修复: mcp_server_info 改用新 localbrain_mcps 包 (新 Mac 安装后 MCP '未就绪' bug).",
-  "pub_date": "2026-07-10T14:24:00.000Z",
+  "version": "0.3.4",
+  "notes": "v0.3.4 累计: Vision (VLM) + Embeddings + VLM kv-size + bridge 重试 + updater 签名 + mcp_server_info 修新 Mac + 15+ bug fix.",
+  "pub_date": "2026-07-10T14:33:31.000Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQTZPMkRiU2dsUHhSSDErMlQ4WjhFckNTMEhyQWhqQ2VOZGpCckd0SGVhTEUwMC9mekZHMTlIR2JvYUVCQ2xQbnovaW1mZjJFZkhPVFN5SktwT2dnZWdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNjkzNDI2CWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6CjRXbEVFNGkxZ0JFenRNWEdKQy9jZEt0dFEzakw4L3lGaGMzRy9iRndvaUlpdytZQkdaYUsxYmJiRHFLejZGaUUxSVpXc2JTaVQxVmNqTDgrME9makF3PT0K",
-      "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/main/LocalBrain_0.3.3_aarch64.dmg"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRazJvNnc5VmRqQS9HeEtjVG5uMWFnUVVndkZXK1A5TVRZQldzN2dNUjZVVTVBZ1EyZk8yeG9OclEvNmJuNTU0WS9wbTZMTmlMdjVqYnQrekhCWUFOU3JKdE41emJPYmcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNjk0MDExCWZpbGU6TG9jYWxCcmFpbi5hcHAudGFyLmd6CmRCVzdsZU5RRXJxdmxHSStVbzEyUzliSDFRQ285MGllbjVHeHY3V0F3SzBYZ2kxQXF6UWU0anQreGYrMDZYbDlZMVZNeGdrT1liLzhHV0IxckE5VkNBPT0K",
+      "url": "https://github.com/HackerChi-Hub/localbrain-releases/releases/download/main/LocalBrain_0.3.4_aarch64.dmg"
     }
   }
 }
