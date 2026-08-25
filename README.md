@@ -10,7 +10,7 @@ LocalBrain（中文名：方寸智匣）是黑粉科技 HyphenTech 出品的 Mac
 
 当前安装包：`LocalBrain_1.2.6_aarch64.dmg`
 
-SHA-256：`8e854cde8946600f3e4f44af969f8090b9938e837b63efb573ad54cd6082a011`
+SHA-256：`deb07835697b3994afbee9545f42d12961334239956ab0347a2e9845373c9d3e`
 
 要求：macOS，Apple Silicon（M1 及以上）。
 
