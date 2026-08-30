@@ -100,17 +100,17 @@ SHA-256：`a8bce941342d8555711b90bb453575d0366f550fb21458e812f592c6aa8effd9`
 
 ## 截图
 
-![本地模型工作台](screenshots/home-overview.png)
+![主页：本机状态、运行中的服务与已装模型](screenshots/home-overview.png)
 
-![多模态后端管理](screenshots/home-backends.png)
+![本机硬件与内存占用](screenshots/hardware.png)
 
-![发现模型](screenshots/discover-models.png)
+![发现模型：下载源测速与能力标签](screenshots/discover-models.png)
 
-![对话](screenshots/chat.png)
+![对话：会话模型归属、工具调用与文档任务回执](screenshots/chat.png)
 
-![一键接入 Codex / Claude Code / ScreenLex](screenshots/integrations.png)
+![集成：本地 MCP 工具与一键接入 AI Agent](screenshots/integrations.png)
 
-![硬件信息](screenshots/settings-hardware.png)
+![设置：本地系统工具、四套主题与运行环境](screenshots/settings.png)
 
 ## 安装提示
 
