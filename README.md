@@ -2,15 +2,15 @@
 
 LocalBrain（中文名：方寸智匣）是黑粉科技 HyphenTech 出品的 Mac 本地 AI 工作台：统一管理本地大语言模型、视觉理解、语音转写、语音合成、图像、视频、音乐和图片编辑后端，并提供 OpenAI 兼容接口、内置对话和本地工具调用。
 
-> 当前稳定版：**1.2.20**。本仓库只保留最新公开版本的下载入口。
+> 当前稳定版：**1.2.21**。本仓库只保留最新公开版本的下载入口。
 
 ## 下载
 
 前往 **[Releases](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest)** 下载最新 DMG。已安装的旧版会自动收到更新。
 
-当前安装包：`LocalBrain_1.2.20_aarch64.dmg`
+当前安装包：`LocalBrain_1.2.21_aarch64.dmg`
 
-SHA-256：`734b8050a3e882c6b0b0bbbfae9fc6f99652cb2387f3482a93b59cb725e60587`
+SHA-256：`a8bce941342d8555711b90bb453575d0366f550fb21458e812f592c6aa8effd9`
 
 要求：macOS，Apple Silicon（M1 及以上）。
 
