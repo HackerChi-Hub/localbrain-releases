@@ -18,7 +18,7 @@ SHA-256：`b0c243ab1f8a31677248244ee1526b69d34e8faa8eca02712d6e032bae64a2cb`
 
 前往 **[v1.2.50 · Windows 首版](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.2.50)** 下载 `LocalBrain_1.2.50_x64-setup.exe`。
 
-SHA-256（Windows 安装包）：`886b6ef8e275e3c9faed8ecc683260a7d17ea43fa9e12cf063c517d4e023841b`
+SHA-256（Windows 安装包）：`32e8a134f9800f55655413ba28f4f2769f716f0191e98e08de03308c10dcc503`
 
 要求：Windows 10 1803+ / Windows 11 x64；NVIDIA 显卡，驱动 527.41 或更新（没有 NVIDIA 显卡时自动改用 CPU 版，明显更慢）；16 GB 内存起。
 
