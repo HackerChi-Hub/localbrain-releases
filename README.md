@@ -2,7 +2,7 @@
 
 LocalBrain（中文名：方寸智匣）是黑粉科技 HyphenTech 出品的本地 AI 工作台（macOS Apple Silicon，以及 Windows NVIDIA 显卡首版预览）：统一管理本地大语言模型、视觉理解、语音转写、语音合成、图像、视频、音乐和图片编辑后端，并提供 OpenAI 兼容接口、内置对话和本地工具调用。
 
-> 当前稳定版：**1.2.55**（macOS）。Windows 首版预览：1.2.50。本仓库每个平台只保留最新的公开版本。
+> 当前稳定版：**1.2.55**，macOS 与 Windows 同版本发布。本仓库每个平台只保留最新的公开版本。
 
 ## 下载
 
@@ -14,15 +14,15 @@ SHA-256：`50371a073949711d4b1e766da3031adf95b6049ea4cd24e43544a25e5843fa73`
 
 要求：macOS，Apple Silicon（M1 及以上）。
 
-### Windows（首版预览）
+### Windows
 
-前往 **[v1.2.50 · Windows 首版](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.2.50)** 下载 `LocalBrain_1.2.50_x64-setup.exe`。
+当前安装包：`LocalBrain_1.2.55_x64-setup.exe`
 
-SHA-256（Windows 安装包）：`5c2f5e2da9cf776ec7017ca5049e7605b9d0a7625ee15b0b963664dc26711667`
+SHA-256（Windows 安装包）：`629423d2ddcc1435d28ed30211f96318fd94b0b38985f1fbecb6f832fd193698`
 
 要求：Windows 10 1803+ / Windows 11 x64；NVIDIA 显卡，驱动 527.41 或更新（没有 NVIDIA 显卡时自动改用 CPU 版，明显更慢）；16 GB 内存起。
 
-Windows 版包含本地文本模型与全部本地工具（文档、联网、系统文件、网页自检）。语音转写、语音合成、图像、视频、音乐后端目前只在 macOS 提供，Windows 版不显示这些入口。首版**未做代码签名、没有自动更新**：SmartScreen 会提示「更多信息 → 仍要运行」；新版本请回到本页下载。装好后到「设置 → 本地运行环境 → 一键全装」，程序会按显卡和驱动自动选 CUDA 版或 CPU 版推理引擎并说明理由。
+Windows 版包含本地文本模型与全部本地工具（文档、联网、系统文件、网页自检）。语音转写、语音合成、图像、视频、音乐后端目前只在 macOS 提供，Windows 版不显示这些入口。**应用内自动更新已可用**（与 macOS 同一套更新器签名）：装好之后新版本会自己提示并安装。**仍未做代码签名**，首次安装时 SmartScreen 会提示「更多信息 → 仍要运行」。装好后到「设置 → 本地运行环境 → 一键全装」，程序会按显卡和驱动自动选 CUDA 版或 CPU 版推理引擎并说明理由。
 
 ## 快速开始
 
