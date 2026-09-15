@@ -2,23 +2,23 @@
 
 LocalBrain（中文名：方寸智匣）是黑粉科技 HyphenTech 出品的本地 AI 工作台（macOS Apple Silicon，以及 Windows NVIDIA 显卡首版预览）：统一管理本地大语言模型、视觉理解、语音转写、语音合成、图像、视频、音乐和图片编辑后端，并提供 OpenAI 兼容接口、内置对话和本地工具调用。
 
-> 当前稳定版：**1.2.66**，macOS 与 Windows 同版本发布。本仓库每个平台只保留最新的公开版本。
+> 当前稳定版：**1.2.67**，macOS 与 Windows 同版本发布。本仓库每个平台只保留最新的公开版本。
 
 ## 下载
 
 前往 **[Releases](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest)** 下载最新 DMG。已安装的旧版会自动收到更新。
 
-当前安装包：`LocalBrain_1.2.66_aarch64.dmg`
+当前安装包：`LocalBrain_1.2.67_aarch64.dmg`
 
-SHA-256：`e739b1ba683790fff4e0eab753f654e67337bab6bf26e29a141e35b8d13e657a`
+SHA-256：`f73cc70aa591ba2ea99478e8daa9480d00e106389be2d7fa338c4d7218e9f5a2`
 
 要求：macOS，Apple Silicon（M1 及以上）。
 
 ### Windows
 
-当前安装包：`LocalBrain_1.2.66_x64-setup.exe`
+当前安装包：`LocalBrain_1.2.67_x64-setup.exe`
 
-SHA-256（Windows 安装包）：`64c22ad9d4a4b17cc187315af9bb8d344d11a0ac13f736b5fd6df5e530a1334d`
+SHA-256（Windows 安装包）：`a93490194d99e02892083cf1c65ba688985765797146c0d55f26607eada575ee`
 
 要求：Windows 10 1803+ / Windows 11 x64；NVIDIA 显卡，驱动 527.41 或更新（没有 NVIDIA 显卡时自动改用 CPU 版，明显更慢）；16 GB 内存起。
 
