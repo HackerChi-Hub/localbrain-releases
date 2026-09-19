@@ -2,15 +2,15 @@
 
 LocalBrain（中文名：方寸智匣）是黑粉科技 HyphenTech 出品的本地 AI 工作台（macOS Apple Silicon，以及 Windows NVIDIA 显卡首版预览）：统一管理本地大语言模型、视觉理解、语音转写、语音合成、图像、视频、音乐和图片编辑后端，并提供 OpenAI 兼容接口、内置对话和本地工具调用。
 
-> 当前版本：Windows **1.2.68**；macOS **1.2.67**（1.2.68 构建待完成）。两个平台独立更新。
+> 当前版本：macOS **1.2.69**；Windows **1.2.68**。两个平台独立更新。
 
 ## 下载
 
-Windows 下载 [1.2.68 安装包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.2.68/LocalBrain_1.2.68_x64-setup.exe)；Mac 下载 [1.2.67 DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.2.67/LocalBrain_1.2.67_aarch64.dmg)。已安装的应用按各自平台接收更新。
+Windows 下载 [1.2.68 安装包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.2.68/LocalBrain_1.2.68_x64-setup.exe)；Mac 下载 [1.2.69 DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.2.69/LocalBrain_1.2.69_aarch64.dmg)。已安装的应用按各自平台接收更新。
 
-当前安装包：`LocalBrain_1.2.67_aarch64.dmg`
+当前安装包：`LocalBrain_1.2.69_aarch64.dmg`
 
-SHA-256：`f73cc70aa591ba2ea99478e8daa9480d00e106389be2d7fa338c4d7218e9f5a2`
+SHA-256：`646c2d66cbc9f8176bff94f6743a23246dbfbebca8db2e3fe38ddc3d2d2856ee`
 
 要求：macOS，Apple Silicon（M1 及以上）。
 
@@ -24,12 +24,19 @@ SHA-256（Windows 安装包）：`910eab5021c1707f5384a3ec42a63fa8648c7737a7910d
 
 Windows 版包含本地文本模型与全部本地工具（文档、联网、系统文件、网页自检）。语音转写、语音合成、图像、视频、音乐后端目前只在 macOS 提供，Windows 版不显示这些入口。**应用内自动更新已可用**（与 macOS 同一套更新器签名）：装好之后新版本会自己提示并安装。**仍未做代码签名**，首次安装时 SmartScreen 会提示「更多信息 → 仍要运行」。装好后到「设置 → 本地运行环境 → 一键全装」，程序会按显卡和驱动自动选 CUDA 版或 CPU 版推理引擎并说明理由。
 
-## 1.2.68 长任务修复（Windows 已发布）
+## 1.2.69 第二代三值模型（苹果芯片 Mac）
+
+- 下载库新增 Bonsai 2 27B 三值 PQ2_0，替换第一代三值条目；一位版 Bonsai 保留。
+- 纯文本约 7.21 GB，含视觉约 7.84 GB。支持对话、思考、编程、工具调用和图片理解；建议中档思考，不支持低档。
+- 按权重元数据自动选择独立 PrismML 后端，自动准备运行环境并校验 SHA256，其他模型后端不变。
+- 下载大小不等于运行内存，实际上下文按硬件规划。已做本机多轮对话、文件工具与图片识别测试，不保证任意复杂长任务一次成功。
+
+## 1.2.68 长任务修复（已包含在新版）
 
 - 显存限制上下文时，自动调整 GPU / CPU 层数，利用系统内存争取最多 32K 工作窗口；实际值仍由模型和内存预算、历史压力校准限制。
 - 自动工具模式输入独立的“继续”，恢复最新未完成任务的原始需求、计划和工具回执。
 - 没有真实成功工具回执时拒绝空交付，避免把未完成任务显示为完成。
-- 保留 1.2.67 的外部 MCP、工具图片观察和 view_image 功能。继续任务与交付修复也适用于 Mac 源码；Mac 新安装包待构建完成。
+- 保留 1.2.67 的外部 MCP、工具图片观察和 view_image 功能。继续任务与交付修复也已包含在 Mac 1.2.69 安装包中。
 
 ## 快速开始
 
@@ -146,4 +153,4 @@ Windows 安装包未签名，SmartScreen 会拦一次：点「更多信息 → �
 
 ## 说明
 
-公开下载库和 Releases 每个平台只保留最新版本。问题反馈请开 Issue。
+公开下载页优先展示各平台最新版本；仍被旧版更新清单引用的历史资产保留，避免更新链接失效。问题反馈请开 Issue。
