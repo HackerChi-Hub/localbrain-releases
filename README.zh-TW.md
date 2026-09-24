@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下載 Mac 1.2.70](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.2.70/LocalBrain_1.2.70_aarch64.dmg) · [Windows 1.2.68 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.2.68)
+[下載 Mac 1.3.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.3/LocalBrain_1.3.3_aarch64.dmg) · [Windows 1.2.68 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.2.68)
 
-Mac 安裝包 SHA-256：`950db820bca3f6b78eb31ea02275c73d3c4fdc1d624f265618f2a2e19fadf379`
+Mac 安裝包 SHA-256：`e8c5d0d032d3a12e400ef5c5349089347fb6bb294212d0c31175f1e37ba7fd46`
 
-- **Mac：1.2.70**，適用於 Apple Silicon，新增簡體中文、繁體中文及英文介面。
+- **Mac：1.3.3**，適用於 Apple Silicon。渲染出錯時顯示錯誤而不是黑屏；上下文記憶體預算標明生效範圍。
 - **Windows：1.2.68** 仍為目前已發布的安裝包。多語言原始碼已同步，Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
 - 在「設定 → 介面語言」選擇語言，亦可跟隨系統。立即生效並儲存，不改變對話、模型回答、程式碼及檔案路徑；後端原始日誌保留原文。
 
@@ -34,7 +34,7 @@ Mac 安裝包 SHA-256：`950db820bca3f6b78eb31ea02275c73d3c4fdc1d624f265618f2a2e
 | 語言模型 | MLX / llama.cpp（Metal） | llama.cpp（CUDA / CPU） |
 | 對話、網頁及文件工具 | 支援 | 支援 |
 | MLX 媒體後端 | 已支援的模型可用 | 不支援，隱藏相關入口 |
-| 本次三語言安裝包 | 1.2.70 | 待手動建置 |
+| 三語言介面起始版本 | 1.2.70 | 待手動建置 |
 
 能辨識模型檔案不等於能執行其架構；效果取決於模型、量化、執行環境與硬體。
 

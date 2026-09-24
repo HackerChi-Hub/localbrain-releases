@@ -8,11 +8,11 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 ## Current release
 
-[Download Mac 1.2.70](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.2.70/LocalBrain_1.2.70_aarch64.dmg) · [Windows 1.2.68 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.2.68)
+[Download Mac 1.3.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.3/LocalBrain_1.3.3_aarch64.dmg) · [Windows 1.2.68 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.2.68)
 
-Mac installer SHA-256: `950db820bca3f6b78eb31ea02275c73d3c4fdc1d624f265618f2a2e19fadf379`
+Mac installer SHA-256: `e8c5d0d032d3a12e400ef5c5349089347fb6bb294212d0c31175f1e37ba7fd46`
 
-- **Mac: 1.2.70** for Apple Silicon, with Simplified Chinese, Traditional Chinese, and English interfaces.
+- **Mac: 1.3.3** for Apple Silicon. Render errors now show an error page instead of a black screen; the context memory budget states where it applies.
 - **Windows: 1.2.68** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.
 
@@ -34,7 +34,7 @@ Mac installer SHA-256: `950db820bca3f6b78eb31ea02275c73d3c4fdc1d624f265618f2a2e1
 | Language models | MLX / llama.cpp (Metal) | llama.cpp (CUDA / CPU) |
 | Chat, web, and document tools | Supported | Supported |
 | MLX media backends | Supported models | Unavailable; entries hidden |
-| Multilingual installer in this release | 1.2.70 | Separate manual build pending |
+| Multilingual UI since | 1.2.70 | Separate manual build pending |
 
 Recognizing a model file does not mean its architecture can run. Results depend on the model, quantization, runtime, and hardware.
 
