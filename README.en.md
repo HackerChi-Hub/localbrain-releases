@@ -12,7 +12,7 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 Mac installer SHA-256: `af4bfd3f1759f765cab2d0d393b0c7ee7185a0e0dce6bfed48810e3c5093b23d`
 
-- **Mac: 1.3.9** for Apple Silicon. Render errors now show an error page instead of a black screen; the context memory budget states where it applies.
+- **Mac: 1.3.9** for Apple Silicon. Read-only folders and writable workspaces now have separate permissions; build/test commands require confirmation each time; webpage previews can optionally use restricted network access. Chat input and task closeout are also improved.
 - **Windows: 1.3.8** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.
 
