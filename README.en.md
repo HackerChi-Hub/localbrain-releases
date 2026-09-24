@@ -8,11 +8,11 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 ## Current release
 
-[Download Mac 1.3.4](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.4/LocalBrain_1.3.4_aarch64.dmg) · [Windows 1.2.68 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.2.68)
+[Download Mac 1.3.5](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.5/LocalBrain_1.3.5_aarch64.dmg) · [Windows 1.2.68 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.2.68)
 
-Mac installer SHA-256: `45117ab15b4e028a18c1cc22867262635f670c1dc7ee73d3c7135f9a5ea62890`
+Mac installer SHA-256: `ac8f2edc185a79865d5b0882e0edc87ee1b47799a3456c6115953b157df3bbcd`
 
-- **Mac: 1.3.4** for Apple Silicon. Render errors now show an error page instead of a black screen; the context memory budget states where it applies.
+- **Mac: 1.3.5** for Apple Silicon. Render errors now show an error page instead of a black screen; the context memory budget states where it applies.
 - **Windows: 1.2.68** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.
 
