@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下載 Mac 1.3.8](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.8/LocalBrain_1.3.8_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下載 Mac 1.3.9](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.9/LocalBrain_1.3.9_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安裝包 SHA-256：`821bf9aaf23f731324b6579c815f9825e9a7f9f5c5555d9bbbeac563dc28aa64`
+Mac 安裝包 SHA-256：`af4bfd3f1759f765cab2d0d393b0c7ee7185a0e0dce6bfed48810e3c5093b23d`
 
-- **Mac：1.3.8**，適用於 Apple Silicon。渲染出錯時顯示錯誤而不是黑屏；上下文記憶體預算標明生效範圍。
+- **Mac：1.3.9**，適用於 Apple Silicon。渲染出錯時顯示錯誤而不是黑屏；上下文記憶體預算標明生效範圍。
 - **Windows：1.3.8** 仍為目前已發布的安裝包。多語言原始碼已同步，Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
 - 在「設定 → 介面語言」選擇語言，亦可跟隨系統。立即生效並儲存，不改變對話、模型回答、程式碼及檔案路徑；後端原始日誌保留原文。
 
