@@ -8,11 +8,11 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 ## Current release
 
-[Download Mac 1.3.10](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.10/LocalBrain_1.3.10_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[Download Mac 1.3.11](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.11/LocalBrain_1.3.11_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac installer SHA-256: `ccb690fc368cf429e102fde3ed843cdf42bc51071509759361607f3a65351aba`
+Mac installer SHA-256: `9eace92ecb18beb82318d4b953c5cb4fb6abc33fc7660605888876fe688d865c`
 
-- **Mac: 1.3.10** for Apple Silicon. Settings now live behind one entry point split into nine categories; each item shows a keyword and the long explanation moves into a hover tooltip, and the chat page's Parameters drawer renders the same panel as the settings page. Read-only folders and writable workspaces have separate permissions; build/test commands require confirmation each time; webpage previews can optionally use restricted network access.
+- **Mac: 1.3.11** for Apple Silicon. Settings now live behind one entry point split into nine categories; each item shows a keyword and the long explanation moves into a hover tooltip, and the chat page's Parameters drawer renders the same panel as the settings page. Read-only folders and writable workspaces have separate permissions; build/test commands require confirmation each time; webpage previews can optionally use restricted network access.
 - **Windows: 1.3.8** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.
 

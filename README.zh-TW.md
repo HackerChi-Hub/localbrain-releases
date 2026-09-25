@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下載 Mac 1.3.10](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.10/LocalBrain_1.3.10_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下載 Mac 1.3.11](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.11/LocalBrain_1.3.11_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安裝包 SHA-256：`ccb690fc368cf429e102fde3ed843cdf42bc51071509759361607f3a65351aba`
+Mac 安裝包 SHA-256：`9eace92ecb18beb82318d4b953c5cb4fb6abc33fc7660605888876fe688d865c`
 
-- **Mac：1.3.10**，適用於 Apple Silicon。設定合併到一個入口、按九類分欄，每項只顯示關鍵詞，長說明收進浮動提示；對話頁「參數」與設定頁用同一套介面。唯讀目錄與可寫工作區分開授權；專案建置／測試命令須逐次確認；網頁預覽可選擇受限連網。
+- **Mac：1.3.11**，適用於 Apple Silicon。設定合併到一個入口、按九類分欄，每項只顯示關鍵詞，長說明收進浮動提示；對話頁「參數」與設定頁用同一套介面。唯讀目錄與可寫工作區分開授權；專案建置／測試命令須逐次確認；網頁預覽可選擇受限連網。
 - **Windows：1.3.8** 仍為目前已發布的安裝包。多語言原始碼已同步，Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
 - 在「設定 → 介面語言」選擇語言，亦可跟隨系統。立即生效並儲存，不改變對話、模型回答、程式碼及檔案路徑；後端原始日誌保留原文。
 
