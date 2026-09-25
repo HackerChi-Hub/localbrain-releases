@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下載 Mac 1.3.13](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.13/LocalBrain_1.3.13_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下載 Mac 1.3.14](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.14/LocalBrain_1.3.14_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安裝包 SHA-256：`9581a77df25eb4f7a41d62ff4cc6d4bccfcfff392992db4ce453d13e72f43df4`
+Mac 安裝包 SHA-256：`059c885324e74f8d49d958710085347e8c19b7427a8ed6f559f96c93efc2285e`
 
-- **Mac：1.3.13**，適用於 Apple Silicon。模型的聯網檢索現在可以在設定裡關掉；沒授權工作區或沒開終端時，相應工具不再出現在模型的工具清單裡。網頁檢查沒能傳回結果時不再報成「頁面可能無限迴圈」，交付也不會被這樣一次中斷永久擋住。設定合併到一個入口、按九類分欄，每項只顯示關鍵詞，長說明收進浮動提示；對話頁「參數」與設定頁用同一套介面。唯讀目錄與可寫工作區分開授權；專案建置／測試命令須逐次確認；網頁預覽可選擇受限連網。
+- **Mac：1.3.14**，適用於 Apple Silicon。模型的聯網檢索現在可以在設定裡關掉；沒授權工作區或沒開終端時，相應工具不再出現在模型的工具清單裡。網頁檢查沒能傳回結果時不再報成「頁面可能無限迴圈」，交付也不會被這樣一次中斷永久擋住。設定合併到一個入口、按九類分欄，每項只顯示關鍵詞，長說明收進浮動提示；對話頁「參數」與設定頁用同一套介面。唯讀目錄與可寫工作區分開授權；專案建置／測試命令須逐次確認；網頁預覽可選擇受限連網。
 - **Windows：1.3.8** 仍為目前已發布的安裝包。多語言原始碼已同步，Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
 - 在「設定 → 介面語言」選擇語言，亦可跟隨系統。立即生效並儲存，不改變對話、模型回答、程式碼及檔案路徑；後端原始日誌保留原文。
 
