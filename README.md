@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下载 Mac 1.3.12](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.12/LocalBrain_1.3.12_aarch64.dmg) · [Windows 1.3.8 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下载 Mac 1.3.13](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.13/LocalBrain_1.3.13_aarch64.dmg) · [Windows 1.3.8 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安装包 SHA-256：`c90908e7b61f3c371caa1e5d5c86a3f22b0bfd64a820ea403d20e98a457bf41c`
+Mac 安装包 SHA-256：`9581a77df25eb4f7a41d62ff4cc6d4bccfcfff392992db4ce453d13e72f43df4`
 
-- **Mac：1.3.12**，适用于 Apple Silicon。模型的联网检索现在可以在设置里关掉；没授权工作区或没开终端时，相应工具不再出现在模型的工具清单里。网页检查没能返回结果时不再报成「页面可能死循环」，交付也不会被这样一次中断永久拦住。设置合并到一个入口、按九类分栏，每项只显示关键词，长说明收进悬浮提示；对话页「参数」与设置页用同一套界面。读取目录与可写工作区分开授权；项目构建／测试命令须逐次确认；网页预览可选择受限联网。
+- **Mac：1.3.13**，适用于 Apple Silicon。模型的联网检索现在可以在设置里关掉；没授权工作区或没开终端时，相应工具不再出现在模型的工具清单里。网页检查没能返回结果时不再报成「页面可能死循环」，交付也不会被这样一次中断永久拦住。设置合并到一个入口、按九类分栏，每项只显示关键词，长说明收进悬浮提示；对话页「参数」与设置页用同一套界面。读取目录与可写工作区分开授权；项目构建／测试命令须逐次确认；网页预览可选择受限联网。
 - **Windows：1.3.8** 仍为当前已发布安装包。多语言源码已同步，Windows 新安装包另行手动构建；Mac 版本号不代表 Windows 已更新。
 - 在「设置 → 界面语言」选择语言，也可以跟随系统；立即生效并保存。不改变对话、模型回答、代码及文件路径；后端原始日志保留原文。
 

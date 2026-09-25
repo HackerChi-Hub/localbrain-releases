@@ -8,11 +8,11 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 ## Current release
 
-[Download Mac 1.3.12](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.12/LocalBrain_1.3.12_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[Download Mac 1.3.13](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.13/LocalBrain_1.3.13_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac installer SHA-256: `c90908e7b61f3c371caa1e5d5c86a3f22b0bfd64a820ea403d20e98a457bf41c`
+Mac installer SHA-256: `9581a77df25eb4f7a41d62ff4cc6d4bccfcfff392992db4ce453d13e72f43df4`
 
-- **Mac: 1.3.12** for Apple Silicon. The model's web search can now be switched off in settings, and tools that need an authorized workspace or the terminal no longer appear in the model's tool list when those are off. A web check that returns no result is no longer reported as a possible page hang, and delivery is no longer blocked forever by one such interruption. Settings now live behind one entry point split into nine categories; each item shows a keyword and the long explanation moves into a hover tooltip, and the chat page's Parameters drawer renders the same panel as the settings page. Read-only folders and writable workspaces have separate permissions; build/test commands require confirmation each time; webpage previews can optionally use restricted network access.
+- **Mac: 1.3.13** for Apple Silicon. The model's web search can now be switched off in settings, and tools that need an authorized workspace or the terminal no longer appear in the model's tool list when those are off. A web check that returns no result is no longer reported as a possible page hang, and delivery is no longer blocked forever by one such interruption. Settings now live behind one entry point split into nine categories; each item shows a keyword and the long explanation moves into a hover tooltip, and the chat page's Parameters drawer renders the same panel as the settings page. Read-only folders and writable workspaces have separate permissions; build/test commands require confirmation each time; webpage previews can optionally use restricted network access.
 - **Windows: 1.3.8** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.
 
