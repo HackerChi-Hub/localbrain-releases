@@ -12,7 +12,7 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 Mac installer SHA-256: `8e27c0f4858c3c9c28ef4d9db7f86c33fbb82a021a8a90ead628f7f2d4bf3ce6`
 
-- **Mac: 1.3.17** for Apple Silicon. The model catalogue adds three Qwen3.8 distills — 2B / 4B / 9B (1.3–5.8 GB, Apache-2.0, 262K context, text only). They distil the full Qwen3.8 model into smaller architectures: broad knowledge improves markedly, but grade-school maths slips slightly on the 4B and 9B. Both sides of the measurement are on the cards.
+- **Mac: 1.3.17** for Apple Silicon. Model card titles no longer pin a single quantisation tier. A title like "· Q4_K_M" stayed fixed while the card auto-selected a higher tier based on available memory, so on a large-memory machine the title disagreed with what actually downloaded — off by a factor of two in size. Thirteen affected entries were corrected; entries whose tiers all share one quantisation (official QAT, Bonsai) keep their titles.
 - **Windows: 1.3.8** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.
 
