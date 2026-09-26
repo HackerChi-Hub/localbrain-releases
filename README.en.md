@@ -8,11 +8,11 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 ## Current release
 
-[Download Mac 1.3.17](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.17/LocalBrain_1.3.17_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[Download Mac 1.3.18](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.18/LocalBrain_1.3.18_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac installer SHA-256: `8e27c0f4858c3c9c28ef4d9db7f86c33fbb82a021a8a90ead628f7f2d4bf3ce6`
+Mac installer SHA-256: `2cb060aa8f8aa98ad00d71641c64b19553d399ad48f2bf6d6eb5de968591f4f1`
 
-- **Mac: 1.3.17** for Apple Silicon. Model card titles no longer pin a single quantisation tier. A title like "· Q4_K_M" stayed fixed while the card auto-selected a higher tier based on available memory, so on a large-memory machine the title disagreed with what actually downloaded — off by a factor of two in size. Thirteen affected entries were corrected; entries whose tiers all share one quantisation (official QAT, Bonsai) keep their titles.
+- **Mac: 1.3.18** for Apple Silicon. Model card titles no longer pin a single quantisation tier. A title like "· Q4_K_M" stayed fixed while the card auto-selected a higher tier based on available memory, so on a large-memory machine the title disagreed with what actually downloaded — off by a factor of two in size. Thirteen affected entries were corrected; entries whose tiers all share one quantisation (official QAT, Bonsai) keep their titles.
 - **Windows: 1.3.8** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.
 

@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下載 Mac 1.3.17](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.17/LocalBrain_1.3.17_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下載 Mac 1.3.18](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.18/LocalBrain_1.3.18_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安裝包 SHA-256：`8e27c0f4858c3c9c28ef4d9db7f86c33fbb82a021a8a90ead628f7f2d4bf3ce6`
+Mac 安裝包 SHA-256：`2cb060aa8f8aa98ad00d71641c64b19553d399ad48f2bf6d6eb5de968591f4f1`
 
-- **Mac：1.3.17**，適用於 Apple Silicon。修正模型卡片標題：此前標題會釘死某一個量化檔（如「· Q4_K_M」），而卡片實際按本機記憶體自動選更高的檔，記憶體大的機器上標題和真正下載的檔位對不上、體積差一倍。13 條受影響的條目一起改；各檔本來就同一量化的（如官方 QAT、Bonsai）保留原標題。
+- **Mac：1.3.18**，適用於 Apple Silicon。修正模型卡片標題：此前標題會釘死某一個量化檔（如「· Q4_K_M」），而卡片實際按本機記憶體自動選更高的檔，記憶體大的機器上標題和真正下載的檔位對不上、體積差一倍。13 條受影響的條目一起改；各檔本來就同一量化的（如官方 QAT、Bonsai）保留原標題。
 - **Windows：1.3.8** 仍為目前已發布的安裝包。多語言原始碼已同步，Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
 - 在「設定 → 介面語言」選擇語言，亦可跟隨系統。立即生效並儲存，不改變對話、模型回答、程式碼及檔案路徑；後端原始日誌保留原文。
 
