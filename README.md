@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下载 Mac 1.3.16](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.16/LocalBrain_1.3.16_aarch64.dmg) · [Windows 1.3.8 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下载 Mac 1.3.17](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.17/LocalBrain_1.3.17_aarch64.dmg) · [Windows 1.3.8 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安装包 SHA-256：`9b3eebd902c25305d906c9118900d8fa7f547468e4f85f5e2d1c6901e1df6fa3`
+Mac 安装包 SHA-256：`8e27c0f4858c3c9c28ef4d9db7f86c33fbb82a021a8a90ead628f7f2d4bf3ce6`
 
-- **Mac：1.3.16**，适用于 Apple Silicon。模型目录新增 Qwen3.8 蒸馏 2B / 4B / 9B 三档（1.3–5.8 GB，Apache-2.0，26 万字上下文，纯文本无视觉）——把 Qwen3.8 大模型全参数蒸馏进小架构，知识面明显提升，但 4B 与 9B 的小学数学略有退步，卡片里两边的实测数都写了。
+- **Mac：1.3.17**，适用于 Apple Silicon。模型目录新增 Qwen3.8 蒸馏 2B / 4B / 9B 三档（1.3–5.8 GB，Apache-2.0，26 万字上下文，纯文本无视觉）——把 Qwen3.8 大模型全参数蒸馏进小架构，知识面明显提升，但 4B 与 9B 的小学数学略有退步，卡片里两边的实测数都写了。
 - **Windows：1.3.8** 仍为当前已发布安装包。多语言源码已同步，Windows 新安装包另行手动构建；Mac 版本号不代表 Windows 已更新。
 - 在「设置 → 界面语言」选择语言，也可以跟随系统；立即生效并保存。不改变对话、模型回答、代码及文件路径；后端原始日志保留原文。
 

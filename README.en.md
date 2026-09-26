@@ -8,11 +8,11 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 ## Current release
 
-[Download Mac 1.3.16](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.16/LocalBrain_1.3.16_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[Download Mac 1.3.17](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.17/LocalBrain_1.3.17_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac installer SHA-256: `9b3eebd902c25305d906c9118900d8fa7f547468e4f85f5e2d1c6901e1df6fa3`
+Mac installer SHA-256: `8e27c0f4858c3c9c28ef4d9db7f86c33fbb82a021a8a90ead628f7f2d4bf3ce6`
 
-- **Mac: 1.3.16** for Apple Silicon. The model catalogue adds three Qwen3.8 distills — 2B / 4B / 9B (1.3–5.8 GB, Apache-2.0, 262K context, text only). They distil the full Qwen3.8 model into smaller architectures: broad knowledge improves markedly, but grade-school maths slips slightly on the 4B and 9B. Both sides of the measurement are on the cards.
+- **Mac: 1.3.17** for Apple Silicon. The model catalogue adds three Qwen3.8 distills — 2B / 4B / 9B (1.3–5.8 GB, Apache-2.0, 262K context, text only). They distil the full Qwen3.8 model into smaller architectures: broad knowledge improves markedly, but grade-school maths slips slightly on the 4B and 9B. Both sides of the measurement are on the cards.
 - **Windows: 1.3.8** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.
 
