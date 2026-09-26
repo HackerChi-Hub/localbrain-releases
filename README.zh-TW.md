@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下載 Mac 1.3.18](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.18/LocalBrain_1.3.18_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下載 Mac 1.3.19](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.19/LocalBrain_1.3.19_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安裝包 SHA-256：`2cb060aa8f8aa98ad00d71641c64b19553d399ad48f2bf6d6eb5de968591f4f1`
+Mac 安裝包 SHA-256：`f497842b4494d8f2461c33e14ddbd97197155bbfc9ff9123ef9e4e9373bbfdd7`
 
-- **Mac：1.3.18**，適用於 Apple Silicon。把視窗關進選單列時，會放掉當時閒置的媒體後端（語音辨識、語音合成、影像、影片、音樂、影像編輯）——此前手動啟動過的影像等後端會一直佔著記憶體，直到完全結束。正在生成的不受影響；語言模型照常留著供外部用戶端使用；在設定裡選「一直保溫」則關視窗也不釋放。
+- **Mac：1.3.19**，適用於 Apple Silicon。把視窗關進選單列時，會放掉當時閒置的媒體後端（語音辨識、語音合成、影像、影片、音樂、影像編輯）——此前手動啟動過的影像等後端會一直佔著記憶體，直到完全結束。正在生成的不受影響；語言模型照常留著供外部用戶端使用；在設定裡選「一直保溫」則關視窗也不釋放。
 - **Windows：1.3.8** 仍為目前已發布的安裝包。多語言原始碼已同步，Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
 - 在「設定 → 介面語言」選擇語言，亦可跟隨系統。立即生效並儲存，不改變對話、模型回答、程式碼及檔案路徑；後端原始日誌保留原文。
 

@@ -8,11 +8,11 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 ## Current release
 
-[Download Mac 1.3.18](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.18/LocalBrain_1.3.18_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[Download Mac 1.3.19](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.19/LocalBrain_1.3.19_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac installer SHA-256: `2cb060aa8f8aa98ad00d71641c64b19553d399ad48f2bf6d6eb5de968591f4f1`
+Mac installer SHA-256: `f497842b4494d8f2461c33e14ddbd97197155bbfc9ff9123ef9e4e9373bbfdd7`
 
-- **Mac: 1.3.18** for Apple Silicon. Closing the window to the menu bar now releases whatever media backends are idle at that moment (speech recognition, speech synthesis, image, video, music, image editing). Previously a manually started backend such as image generation held memory until you fully quit. Anything mid-generation is left alone, language models stay up for external clients, and choosing "always keep warm" in settings releases nothing on close.
+- **Mac: 1.3.19** for Apple Silicon. Closing the window to the menu bar now releases whatever media backends are idle at that moment (speech recognition, speech synthesis, image, video, music, image editing). Previously a manually started backend such as image generation held memory until you fully quit. Anything mid-generation is left alone, language models stay up for external clients, and choosing "always keep warm" in settings releases nothing on close.
 - **Windows: 1.3.8** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.
 
