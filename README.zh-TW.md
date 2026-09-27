@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下載 Mac 1.3.23](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.23/LocalBrain_1.3.23_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下載 Mac 1.3.24](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.24/LocalBrain_1.3.24_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安裝包 SHA-256：`af4765a48a17035653d7e2dcf88efa7bf4b9714f1130a8b5576ea179795e832a`
+Mac 安裝包 SHA-256：`f825af914683c93cc14b370b9c54a485e2a3327ff215d53caae39076bfbf8c5c`
 
-- **Mac：1.3.23**，適用於 Apple Silicon。在「發現」頁安裝的 Splash 模型，回到首頁**不再被預設藏起來**。此前它借用「外部模型庫」的身分：徽章寫著「外部模型庫」，還被收進「顯示外部模型（1）」按鈕後面，讓剛把模型下載到系統碟的人以為權重落到了外接硬碟上。現在它預設顯示，徽章寫「Splash 目錄」；真正來自外部模型庫的模型照舊可以收合。Splash 模型仍然沒有首頁刪除按鈕（刪除它走 Splash 自己的解除安裝流程）。
+- **Mac：1.3.24**，適用於 Apple Silicon。在「發現」頁安裝的 Splash 模型，回到首頁**不再被預設藏起來**。此前它借用「外部模型庫」的身分：徽章寫著「外部模型庫」，還被收進「顯示外部模型（1）」按鈕後面，讓剛把模型下載到系統碟的人以為權重落到了外接硬碟上。現在它預設顯示，徽章寫「Splash 目錄」；真正來自外部模型庫的模型照舊可以收合。Splash 模型仍然沒有首頁刪除按鈕（刪除它走 Splash 自己的解除安裝流程）。
 - 同一個安裝包裡還帶著前兩版的改動：停機理由不再借用「空轉自動停止」開關的名字，關掉開關後被別的保護停住時，會說清是哪一道觸發的；影片每次生成都不一樣了（此前不給種子時同一段提示詞會得到**逐位元組相同**的結果，現在每次現取隨機種子並寫明用的哪個，填回去即可重現）；音軌響度統一到 −16 LUFS；出完圖接著生成影片不再因記憶體不足被拒；工作結束多一行「這類活兒通常多久」。
 - **Windows：1.3.8** 仍為目前已發布的安裝包。多語言原始碼已同步，Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
 - 在「設定 → 介面語言」選擇語言，亦可跟隨系統。立即生效並儲存，不改變對話、模型回答、程式碼及檔案路徑；後端原始日誌保留原文。
