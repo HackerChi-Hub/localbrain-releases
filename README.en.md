@@ -8,11 +8,11 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 ## Current release
 
-[Download Mac 1.3.20](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.20/LocalBrain_1.3.20_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[Download Mac 1.3.21](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.21/LocalBrain_1.3.21_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac installer SHA-256: `ad7a9f6b61a4e1293b0cb3a827fdf9281ff0d8a5705ac6b0b0bf15fe7b8f6064`
+Mac installer SHA-256: `59db80fa2134b4d012fa2bd32739d45aedec84bf91a9962a1584b6418f96572f`
 
-- **Mac: 1.3.20** for Apple Silicon. Video generation now differs every run — without a seed the same prompt previously returned a **byte-identical** result, so "run it again" did nothing; each run now draws a seed and reports it, and putting that number back reproduces the result. Soundtracks are normalised to −16 LUFS (measured here they ranged from −13 to −47, with the quiet ones barely audible). Generating a video right after an image no longer fails for lack of memory, and when a backend fails to start you get the reason instead of a pointer to the log. A finished task shows how long this kind of task usually takes. Prompt-template timings are now computed for your machine. Assistant replies share one width, so long run records and short answers line up.
+- **Mac: 1.3.21** for Apple Silicon. Video generation now differs every run — without a seed the same prompt previously returned a **byte-identical** result, so "run it again" did nothing; each run now draws a seed and reports it, and putting that number back reproduces the result. Soundtracks are normalised to −16 LUFS (measured here they ranged from −13 to −47, with the quiet ones barely audible). Generating a video right after an image no longer fails for lack of memory, and when a backend fails to start you get the reason instead of a pointer to the log. A finished task shows how long this kind of task usually takes. Prompt-template timings are now computed for your machine. Assistant replies share one width, so long run records and short answers line up.
 - **Windows: 1.3.8** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.
 

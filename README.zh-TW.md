@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下載 Mac 1.3.20](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.20/LocalBrain_1.3.20_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下載 Mac 1.3.21](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.21/LocalBrain_1.3.21_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安裝包 SHA-256：`ad7a9f6b61a4e1293b0cb3a827fdf9281ff0d8a5705ac6b0b0bf15fe7b8f6064`
+Mac 安裝包 SHA-256：`59db80fa2134b4d012fa2bd32739d45aedec84bf91a9962a1584b6418f96572f`
 
-- **Mac：1.3.20**，適用於 Apple Silicon。影片每次生成都不一樣了——此前不給種子時，同一段提示詞會得到**逐位元組相同**的結果，「不滿意再來一次」其實什麼也沒發生；現在每次現取隨機種子並寫明用的哪個，填回去即可重現。音軌響度統一到 −16 LUFS（本機實測原本 −13 到 −47 不等，安靜的那幾段幾乎聽不見）。出完圖接著生成影片不再因記憶體不足被拒，後端啟動失敗時會說明原因而不是讓你去翻日誌。工作結束多一行「這類活兒通常多久」。提示詞模板的耗時改成按你這台機器算。對話頁回答寬度統一，長記錄和短回答不再一條寬一條窄。
+- **Mac：1.3.21**，適用於 Apple Silicon。影片每次生成都不一樣了——此前不給種子時，同一段提示詞會得到**逐位元組相同**的結果，「不滿意再來一次」其實什麼也沒發生；現在每次現取隨機種子並寫明用的哪個，填回去即可重現。音軌響度統一到 −16 LUFS（本機實測原本 −13 到 −47 不等，安靜的那幾段幾乎聽不見）。出完圖接著生成影片不再因記憶體不足被拒，後端啟動失敗時會說明原因而不是讓你去翻日誌。工作結束多一行「這類活兒通常多久」。提示詞模板的耗時改成按你這台機器算。對話頁回答寬度統一，長記錄和短回答不再一條寬一條窄。
 - **Windows：1.3.8** 仍為目前已發布的安裝包。多語言原始碼已同步，Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
 - 在「設定 → 介面語言」選擇語言，亦可跟隨系統。立即生效並儲存，不改變對話、模型回答、程式碼及檔案路徑；後端原始日誌保留原文。
 
