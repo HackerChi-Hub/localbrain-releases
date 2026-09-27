@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下载 Mac 1.3.19](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.19/LocalBrain_1.3.19_aarch64.dmg) · [Windows 1.3.8 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下载 Mac 1.3.20](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.20/LocalBrain_1.3.20_aarch64.dmg) · [Windows 1.3.8 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安装包 SHA-256：`f497842b4494d8f2461c33e14ddbd97197155bbfc9ff9123ef9e4e9373bbfdd7`
+Mac 安装包 SHA-256：`ad7a9f6b61a4e1293b0cb3a827fdf9281ff0d8a5705ac6b0b0bf15fe7b8f6064`
 
-- **Mac：1.3.19**，适用于 Apple Silicon。对话过程改成一步一行：动作、目标、耗时、结论用不同字体和颜色区分，同一步的重复调用合并成 ×N，其中的失败次数单独标出；阶段计划钉在顶部，运行中底部状态栏显示总用时和正在执行的工具，结束时给出总用时及预填／思考／输出／工具四项分账。代码块按语言高亮。图像与视频工作台新增 13 个提示词模板，每个都在本机实跑过，附参考耗时与实测结论。出完图接着生成视频时，空闲的图像模型会先被腾出，不再因内存不足被拒。
+- **Mac：1.3.20**，适用于 Apple Silicon。对话过程改成一步一行：动作、目标、耗时、结论用不同字体和颜色区分，同一步的重复调用合并成 ×N，其中的失败次数单独标出；阶段计划钉在顶部，运行中底部状态栏显示总用时和正在执行的工具，结束时给出总用时及预填／思考／输出／工具四项分账。代码块按语言高亮。图像与视频工作台新增 13 个提示词模板，每个都在本机实跑过，附参考耗时与实测结论。出完图接着生成视频时，空闲的图像模型会先被腾出，不再因内存不足被拒。
 - **Windows：1.3.8** 仍为当前已发布安装包。多语言源码已同步，Windows 新安装包另行手动构建；Mac 版本号不代表 Windows 已更新。
 - 在「设置 → 界面语言」选择语言，也可以跟随系统；立即生效并保存。不改变对话、模型回答、代码及文件路径；后端原始日志保留原文。
 

@@ -8,11 +8,11 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 ## Current release
 
-[Download Mac 1.3.19](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.19/LocalBrain_1.3.19_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[Download Mac 1.3.20](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.20/LocalBrain_1.3.20_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac installer SHA-256: `f497842b4494d8f2461c33e14ddbd97197155bbfc9ff9123ef9e4e9373bbfdd7`
+Mac installer SHA-256: `ad7a9f6b61a4e1293b0cb3a827fdf9281ff0d8a5705ac6b0b0bf15fe7b8f6064`
 
-- **Mac: 1.3.19** for Apple Silicon. The run view is now one line per step: action, target, time, and result each get their own typeface and color; repeated calls to the same step fold into ×N with any failures counted separately; the stage plan is pinned on top, a status bar shows total elapsed time and the tool currently running, and a finished run shows its total time split into prefill, reasoning, output, and tools. Code blocks are syntax-highlighted. The image and video workbenches gain 13 prompt templates, each run for real on this machine and shown with a reference time and the tested result. Generating a video right after an image now first frees the idle image model instead of failing for lack of memory.
+- **Mac: 1.3.20** for Apple Silicon. The run view is now one line per step: action, target, time, and result each get their own typeface and color; repeated calls to the same step fold into ×N with any failures counted separately; the stage plan is pinned on top, a status bar shows total elapsed time and the tool currently running, and a finished run shows its total time split into prefill, reasoning, output, and tools. Code blocks are syntax-highlighted. The image and video workbenches gain 13 prompt templates, each run for real on this machine and shown with a reference time and the tested result. Generating a video right after an image now first frees the idle image model instead of failing for lack of memory.
 - **Windows: 1.3.8** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.
 
