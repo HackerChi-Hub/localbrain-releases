@@ -8,11 +8,11 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 ## Current release
 
-[Download Mac 1.3.25](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.25/LocalBrain_1.3.25_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[Download Mac 1.3.26](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.26/LocalBrain_1.3.26_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac installer SHA-256: `fb1d22fbaf644317722c6639ff4f804bc830df268ad3dfb259352f048167da99`
+Mac installer SHA-256: `937560118b8f2c2cf16abc22e36a4aeca27ac9cf5bc63ddfaf07c429d453847d`
 
-- **Mac: 1.3.25** for Apple Silicon. **Long tasks no longer stall on "output budget used up".** Output per round used to be priced from "output ÷ whole-round time, slowest ever seen"; after a restart the first round spent 151 s just reading the prompt, which locked the rate at 2.5 tokens/s for good and left the next round 1,488 tokens — the model used them all thinking. Each round is now split at the first token into prompt processing and generation and priced separately; the same real data now yields 21,394 tokens. **The model no longer loops on large files**: when it repeats a read and the file has not changed, the app follows the continuation arguments and reads the next page for it, until the end.
+- **Mac: 1.3.26** for Apple Silicon. **Long tasks no longer stall on "output budget used up".** Output per round used to be priced from "output ÷ whole-round time, slowest ever seen"; after a restart the first round spent 151 s just reading the prompt, which locked the rate at 2.5 tokens/s for good and left the next round 1,488 tokens — the model used them all thinking. Each round is now split at the first token into prompt processing and generation and priced separately; the same real data now yields 21,394 tokens. **The model no longer loops on large files**: when it repeats a read and the file has not changed, the app follows the continuation arguments and reads the next page for it, until the end.
 - The same installer carries the previous releases: four defects that stopped large files from being read to the end are fixed; all three stop switches follow your settings; the Settings sidebar is larger and content is centred on wide screens; Splash models installed from Discover are no longer hidden; video generation differs every run and soundtracks are normalised to −16 LUFS.
 - **Windows: 1.3.8** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.

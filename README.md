@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下载 Mac 1.3.25](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.25/LocalBrain_1.3.25_aarch64.dmg) · [Windows 1.3.8 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下载 Mac 1.3.26](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.26/LocalBrain_1.3.26_aarch64.dmg) · [Windows 1.3.8 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安装包 SHA-256：`fb1d22fbaf644317722c6639ff4f804bc830df268ad3dfb259352f048167da99`
+Mac 安装包 SHA-256：`937560118b8f2c2cf16abc22e36a4aeca27ac9cf5bc63ddfaf07c429d453847d`
 
-- **Mac：1.3.25**，适用于 Apple Silicon。**长任务不会再被「额度用完」卡死**：每轮能写多少原先按「输出 ÷ 整轮耗时、取历次最慢」估算生成速度，应用重启后第一轮光处理提示词就等了 151 秒，于是算出 2.5 词元/秒并被永久锁住，下一轮只给 1,488 词元，模型思考就用完了。现在按首个词元出现的时刻把每轮拆成「处理提示词」和「生成」分别计价，同一组真实数据重算是 21,394 词元。**模型读大文件不再原地打转**：它原样重复读取、而文件没有变化时，由程序照续读参数替它读下一页，读完为止。
+- **Mac：1.3.26**，适用于 Apple Silicon。**长任务不会再被「额度用完」卡死**：每轮能写多少原先按「输出 ÷ 整轮耗时、取历次最慢」估算生成速度，应用重启后第一轮光处理提示词就等了 151 秒，于是算出 2.5 词元/秒并被永久锁住，下一轮只给 1,488 词元，模型思考就用完了。现在按首个词元出现的时刻把每轮拆成「处理提示词」和「生成」分别计价，同一组真实数据重算是 21,394 词元。**模型读大文件不再原地打转**：它原样重复读取、而文件没有变化时，由程序照续读参数替它读下一页，读完为止。
 - 同一个安装包里还带着前几版的改动：读取工具在文件超过约 2 万字时的四处缺陷已修复；三个停止开关都真正听你的设置了；设置页分类栏放大、宽屏内容居中；在「发现」页装的 Splash 模型不再被默认藏起来；视频每次生成都不一样了，音轨响度统一到 −16 LUFS。
 - **Windows：1.3.8** 仍为当前已发布安装包。多语言源码已同步，Windows 新安装包另行手动构建；Mac 版本号不代表 Windows 已更新。
 - 在「设置 → 界面语言」选择语言，也可以跟随系统；立即生效并保存。不改变对话、模型回答、代码及文件路径；后端原始日志保留原文。
