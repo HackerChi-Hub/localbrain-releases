@@ -14,7 +14,7 @@ A private AI workbench for your computer: download and manage local models, let 
 
 Mac installer SHA-256: `fc426f29797c97c756c54adf829e70aec1c8aedc39e1963f73836bad87b6dc9d`
 
-- **Mac: 1.4.4 (stable)** for Apple Silicon. The 1.4 series adds **Storage & cleanup**: generated files and caches can live anywhere (including an external drive) and be cleaned out completely; automatic cleanup runs on a background timer, so it also happens while the window is hidden. 1.4.3 removes the Simplified Chinese that was still showing in the English and Traditional Chinese interfaces.
+- **Mac: 1.4.4 (stable)** for Apple Silicon. The 1.4 series adds **Storage & cleanup**: generated files and caches can live anywhere (including an external drive) and be cleaned out completely; automatic cleanup runs on a background timer, so it also happens while the window is hidden. 1.4.3 removes the Simplified Chinese that was still showing in the English and Traditional Chinese interfaces. 1.4.4 makes “Import existing” on Discover check that the chosen folder really holds that model, lists broken registrations that point at folders that no longer exist on Home, and reviews about 1,400 English interface strings one by one.
 - **Windows: 1.3.8** remains the published installer. The next Windows package is built separately; the Mac version does not imply a Windows release.
 - Updates can be checked and installed from inside the app; update packages are signature-checked.
 
