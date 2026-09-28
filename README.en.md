@@ -10,11 +10,11 @@ A private AI workbench for your computer: download and manage local models, let 
 
 ## Download
 
-[Download Mac 1.4.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.3/LocalBrain_1.4.3_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[Download Mac 1.4.4](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.4/LocalBrain_1.4.4_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac installer SHA-256: `6b1fdd11c28b0e128daa6f81bcb97de95498c6a1ec3131dbba8311feaabf2dd3`
+Mac installer SHA-256: `fc426f29797c97c756c54adf829e70aec1c8aedc39e1963f73836bad87b6dc9d`
 
-- **Mac: 1.4.3 (stable)** for Apple Silicon. The 1.4 series adds **Storage & cleanup**: generated files and caches can live anywhere (including an external drive) and be cleaned out completely; automatic cleanup runs on a background timer, so it also happens while the window is hidden. 1.4.3 removes the Simplified Chinese that was still showing in the English and Traditional Chinese interfaces.
+- **Mac: 1.4.4 (stable)** for Apple Silicon. The 1.4 series adds **Storage & cleanup**: generated files and caches can live anywhere (including an external drive) and be cleaned out completely; automatic cleanup runs on a background timer, so it also happens while the window is hidden. 1.4.3 removes the Simplified Chinese that was still showing in the English and Traditional Chinese interfaces.
 - **Windows: 1.3.8** remains the published installer. The next Windows package is built separately; the Mac version does not imply a Windows release.
 - Updates can be checked and installed from inside the app; update packages are signature-checked.
 

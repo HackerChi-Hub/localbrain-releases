@@ -10,11 +10,11 @@
 
 ## 下載
 
-[下載 Mac 1.4.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.3/LocalBrain_1.4.3_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下載 Mac 1.4.4](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.4/LocalBrain_1.4.4_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安裝包 SHA-256：`6b1fdd11c28b0e128daa6f81bcb97de95498c6a1ec3131dbba8311feaabf2dd3`
+Mac 安裝包 SHA-256：`fc426f29797c97c756c54adf829e70aec1c8aedc39e1963f73836bad87b6dc9d`
 
-- **Mac：1.4.3（正式版）**，適用於 Apple Silicon。1.4 系列新增「儲存與清理」：產生的檔案和快取都能指定位置（包括外接硬碟）並徹底清理；自動收斂由程式在背景定時執行，視窗隱藏時也照常清理。1.4.3 補齊了英文與繁體中文介面裡殘留的簡體中文。
+- **Mac：1.4.4（正式版）**，適用於 Apple Silicon。1.4 系列新增「儲存與清理」：產生的檔案和快取都能指定位置（包括外接硬碟）並徹底清理；自動收斂由程式在背景定時執行，視窗隱藏時也照常清理。1.4.3 補齊了英文與繁體中文介面裡殘留的簡體中文。
 - **Windows：1.3.8** 仍為目前已發布的安裝包。Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
 - 應用程式內可以直接檢查並安裝更新，更新包帶簽章校驗。
 
