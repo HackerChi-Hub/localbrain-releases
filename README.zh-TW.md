@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下載 Mac 1.3.29](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.29/LocalBrain_1.3.29_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下載 Mac 1.4.0](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.0/LocalBrain_1.4.0_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安裝包 SHA-256：`768ab6837e86cb1755509ab6a9e1d3b8cdacb933a80dae6fbd62c8cd6c6a4a00`
+Mac 安裝包 SHA-256：`5e36e347009cc1218972df8952c0d903b3abc145bc6c7edd0fa1e1b75f9a2ec9`
 
-- **Mac：1.3.29**，適用於 Apple Silicon。**Splash 模型現在能用上工具的可選參數了**：程式原先把工具參數按字母順序重排後才送給模型，而 Splash 要求參數嚴格按表裡的順序填寫、寫過去就不能回頭。模型先寫了檔案路徑之後，讀取的起訖行號、修改的行號範圍、表格檔名、範本要填的資料就再也寫不進去——這就是「大檔案永遠只讀開頭、反覆重讀」「表格總是叫 workbook.xlsx」的原因。現在參數保持工具作者寫的順序，必填項排在最前。實測請求「讀第 640 行到第 900 行」各 5 次：原來 0 次帶上起始行號，現在 5 次全部帶上。本版同時修正了這項改動的一個副作用：本機 GGUF 模型的上下文校準紀錄繼續有效，不用重新摸索。
+- **Mac：1.4.0**，適用於 Apple Silicon。**Splash 模型現在能用上工具的可選參數了**：程式原先把工具參數按字母順序重排後才送給模型，而 Splash 要求參數嚴格按表裡的順序填寫、寫過去就不能回頭。模型先寫了檔案路徑之後，讀取的起訖行號、修改的行號範圍、表格檔名、範本要填的資料就再也寫不進去——這就是「大檔案永遠只讀開頭、反覆重讀」「表格總是叫 workbook.xlsx」的原因。現在參數保持工具作者寫的順序，必填項排在最前。實測請求「讀第 640 行到第 900 行」各 5 次：原來 0 次帶上起始行號，現在 5 次全部帶上。本版同時修正了這項改動的一個副作用：本機 GGUF 模型的上下文校準紀錄繼續有效，不用重新摸索。
 - 同一個安裝包裡還帶著前幾版的改動：快模型長輸出時介面不再卡死（寫 19,200 詞元檔案的最長卡頓從 0.19 秒降到 0.03 秒，寫入量從約 980 MB 降到 36 MB）；用 Splash 模型做文件任務不再報 404；長任務不會再因為「額度用完」卡死；三個停止開關都真正聽你的設定了；在「發現」頁安裝的 Splash 模型不再被預設藏起來。
 - **Windows：1.3.8** 仍為目前已發布的安裝包。多語言原始碼已同步，Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
 - 在「設定 → 介面語言」選擇語言，亦可跟隨系統。立即生效並儲存，不改變對話、模型回答、程式碼及檔案路徑；後端原始日誌保留原文。
