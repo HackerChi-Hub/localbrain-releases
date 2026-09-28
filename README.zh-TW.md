@@ -10,12 +10,12 @@
 
 ## 下載
 
-[下載 Mac 1.4.4](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.4/LocalBrain_1.4.4_aarch64.dmg) · [Windows 1.3.8 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下載 Mac 1.4.4](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.4/LocalBrain_1.4.4_aarch64.dmg) · [Windows 1.4.4 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.4.4)
 
 Mac 安裝包 SHA-256：`fc426f29797c97c756c54adf829e70aec1c8aedc39e1963f73836bad87b6dc9d`
 
 - **Mac：1.4.4（正式版）**，適用於 Apple Silicon。1.4 系列新增「儲存與清理」：產生的檔案和快取都能指定位置（包括外接硬碟）並徹底清理；自動收斂由程式在背景定時執行，視窗隱藏時也照常清理。1.4.3 補齊了英文與繁體中文介面裡殘留的簡體中文；1.4.4 讓探索頁的「使用現有」先核對所選資料夾裡是不是這個模型，首頁會列出指向已不存在目錄的失效登記，並逐條審校了約 1400 條英文介面文字。
-- **Windows：1.3.8** 仍為目前已發布的安裝包。Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
+- **Windows：1.4.4** 仍為目前已發布的安裝包。Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
 - 應用程式內可以直接檢查並安裝更新，更新包帶簽章校驗。
 
 ## 功能一覽
@@ -84,7 +84,7 @@ Mac 安裝包 SHA-256：`fc426f29797c97c756c54adf829e70aec1c8aedc39e1963f73836ba
 | 對話、網頁及文件工具 | 支援 | 支援 |
 | 影像產生（torch / diffusers） | 支援（MPS） | 支援（CUDA），執行環境約 3 GB |
 | 語音 / 影片 / 音樂後端 | 已支援的模型可用 | 不支援，隱藏相關入口 |
-| 儲存與清理 | 1.4.0 起 | 待手動建置 |
+| 儲存與清理 | 1.4.0 起 | 1.4.4 起 |
 
 識別到模型檔案不代表支援其架構；執行效果取決於模型、量化、執行環境和硬體。
 
