@@ -8,11 +8,11 @@
 
 ## 最新版本
 
-[下载 Mac 1.3.26](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.26/LocalBrain_1.3.26_aarch64.dmg) · [Windows 1.3.8 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[下载 Mac 1.3.27](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.27/LocalBrain_1.3.27_aarch64.dmg) · [Windows 1.3.8 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac 安装包 SHA-256：`937560118b8f2c2cf16abc22e36a4aeca27ac9cf5bc63ddfaf07c429d453847d`
+Mac 安装包 SHA-256：`339418757434e27fed5b2dc77e1e70a0e767373167944e5ce92c36f41714e08c`
 
-- **Mac：1.3.26**，适用于 Apple Silicon。**用 Splash 模型做文档任务不再报 404**：让它「整理成 Excel 表格」这类任务时，第一轮就报 `model_not_found`。原因是 Splash 按模型的仓库名识别模型，普通对话早已改为发送仓库名，文档任务这条路径却一直在发磁盘路径。现在两条路径发送同一个名字。
+- **Mac：1.3.27**，适用于 Apple Silicon。**用 Splash 模型做文档任务不再报 404**：让它「整理成 Excel 表格」这类任务时，第一轮就报 `model_not_found`。原因是 Splash 按模型的仓库名识别模型，普通对话早已改为发送仓库名，文档任务这条路径却一直在发磁盘路径。现在两条路径发送同一个名字。
 - 同一个安装包里还带着前几版的改动：长任务不会再因为「额度用完」卡死（每轮按首个词元出现的时刻拆开计价，同一组真实数据从 1,488 词元回到 21,394 词元）；模型原样重复读取大文件时，由程序替它读下一页；读取工具在文件超过约 2 万字时的四处缺陷已修复；三个停止开关都真正听你的设置了；设置页分类栏放大、宽屏内容居中；在「发现」页装的 Splash 模型不再被默认藏起来。
 - **Windows：1.3.8** 仍为当前已发布安装包。多语言源码已同步，Windows 新安装包另行手动构建；Mac 版本号不代表 Windows 已更新。
 - 在「设置 → 界面语言」选择语言，也可以跟随系统；立即生效并保存。不改变对话、模型回答、代码及文件路径；后端原始日志保留原文。

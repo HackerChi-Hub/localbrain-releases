@@ -8,11 +8,11 @@ A private AI workspace: manage local models, chat, use tools, and connect your e
 
 ## Current release
 
-[Download Mac 1.3.26](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.26/LocalBrain_1.3.26_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
+[Download Mac 1.3.27](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.3.27/LocalBrain_1.3.27_aarch64.dmg) · [Windows 1.3.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.3.8)
 
-Mac installer SHA-256: `937560118b8f2c2cf16abc22e36a4aeca27ac9cf5bc63ddfaf07c429d453847d`
+Mac installer SHA-256: `339418757434e27fed5b2dc77e1e70a0e767373167944e5ce92c36f41714e08c`
 
-- **Mac: 1.3.26** for Apple Silicon. **Document tasks with a Splash model no longer fail with 404.** Asking it to, say, turn a list into an Excel sheet failed on the first round with `model_not_found`. Splash identifies models by repository name; ordinary chat already sent that name, but the document-task path kept sending the file-system path. Both paths now send the same name.
+- **Mac: 1.3.27** for Apple Silicon. **Document tasks with a Splash model no longer fail with 404.** Asking it to, say, turn a list into an Excel sheet failed on the first round with `model_not_found`. Splash identifies models by repository name; ordinary chat already sent that name, but the document-task path kept sending the file-system path. Both paths now send the same name.
 - The same installer carries the previous releases: long tasks no longer stall on "output budget used up" (each round is split at the first token and prompt processing and generation are priced separately — the same real data went from 1,488 back to 21,394 tokens); when the model repeats a read of a large, unchanged file, the app reads the next page for it; four defects that stopped large files from being read to the end are fixed; all three stop switches follow your settings; the Settings sidebar is larger and content is centred on wide screens; Splash models installed from Discover are no longer hidden.
 - **Windows: 1.3.8** remains the published installer. Multilingual source is available; the next Windows package will be built separately. The Mac version does not imply a Windows release.
 - Select **Settings → Interface language**, or follow the system language. Changes apply immediately and persist. Conversations, model responses, code, paths, and raw backend logs are not translated.
