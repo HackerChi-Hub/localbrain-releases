@@ -10,11 +10,11 @@
 
 ## 下載
 
-[下載 Mac 1.4.6](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.6/LocalBrain_1.4.6_aarch64.dmg) · [Windows 1.4.4 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.4.4)
+[下載 Mac 1.4.7](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.7/LocalBrain_1.4.7_aarch64.dmg) · [Windows 1.4.4 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.4.4)
 
-Mac 安裝包 SHA-256：`985b861294172fe5de9518dc9b04c2bf0daeb86ceb083ff938eeacde79e3f360`
+Mac 安裝包 SHA-256：`64b894181a97f808573c65ab3b75d0180204d35d4216033e6aaca403cea83d08`
 
-- **Mac：1.4.6（正式版）**，適用於 Apple Silicon。1.4 系列新增「儲存與清理」：產生的檔案和快取都能指定位置（包括外接硬碟）並徹底清理；自動收斂由程式在背景定時執行，視窗隱藏時也照常清理。1.4.3 補齊了英文與繁體中文介面裡殘留的簡體中文；1.4.4 讓探索頁的「使用現有」先核對所選資料夾裡是不是這個模型，首頁會列出指向已不存在目錄的失效登記，並逐條審校了約 1400 條英文介面文字；1.4.5 新增「贊助」入口，側欄和設定裡隨時能看到微信贊助碼，任務完成後偶爾出現一張不打擾的邀請卡（每天最多一次，可關閉）；1.4.6 起產生圖片、影片、音訊和產出文件也算一次任務，邀請卡要等產生視窗關上才出現。
+- **Mac：1.4.7（正式版）**，適用於 Apple Silicon。1.4 系列新增「儲存與清理」：產生的檔案和快取都能指定位置（包括外接硬碟）並徹底清理；自動收斂由程式在背景定時執行，視窗隱藏時也照常清理。1.4.3 補齊了英文與繁體中文介面裡殘留的簡體中文；1.4.4 讓探索頁的「使用現有」先核對所選資料夾裡是不是這個模型，首頁會列出指向已不存在目錄的失效登記，並逐條審校了約 1400 條英文介面文字；1.4.5 新增「贊助」入口，側欄和設定裡隨時能看到微信贊助碼，任務完成後偶爾出現一張不打擾的邀請卡（每天最多一次，可關閉）；1.4.6 起產生圖片、影片、音訊和產出文件也算一次任務，邀請卡要等產生視窗關上才出現。
 - **Windows：1.4.4** 仍為目前已發布的安裝包。Windows 新安裝包另行手動建置；Mac 版本號不代表 Windows 已更新。
 - 應用程式內可以直接檢查並安裝更新，更新包帶簽章校驗。
 
