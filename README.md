@@ -10,11 +10,11 @@
 
 ## 下载
 
-[下载 Mac 1.4.5](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.5/LocalBrain_1.4.5_aarch64.dmg) · [Windows 1.4.4 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.4.4)
+[下载 Mac 1.4.6](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.6/LocalBrain_1.4.6_aarch64.dmg) · [Windows 1.4.4 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.4.4)
 
-Mac 安装包 SHA-256：`9e126b4e3e061471e0e10aa1a56b68bd0381350f19b48ec3678178de45927883`
+Mac 安装包 SHA-256：`985b861294172fe5de9518dc9b04c2bf0daeb86ceb083ff938eeacde79e3f360`
 
-- **Mac：1.4.5（正式版）**，适用于 Apple Silicon。1.4 系列新增「存储与清理」：生成的文件和缓存都能指定位置（包括外置盘）并彻底清理；自动收敛由程序后台定时执行，窗口隐藏时也照常清理。1.4.3 补齐了英文与繁体中文界面里残留的简体中文；1.4.4 让发现页的「使用已有」先核对所选文件夹里是不是这个模型，主页会列出指向已不存在目录的失效登记，并逐条审校了约 1400 条英文界面文字；1.4.5 新增「赞助」入口，侧栏和设置里随时能看到微信赞助码，任务完成后偶尔出现一张不打扰的邀请卡（每天最多一次，可关闭）。
+- **Mac：1.4.6（正式版）**，适用于 Apple Silicon。1.4 系列新增「存储与清理」：生成的文件和缓存都能指定位置（包括外置盘）并彻底清理；自动收敛由程序后台定时执行，窗口隐藏时也照常清理。1.4.3 补齐了英文与繁体中文界面里残留的简体中文；1.4.4 让发现页的「使用已有」先核对所选文件夹里是不是这个模型，主页会列出指向已不存在目录的失效登记，并逐条审校了约 1400 条英文界面文字；1.4.5 新增「赞助」入口，侧栏和设置里随时能看到微信赞助码，任务完成后偶尔出现一张不打扰的邀请卡（每天最多一次，可关闭）。
 - **Windows：1.4.4** 仍为当前已发布安装包。Windows 新安装包另行手动构建；Mac 版本号不代表 Windows 已更新。
 - 应用内可以直接检查并安装更新，更新包带签名校验。
 

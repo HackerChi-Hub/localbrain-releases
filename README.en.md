@@ -10,11 +10,11 @@ A private AI workbench for your computer: download and manage local models, let 
 
 ## Download
 
-[Download Mac 1.4.5](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.5/LocalBrain_1.4.5_aarch64.dmg) · [Windows 1.4.4 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.4.4)
+[Download Mac 1.4.6](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.6/LocalBrain_1.4.6_aarch64.dmg) · [Windows 1.4.4 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.4.4)
 
-Mac installer SHA-256: `9e126b4e3e061471e0e10aa1a56b68bd0381350f19b48ec3678178de45927883`
+Mac installer SHA-256: `985b861294172fe5de9518dc9b04c2bf0daeb86ceb083ff938eeacde79e3f360`
 
-- **Mac: 1.4.5 (stable)** for Apple Silicon. The 1.4 series adds **Storage & cleanup**: generated files and caches can live anywhere (including an external drive) and be cleaned out completely; automatic cleanup runs on a background timer, so it also happens while the window is hidden. 1.4.3 removes the Simplified Chinese that was still showing in the English and Traditional Chinese interfaces. 1.4.4 makes “Import existing” on Discover check that the chosen folder really holds that model, lists broken registrations that point at folders that no longer exist on Home, and reviews about 1,400 English interface strings one by one. 1.4.5 adds a “Sponsor” entry in the sidebar and Settings that shows the WeChat sponsor code (WeChat Pay only); the English interface never shows an invitation on its own.
+- **Mac: 1.4.6 (stable)** for Apple Silicon. The 1.4 series adds **Storage & cleanup**: generated files and caches can live anywhere (including an external drive) and be cleaned out completely; automatic cleanup runs on a background timer, so it also happens while the window is hidden. 1.4.3 removes the Simplified Chinese that was still showing in the English and Traditional Chinese interfaces. 1.4.4 makes “Import existing” on Discover check that the chosen folder really holds that model, lists broken registrations that point at folders that no longer exist on Home, and reviews about 1,400 English interface strings one by one. 1.4.5 adds a “Sponsor” entry in the sidebar and Settings that shows the WeChat sponsor code (WeChat Pay only); the English interface never shows an invitation on its own.
 - **Windows: 1.4.4** remains the published installer. The next Windows package is built separately; the Mac version does not imply a Windows release.
 - Updates can be checked and installed from inside the app; update packages are signature-checked.
 
