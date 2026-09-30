@@ -10,12 +10,12 @@ A private AI workbench for your computer: download and manage local models, let 
 
 ## Download
 
-[Download Mac 1.4.8](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.8/LocalBrain_1.4.8_aarch64.dmg) · [Windows 1.4.4 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.4.4)
+[Download Mac 1.4.8](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.4.8/LocalBrain_1.4.8_aarch64.dmg) · [Windows 1.4.8 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.4.8)
 
 Mac installer SHA-256: `1416f07243136206755892071810ab6cac661245b73182714fde7a1dc74bc143`
 
 - **Mac: 1.4.8 (stable)** for Apple Silicon. The 1.4 series adds **Storage & cleanup**: generated files and caches can live anywhere (including an external drive) and be cleaned out completely; automatic cleanup runs on a background timer, so it also happens while the window is hidden. 1.4.3 removes the Simplified Chinese that was still showing in the English and Traditional Chinese interfaces. 1.4.4 makes “Import existing” on Discover check that the chosen folder really holds that model, lists broken registrations that point at folders that no longer exist on Home, and reviews about 1,400 English interface strings one by one. 1.4.5 adds a “Sponsor” entry in the sidebar and Settings that shows the WeChat sponsor code (WeChat Pay only); the English interface never shows an invitation on its own. From 1.4.6, generated images, video, audio and produced documents also count as completed tasks, and the invitation waits until the generation window is closed. 1.4.7 lets documents come out as Markdown, HTML, TXT, RTF, ODT and EPUB, with the content cleaned before it is written, and adds “Network access” (HTTP + SSH, off by default). 1.4.8 adds a second local video engine, LTX-2.5: text, first-frame and first-and-last-frame videos with synchronized stereo sound, lines written in quotes are spoken, 1–30 seconds (10 seconds per pass, longer clips chained automatically); a one-click 43.4 GB download on Discover, with ModelScope as the direct source from mainland China.
-- **Windows: 1.4.4** remains the published installer. The next Windows package is built separately; the Mac version does not imply a Windows release.
+- **Windows: 1.4.8** remains the published installer. The next Windows package is built separately; the Mac version does not imply a Windows release.
 - Updates can be checked and installed from inside the app; update packages are signature-checked.
 
 ## What it does
