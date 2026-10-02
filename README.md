@@ -10,11 +10,11 @@
 
 ## 下载
 
-[下载 Mac 1.5.0](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.0/LocalBrain_1.5.0_aarch64.dmg) · [Windows 1.5.0 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.5.0)
+[下载 Mac 1.5.2](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.2/LocalBrain_1.5.2_aarch64.dmg) · [Windows 1.5.0 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.5.0)
 
-Mac 安装包 SHA-256：`27e1aeea03a86e78964a7e75c019d56c7f5251b497dfbd1e4088134287ef2289`
+Mac 安装包 SHA-256：`3f8ca7c99cc343df50e8b7cf1d98fda04c2a0c4c1f2c5dbee690a709bbd2dac3`
 
-- **Mac：1.5.0（正式版）**，适用于 Apple Silicon。1.4 系列新增「存储与清理」：生成的文件和缓存都能指定位置（包括外置盘）并彻底清理；自动收敛由程序后台定时执行，窗口隐藏时也照常清理。1.4.3 补齐了英文与繁体中文界面里残留的简体中文；1.4.4 让发现页的「使用已有」先核对所选文件夹里是不是这个模型，主页会列出指向已不存在目录的失效登记，并逐条审校了约 1400 条英文界面文字；1.4.5 新增「赞助」入口，侧栏和设置里随时能看到微信赞助码，任务完成后偶尔出现一张不打扰的邀请卡（每天最多一次，可关闭）；1.4.6 起生成图片、视频、音频和产出文档也算一次任务，邀请卡要等生成窗口关上才出现。1.4.7 起文档能直接生成 Markdown、HTML、TXT、RTF、ODT、EPUB，内容先清洗再写成文件；新增「访问网络设备」（HTTP + SSH，默认关）。1.4.8 新增第二个本地视频引擎 LTX-2.5：文字、首帧、首尾帧生成带同步立体声的视频，台词写进引号里会被念出来，时长 1～30 秒（单次 10 秒，更长的自动接力）；发现页一键下载 43.4 GB，国内选 ModelScope 直连。
+- **Mac：1.5.2（正式版）**，适用于 Apple Silicon。1.4 系列新增「存储与清理」：生成的文件和缓存都能指定位置（包括外置盘）并彻底清理；自动收敛由程序后台定时执行，窗口隐藏时也照常清理。1.4.3 补齐了英文与繁体中文界面里残留的简体中文；1.4.4 让发现页的「使用已有」先核对所选文件夹里是不是这个模型，主页会列出指向已不存在目录的失效登记，并逐条审校了约 1400 条英文界面文字；1.4.5 新增「赞助」入口，侧栏和设置里随时能看到微信赞助码，任务完成后偶尔出现一张不打扰的邀请卡（每天最多一次，可关闭）；1.4.6 起生成图片、视频、音频和产出文档也算一次任务，邀请卡要等生成窗口关上才出现。1.4.7 起文档能直接生成 Markdown、HTML、TXT、RTF、ODT、EPUB，内容先清洗再写成文件；新增「访问网络设备」（HTTP + SSH，默认关）。1.4.8 新增第二个本地视频引擎 LTX-2.5：文字、首帧、首尾帧生成带同步立体声的视频，台词写进引号里会被念出来，时长 1～30 秒（单次 10 秒，更长的自动接力）；发现页一键下载 43.4 GB，国内选 ModelScope 直连。
 - **1.4.9 新增**：Swift 1.5 的 Splash 社区转换版（约 17.4 GB）；LTX-2.5 下载可选择 4bit（27.2 GB）、8bit（43.4 GB）或 BF16（71 GB），各档独立识别安装状态；Splash 安装失败保留受限长度的具体诊断。
 - **Windows：1.5.0**，已由 GitHub Actions 构建并发布，更新包带签名校验。
 - **Linux x64：1.5.0 预览版**：[AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.0/LocalBrain_1.5.0_amd64.AppImage) · [Debian 安装包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.0/LocalBrain_1.5.0_amd64.deb)。当前未接入受管 llama.cpp / Prism 运行时下载，不支持 MLX / Splash；构建和包校验通过不代表已完成 Linux 模型运行验收。
