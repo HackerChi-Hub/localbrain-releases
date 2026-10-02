@@ -10,6 +10,8 @@
 
 ## 下載
 
+**Linux 為近期新增的預覽包，不是正式支援平台。** 1.4.8 沒有 Linux 安裝包；現有發行紀錄中從 1.5.0（2026-10-02）開始提供 Linux x64 預覽包，1.5.3、1.5.4 延續建置。可下載不等於已完成 Linux 功能移植或真實裝置模型執行驗收，請先閱讀下方限制。
+
 1.5.4：新增媒體模型能力查詢、進階參數校驗、實際執行回執及程式化語音停頓。Mac安裝版完成真實語音、圖片與介面驗收；影片與音樂本輪未完成完整效果驗收，不支援的控制明確拒絕。
 
 [下載 Mac 1.5.4](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.4/LocalBrain_1.5.4_aarch64.dmg) · [Windows 1.5.4 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.5.4)

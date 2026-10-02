@@ -10,6 +10,8 @@ A private AI workbench for your computer: download and manage local models, let 
 
 ## Download
 
+**Linux is a recently added preview, not a stable supported platform.** Release 1.4.8 has no Linux installer; the available release history starts offering Linux x64 previews with 1.5.0 (2026-10-02), followed by 1.5.3 and 1.5.4. Download availability does not mean Linux feature migration or real-device model-runtime acceptance is complete. Read the limitations below before use.
+
 1.5.4 adds media capability queries, advanced parameter validation, actual execution receipts and programmatic speech pauses. The installed Mac app passed real speech, image and UI checks. Full video and music generation effects were not accepted in this round; unsupported controls are explicitly rejected.
 
 [Download Mac 1.5.4](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.4/LocalBrain_1.5.4_aarch64.dmg) · [Windows 1.5.4 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.5.4)
