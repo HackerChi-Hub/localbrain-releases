@@ -10,22 +10,22 @@ A private AI workbench for your computer: download and manage local models, let 
 
 ## Download
 
-[Download Mac 1.5.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.3/LocalBrain_1.5.3_aarch64.dmg) · [Windows 1.5.0 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.5.0)
+[Download Mac 1.5.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.3/LocalBrain_1.5.3_aarch64.dmg) · [Windows 1.5.3 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.5.3)
 
 Mac installer SHA-256: `d7ac4bef657f00a9ee5eb9d802d9e426464532fe8f78e5eb1cc23ef13d7790b9`
 
 - **Mac: 1.5.3 (stable)** for Apple Silicon. The 1.4 series adds **Storage & cleanup**: generated files and caches can live anywhere (including an external drive) and be cleaned out completely; automatic cleanup runs on a background timer, so it also happens while the window is hidden. 1.4.3 removes the Simplified Chinese that was still showing in the English and Traditional Chinese interfaces. 1.4.4 makes “Import existing” on Discover check that the chosen folder really holds that model, lists broken registrations that point at folders that no longer exist on Home, and reviews about 1,400 English interface strings one by one. 1.4.5 adds a “Sponsor” entry in the sidebar and Settings that shows the WeChat sponsor code (WeChat Pay only); the English interface never shows an invitation on its own. From 1.4.6, generated images, video, audio and produced documents also count as completed tasks, and the invitation waits until the generation window is closed. 1.4.7 lets documents come out as Markdown, HTML, TXT, RTF, ODT and EPUB, with the content cleaned before it is written, and adds “Network access” (HTTP + SSH, off by default). 1.4.8 adds a second local video engine, LTX-2.5: text, first-frame and first-and-last-frame videos with synchronized stereo sound, lines written in quotes are spoken, 1–30 seconds (10 seconds per pass, longer clips chained automatically); a one-click 43.4 GB download on Discover, with ModelScope as the direct source from mainland China.
 - **New in 1.4.9:** the Swift 1.5 community Splash conversion (about 17.4 GB); selectable LTX-2.5 downloads in 4-bit (27.2 GB), 8-bit (43.4 GB) and BF16 (71 GB), with independent installation detection; bounded diagnostic details for Splash installation failures.
-- **Windows: 1.5.0**, built and published through GitHub Actions, with signed updater artifacts.
-- **Linux x64: 1.5.0 preview**: [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.0/LocalBrain_1.5.0_amd64.AppImage) · [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.0/LocalBrain_1.5.0_amd64.deb). Managed llama.cpp / Prism runtime downloads are not wired on Linux; MLX / Splash are unavailable. Build and package checks are not model-runtime acceptance tests.
+- **Windows: 1.5.3**, built and published through GitHub Actions, with signed updater artifacts.
+- **Linux x64: 1.5.3 preview**: [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.3/LocalBrain_1.5.3_amd64.AppImage) · [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.3/LocalBrain_1.5.3_amd64.deb). Managed llama.cpp / Prism runtime downloads are not wired on Linux; MLX / Splash are unavailable. Build and package checks are not model-runtime acceptance tests.
 
-Windows installer SHA-256: `bc282199d63b651b23b0a5df093c937af68cb57eb20c36a865a7b8c3148930fa`
+Windows installer SHA-256: `367512e229c37dbd08af251712915c9c0a95641999f81c38c66840d1b829f247`
 
-Linux AppImage SHA-256: `148d7b4c5267e80696b7365fdf4d30b7599367510215af11dc30cad4c05db8b1`
+Linux AppImage SHA-256: `8c9a23aed5928fff3d06ae2d24f92af948ce5517ac8262b7812a52e82bb97697`
 
-Linux Debian SHA-256: `cf7c762827621af778fdd2ce35b84d2e1db239c79644c8a03433d48d941f01e2`
+Linux Debian SHA-256: `1a2c8ca84eb44b612ccca8a6907c969f567e1577a9f8140b2ebaaadf75cfc38c`
 
-On Linux, run `chmod +x LocalBrain_1.5.0_amd64.AppImage` before launching the AppImage. On Debian / Ubuntu, use `sudo apt install ./LocalBrain_1.5.0_amd64.deb`. Automatic updates use AppImage; the Debian package is for manual installation.
+On Linux, run `chmod +x LocalBrain_1.5.3_amd64.AppImage` before launching the AppImage. On Debian / Ubuntu, use `sudo apt install ./LocalBrain_1.5.3_amd64.deb`. Automatic updates use AppImage; the Debian package is for manual installation.
 - Updates can be checked and installed from inside the app; update packages are signature-checked.
 
 ## What it does
