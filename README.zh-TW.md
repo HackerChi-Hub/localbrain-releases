@@ -12,24 +12,24 @@
 
 **Linux 為近期新增的預覽包，不是正式支援平台。** 1.4.8 沒有 Linux 安裝包；現有發行紀錄中從 1.5.0（2026-10-02）開始提供 Linux x64 預覽包，1.5.3、1.5.4 延續建置。可下載不等於已完成 Linux 功能移植或真實裝置模型執行驗收，請先閱讀下方限制。
 
-1.5.4：新增媒體模型能力查詢、進階參數校驗、實際執行回執及程式化語音停頓。Mac安裝版完成真實語音、圖片與介面驗收；影片與音樂本輪未完成完整效果驗收，不支援的控制明確拒絕。
+1.5.5：修復媒體第二次查詢、產生及產物讀取被代理流程誤擋的問題。能力查詢視為唯讀操作，規劃建議不再成為執行前置條件；允許讀取已設定的媒體產物目錄，但不擴大寫入或終端權限。真實語音連續呼叫與使用者測試版試用通過；影片、音樂的完整產生效果本輪未重新驗收。
 
-[下載 Mac 1.5.4](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.4/LocalBrain_1.5.4_aarch64.dmg) · [Windows 1.5.4 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.5.4)
+[下載 Mac 1.5.5](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.5/LocalBrain_1.5.5_aarch64.dmg) · [Windows 1.5.5 下載頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.5.5)
 
-Mac 安裝包 SHA-256：`fd222e76862eb8f16449ec7feae607f1794cd6328cd0c118249ccbb99b4ce899`
+Mac 安裝包 SHA-256：`22c84df97eb07b649c02c84012f2084c5c9f1042cffd98da7bccc639863a2ac1`
 
-- **Mac：1.5.4（正式版）**，適用於 Apple Silicon。1.4 系列新增「儲存與清理」：產生的檔案和快取都能指定位置（包括外接硬碟）並徹底清理；自動收斂由程式在背景定時執行，視窗隱藏時也照常清理。1.4.3 補齊了英文與繁體中文介面裡殘留的簡體中文；1.4.4 讓探索頁的「使用現有」先核對所選資料夾裡是不是這個模型，首頁會列出指向已不存在目錄的失效登記，並逐條審校了約 1400 條英文介面文字；1.4.5 新增「贊助」入口，側欄和設定裡隨時能看到微信贊助碼，任務完成後偶爾出現一張不打擾的邀請卡（每天最多一次，可關閉）；1.4.6 起產生圖片、影片、音訊和產出文件也算一次任務，邀請卡要等產生視窗關上才出現。1.4.7 起文件能直接產生 Markdown、HTML、TXT、RTF、ODT、EPUB，內容先清洗再寫成檔案；新增「存取網路裝置」（HTTP + SSH，預設關閉）。1.4.8 新增第二個本機影片引擎 LTX-2.5：以文字、首幀、首尾幀產生帶同步立體聲的影片，寫在引號裡的台詞會被唸出來，時長 1～30 秒（單次 10 秒，更長的自動接力）；探索頁一鍵下載 43.4 GB，中國大陸選 ModelScope 直連。
+- **Mac：1.5.5（正式版）**，適用於 Apple Silicon。1.4 系列新增「儲存與清理」：產生的檔案和快取都能指定位置（包括外接硬碟）並徹底清理；自動收斂由程式在背景定時執行，視窗隱藏時也照常清理。1.4.3 補齊了英文與繁體中文介面裡殘留的簡體中文；1.4.4 讓探索頁的「使用現有」先核對所選資料夾裡是不是這個模型，首頁會列出指向已不存在目錄的失效登記，並逐條審校了約 1400 條英文介面文字；1.4.5 新增「贊助」入口，側欄和設定裡隨時能看到微信贊助碼，任務完成後偶爾出現一張不打擾的邀請卡（每天最多一次，可關閉）；1.4.6 起產生圖片、影片、音訊和產出文件也算一次任務，邀請卡要等產生視窗關上才出現。1.4.7 起文件能直接產生 Markdown、HTML、TXT、RTF、ODT、EPUB，內容先清洗再寫成檔案；新增「存取網路裝置」（HTTP + SSH，預設關閉）。1.4.8 新增第二個本機影片引擎 LTX-2.5：以文字、首幀、首尾幀產生帶同步立體聲的影片，寫在引號裡的台詞會被唸出來，時長 1～30 秒（單次 10 秒，更長的自動接力）；探索頁一鍵下載 43.4 GB，中國大陸選 ModelScope 直連。
 - **1.4.9 新增**：Swift 1.5 的 Splash 社群轉換版（約 17.4 GB）；LTX-2.5 下載可選擇 4bit（27.2 GB）、8bit（43.4 GB）或 BF16（71 GB），各檔獨立辨識安裝狀態；Splash 安裝失敗保留受限長度的具體診斷。
-- **Windows：1.5.4**，已由 GitHub Actions 建置並發布，更新包帶簽章校驗。
-- **Linux x64：1.5.4 預覽版**：[AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.4/LocalBrain_1.5.4_amd64.AppImage) · [Debian 安裝包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.4/LocalBrain_1.5.4_amd64.deb)。目前未接入受管 llama.cpp / Prism 執行環境下載，不支援 MLX / Splash；建置及包校驗通過不代表已完成 Linux 模型執行驗收。
+- **Windows：1.5.5**，已由 GitHub Actions 建置並發布，更新包帶簽章校驗。
+- **Linux x64：1.5.5 預覽版**：[AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.5/LocalBrain_1.5.5_amd64.AppImage) · [Debian 安裝包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.5/LocalBrain_1.5.5_amd64.deb)。目前未接入受管 llama.cpp / Prism 執行環境下載，不支援 MLX / Splash；建置及包校驗通過不代表已完成 Linux 模型執行驗收。
 
-Windows installer SHA-256：`8d27642ec39a324dfec9e3f15988fe366c9199c769cbb7f1fbdc96235cb436f8`
+Windows installer SHA-256：`1283f62acc8e6b04f2303b3298f9ddb1dc652f449a19251b7182e56bfa0a6aa7`
 
-Linux AppImage SHA-256：`7746263050f1be772624c9ecc6bd48c5caa1721f2b37bac3f7db550a49535d70`
+Linux AppImage SHA-256：`b99a4a1920029d237c15aaf575e957997a78119ffcbd3d7064c396742057e1e4`
 
-Linux Debian SHA-256：`99d219b99288a403b51bcd344053600da314cc6a62630e2f3ddd2f74f34fa16d`
+Linux Debian SHA-256：`67312ae006fb0c48719f56fe32a7fe7cba069db36ae477eb836e8aaa1c99e9ff`
 
-Linux 安裝：AppImage 下載後執行 `chmod +x LocalBrain_1.5.4_amd64.AppImage` 再啟動；Debian / Ubuntu 可執行 `sudo apt install ./LocalBrain_1.5.4_amd64.deb`。Linux 自動更新使用 AppImage，Debian 包供手動安裝。
+Linux 安裝：AppImage 下載後執行 `chmod +x LocalBrain_1.5.5_amd64.AppImage` 再啟動；Debian / Ubuntu 可執行 `sudo apt install ./LocalBrain_1.5.5_amd64.deb`。Linux 自動更新使用 AppImage，Debian 包供手動安裝。
 - 應用程式內可以直接檢查並安裝更新，更新包帶簽章校驗。
 
 ## 功能一覽
