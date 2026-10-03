@@ -10,6 +10,12 @@ A private AI workbench for your computer: download and manage local models, let 
 
 ## Download
 
+### Latest release candidate: 1.6.4-rc.1
+
+[Cross-platform candidate downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.6.4-rc.1) · [Step-by-step security tutorial](https://hyphentech.top/localbrain-network-security/)
+
+Choose a target, review the scope, confirm, and read the report. Local-model execution is the default; direct checks remain available, with maintenance collapsed. The Apple Silicon Mac package is installed and package verification and repeated production-tool checks passed. Native end-to-end acceptance of the new workflow remains blocked by a system window-capture error. Windows x64 and Linux x64 are built from the same source and update signatures are verified, but neither has native-device acceptance. Linux remains a preview without MLX/Splash. Download this candidate manually; it does not replace the stable automatic update below or remove older releases.
+
 **Linux is a recently added preview, not a stable supported platform.** Release 1.4.8 has no Linux installer; the available release history starts offering Linux x64 previews with 1.5.0 (2026-10-02), followed by 1.5.3 and 1.5.4. Download availability does not mean Linux feature migration or real-device model-runtime acceptance is complete. Read the limitations below before use.
 
 1.5.5 fixes repeated media queries, generation and output reads being incorrectly blocked by the agent workflow. Capability queries are read-only, and planning suggestions no longer gate execution. Configured media output folders can be read without expanding write or terminal permissions. Real repeated speech calls and the user's test-build trial passed; full video and music generation effects were not re-accepted in this round.
