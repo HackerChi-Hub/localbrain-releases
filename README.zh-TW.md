@@ -10,17 +10,17 @@
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.8/LocalBrain_1.6.8_aarch64.dmg)，已安裝及原版27B工具鏈實測；未蘋果公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.8/LocalBrain_1.6.8_x64-setup.exe)，同源CI建置與更新驗簽；未實機功能驗收 |
-| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.8/LocalBrain_1.6.8_amd64.AppImage) · [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.8/LocalBrain_1.6.8_amd64.deb)，預覽支援，未實機功能驗收 |
+| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.9/LocalBrain_1.6.9_aarch64.dmg)，已安裝及原版27B工具鏈實測；未蘋果公證 |
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.9/LocalBrain_1.6.9_x64-setup.exe)，同源CI建置與更新驗簽；未實機功能驗收 |
+| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.9/LocalBrain_1.6.9_amd64.AppImage) · [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.9/LocalBrain_1.6.9_amd64.deb)，預覽支援，未實機功能驗收 |
 
-[發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.6.8)。Mac拖入應用程式，Windows執行安裝程式；Linux AppImage先執行`chmod +x LocalBrain_1.6.8_amd64.AppImage`，Debian/Ubuntu執行`sudo apt install ./LocalBrain_1.6.8_amd64.deb`。更新包帶簽章，Linux更新使用AppImage。保留舊發行。
+[發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.6.9)。Mac拖入應用程式，Windows執行安裝程式；Linux AppImage先執行`chmod +x LocalBrain_1.6.9_amd64.AppImage`，Debian/Ubuntu執行`sudo apt install ./LocalBrain_1.6.9_amd64.deb`。更新包帶簽章，Linux更新使用AppImage。保留舊發行。
 
 ## 本版修正
 
 無效目標在批准前拒絕，執行時再次核對；報告提供真實分頁參數、下一頁請求與持久化去重證據數量；缺失修復欄位保持未知；漏洞庫最近成功準備狀態與離線掃描分開。共用機制不按模型名稱特判，不替模型改寫參數。
 
-Mac真實安裝版已完成範圍確認、原生批准、Juice Shop鏡像掃描與證據讀取。170條是元件匹配，不是已驗證可利用漏洞。模型仍可能誤解證據或給出未驗證升級建議，須核對原始報告。[驗收紀錄](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.6.8_VERIFICATION.md)。
+Mac真實安裝版已完成範圍確認、原生批准、Juice Shop鏡像掃描與證據讀取。170條是元件匹配，不是已驗證可利用漏洞。模型仍可能誤解證據或給出未驗證升級建議，須核對原始報告。[驗收紀錄](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.6.9_VERIFICATION.md)。
 
 ## 功能和操作
 
@@ -43,7 +43,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `fe9f5f1e4ba95ab4eb662ef978dde1effb32eec9135d693cd45bbc79a2a2fe6b` |
+| Mac DMG | `0fb3427d1331c342b2bbe668763c98f3b652a5b66a7d4162e8c21074f0ff8d6e` |
 | Windows安裝程式 | `ff71f6a28dd2e571bf45566436d2980711118b24d660f1f596e4aa747e46ef39` |
 | Linux AppImage | `81c1904a0df699cdfcaf55ce557723f19c61113ec0b70495d2ce02f59d75ffbf` |
 | Linux Debian包 | `fb0bc79e193cfb230812384755cc56a9c68b5a8a5d5cc4005d1c0882f7340a55` |
