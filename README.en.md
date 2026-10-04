@@ -6,21 +6,21 @@ A desktop workspace for local models, file tools and media generation. You choos
 
 [Website](https://hyphentech.top/localbrain) · [All releases](https://github.com/HackerChi-Hub/localbrain-releases/releases) · [Security tutorial in Chinese](https://hyphentech.top/localbrain-network-security/)
 
-## Latest downloads: 1.6.6
+## Latest downloads: 1.6.7
 
 | Platform | Package and acceptance |
 | --- | --- |
-| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_aarch64.dmg), installed and tested with the original 27B model; not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_x64-setup.exe), same-source CI build and updater signature verified; no native-device functional acceptance |
-| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_amd64.AppImage) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_amd64.deb), preview support without native-device acceptance |
+| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.7/LocalBrain_1.6.7_aarch64.dmg), installed and tested with the original 27B model; not Apple-notarized |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.7/LocalBrain_1.6.7_x64-setup.exe), same-source CI build and updater signature verified; no native-device functional acceptance |
+| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.7/LocalBrain_1.6.7_amd64.AppImage) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.7/LocalBrain_1.6.7_amd64.deb), preview support without native-device acceptance |
 
-[Release notes and verification files](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.6.6). Drag the Mac app into Applications or run the Windows installer. On Linux run `chmod +x LocalBrain_1.6.6_amd64.AppImage`, or `sudo apt install ./LocalBrain_1.6.6_amd64.deb` on Debian/Ubuntu. Updater artifacts are signed; Linux updates use AppImage. Older releases are retained.
+[Release notes and verification files](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.6.7). Drag the Mac app into Applications or run the Windows installer. On Linux run `chmod +x LocalBrain_1.6.7_amd64.AppImage`, or `sudo apt install ./LocalBrain_1.6.7_amd64.deb` on Debian/Ubuntu. Updater artifacts are signed; Linux updates use AppImage. Older releases are retained.
 
 ## Changes
 
 Invalid targets are rejected before approval and checked again at execution. Reports provide effective pagination arguments, complete next-page requests and persistent deduplicated evidence counts. Missing fixed-version fields remain unknown. Successful database preparation is recorded separately from offline scanning. Shared mechanisms do not branch on model names or rewrite model arguments.
 
-The installed Mac app completed native scope confirmation, tool approval, Juice Shop image scanning and evidence reading. The 170 records are component matches, not proven exploitable vulnerabilities. Models may still misinterpret evidence or recommend unverified upgrades; inspect the original report. [Acceptance record](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.6.6_VERIFICATION.md).
+The installed Mac app completed native scope confirmation, tool approval, Juice Shop image scanning and evidence reading. The 170 records are component matches, not proven exploitable vulnerabilities. Models may still misinterpret evidence or recommend unverified upgrades; inspect the original report. [Acceptance record](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.6.7_VERIFICATION.md).
 
 ## Features and usage
 
@@ -43,9 +43,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `bbbf05f11e9ff1269c55dbce354b54196d73f3dc6f903f6772382b5b3a185e0b` |
-| Windows installer | `cc0ef6217365596b3be93a3e55393bdf48d243b6e84cc040c7a5657d47ef700d` |
-| Linux AppImage | `868fda0c8cd6a513e4faded193d620d9c23d1fb3fea2d13e9dd916d25ea74661` |
-| Linux Debian | `a5194025da3db5c62c40f2124c8cc6f7f9e4ae1d4fda4155cd58255d37dad08a` |
+| Mac DMG | `ed61a9d5061fc79c71e6a70000ee6783d8871fbb29dfef57eadcb56dad369e0f` |
+| Windows installer | `ff71f6a28dd2e571bf45566436d2980711118b24d660f1f596e4aa747e46ef39` |
+| Linux AppImage | `3e91879ddb928f185dbfcde23ec1b57743937ed02f2862b3971aa3d0a42f2e42` |
+| Linux Debian | `29a2ba9315fc848a95eedad6a77c4e93f81ece390938df0d7c6f4b848178aca8` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.

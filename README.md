@@ -6,21 +6,21 @@
 
 [官网](https://hyphentech.top/localbrain) · [全部发行](https://github.com/HackerChi-Hub/localbrain-releases/releases) · [安全检查实测教程](https://hyphentech.top/localbrain-network-security/)
 
-## 最新下载：1.6.6
+## 最新下载：1.6.7
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_aarch64.dmg)，已本机安装及原版27B工具链实测；未苹果公证 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_x64-setup.exe)，同源CI构建、更新验签；未真机功能验收 |
-| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_amd64.AppImage) · [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_amd64.deb)，预览支持，未真机功能验收 |
+| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.7/LocalBrain_1.6.7_aarch64.dmg)，已本机安装及原版27B工具链实测；未苹果公证 |
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.7/LocalBrain_1.6.7_x64-setup.exe)，同源CI构建、更新验签；未真机功能验收 |
+| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.7/LocalBrain_1.6.7_amd64.AppImage) · [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.7/LocalBrain_1.6.7_amd64.deb)，预览支持，未真机功能验收 |
 
-[发行说明及全部校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.6.6)。Mac拖入应用程序，Windows运行安装程序；Linux AppImage先执行`chmod +x LocalBrain_1.6.6_amd64.AppImage`，Debian/Ubuntu执行`sudo apt install ./LocalBrain_1.6.6_amd64.deb`。更新包带签名，Linux自动更新使用AppImage。旧发行保留。
+[发行说明及全部校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.6.7)。Mac拖入应用程序，Windows运行安装程序；Linux AppImage先执行`chmod +x LocalBrain_1.6.7_amd64.AppImage`，Debian/Ubuntu执行`sudo apt install ./LocalBrain_1.6.7_amd64.deb`。更新包带签名，Linux自动更新使用AppImage。旧发行保留。
 
 ## 本版修正
 
 无效安全目标在批准前拒绝，执行时再次核对；报告返回实际分页参数、下一页请求、持久化去重证据数量；缺失修复字段保持未知；漏洞库最近成功准备状态与离线扫描分开。共同机制不按模型名称特判，不替模型改写参数。
 
-Mac真实安装版已完成范围确认、原生工具批准、Juice Shop镜像扫描与证据读取。170条是组件匹配，不是已验证可利用漏洞。模型仍可能误解证据或给出未验证升级建议，须核对原始报告。[验收记录](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.6.6_VERIFICATION.md)。
+Mac真实安装版已完成范围确认、原生工具批准、Juice Shop镜像扫描与证据读取。170条是组件匹配，不是已验证可利用漏洞。模型仍可能误解证据或给出未验证升级建议，须核对原始报告。[验收记录](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.6.7_VERIFICATION.md)。
 
 ## 功能和使用
 
@@ -43,9 +43,9 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `bbbf05f11e9ff1269c55dbce354b54196d73f3dc6f903f6772382b5b3a185e0b` |
-| Windows安装程序 | `cc0ef6217365596b3be93a3e55393bdf48d243b6e84cc040c7a5657d47ef700d` |
-| Linux AppImage | `868fda0c8cd6a513e4faded193d620d9c23d1fb3fea2d13e9dd916d25ea74661` |
-| Linux Debian包 | `a5194025da3db5c62c40f2124c8cc6f7f9e4ae1d4fda4155cd58255d37dad08a` |
+| Mac DMG | `ed61a9d5061fc79c71e6a70000ee6783d8871fbb29dfef57eadcb56dad369e0f` |
+| Windows安装程序 | `ff71f6a28dd2e571bf45566436d2980711118b24d660f1f596e4aa747e46ef39` |
+| Linux AppImage | `3e91879ddb928f185dbfcde23ec1b57743937ed02f2862b3971aa3d0a42f2e42` |
+| Linux Debian包 | `29a2ba9315fc848a95eedad6a77c4e93f81ece390938df0d7c6f4b848178aca8` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
