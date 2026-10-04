@@ -45,7 +45,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | --- | --- |
 | Mac DMG | `fe9f5f1e4ba95ab4eb662ef978dde1effb32eec9135d693cd45bbc79a2a2fe6b` |
 | Windows installer | `ed03710df02b3b5ac1863f04d601c9ffddf98ef52302565755e1484d5a93ea52` |
-| Linux AppImage | `3e91879ddb928f185dbfcde23ec1b57743937ed02f2862b3971aa3d0a42f2e42` |
-| Linux Debian | `29a2ba9315fc848a95eedad6a77c4e93f81ece390938df0d7c6f4b848178aca8` |
+| Linux AppImage | `81c1904a0df699cdfcaf55ce557723f19c61113ec0b70495d2ce02f59d75ffbf` |
+| Linux Debian | `fb0bc79e193cfb230812384755cc56a9c68b5a8a5d5cc4005d1c0882f7340a55` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
