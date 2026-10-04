@@ -45,7 +45,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | --- | --- |
 | Mac DMG | `0fb3427d1331c342b2bbe668763c98f3b652a5b66a7d4162e8c21074f0ff8d6e` |
 | Windows安裝程式 | `ff71f6a28dd2e571bf45566436d2980711118b24d660f1f596e4aa747e46ef39` |
-| Linux AppImage | `81c1904a0df699cdfcaf55ce557723f19c61113ec0b70495d2ce02f59d75ffbf` |
-| Linux Debian包 | `fb0bc79e193cfb230812384755cc56a9c68b5a8a5d5cc4005d1c0882f7340a55` |
+| Linux AppImage | `4f97d49f724cc4cbf912bbcc92e1596e6c2607e7e961f100df528725d88e3db7` |
+| Linux Debian包 | `2cc8bd8da1ea328c53b9782060cb5bc118524130e916755bf1479c50ecf409f8` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
