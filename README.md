@@ -2,140 +2,50 @@
 
 **简体中文** · [繁體中文](README.zh-TW.md) · [English](README.en.md)
 
-把电脑变成私有 AI 工作台：下载和管理本地模型，在对话里让模型读写文件、查资料、生成文档与多媒体，也能把这些本地能力接给 Claude Code、OpenCode、Codex 等客户端使用。
+本地模型、文件工具与媒体工作台放进同一个桌面应用。你选择模型和授权范围，模型规划任务、调用工具，程序保留真实执行回执。
 
-[官网](https://hyphentech.top/localbrain) · [全部版本](https://github.com/HackerChi-Hub/localbrain-releases/releases)
+[官网](https://hyphentech.top/localbrain) · [全部发行](https://github.com/HackerChi-Hub/localbrain-releases/releases) · [安全检查实测教程](https://hyphentech.top/localbrain-network-security/)
 
-![方寸智匣主页：本机硬件、运行中的服务与本地模型](screenshots/zh-CN/home.png)
+## 最新下载：1.6.6
 
-## 下载
+| 平台 | 安装包与状态 |
+| --- | --- |
+| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_aarch64.dmg)，已本机安装及原版27B工具链实测；未苹果公证 |
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_x64-setup.exe)，同源CI构建、更新验签；未真机功能验收 |
+| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_amd64.AppImage) · [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_amd64.deb)，预览支持，未真机功能验收 |
 
-### 最新候选版：1.6.4-rc.1
+[发行说明及全部校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.6.6)。Mac拖入应用程序，Windows运行安装程序；Linux AppImage先执行`chmod +x LocalBrain_1.6.6_amd64.AppImage`，Debian/Ubuntu执行`sudo apt install ./LocalBrain_1.6.6_amd64.deb`。更新包带签名，Linux自动更新使用AppImage。旧发行保留。
 
-[全平台候选下载](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.6.4-rc.1) · [安全检查详细教程](https://hyphentech.top/localbrain-network-security/)
+## 本版修正
 
-安全检查改为选择对象、核对范围、确认开始和查看报告；默认交给本地模型，也可直接检查，环境维护默认折叠。Mac Apple Silicon 已安装，包校验与生产安全工具连续检查通过；新版原生完整流程因系统窗口捕获异常尚待补验。Windows x64、Linux x64 同源构建与更新验签通过，没有真机验收；Linux 仍为预览支持，不支持 MLX/Splash。候选版手动下载，不替换下方正式自动更新，不删除旧发行。
+无效安全目标在批准前拒绝，执行时再次核对；报告返回实际分页参数、下一页请求、持久化去重证据数量；缺失修复字段保持未知；漏洞库最近成功准备状态与离线扫描分开。共同机制不按模型名称特判，不替模型改写参数。
 
-**Linux 为近期新增的预览包，不是正式支持平台。** 1.4.8 没有 Linux 安装包；现有发行记录中从 1.5.0（2026-10-02）开始提供 Linux x64 预览包，1.5.3、1.5.4 延续打包。可下载不等于已完成 Linux 功能移植或真实设备模型运行验收，请先阅读下方限制。
+Mac真实安装版已完成范围确认、原生工具批准、Juice Shop镜像扫描与证据读取。170条是组件匹配，不是已验证可利用漏洞。模型仍可能误解证据或给出未验证升级建议，须核对原始报告。[验收记录](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.6.6_VERIFICATION.md)。
 
-1.5.5：修复媒体第二次查询、生成及产物读取被代理流程误拦的问题。能力查询按只读操作处理，规划建议不再作为执行前置门槛；允许读取已配置媒体产物目录，但不扩大写入或终端权限。真实语音连续调用与用户测试版试用通过；视频、音乐的完整生成效果本轮未重新验收。
+## 功能和使用
 
-[下载 Mac 1.5.9](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.9/LocalBrain_1.5.9_aarch64.dmg) · [Windows 1.5.9 下载页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.5.9)
+本地模型下载、导入、启停；流式对话、附件、思考控制、硬件感知上下文预算与任务恢复；已授权文件、项目构建测试、文档和网页工具；已集成模型的语音、图片、视频、音乐工作台；MCP、本地模型接口、存储管理和三语界面。媒体详细参数依模型能力，不保证所有模型支持笑声、精确停顿或多参考图。
 
-Mac 安装包 SHA-256：`8b2a39a5b89ba184e1584b6fb44f5f680950d147a63a416b621ac0a6c39a0dbb`
+1. 启动支持工具调用的模型，进入设置的网络安全入口。
+2. 选择内置练习靶场、自己的主机或服务、自己的容器。
+3. 选择目标和模型检查／直接检查，核对范围并确认。
+4. 环境自动准备，模型以原生批准调用工具并读取证据；维护默认折叠。
 
-- **Mac：1.5.9（正式版）**，适用于 Apple Silicon。1.4 系列新增「存储与清理」：生成的文件和缓存都能指定位置（包括外置盘）并彻底清理；自动收敛由程序后台定时执行，窗口隐藏时也照常清理。1.4.3 补齐了英文与繁体中文界面里残留的简体中文；1.4.4 让发现页的「使用已有」先核对所选文件夹里是不是这个模型，主页会列出指向已不存在目录的失效登记，并逐条审校了约 1400 条英文界面文字；1.4.5 新增「赞助」入口，侧栏和设置里随时能看到微信赞助码，任务完成后偶尔出现一张不打扰的邀请卡（每天最多一次，可关闭）；1.4.6 起生成图片、视频、音频和产出文档也算一次任务，邀请卡要等生成窗口关上才出现。1.4.7 起文档能直接生成 Markdown、HTML、TXT、RTF、ODT、EPUB，内容先清洗再写成文件；新增「访问网络设备」（HTTP + SSH，默认关）。1.4.8 新增第二个本地视频引擎 LTX-2.5：文字、首帧、首尾帧生成带同步立体声的视频，台词写进引号里会被念出来，时长 1～30 秒（单次 10 秒，更长的自动接力）；发现页一键下载 43.4 GB，国内选 ModelScope 直连。
-- **1.4.9 新增**：Swift 1.5 的 Splash 社区转换版（约 17.4 GB）；LTX-2.5 下载可选择 4bit（27.2 GB）、8bit（43.4 GB）或 BF16（71 GB），各档独立识别安装状态；Splash 安装失败保留受限长度的具体诊断。
-- **Windows：1.5.9**，已由 GitHub Actions 构建并发布，更新包带签名校验。
-- **Linux x64：1.5.9 预览版**：[AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.9/LocalBrain_1.5.9_amd64.AppImage) · [Debian 安装包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.9/LocalBrain_1.5.9_amd64.deb)。当前未接入受管 llama.cpp / Prism 运行时下载，不支持 MLX / Splash；构建和包校验通过不代表已完成 Linux 模型运行验收。
-- 应用内可以直接检查并安装更新，更新包带签名校验。
+只检查自己拥有或明确获授权目标。主机授权绑定实际地址和端口，不扩展至其他目标；主要覆盖TCP、明文HTTP及限定泄露规则，不是无限制漏洞扫描或自动利用平台。项目工作目录限制不等于系统沙箱，镜像审计不等于运行中应用的完整评估。
 
-SHA-256（Windows 安装包）：`36f7e9511ee284cf3b0d24bf0a4c0043ae1e48064d2b749cfd96fb2ffce9f533`
+## 平台与隐私
 
-SHA-256（Linux AppImage）：`7e317fdd05c24b36494982a97258dbeae3e7904218afe63beaf67d8e72a5ac2b`
+Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配llama.cpp/Prism，不支持MLX/Splash。Linux近期新增预览，受管llama.cpp/Prism下载未完整接入，不支持MLX/Splash。构建成功不代替真机验收。
 
-SHA-256（Linux Debian 包）：`b5279a83d5d931b6c022c368b41de5e8e97a3553bc365c3681e3fd5442f32e9d`
+本地推理不要求对话上传云端；下载、依赖、更新、网页与外部服务仍可能联网。应用不捆绑模型权重，模型许可证独立。
 
-Linux 安装：AppImage 下载后执行 `chmod +x LocalBrain_1.5.9_amd64.AppImage` 再启动；Debian / Ubuntu 可执行 `sudo apt install ./LocalBrain_1.5.9_amd64.deb`。Linux 自动更新使用 AppImage，Debian 包为手动安装方式。
+## SHA-256
 
-## 功能一览
+| 文件 | 散列 |
+| --- | --- |
+| Mac DMG | `bbbf05f11e9ff1269c55dbce354b54196d73f3dc6f903f6772382b5b3a185e0b` |
+| Windows安装程序 | `cc0ef6217365596b3be93a3e55393bdf48d243b6e84cc040c7a5657d47ef700d` |
+| Linux AppImage | `868fda0c8cd6a513e4faded193d620d9c23d1fb3fea2d13e9dd916d25ea74661` |
+| Linux Debian包 | `a5194025da3db5c62c40f2124c8cc6f7f9e4ae1d4fda4155cd58255d37dad08a` |
 
-### 本机总览：看得见的内存账
-
-主页一屏说清三件事：这台机器是什么配置、现在谁在占内存、还能再开什么。
-
-- **硬件与内存**：芯片、统一内存、可用磁盘、系统版本；内存条把占用拆成「系统」和「AI 模型」两段，剩余多少直接写出来。
-- **运行中的服务**：每个后端标明预计占用的内存，随时停止。多个模型抢内存时，由仲裁器按剩余内存决定能不能开。
-- **语言模型**：MLX、llama.cpp（GGUF）和 Splash 三种引擎用同一套启停方式。Splash 模型自带草稿模型做投机解码，能看图的模型会标出来。
-- **多媒体后端**：语音转写、语音合成（含声音克隆）、图像生成、图像编辑、视频生成、音乐生成，各自按需启动；空闲一段时间或内存吃紧时自动释放。
-
-### 发现模型：下载之前就知道能不能跑
-
-![发现页：模型卡片写明能力、官方基准、量化档位与内存需求](screenshots/zh-CN/discover.png)
-
-- **精选目录**：40 多个条目，覆盖语言、视觉、语音、图像、视频和音乐模型，按加入时间排列。每张卡片写明能力标签、官方基准的原始数字和出处、各量化档位的体积，以及**按本机算出来的**最低和建议内存。
-- **许可证提前说**：禁止商用这类比通常更严的限制，显示在下载按钮之前，并附原文链接。
-- **下载源可选**：ModelScope、HF-Mirror 与 Hugging Face 官方，一键测速选最快的源。
-- **挂载已有模型**：选中已经下载好的模型目录，自动识别引擎、类别与上下文能力，不复制权重、不改动源目录。
-
-### 对话与任务：每一步都摆在明面上
-
-![对话页：模型调用工具、自检失败后修改、再自检通过](screenshots/zh-CN/chat.png)
-
-让模型处理一个具体任务时，它调用工具一步步做（复杂任务会先列计划），过程全部展示：
-
-- **工具**：读取和列出本地文件、联网检索网页、写入和逐处编辑文件、运行网页自检、处理 Word / Excel / PowerPoint / PDF。运行项目命令前每次都会弹窗确认，并说明工作目录限制不等于系统沙箱。
-- **失败不藏**：同一工具的重复调用合并显示（如「页面自检 ×2 · 1 次失败」），失败原因原样保留。上图里模型第一次自检拿到页面报错，改了一行判空，再自检通过。
-- **自检**：生成的网页会在无头浏览器里检查画布是否存在、动画帧是否推进、控制台有没有报错。
-- **用时分账**：任务结束给出总用时、轮数、工具次数和失败次数，并把时间拆成预填、思考、输出、工具四段。
-- **上下文管理**：按模型窗口和本机内存自动决定单次输出上限与带入的历史条数；超出预算的早期消息折叠成摘要，不会无限变长。
-
-截图中的对话是演示内容；硬件、模型、体积与目录占用取自作者的 Mac（M5 Pro · 64 GB）。
-
-### 存储与清理：不留隐形占用
-
-![设置 · 存储与清理：产物目录、缓存目录与各类占用](screenshots/zh-CN/storage.png)
-
-- **两个目录都能换位置**：「产物目录」放生成的文档、图片、配音、视频、音乐和网络素材，「缓存目录」放日志、任务检查点、检查截图和临时文件。都可以改到任意位置，包括外置盘。
-- **换位置自动搬家**：同一块盘直接移动；跨盘先复制、核对无误，再把旧的移进废纸篓。
-- **按类别看占用、按类别清理**：默认进废纸篓，也可以选择彻底删除；进废纸篓的文件夹带上来源目录名，一眼认得出。
-- **自动收敛**：日志总量、检查点天数、临时文件天数都有阈值，程序后台定时执行，窗口没打开也照常清理。
-
-### 接入其它 AI 客户端
-
-![集成页：本地 MCP 工具与本地模型接口](screenshots/zh-CN/integrations.png)
-
-- **本地 MCP 工具**：把文档处理、语音转写、语音合成、图像、视频和联网研究作为工具，一键写入 Claude Code、OpenCode、Codex、DeepSeek Harness 的配置。只增改 `localbrain-*` 这几项，不动你的模型设置和其它 MCP；需要时一键恢复到写入前的原样。
-- **本地模型当脑**：OpenCode、ScreenLex、DeepSeek Harness 可以通过本机的 OpenAI 兼容接口（`127.0.0.1:11434/v1`）直接使用本地模型，全程本地、不需要 API key。
-- **自检**：检查 MCP 协议与工具发现是否正常，不加载模型、不占额外内存。
-
-### 其它
-
-- **提示词模板**：图像 8 个（人像、商品、透明底、局部编辑、换场景、人物＋商品合成、中文海报、中英混排）、视频 5 个（风景运镜、生活特写、首帧、首尾帧、多参考图），标出要改哪里、需要几张参考图和本机参考耗时。
-- **文档工作台**：DocFactory 读取、创建、编辑 DOCX、PPTX、XLSX、PDF，支持模板填充与预览检查。
-- **三种界面语言**：简体中文、繁体中文、英文，也可以跟随系统；只翻译界面，不改对话、模型回答、代码和文件路径。
-- **可扩展**：可以接入你信任的本地 stdio MCP 服务器；四种界面主题。
-
-## 平台差异
-
-| 功能 | Apple Silicon Mac | Windows x64 |
-|---|---|---|
-| 语言模型 | MLX / llama.cpp（Metal） / Splash | llama.cpp（CUDA / CPU） |
-| 对话、网页及文档工具 | 支持 | 支持 |
-| 图像生成（torch / diffusers） | 支持（MPS） | 支持（CUDA），运行环境约 3 GB |
-| 语音 / 视频 / 音乐后端 | 已支持的模型可用 | 不支持，隐藏相关入口 |
-| 存储与清理 | 1.4.0 起 | 1.4.4 起 |
-
-识别到模型文件不代表支持其架构；运行效果取决于模型、量化、运行时和硬件。
-
-## 开始使用
-
-1. 下载对应平台的安装包。Mac 把应用拖进「应用程序」；Windows 运行安装程序。
-2. 在「设置」安装所需的运行环境，选择界面语言、模型目录和下载来源。
-3. 在「发现」下载合适的模型，或挂载已有的模型目录。
-4. 在「主页」启动语言模型，到「对话」使用；通过「集成」把本地能力接给其它客户端。
-
-## 隐私与网络
-
-推理在本机进行，对话只保存在这台电脑上。首次下载模型、安装运行环境、检查更新和联网检索需要网络；只有你明确加入的外部模型目录才会被读取；切换界面语言不会把对话发给任何翻译服务。
-
-## 开发
-
-本仓库只提供安装包和使用说明。以下命令面向已获得源码的开发者，不能在本下载仓库直接执行。
-
-React / TypeScript / Vite 前端，Tauri / Rust 桌面层。
-
-```bash
-npm install
-npm test
-npm run build
-npm run tauri:dev
-```
-
-Mac：`npm run package`。Windows：在 Windows 上运行 `npm run package:win`。发布前检查安装包、签名、线上下载和分平台更新清单。
-
-词典位于 `src/locales/`，只处理显示文案，不修改提示词、工具参数或用户内容。
-
-## 许可
-
-专有软件。模型遵守各自许可；应用下载不包含模型权重。© HyphenTech · 黑粉科技。
+本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。

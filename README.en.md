@@ -2,140 +2,50 @@
 
 [简体中文](README.md) · [繁體中文](README.zh-TW.md) · **English**
 
-A private AI workbench for your computer: download and manage local models, let a model read and write files, research the web and produce documents and media in a chat, and hand these local abilities to clients such as Claude Code, OpenCode and Codex.
+A desktop workspace for local models, file tools and media generation. You choose the model and authorize the scope; the model plans and calls tools, while the application preserves real execution receipts.
 
-[Website](https://hyphentech.top/localbrain) · [All releases](https://github.com/HackerChi-Hub/localbrain-releases/releases)
+[Website](https://hyphentech.top/localbrain) · [All releases](https://github.com/HackerChi-Hub/localbrain-releases/releases) · [Security tutorial in Chinese](https://hyphentech.top/localbrain-network-security/)
 
-![LocalBrain home: this machine's hardware, running services and local models](screenshots/en/home.png)
+## Latest downloads: 1.6.6
 
-## Download
+| Platform | Package and acceptance |
+| --- | --- |
+| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_aarch64.dmg), installed and tested with the original 27B model; not Apple-notarized |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_x64-setup.exe), same-source CI build and updater signature verified; no native-device functional acceptance |
+| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_amd64.AppImage) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.6/LocalBrain_1.6.6_amd64.deb), preview support without native-device acceptance |
 
-### Latest release candidate: 1.6.4-rc.1
+[Release notes and verification files](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.6.6). Drag the Mac app into Applications or run the Windows installer. On Linux run `chmod +x LocalBrain_1.6.6_amd64.AppImage`, or `sudo apt install ./LocalBrain_1.6.6_amd64.deb` on Debian/Ubuntu. Updater artifacts are signed; Linux updates use AppImage. Older releases are retained.
 
-[Cross-platform candidate downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.6.4-rc.1) · [Step-by-step security tutorial](https://hyphentech.top/localbrain-network-security/)
+## Changes
 
-Choose a target, review the scope, confirm, and read the report. Local-model execution is the default; direct checks remain available, with maintenance collapsed. The Apple Silicon Mac package is installed and package verification and repeated production-tool checks passed. Native end-to-end acceptance of the new workflow remains blocked by a system window-capture error. Windows x64 and Linux x64 are built from the same source and update signatures are verified, but neither has native-device acceptance. Linux remains a preview without MLX/Splash. Download this candidate manually; it does not replace the stable automatic update below or remove older releases.
+Invalid targets are rejected before approval and checked again at execution. Reports provide effective pagination arguments, complete next-page requests and persistent deduplicated evidence counts. Missing fixed-version fields remain unknown. Successful database preparation is recorded separately from offline scanning. Shared mechanisms do not branch on model names or rewrite model arguments.
 
-**Linux is a recently added preview, not a stable supported platform.** Release 1.4.8 has no Linux installer; the available release history starts offering Linux x64 previews with 1.5.0 (2026-10-02), followed by 1.5.3 and 1.5.4. Download availability does not mean Linux feature migration or real-device model-runtime acceptance is complete. Read the limitations below before use.
+The installed Mac app completed native scope confirmation, tool approval, Juice Shop image scanning and evidence reading. The 170 records are component matches, not proven exploitable vulnerabilities. Models may still misinterpret evidence or recommend unverified upgrades; inspect the original report. [Acceptance record](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.6.6_VERIFICATION.md).
 
-1.5.5 fixes repeated media queries, generation and output reads being incorrectly blocked by the agent workflow. Capability queries are read-only, and planning suggestions no longer gate execution. Configured media output folders can be read without expanding write or terminal permissions. Real repeated speech calls and the user's test-build trial passed; full video and music generation effects were not re-accepted in this round.
+## Features and usage
 
-[Download Mac 1.5.9](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.9/LocalBrain_1.5.9_aarch64.dmg) · [Windows 1.5.9 downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.5.9)
+Local model downloads/import/start/stop; streaming chat, attachments, reasoning controls, hardware-aware context budgets and task recovery; authorized files, project tests, documents and web tools; integrated media workbenches, MCP, local model APIs, storage management and three UI languages. Media controls depend on the model; laughter, precise pauses and multiple reference images are not universal capabilities.
 
-Mac installer SHA-256: `8b2a39a5b89ba184e1584b6fb44f5f680950d147a63a416b621ac0a6c39a0dbb`
+1. Start a tool-capable model and open network-security settings.
+2. Select a built-in lab, your host/service or your container.
+3. Select a target and model execution or a direct check; review and confirm the scope.
+4. The environment is prepared automatically. Model tools use native approval and return evidence; maintenance is collapsed by default.
 
-- **Mac: 1.5.9 (stable)** for Apple Silicon. The 1.4 series adds **Storage & cleanup**: generated files and caches can live anywhere (including an external drive) and be cleaned out completely; automatic cleanup runs on a background timer, so it also happens while the window is hidden. 1.4.3 removes the Simplified Chinese that was still showing in the English and Traditional Chinese interfaces. 1.4.4 makes “Import existing” on Discover check that the chosen folder really holds that model, lists broken registrations that point at folders that no longer exist on Home, and reviews about 1,400 English interface strings one by one. 1.4.5 adds a “Sponsor” entry in the sidebar and Settings that shows the WeChat sponsor code (WeChat Pay only); the English interface never shows an invitation on its own. From 1.4.6, generated images, video, audio and produced documents also count as completed tasks, and the invitation waits until the generation window is closed. 1.4.7 lets documents come out as Markdown, HTML, TXT, RTF, ODT and EPUB, with the content cleaned before it is written, and adds “Network access” (HTTP + SSH, off by default). 1.4.8 adds a second local video engine, LTX-2.5: text, first-frame and first-and-last-frame videos with synchronized stereo sound, lines written in quotes are spoken, 1–30 seconds (10 seconds per pass, longer clips chained automatically); a one-click 43.4 GB download on Discover, with ModelScope as the direct source from mainland China.
-- **New in 1.4.9:** the Swift 1.5 community Splash conversion (about 17.4 GB); selectable LTX-2.5 downloads in 4-bit (27.2 GB), 8-bit (43.4 GB) and BF16 (71 GB), with independent installation detection; bounded diagnostic details for Splash installation failures.
-- **Windows: 1.5.9**, built and published through GitHub Actions, with signed updater artifacts.
-- **Linux x64: 1.5.9 preview**: [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.9/LocalBrain_1.5.9_amd64.AppImage) · [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.5.9/LocalBrain_1.5.9_amd64.deb). Managed llama.cpp / Prism runtime downloads are not wired on Linux; MLX / Splash are unavailable. Build and package checks are not model-runtime acceptance tests.
+Only inspect owned or explicitly authorized targets. Host grants bind to the reviewed address and ports, without scope expansion. Current coverage centers on TCP, plaintext HTTP and restricted exposure checks, not unrestricted scanning or exploitation. A working-directory restriction is not an OS sandbox, and image auditing is not a full assessment of a running application.
 
-Windows installer SHA-256: `36f7e9511ee284cf3b0d24bf0a4c0043ae1e48064d2b749cfd96fb2ffce9f533`
+## Platforms and privacy
 
-Linux AppImage SHA-256: `7e317fdd05c24b36494982a97258dbeae3e7904218afe63beaf67d8e72a5ac2b`
+Mac supports integrated MLX, Metal llama.cpp, Splash and Prism. Windows uses adapted llama.cpp/Prism, without MLX/Splash. Linux is a recent preview: managed llama.cpp/Prism downloads are not fully wired, and MLX/Splash are unavailable. Build success does not establish native-device acceptance.
 
-Linux Debian SHA-256: `b5279a83d5d931b6c022c368b41de5e8e97a3553bc365c3681e3fd5442f32e9d`
+Local inference does not require sending conversations to the cloud; downloads, dependencies, updates, web tools and external services can use the network. Model weights are not bundled and retain separate licenses.
 
-On Linux, run `chmod +x LocalBrain_1.5.9_amd64.AppImage` before launching the AppImage. On Debian / Ubuntu, use `sudo apt install ./LocalBrain_1.5.9_amd64.deb`. Automatic updates use AppImage; the Debian package is for manual installation.
-- Updates can be checked and installed from inside the app; update packages are signature-checked.
+## SHA-256
 
-## What it does
+| File | Hash |
+| --- | --- |
+| Mac DMG | `bbbf05f11e9ff1269c55dbce354b54196d73f3dc6f903f6772382b5b3a185e0b` |
+| Windows installer | `cc0ef6217365596b3be93a3e55393bdf48d243b6e84cc040c7a5657d47ef700d` |
+| Linux AppImage | `868fda0c8cd6a513e4faded193d620d9c23d1fb3fea2d13e9dd916d25ea74661` |
+| Linux Debian | `a5194025da3db5c62c40f2124c8cc6f7f9e4ae1d4fda4155cd58255d37dad08a` |
 
-### This machine at a glance: a memory budget you can see
-
-The home screen answers three questions: what this machine is, what is using memory right now, and what else you can start.
-
-- **Hardware and memory**: chip, unified memory, free disk and OS version; the memory bar splits usage into "System" and "AI models" and states what is left.
-- **Running services**: each backend shows its expected memory use and can be stopped at any time. When models compete for memory, an arbiter decides from the free memory whether another one may start.
-- **Language models**: MLX, llama.cpp (GGUF) and Splash share one way of starting and stopping. Splash models bring their own draft model for speculative decoding; models that can read images are marked.
-- **Media backends**: speech transcription, speech synthesis (with voice cloning), image generation, image editing, video generation and music generation, each started on demand and released automatically after idling or under memory pressure.
-
-### Discover models: know whether it will run before you download
-
-![Discover: each model card lists abilities, official benchmarks, quantizations and memory needs](screenshots/en/discover.png)
-
-- **Curated catalog**: more than 40 entries across language, vision, speech, image, video and music models, newest first. Each card lists ability tags, the publisher's benchmark numbers with their source, the size of each quantization, and the minimum and recommended memory **worked out for this machine**.
-- **Licenses up front**: restrictions stricter than usual, such as no commercial use, appear before the download button with a link to the original text.
-- **Choice of download source**: ModelScope, HF-Mirror or Hugging Face; one click measures them and picks the fastest.
-- **Mount models you already have**: point at a downloaded model folder and LocalBrain detects the engine, category and context ability, without copying weights or touching the folder.
-
-### Chat and tasks: every step in plain view
-
-![Chat: the model calls tools, fails a self-check, fixes one line and passes](screenshots/en/chat.png)
-
-When a model works on a concrete task, it calls tools step by step (complex tasks start with a plan), and the whole process is shown:
-
-- **Tools**: read and list local files, search and read the web, write files and make targeted edits, run a web page self-check, and work with Word / Excel / PowerPoint / PDF. Before running a project command it asks every time, and says plainly that the working-directory limit is not a system sandbox.
-- **Failures stay visible**: repeated calls to the same tool are grouped (for example "Page self-check ×2 · 1 failed") and the failure reason is kept. Above, the model's first self-check returned a page error; it added a null check and the next self-check passed.
-- **Self-check**: generated web pages are checked in a headless browser for a canvas, advancing animation frames and console errors.
-- **Where the time went**: each task ends with total time, rounds, tool calls and failures, with time split into prefill, reasoning, output and tools.
-- **Context management**: the output limit and how much history to carry are set from the model's window and this machine's memory; older messages beyond the budget are folded into a summary, so a conversation does not grow without bound.
-
-The conversation in the screenshots is demo content; hardware, models, sizes and folder usage come from the author's Mac (M5 Pro · 64 GB).
-
-### Storage & cleanup: no hidden usage
-
-![Settings · Storage & cleanup: output folder, cache folder and usage per category](screenshots/en/storage.png)
-
-- **Both folders can move**: the output folder holds generated documents, images, speech, video, music and web downloads; the cache folder holds logs, task checkpoints, check screenshots and temporary files. Either can live anywhere, including an external drive.
-- **Moving takes the files along**: on the same drive they are moved directly; across drives they are copied and verified first, then the old copies go to the Trash.
-- **Usage and cleanup per category**: to the Trash by default, or deleted permanently if you choose; folders sent to the Trash are named after where they came from.
-- **Automatic cleanup**: total log size, checkpoint age and temporary file age each have a threshold; the app applies them on a background timer, window open or not.
-
-### Connect other AI clients
-
-![Integrations: local MCP tools and the local model endpoint](screenshots/en/integrations.png)
-
-- **Local MCP tools**: document processing, speech transcription, speech synthesis, images, video and web research as tools, written into the configuration of Claude Code, OpenCode, Codex or DeepSeek Harness with one click. Only the `localbrain-*` entries are added or updated; your model settings and other MCP servers stay as they are, and one click restores the configuration from before.
-- **Local models as the brain**: OpenCode, ScreenLex and DeepSeek Harness can use local models directly through the OpenAI-compatible endpoint on this machine (`127.0.0.1:11434/v1`), fully local, no API key.
-- **Self-test**: checks that the MCP protocol and tool discovery work, without loading a model or using extra memory.
-
-### Also
-
-- **Prompt templates**: 8 for images (portrait, product, transparent background, local edit, scene swap, person + product, Chinese poster, mixed Chinese/English) and 5 for video (landscape camera move, everyday close-up, first frame, first and last frame, multiple references), each marking what to change, how many reference images it needs and the reference time on this machine.
-- **Document workbench**: DocFactory reads, creates and edits DOCX, PPTX, XLSX and PDF, with template filling and preview checks.
-- **Three interface languages**: Simplified Chinese, Traditional Chinese and English, or follow the system; only the interface is translated, never your conversations, model answers, code or file paths.
-- **Extensible**: add local stdio MCP servers you trust; four interface themes.
-
-## Platform differences
-
-| Feature | Apple Silicon Mac | Windows x64 |
-|---|---|---|
-| Language models | MLX / llama.cpp (Metal) / Splash | llama.cpp (CUDA / CPU) |
-| Chat, web and document tools | Supported | Supported |
-| Image generation (torch / diffusers) | Supported (MPS) | Supported (CUDA), runtime about 3 GB |
-| Speech / video / music backends | Supported models only | Not supported; entries hidden |
-| Storage & cleanup | From 1.4.0 | From 1.4.4 |
-
-Finding model files does not mean their architecture is supported; results depend on the model, quantization, runtime and hardware.
-
-## Getting started
-
-1. Download the installer for your platform. On Mac, drag the app into Applications; on Windows, run the installer.
-2. In Settings, install the runtimes you need and choose the interface language, model folder and download source.
-3. In Discover, download a suitable model or mount a model folder you already have.
-4. Start a language model on Home and use it in Chat; connect other clients under Integrations.
-
-## Privacy and network
-
-Inference runs on this machine and conversations are saved only on this computer. Downloading models, installing runtimes, checking for updates and web research need the network; only external model folders you add yourself are read; switching the interface language never sends conversations to a translation service.
-
-## Development
-
-This repository only hosts installers and documentation. The commands below are for developers with access to the source; they do not run in this download repository.
-
-React / TypeScript / Vite frontend with a Tauri / Rust desktop layer.
-
-```bash
-npm install
-npm test
-npm run build
-npm run tauri:dev
-```
-
-Mac: `npm run package`. Windows: run `npm run package:win` on Windows. Before releasing, check the installers, signatures, live downloads and per-platform update manifests.
-
-Dictionaries live in `src/locales/` and cover display text only; they never change prompts, tool arguments or user content.
-
-## License
-
-Proprietary software. Models follow their own licenses; the app download contains no model weights. © HyphenTech.
+This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
