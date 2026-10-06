@@ -6,21 +6,21 @@ A desktop workspace for local models, file tools and media generation. You choos
 
 [Website](https://hyphentech.top/localbrain) · [All releases](https://github.com/HackerChi-Hub/localbrain-releases/releases) · [Security tutorial in Chinese](https://hyphentech.top/localbrain-network-security/)
 
-## Latest downloads: 1.6.9
+## Latest downloads: 1.7.0
 
 | Platform | Package and acceptance |
 | --- | --- |
-| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.9/LocalBrain_1.6.9_aarch64.dmg), installed and tested with the original 27B model; not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.9/LocalBrain_1.6.9_x64-setup.exe), same-source CI build and updater signature verified; no native-device functional acceptance |
-| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.9/LocalBrain_1.6.9_amd64.AppImage) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.6.9/LocalBrain_1.6.9_amd64.deb), preview support without native-device acceptance |
+| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.0/LocalBrain_1.7.0_aarch64.dmg), signature, disk image and packaged Office code verified; no installation acceptance for this release; not Apple-notarized |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.0/LocalBrain_1.7.0_x64-setup.exe), same-source CI build and updater signature verified; no native-device functional acceptance |
+| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.0/LocalBrain_1.7.0_amd64.AppImage) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.0/LocalBrain_1.7.0_amd64.deb), preview support without native-device acceptance |
 
-[Release notes and verification files](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.6.9). Drag the Mac app into Applications or run the Windows installer. On Linux run `chmod +x LocalBrain_1.6.9_amd64.AppImage`, or `sudo apt install ./LocalBrain_1.6.9_amd64.deb` on Debian/Ubuntu. Updater artifacts are signed; Linux updates use AppImage. Older releases are retained.
+[Release notes and verification files](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.0). Drag the Mac app into Applications or run the Windows installer. On Linux run `chmod +x LocalBrain_1.7.0_amd64.AppImage`, or `sudo apt install ./LocalBrain_1.7.0_amd64.deb` on Debian/Ubuntu. Updater artifacts are signed; Linux updates use AppImage. Older releases are retained.
 
 ## Changes
 
-Invalid targets are rejected before approval and checked again at execution. Reports provide effective pagination arguments, complete next-page requests and persistent deduplicated evidence counts. Missing fixed-version fields remain unknown. Successful database preparation is recorded separately from offline scanning. Shared mechanisms do not branch on model names or rewrite model arguments.
+XLSX supports actual row/column pagination, worksheet inventory and scoped reads. Attachments explicitly mark reference summaries and truncation. Programmatic sum/count/min/max, safe appends, expected-value protection, independent formula checks and record reconciliation share one implementation across chat and the GUI. Documents and presentations offer rendered previews; no model-name exceptions are used.
 
-The installed Mac app completed native scope confirmation, tool approval, Juice Shop image scanning and evidence reading. The 170 records are component matches, not proven exploitable vulnerabilities. Models may still misinterpret evidence or recommend unverified upgrades; inspect the original report. [Acceptance record](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.6.9_VERIFICATION.md).
+Real document-tool tests and packaged Mac code checks passed: all 21 selected source rows were read, and the raw quantity sum was 303 (not an expense total). Full model-driven Office tasks and native Windows/Linux functionality remain unverified. Without LibreOffice, formula recalculation cannot be claimed; rendered screenshots do not establish layout quality. [Acceptance record](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.0_VERIFICATION.md).
 
 ## Features and usage
 
@@ -43,9 +43,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `0fb3427d1331c342b2bbe668763c98f3b652a5b66a7d4162e8c21074f0ff8d6e` |
-| Windows installer | `4271ec946a9d9248c6f3a5341a13d697f19fccb7a62606566b0652bf5f813b12` |
-| Linux AppImage | `4f97d49f724cc4cbf912bbcc92e1596e6c2607e7e961f100df528725d88e3db7` |
-| Linux Debian | `2cc8bd8da1ea328c53b9782060cb5bc118524130e916755bf1479c50ecf409f8` |
+| Mac DMG | `f348e90754e943aa32cc9a187e06c58590f45524b08c61719f97a14bb6b229fc` |
+| Windows installer | `9f0af81ab5de83f0acfec1df654dd02d48446ee3bee66ea6f359c1ef78df3fb7` |
+| Linux AppImage | `1aa926f956e7be1850f521b9926ac2c5d36245cfdbb53d8b4a363f7583df2366` |
+| Linux Debian | `6da45c53e2b8631676b71a36b13fd2515fcd17f6a007b8fce8ed7847f5c8ac7f` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
