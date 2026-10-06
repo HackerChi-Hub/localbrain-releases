@@ -6,21 +6,25 @@
 
 [官网](https://hyphentech.top/localbrain) · [全部发行](https://github.com/HackerChi-Hub/localbrain-releases/releases) · [安全检查实测教程](https://hyphentech.top/localbrain-network-security/)
 
-## 最新下载：1.7.0
+## 最新下载：1.7.1
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.0/LocalBrain_1.7.0_aarch64.dmg)，签名、磁盘镜像及包内办公代码核验通过；本版未安装验收，未苹果公证 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.0/LocalBrain_1.7.0_x64-setup.exe)，同源CI构建、更新验签；未真机功能验收 |
-| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.0/LocalBrain_1.7.0_amd64.AppImage) · [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.0/LocalBrain_1.7.0_amd64.deb)，预览支持，未真机功能验收 |
+| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.1/LocalBrain_1.7.1_aarch64.dmg)，签名、镜像、安装启动和连续两次严格工具参数实测通过；未苹果公证 |
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.1/LocalBrain_1.7.1_x64-setup.exe)，同源CI构建、更新验签；未真机功能验收 |
+| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.1/LocalBrain_1.7.1_amd64.AppImage) · [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.1/LocalBrain_1.7.1_amd64.deb)，预览支持，未真机功能验收 |
 
-[发行说明及全部校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.0)。Mac拖入应用程序，Windows运行安装程序；Linux AppImage先执行`chmod +x LocalBrain_1.7.0_amd64.AppImage`，Debian/Ubuntu执行`sudo apt install ./LocalBrain_1.7.0_amd64.deb`。更新包带签名，Linux自动更新使用AppImage。旧发行保留。
+[发行说明及全部校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.1)。Mac拖入应用程序，Windows运行安装程序；Linux AppImage先执行`chmod +x LocalBrain_1.7.1_amd64.AppImage`，Debian/Ubuntu执行`sudo apt install ./LocalBrain_1.7.1_amd64.deb`。更新包带签名，Linux自动更新使用AppImage。旧发行保留。
 
-## 本版办公优化
+## 本版 Splash 兼容修复
+
+修复新版 Splash 启动接口，以及工具参数文字被省略和严格约束报错。Mac已安装1.7.1，从软件启动普通27B模型，连续两次真实请求完整保留时间、前导零、中文引号和工具标签，耗时1.46秒与0.82秒。受管入口不修改上游安装或模型权重，其他候选运行环境升级未纳入正式包。[1.7.1验收记录](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.1_VERIFICATION.md)。
+
+## 继承的办公优化
 
 XLSX支持真实行列分页、工作表目录与指定区域读取；附件明确标注参考摘要和截取范围。提供求和、计数、最小值、最大值的程序统计。安全追加与旧值保护、独立公式结果和原始明细对账分开验收，文档与简报支持渲染预览。聊天与图形界面共用实现，不按模型名称特判。
 
-本版完成真实文档工具链和Mac包内代码验证；原始费用表指定区域21行完整读回，数量列统计303（不是费用总额）。完整模型主导办公任务及Windows/Linux真机功能仍待验收；缺少LibreOffice时不能宣称公式已重算，渲染截图不等于排版合格。[验收记录](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.0_VERIFICATION.md)。
+1.7.0完成真实文档工具链和Mac包内代码验证；原始费用表指定区域21行完整读回，数量列统计303（不是费用总额）。完整模型主导办公任务及Windows/Linux真机功能仍待验收；缺少LibreOffice时不能宣称公式已重算，渲染截图不等于排版合格。[办公验收记录](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.0_VERIFICATION.md)。
 
 ## 功能和使用
 
@@ -43,9 +47,9 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `f348e90754e943aa32cc9a187e06c58590f45524b08c61719f97a14bb6b229fc` |
-| Windows安装程序 | `9f0af81ab5de83f0acfec1df654dd02d48446ee3bee66ea6f359c1ef78df3fb7` |
-| Linux AppImage | `1aa926f956e7be1850f521b9926ac2c5d36245cfdbb53d8b4a363f7583df2366` |
-| Linux Debian包 | `6da45c53e2b8631676b71a36b13fd2515fcd17f6a007b8fce8ed7847f5c8ac7f` |
+| Mac DMG | `bd0a2c935b8ccc7b50660edc78363568cc0017cbeb862a058e2ecff1c7931be4` |
+| Windows安装程序 | `f811b61aa7b79b04f26801357a0d29752d4ba8a465413734d68947fa00f5ef43` |
+| Linux AppImage | `eea27972039c67886edc9f4d847d9360bfa3bc4418142d8d89e47e077ceea1b3` |
+| Linux Debian包 | `b0626facfc9a4bfe59ccdbe6d43d97949558e367bfa6711972f44d541b36f42d` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
