@@ -43,7 +43,7 @@
 
 [發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.4)。Mac 拖入應用程式，Windows 執行安裝程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.7.4_amd64.deb`。Mac 與 Windows 更新包帶簽章；Linux 本版需手動下載安裝。保留舊發行。
 
-各平台產物的建置提交與驗收範圍見 [1.7.4 驗收記錄](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.4_VERIFICATION.md)。跨平台打包修復不改變網路安全工作台功能程式碼；工作區未提交的影片 LoRA 改動未納入本包。
+各平台產物的建置提交與驗收範圍見 [1.7.4 驗收記錄](VERIFICATION-1.7.4.md)。跨平台打包修復不改變網路安全工作台功能程式碼；工作區未提交的影片 LoRA 改動未納入本包。
 
 <!-- evergreen:screenshots:start -->
 ## 實際介面

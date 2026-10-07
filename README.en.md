@@ -43,7 +43,7 @@ These videos show the versions available when recorded. Use the current release 
 
 [Release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.4). Drag the Mac app into Applications or run the Windows installer. On Debian/Ubuntu run `sudo apt install ./LocalBrain_1.7.4_amd64.deb`. Mac and Windows updater artifacts are signed; Linux requires a manual install for this release. Older releases are retained.
 
-See the [1.7.4 verification record](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.4_VERIFICATION.md) for platform build commits and acceptance limits. Packaging fixes do not change the Security workspace code. Uncommitted video LoRA changes are excluded.
+See the [1.7.4 verification record](VERIFICATION-1.7.4.md) for platform build commits and acceptance limits. Packaging fixes do not change the Security workspace code. Uncommitted video LoRA changes are excluded.
 
 <!-- evergreen:screenshots:start -->
 ## Real application screenshots
