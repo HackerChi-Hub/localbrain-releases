@@ -35,6 +35,8 @@ These videos show the versions available when recorded. Use the current release 
 
 ## Latest downloads: 1.7.2
 
+**Separate 1.7.3 Mac test candidate**: [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.3-rc.1/LocalBrain_1.7.3_aarch64.dmg) · [limitations and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.3-rc.1). Installed and version 1.7.3 read back in the real UI. Basic short-path checks passed; paper citations and complete task quality remain unverified. The network demo was denied because its isolated environment was not ready. Stable automatic updates are unchanged; Windows/Linux remain on 1.7.2.
+
 | Platform | Package and acceptance |
 | --- | --- |
 | Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_aarch64.dmg), application, disk-image and updater signatures verified; local installation and packaged-button acceptance await completion of active tasks; not Apple-notarized |

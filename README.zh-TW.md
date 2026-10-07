@@ -35,6 +35,8 @@
 
 ## 最新下載：1.7.2
 
+**另有1.7.3測試候選（Mac）**：[下載安裝映像](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.3-rc.1/LocalBrain_1.7.3_aarch64.dmg) · [限制與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.3-rc.1)。已安裝並回讀1.7.3介面；基礎短鏈路通過，論文引用及完整任務品質仍待驗收，網路示範因隔離環境未準備而拒絕執行。不覆蓋正式版自動更新，Windows/Linux暫維持1.7.2。
+
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_aarch64.dmg)，簽章、映像及更新簽章通過；本機安裝與新包按鈕驗收等待活躍工作結束；未蘋果公證 |
