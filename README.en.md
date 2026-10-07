@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **1.7.2** · Fix newer Harness local-model integration using cordis.patch.yml, preserving other providers with backups and atomic writes; existing conversations must select the current model again.
+- **1.7.4** · A dedicated Security workspace groups workspace review, built-in labs, authorized hosts and container images by task.
+- **1.7.4** · Settings are more compact; security resources load independently and previous errors are distinct from current status.
+- **1.7.2** · Updated DeepSeek Harness integration uses cordis.patch.yml, preserves configuration and supports restore; existing sessions must reselect the model.
+- **1.7.1** · Splash launch and strict tool arguments now preserve times, leading zeroes, quotes and tool markers.
 - **1.7.0** · Read spreadsheets by actual rows, sheets and selected ranges; attachments show truncation boundaries.
-- **1.7.0** · Programmatic sum, count, minimum and maximum avoid treating model estimates as calculations.
-- **1.7.0** · Safe document appends, expected-value protection and independent reconciliation preserve originals.
-- **1.7.0** · Documents and presentations provide rendering and layout warnings; full model-led Office tasks remain unverified.
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,19 +33,17 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads: 1.7.2
-
-**Separate 1.7.3 Mac test candidate**: [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.3-rc.1/LocalBrain_1.7.3_aarch64.dmg) · [limitations and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.3-rc.1). Installed and version 1.7.3 read back in the real UI. Basic short-path checks passed; paper citations and complete task quality remain unverified. The network demo was denied because its isolated environment was not ready. Stable automatic updates are unchanged; Windows/Linux remain on 1.7.2.
+## Latest downloads: 1.7.4
 
 | Platform | Package and acceptance |
 | --- | --- |
-| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_aarch64.dmg), application, disk-image and updater signatures verified; local installation and packaged-button acceptance await completion of active tasks; not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_x64-setup.exe), same-source CI build and updater signature verified; no native-device functional acceptance |
-| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_amd64.AppImage) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_amd64.deb), preview support without native-device acceptance |
+| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_aarch64.dmg), disk image and signatures verified; installed locally and the dedicated Security workspace checked; not Apple-notarized |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_x64-setup.exe), build and updater signature verified; not yet installed and checked on a Windows device |
+| Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_amd64.deb), version, architecture and resources verified; AppImage packaging failed for this release, so there is no 1.7.4 Linux automatic update; not yet installed on a Linux device |
 
-[Release notes and verification files](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.2). Drag the Mac app into Applications or run the Windows installer. On Linux run `chmod +x LocalBrain_1.7.2_amd64.AppImage`, or `sudo apt install ./LocalBrain_1.7.2_amd64.deb` on Debian/Ubuntu. Updater artifacts are signed; Linux updates use AppImage. Older releases are retained.
+[Release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.4). Drag the Mac app into Applications or run the Windows installer. On Debian/Ubuntu run `sudo apt install ./LocalBrain_1.7.4_amd64.deb`. Mac and Windows updater artifacts are signed; Linux requires a manual install for this release. Older releases are retained.
 
-All three packages were built from `9fd4fe45bde2ac4634392ed77f46e066444d9674`. The failed Harness conversation recovered and returned a successful connection response. Splash compatibility fixes from 1.7.1 remain included; uncommitted video LoRA changes are excluded. [1.7.2 acceptance](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.2_VERIFICATION.md).
+See the [1.7.4 verification record](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.4_VERIFICATION.md) for platform build commits and acceptance limits. Packaging fixes do not change the Security workspace code. Uncommitted video LoRA changes are excluded.
 
 <!-- evergreen:screenshots:start -->
 ## Real application screenshots
@@ -80,10 +78,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `2a51ee558edc06edeea1dd1e8b13900c1056060ed21af426bfd05233c443ee52` |
-| Windows installer | `386dea8822d64d531b2554217e74fd769a6f5b9b4be8467c9805917bb3e8e3f8` |
-| Linux AppImage | `b22a0fd0eb3c37245ce843e2cf27047b22a1cfbec49eb73090d4d09b6f3b65d7` |
-| Linux Debian | `9bc9c8b5897a194c9684fcf301b68d9872e78af4c14f9ab4ec095dd8ca077fec` |
+| Mac DMG | `2e37a452e26b68a5ce35b7dbe1fa5a7b95cb1975f6249295d69fb3b1fcef08db` |
+| Windows installer | `0b4b6d539cd4809aa3e4a6eda919f83f7bac2bf99a4ff1106f0601aa38abc442` |
+| Linux Debian | `8043038099c96e55c317f9dafc5aeee5b046564a99bbc05356df79741af503ac` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

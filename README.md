@@ -16,11 +16,11 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
-- **1.7.2** · 修复新版 Harness 本地模型接入，改用 cordis.patch.yml，保留其他提供方、支持备份与原子写入；已有会话需重新选择模型。
+- **1.7.4** · 网络安全成为独立工作台；工作区审查、内置靶场、授权主机与容器镜像按任务进入。
+- **1.7.4** · 设置布局更紧凑；安全列表独立加载，历史错误和当前状态分开显示。
+- **1.7.2** · 新版 DeepSeek Harness 接入改用 cordis.patch.yml，保留原配置并提供恢复；已有会话需重新选择模型。
+- **1.7.1** · 新版 Splash 启动与严格工具参数兼容：保留时间、前导零、中文引号和工具标签。
 - **1.7.0** · 表格按真实行列分页读取，可选择工作表和单元格区域，附件显示截取范围。
-- **1.7.0** · 提供求和、计数、最小值与最大值的程序统计，避免把模型估算当成计算结果。
-- **1.7.0** · 文档安全追加、旧值保护与独立对账；重算副本保留原件。
-- **1.7.0** · 文档与演示文稿支持渲染预览及排版预警；完整模型主导办公任务仍待验收。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -35,19 +35,17 @@
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：1.7.2
-
-**另有1.7.3测试候选（Mac）**：[下载安装镜像](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.3-rc.1/LocalBrain_1.7.3_aarch64.dmg) · [限制与校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.3-rc.1)。已安装并回读1.7.3界面；基础短链路通过，论文引用和完整任务质量仍待验收，网络示范因隔离环境未准备而拒绝执行。不覆盖下面的正式版自动更新，Windows/Linux暂保持1.7.2。
+## 最新下载：1.7.4
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_aarch64.dmg)，签名、镜像及更新签名通过；本机安装与新包按钮验收等待活跃任务结束；未苹果公证 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_x64-setup.exe)，同源CI构建、更新验签；未真机功能验收 |
-| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_amd64.AppImage) · [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_amd64.deb)，预览支持，未真机功能验收 |
+| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_aarch64.dmg)，镜像和签名通过、本机已安装并验证独立网络安全工作台；未苹果公证 |
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_x64-setup.exe)，构建与更新签名通过；未在 Windows 真机安装验收 |
+| Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_amd64.deb)，版本、架构与资源校验通过；AppImage 本版打包失败，暂无 1.7.4 自动更新；未在 Linux 真机安装验收 |
 
-[发行说明及全部校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.2)。Mac拖入应用程序，Windows运行安装程序；Linux AppImage先执行`chmod +x LocalBrain_1.7.2_amd64.AppImage`，Debian/Ubuntu执行`sudo apt install ./LocalBrain_1.7.2_amd64.deb`。更新包带签名，Linux自动更新使用AppImage。旧发行保留。
+[发行说明及全部校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.4)。Mac 拖入应用程序，Windows 运行安装程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_1.7.4_amd64.deb`。Mac 与 Windows 更新包带签名；Linux 本版需手动下载安装。旧发行保留。
 
-本版三平台构建源码为 `9fd4fe45bde2ac4634392ed77f46e066444d9674`。原失败 Harness 会话已恢复并回复“连接成功”；保留1.7.1的Splash兼容修复，工作区视频LoRA改动未纳入本包。[1.7.2验收记录](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.2_VERIFICATION.md)。
+本版各平台产物的构建提交与验收范围见 [1.7.4 验收记录](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.4_VERIFICATION.md)。跨平台打包修复不改变网络安全工作台功能代码；工作区未提交的视频 LoRA 改动未纳入本包。
 
 <!-- evergreen:screenshots:start -->
 ## 实际界面
@@ -82,10 +80,9 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `2a51ee558edc06edeea1dd1e8b13900c1056060ed21af426bfd05233c443ee52` |
-| Windows安装程序 | `386dea8822d64d531b2554217e74fd769a6f5b9b4be8467c9805917bb3e8e3f8` |
-| Linux AppImage | `b22a0fd0eb3c37245ce843e2cf27047b22a1cfbec49eb73090d4d09b6f3b65d7` |
-| Linux Debian包 | `9bc9c8b5897a194c9684fcf301b68d9872e78af4c14f9ab4ec095dd8ca077fec` |
+| Mac DMG | `2e37a452e26b68a5ce35b7dbe1fa5a7b95cb1975f6249295d69fb3b1fcef08db` |
+| Windows安装程序 | `0b4b6d539cd4809aa3e4a6eda919f83f7bac2bf99a4ff1106f0601aa38abc442` |
+| Linux Debian包 | `8043038099c96e55c317f9dafc5aeee5b046564a99bbc05356df79741af503ac` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 
