@@ -1,11 +1,14 @@
 <!-- evergreen:intro:start -->
+![LocalBrain · HyphenTech](screenshots/readme-hero.svg)
+
 # LocalBrain · Local AI models, file tools and media workspace
 
 Run supported local models, work with authorized files, and manage speech, image, video and music tasks in one desktop application by HyphenTech. Models plan and call tools; the app retains real execution receipts. Apple Silicon Mac integrates MLX, Metal llama.cpp, Splash and Prism; Windows uses adapted llama.cpp / Prism; Linux is preview support.
 
-[Download LocalBrain](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest) · [Website](https://hyphentech.top/localbrain) · [Report an issue](https://github.com/HackerChi-Hub/localbrain-releases/issues)
 
-[简体中文](README.md) · [繁體中文](README.zh-TW.md) · English
+<p align="center"><a href="README.md">简体中文</a> | <a href="README.zh-TW.md">繁體中文</a> | <a href="README.en.md">English</a></p>
+
+<p align="center"><a href="https://github.com/HackerChi-Hub/localbrain-releases/releases/latest"><img alt="Download" src="https://img.shields.io/badge/Download-18181b?style=for-the-badge&amp;logo=github" /></a> <a href="https://hyphentech.top"><img alt="Website" src="https://img.shields.io/badge/Website-334155?style=for-the-badge" /></a></p>
 <!-- evergreen:intro:end -->
 
 <!-- recent-features:start -->
@@ -17,6 +20,18 @@ Run supported local models, work with authorized files, and manage speech, image
 - **1.7.0** · Safe document appends, expected-value protection and independent reconciliation preserve originals.
 - **1.7.0** · Documents and presentations provide rendering and layout warnings; full model-led Office tasks remain unverified.
 <!-- recent-features:end -->
+
+<!-- evergreen:demos:start -->
+## ▶ Watch a practical demo
+
+**Starting local models, longer tasks and actual delivery**
+
+| Bilibili | YouTube |
+| :---: | :---: |
+| [![Watch on Bilibili](https://img.shields.io/badge/Bilibili-00a1d6?style=for-the-badge&logo=bilibili&logoColor=white)](https://www.bilibili.com/video/BV11Xab6GEjy/) | [![Watch on YouTube](https://img.shields.io/badge/YouTube-ff0033?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=A6nRwKU8fao) |
+
+These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
+<!-- evergreen:demos:end -->
 
 ## Latest downloads: 1.7.1
 
@@ -67,6 +82,18 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | Linux Debian | `b0626facfc9a4bfe59ccdbe6d43d97949558e367bfa6711972f44d541b36f42d` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
+
+<!-- evergreen:use-cases:start -->
+## Common questions
+
+**Can I use local AI without sending conversations to the cloud?** Local inference can stay on your computer. Downloads, updates, web tools and external services may still use the network.
+
+**Is every model suitable for file or Office tasks?** No. Use a model that supports the required tools; inspect execution receipts and resulting files. A model's statement alone is not proof that a task succeeded.
+
+**Do all platforms have the same features?** No. Check the platform notes and release acceptance status above. Linux remains preview support.
+
+**How does it fit with other HyphenTech apps?** LocalBrain runs local models; HyphenBox manages provider APIs; ScreenLex handles movie-based English learning; HyphenScreen records and edits tutorials.
+<!-- evergreen:use-cases:end -->
 
 <!-- evergreen:discovery:start -->
 ## More HyphenTech software

@@ -1,13 +1,16 @@
 <!-- evergreen:intro:start -->
+![LocalBrain · HyphenTech](screenshots/readme-hero.svg)
+
 # 方寸智匣 LocalBrain · 本地 AI 大模型与文件、媒体工作台
 
 **把本地大模型、文件工具和媒体生成放进一个桌面应用，按自己的授权范围完成任务。**
 
 方寸智匣是黑粉科技开发的本地 AI 工作台，面向希望在电脑上运行大语言模型、处理文件和管理语音、图片、视频、音乐任务的用户。它整合模型下载、导入、启停、流式对话、附件和工具调用；模型规划任务，程序保留真实执行回执。Apple Silicon Mac 提供 MLX、Metal llama.cpp、Splash 与 Prism 集成，Windows 使用适配的 llama.cpp / Prism，Linux 为预览支持。
 
-[**立即下载方寸智匣**](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest) · [官网与使用介绍](https://hyphentech.top/localbrain) · [反馈问题](https://github.com/HackerChi-Hub/localbrain-releases/issues)
 
-[简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md)
+<p align="center"><a href="README.md">简体中文</a> | <a href="README.zh-TW.md">繁體中文</a> | <a href="README.en.md">English</a></p>
+
+<p align="center"><a href="https://github.com/HackerChi-Hub/localbrain-releases/releases/latest"><img alt="立即下载" src="https://img.shields.io/badge/立即下载-18181b?style=for-the-badge&amp;logo=github" /></a> <a href="https://hyphentech.top"><img alt="官网" src="https://img.shields.io/badge/官网-334155?style=for-the-badge" /></a></p>
 <!-- evergreen:intro:end -->
 
 <!-- recent-features:start -->
@@ -19,6 +22,18 @@
 - **1.7.0** · 文档安全追加、旧值保护与独立对账；重算副本保留原件。
 - **1.7.0** · 文档与演示文稿支持渲染预览及排版预警；完整模型主导办公任务仍待验收。
 <!-- recent-features:end -->
+
+<!-- evergreen:demos:start -->
+## ▶ 使用演示
+
+**本地模型启动、长任务与实际交付**
+
+| Bilibili | YouTube |
+| :---: | :---: |
+| [![B 站观看](https://img.shields.io/badge/Bilibili-00a1d6?style=for-the-badge&logo=bilibili&logoColor=white)](https://www.bilibili.com/video/BV11Xab6GEjy/) | [![YouTube 观看](https://img.shields.io/badge/YouTube-ff0033?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=A6nRwKU8fao) |
+
+视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
+<!-- evergreen:demos:end -->
 
 ## 最新下载：1.7.1
 

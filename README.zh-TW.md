@@ -1,11 +1,14 @@
 <!-- evergreen:intro:start -->
+![LocalBrain · HyphenTech](screenshots/readme-hero.svg)
+
 # 方寸智匣 LocalBrain · 本機 AI 大模型與檔案、媒體工作台
 
 在一個桌面應用中管理本機模型、授權檔案與語音、圖片、影片、音樂工作。由黑粉科技開發，模型規劃任務並呼叫工具，程式保留真實執行回執。Apple Silicon Mac 整合 MLX、Metal llama.cpp、Splash 與 Prism；Windows 使用適配的 llama.cpp / Prism；Linux 為預覽支援。
 
-[立即下載方寸智匣](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest) · [官方網站](https://hyphentech.top/localbrain) · [問題回報](https://github.com/HackerChi-Hub/localbrain-releases/issues)
 
-[简体中文](README.md) · 繁體中文 · [English](README.en.md)
+<p align="center"><a href="README.md">简体中文</a> | <a href="README.zh-TW.md">繁體中文</a> | <a href="README.en.md">English</a></p>
+
+<p align="center"><a href="https://github.com/HackerChi-Hub/localbrain-releases/releases/latest"><img alt="立即下載" src="https://img.shields.io/badge/立即下載-18181b?style=for-the-badge&amp;logo=github" /></a> <a href="https://hyphentech.top"><img alt="官網" src="https://img.shields.io/badge/官網-334155?style=for-the-badge" /></a></p>
 <!-- evergreen:intro:end -->
 
 <!-- recent-features:start -->
@@ -17,6 +20,18 @@
 - **1.7.0** · 文件安全追加、舊值保護與獨立對帳；重算副本保留原件。
 - **1.7.0** · 文件與簡報支援渲染預覽與排版預警；完整模型主導辦公工作仍待驗收。
 <!-- recent-features:end -->
+
+<!-- evergreen:demos:start -->
+## ▶ 使用示範
+
+**本機模型啟動、長任務與實際交付**
+
+| Bilibili | YouTube |
+| :---: | :---: |
+| [![B 站觀看](https://img.shields.io/badge/Bilibili-00a1d6?style=for-the-badge&logo=bilibili&logoColor=white)](https://www.bilibili.com/video/BV11Xab6GEjy/) | [![YouTube 觀看](https://img.shields.io/badge/YouTube-ff0033?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=A6nRwKU8fao) |
+
+影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
+<!-- evergreen:demos:end -->
 
 ## 最新下載：1.7.1
 
@@ -67,6 +82,18 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | Linux Debian包 | `b0626facfc9a4bfe59ccdbe6d43d97949558e367bfa6711972f44d541b36f42d` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
+
+<!-- evergreen:use-cases:start -->
+## 常見問題
+
+**本機 AI 可以不把對話傳到雲端嗎？** 本機推理可以留在電腦上；下載、更新、網頁工具與外部服務仍可能連網。
+
+**任何模型都能處理檔案和辦公任務嗎？** 不是。請選擇支援所需工具的模型，檢查執行回執與產出的檔案；模型說「完成」不能代替結果驗證。
+
+**所有平台功能相同嗎？** 不是。請參考上方平台差異和發行驗收狀態，Linux 仍為預覽支援。
+
+**怎樣和其他黑粉科技軟體搭配？** 方寸智匣執行本機模型，黑粉盒子管理平台 API，光影詞庫用影視學英語，黑粉錄屏錄製與剪輯教學。
+<!-- evergreen:use-cases:end -->
 
 <!-- evergreen:discovery:start -->
 ## 更多黑粉科技自製軟體
