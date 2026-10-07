@@ -16,7 +16,7 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
-- **1.7.1** · 新版 Splash 启动与严格工具参数兼容：保留时间、前导零、中文引号和工具标签。
+- **1.7.2** · 修复新版 Harness 本地模型接入，改用 cordis.patch.yml，保留其他提供方、支持备份与原子写入；已有会话需重新选择模型。
 - **1.7.0** · 表格按真实行列分页读取，可选择工作表和单元格区域，附件显示截取范围。
 - **1.7.0** · 提供求和、计数、最小值与最大值的程序统计，避免把模型估算当成计算结果。
 - **1.7.0** · 文档安全追加、旧值保护与独立对账；重算副本保留原件。
@@ -35,15 +35,17 @@
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：1.7.1
+## 最新下载：1.7.2
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.1/LocalBrain_1.7.1_aarch64.dmg)，签名、镜像、安装启动和连续两次严格工具参数实测通过；未苹果公证 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.1/LocalBrain_1.7.1_x64-setup.exe)，同源CI构建、更新验签；未真机功能验收 |
-| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.1/LocalBrain_1.7.1_amd64.AppImage) · [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.1/LocalBrain_1.7.1_amd64.deb)，预览支持，未真机功能验收 |
+| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_aarch64.dmg)，签名、镜像及更新签名通过；本机安装与新包按钮验收等待活跃任务结束；未苹果公证 |
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_x64-setup.exe)，同源CI构建、更新验签；未真机功能验收 |
+| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_amd64.AppImage) · [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_amd64.deb)，预览支持，未真机功能验收 |
 
-[发行说明及全部校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.1)。Mac拖入应用程序，Windows运行安装程序；Linux AppImage先执行`chmod +x LocalBrain_1.7.1_amd64.AppImage`，Debian/Ubuntu执行`sudo apt install ./LocalBrain_1.7.1_amd64.deb`。更新包带签名，Linux自动更新使用AppImage。旧发行保留。
+[发行说明及全部校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.2)。Mac拖入应用程序，Windows运行安装程序；Linux AppImage先执行`chmod +x LocalBrain_1.7.2_amd64.AppImage`，Debian/Ubuntu执行`sudo apt install ./LocalBrain_1.7.2_amd64.deb`。更新包带签名，Linux自动更新使用AppImage。旧发行保留。
+
+本版三平台构建源码为 `9fd4fe45bde2ac4634392ed77f46e066444d9674`。原失败 Harness 会话已恢复并回复“连接成功”；保留1.7.1的Splash兼容修复，工作区视频LoRA改动未纳入本包。[1.7.2验收记录](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.2_VERIFICATION.md)。
 
 <!-- evergreen:screenshots:start -->
 ## 实际界面
@@ -78,10 +80,10 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `bd0a2c935b8ccc7b50660edc78363568cc0017cbeb862a058e2ecff1c7931be4` |
-| Windows安装程序 | `f811b61aa7b79b04f26801357a0d29752d4ba8a465413734d68947fa00f5ef43` |
-| Linux AppImage | `eea27972039c67886edc9f4d847d9360bfa3bc4418142d8d89e47e077ceea1b3` |
-| Linux Debian包 | `b0626facfc9a4bfe59ccdbe6d43d97949558e367bfa6711972f44d541b36f42d` |
+| Mac DMG | `2a51ee558edc06edeea1dd1e8b13900c1056060ed21af426bfd05233c443ee52` |
+| Windows安装程序 | `386dea8822d64d531b2554217e74fd769a6f5b9b4be8467c9805917bb3e8e3f8` |
+| Linux AppImage | `b22a0fd0eb3c37245ce843e2cf27047b22a1cfbec49eb73090d4d09b6f3b65d7` |
+| Linux Debian包 | `9bc9c8b5897a194c9684fcf301b68d9872e78af4c14f9ab4ec095dd8ca077fec` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 

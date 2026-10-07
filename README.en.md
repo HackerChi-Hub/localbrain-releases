@@ -14,7 +14,7 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **1.7.1** · Splash launch and strict tool arguments now preserve times, leading zeroes, quotes and tool markers.
+- **1.7.2** · Fix newer Harness local-model integration using cordis.patch.yml, preserving other providers with backups and atomic writes; existing conversations must select the current model again.
 - **1.7.0** · Read spreadsheets by actual rows, sheets and selected ranges; attachments show truncation boundaries.
 - **1.7.0** · Programmatic sum, count, minimum and maximum avoid treating model estimates as calculations.
 - **1.7.0** · Safe document appends, expected-value protection and independent reconciliation preserve originals.
@@ -33,15 +33,17 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads: 1.7.1
+## Latest downloads: 1.7.2
 
 | Platform | Package and acceptance |
 | --- | --- |
-| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.1/LocalBrain_1.7.1_aarch64.dmg), signatures, disk image, installation, launch and two consecutive strict tool-argument requests verified; not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.1/LocalBrain_1.7.1_x64-setup.exe), same-source CI build and updater signature verified; no native-device functional acceptance |
-| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.1/LocalBrain_1.7.1_amd64.AppImage) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.1/LocalBrain_1.7.1_amd64.deb), preview support without native-device acceptance |
+| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_aarch64.dmg), application, disk-image and updater signatures verified; local installation and packaged-button acceptance await completion of active tasks; not Apple-notarized |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_x64-setup.exe), same-source CI build and updater signature verified; no native-device functional acceptance |
+| Linux x64 | [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_amd64.AppImage) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.2/LocalBrain_1.7.2_amd64.deb), preview support without native-device acceptance |
 
-[Release notes and verification files](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.1). Drag the Mac app into Applications or run the Windows installer. On Linux run `chmod +x LocalBrain_1.7.1_amd64.AppImage`, or `sudo apt install ./LocalBrain_1.7.1_amd64.deb` on Debian/Ubuntu. Updater artifacts are signed; Linux updates use AppImage. Older releases are retained.
+[Release notes and verification files](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.2). Drag the Mac app into Applications or run the Windows installer. On Linux run `chmod +x LocalBrain_1.7.2_amd64.AppImage`, or `sudo apt install ./LocalBrain_1.7.2_amd64.deb` on Debian/Ubuntu. Updater artifacts are signed; Linux updates use AppImage. Older releases are retained.
+
+All three packages were built from `9fd4fe45bde2ac4634392ed77f46e066444d9674`. The failed Harness conversation recovered and returned a successful connection response. Splash compatibility fixes from 1.7.1 remain included; uncommitted video LoRA changes are excluded. [1.7.2 acceptance](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.2_VERIFICATION.md).
 
 <!-- evergreen:screenshots:start -->
 ## Real application screenshots
@@ -76,10 +78,10 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `bd0a2c935b8ccc7b50660edc78363568cc0017cbeb862a058e2ecff1c7931be4` |
-| Windows installer | `f811b61aa7b79b04f26801357a0d29752d4ba8a465413734d68947fa00f5ef43` |
-| Linux AppImage | `eea27972039c67886edc9f4d847d9360bfa3bc4418142d8d89e47e077ceea1b3` |
-| Linux Debian | `b0626facfc9a4bfe59ccdbe6d43d97949558e367bfa6711972f44d541b36f42d` |
+| Mac DMG | `2a51ee558edc06edeea1dd1e8b13900c1056060ed21af426bfd05233c443ee52` |
+| Windows installer | `386dea8822d64d531b2554217e74fd769a6f5b9b4be8467c9805917bb3e8e3f8` |
+| Linux AppImage | `b22a0fd0eb3c37245ce843e2cf27047b22a1cfbec49eb73090d4d09b6f3b65d7` |
+| Linux Debian | `9bc9c8b5897a194c9684fcf301b68d9872e78af4c14f9ab4ec095dd8ca077fec` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 
