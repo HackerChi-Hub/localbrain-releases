@@ -1,10 +1,22 @@
-# 方寸智匣 · LocalBrain
+<!-- evergreen:intro:start -->
+# 方寸智匣 LocalBrain · 本機 AI 大模型與檔案、媒體工作台
 
-[简体中文](README.md) · **繁體中文** · [English](README.en.md)
+在一個桌面應用中管理本機模型、授權檔案與語音、圖片、影片、音樂工作。由黑粉科技開發，模型規劃任務並呼叫工具，程式保留真實執行回執。Apple Silicon Mac 整合 MLX、Metal llama.cpp、Splash 與 Prism；Windows 使用適配的 llama.cpp / Prism；Linux 為預覽支援。
 
-本機模型、檔案工具與媒體工作台放進桌面應用。使用者選擇模型與授權範圍，模型規劃工作、呼叫工具，程式保留真實回執。
+[立即下載方寸智匣](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest) · [官方網站](https://hyphentech.top/localbrain) · [問題回報](https://github.com/HackerChi-Hub/localbrain-releases/issues)
 
-[官方網站](https://hyphentech.top/localbrain) · [全部發行](https://github.com/HackerChi-Hub/localbrain-releases/releases) · [安全檢查實測教學](https://hyphentech.top/localbrain-network-security/)
+[简体中文](README.md) · 繁體中文 · [English](README.en.md)
+<!-- evergreen:intro:end -->
+
+<!-- recent-features:start -->
+## 近期新增與改進（最近 5 項）
+
+- **1.7.1** · 新版 Splash 啟動與嚴格工具參數相容，保留時間、前導零、中文引號與工具標籤。
+- **1.7.0** · 表格按真實列分頁，可選工作表和儲存格範圍；附件標示截取邊界。
+- **1.7.0** · 提供加總、計數、最小值及最大值的程式統計，避免把模型估算當作計算。
+- **1.7.0** · 文件安全追加、舊值保護與獨立對帳；重算副本保留原件。
+- **1.7.0** · 文件與簡報支援渲染預覽與排版預警；完整模型主導辦公工作仍待驗收。
+<!-- recent-features:end -->
 
 ## 最新下載：1.7.1
 
@@ -16,16 +28,7 @@
 
 [發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.1)。Mac拖入應用程式，Windows執行安裝程式；Linux AppImage先執行`chmod +x LocalBrain_1.7.1_amd64.AppImage`，Debian/Ubuntu執行`sudo apt install ./LocalBrain_1.7.1_amd64.deb`。更新包帶簽章，Linux更新使用AppImage。保留舊發行。
 
-## 本版 Splash 相容修復
-
-修復新版 Splash 啟動介面，以及工具參數文字被省略和嚴格約束報錯。Mac已安裝1.7.1，由軟體啟動普通27B模型，連續兩次真實請求完整保留時間、前導零、中文引號和工具標記，耗時1.46秒與0.82秒。受管入口不修改上游安裝或模型權重，其他候選執行環境升級未納入正式包。[1.7.1驗收記錄](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.1_VERIFICATION.md)。
-
-## 繼承的辦公優化
-
-XLSX支援真實行列分頁、工作表目錄與指定區域讀取；附件標明參考摘要與截取範圍。提供加總、計數、最小值、最大值的程式統計。安全追加、舊值保護、獨立公式結果與明細對帳分開驗收，文件與簡報支援渲染預覽。聊天與圖形介面共用實現，不按模型名稱特判。
-
-1.7.0完成真實文件工具鏈與Mac包內程式驗證；原始費用表指定區域21列完整讀回，數量欄統計303（不是費用總額）。完整模型主導辦公工作與Windows/Linux實機功能仍待驗收；缺少LibreOffice時不能聲稱公式已重算，渲染截圖不等於排版合格。[辦公驗收紀錄](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.0_VERIFICATION.md)。
-
+<!-- evergreen:capabilities:start -->
 ## 功能和操作
 
 本機模型下載、匯入與啟停；串流對話、附件、思考控制、硬體感知上下文預算與工作恢復；授權檔案、專案測試、文件及網頁工具；媒體工作台、MCP、本機模型介面、儲存管理與三語介面。媒體控制依模型，不保證所有模型支援笑聲、精確停頓或多參考圖。
@@ -42,6 +45,7 @@ XLSX支援真實行列分頁、工作表目錄與指定區域讀取；附件標�
 Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配llama.cpp/Prism，不支援MLX/Splash。Linux近期新增預覽，受管llama.cpp/Prism下載未完整接入，不支援MLX/Splash。建置成功不替代實機驗收。
 
 本機推論不要求對話傳雲端；下載、依賴、更新、網頁與外部服務仍可能聯網。應用不捆綁模型權重，模型授權各自獨立。
+<!-- evergreen:capabilities:end -->
 
 ## SHA-256
 
@@ -53,3 +57,9 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | Linux Debian包 | `b0626facfc9a4bfe59ccdbe6d43d97949558e367bfa6711972f44d541b36f42d` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
+
+<!-- evergreen:discovery:start -->
+## 更多黑粉科技自製軟體
+
+本機模型：[方寸智匣](https://github.com/HackerChi-Hub/localbrain-releases)。錄製教學：[黑粉錄屏](https://github.com/HackerChi-Hub/HyphenScreen-Releases)。影視英語：[光影詞庫](https://github.com/HackerChi-Hub/screenlex-download)。介面發現與路由：[黑粉盒子](https://github.com/HackerChi-Hub/hyphenbox-release)。分享倉庫首頁，讓朋友按系統選擇最新安裝包。
+<!-- evergreen:discovery:end -->

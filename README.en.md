@@ -1,10 +1,22 @@
-# LocalBrain
+<!-- evergreen:intro:start -->
+# LocalBrain · Local AI models, file tools and media workspace
 
-[简体中文](README.md) · [繁體中文](README.zh-TW.md) · **English**
+Run supported local models, work with authorized files, and manage speech, image, video and music tasks in one desktop application by HyphenTech. Models plan and call tools; the app retains real execution receipts. Apple Silicon Mac integrates MLX, Metal llama.cpp, Splash and Prism; Windows uses adapted llama.cpp / Prism; Linux is preview support.
 
-A desktop workspace for local models, file tools and media generation. You choose the model and authorize the scope; the model plans and calls tools, while the application preserves real execution receipts.
+[Download LocalBrain](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest) · [Website](https://hyphentech.top/localbrain) · [Report an issue](https://github.com/HackerChi-Hub/localbrain-releases/issues)
 
-[Website](https://hyphentech.top/localbrain) · [All releases](https://github.com/HackerChi-Hub/localbrain-releases/releases) · [Security tutorial in Chinese](https://hyphentech.top/localbrain-network-security/)
+[简体中文](README.md) · [繁體中文](README.zh-TW.md) · English
+<!-- evergreen:intro:end -->
+
+<!-- recent-features:start -->
+## Recent features and improvements (5 items)
+
+- **1.7.1** · Splash launch and strict tool arguments now preserve times, leading zeroes, quotes and tool markers.
+- **1.7.0** · Read spreadsheets by actual rows, sheets and selected ranges; attachments show truncation boundaries.
+- **1.7.0** · Programmatic sum, count, minimum and maximum avoid treating model estimates as calculations.
+- **1.7.0** · Safe document appends, expected-value protection and independent reconciliation preserve originals.
+- **1.7.0** · Documents and presentations provide rendering and layout warnings; full model-led Office tasks remain unverified.
+<!-- recent-features:end -->
 
 ## Latest downloads: 1.7.1
 
@@ -16,16 +28,7 @@ A desktop workspace for local models, file tools and media generation. You choos
 
 [Release notes and verification files](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.1). Drag the Mac app into Applications or run the Windows installer. On Linux run `chmod +x LocalBrain_1.7.1_amd64.AppImage`, or `sudo apt install ./LocalBrain_1.7.1_amd64.deb` on Debian/Ubuntu. Updater artifacts are signed; Linux updates use AppImage. Older releases are retained.
 
-## Changes
-
-Splash launch compatibility and omitted argument text / strict constraint failures are fixed. Mac 1.7.1 was installed, and the regular 27B model was launched from the app. Two consecutive real requests preserved times, leading zeroes, Chinese quotes and tool markers in 1.46 and 0.82 seconds. The managed entry does not edit upstream files or model weights; other candidate runtime upgrades are excluded. [1.7.1 acceptance](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.1_VERIFICATION.md).
-
-### Inherited Office improvements
-
-XLSX supports actual row/column pagination, worksheet inventory and scoped reads. Attachments explicitly mark reference summaries and truncation. Programmatic sum/count/min/max, safe appends, expected-value protection, independent formula checks and record reconciliation share one implementation across chat and the GUI. Documents and presentations offer rendered previews; no model-name exceptions are used.
-
-The 1.7.0 document-tool tests and packaged Mac code checks passed: all 21 selected source rows were read, and the raw quantity sum was 303 (not an expense total). Full model-driven Office tasks and native Windows/Linux functionality remain unverified. Without LibreOffice, formula recalculation cannot be claimed; rendered screenshots do not establish layout quality. [Office acceptance record](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_1.7.0_VERIFICATION.md).
-
+<!-- evergreen:capabilities:start -->
 ## Features and usage
 
 Local model downloads/import/start/stop; streaming chat, attachments, reasoning controls, hardware-aware context budgets and task recovery; authorized files, project tests, documents and web tools; integrated media workbenches, MCP, local model APIs, storage management and three UI languages. Media controls depend on the model; laughter, precise pauses and multiple reference images are not universal capabilities.
@@ -42,6 +45,7 @@ Only inspect owned or explicitly authorized targets. Host grants bind to the rev
 Mac supports integrated MLX, Metal llama.cpp, Splash and Prism. Windows uses adapted llama.cpp/Prism, without MLX/Splash. Linux is a recent preview: managed llama.cpp/Prism downloads are not fully wired, and MLX/Splash are unavailable. Build success does not establish native-device acceptance.
 
 Local inference does not require sending conversations to the cloud; downloads, dependencies, updates, web tools and external services can use the network. Model weights are not bundled and retain separate licenses.
+<!-- evergreen:capabilities:end -->
 
 ## SHA-256
 
@@ -53,3 +57,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | Linux Debian | `b0626facfc9a4bfe59ccdbe6d43d97949558e367bfa6711972f44d541b36f42d` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
+
+<!-- evergreen:discovery:start -->
+## More HyphenTech software
+
+Local models: [LocalBrain](https://github.com/HackerChi-Hub/localbrain-releases). Screen tutorials: [HyphenScreen](https://github.com/HackerChi-Hub/HyphenScreen-Releases). Movie English: [ScreenLex](https://github.com/HackerChi-Hub/screenlex-download). API discovery and routing: [HyphenBox](https://github.com/HackerChi-Hub/hyphenbox-release). Share this repository homepage so others can choose the latest package for their system.
+<!-- evergreen:discovery:end -->
