@@ -30,6 +30,16 @@
 
 [发行说明及全部校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.1)。Mac拖入应用程序，Windows运行安装程序；Linux AppImage先执行`chmod +x LocalBrain_1.7.1_amd64.AppImage`，Debian/Ubuntu执行`sudo apt install ./LocalBrain_1.7.1_amd64.deb`。更新包带签名，Linux自动更新使用AppImage。旧发行保留。
 
+<!-- evergreen:screenshots:start -->
+## 实际界面
+
+下面沿用仓库中已公开的 1.4.6 版 macOS 截图，展示模型管理与工具接入布局；不是最新版本截图，模型与内存数字仅代表拍摄时的状态。
+
+![方寸智匣本地 AI 模型管理工作台，历史版本 1.4.6](screenshots/zh-CN/home.png)
+
+![方寸智匣本地工具与 AI 客户端接入，历史版本 1.4.6](screenshots/zh-CN/integrations.png)
+<!-- evergreen:screenshots:end -->
+
 <!-- evergreen:capabilities:start -->
 ## 功能和使用
 

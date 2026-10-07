@@ -1,23 +1,26 @@
 {
   "files": {
-    "README.en.md": {
-      "blocks": {
-        "intro": "d29138d108b3ea205dd15fe8052d4c3772285f95c2856371201468752a7b2fcb",
-        "capabilities": "a001fbe97b139e2bf119bd54d1b20cfd9d71fe000638921cfa4c887e38ee33b9",
-        "discovery": "ae0e90ee5615380e3f86faf11b6e98530df468c94467797c881c14d418186242"
-      }
-    },
     "README.md": {
       "blocks": {
         "intro": "dea0b4c76def599b3ce5cfb8cd4d532f332a471d66465ce2b3da06b9f0b0def8",
+        "screenshots": "8d113623f68f6fd6b2b8502f947bd9956c78a99f7d2415171501fd2be05147df",
         "capabilities": "0d5e2cc355e29a5d9db42985d6ed4c5e0202243f02adf470e2a982ccf3573814",
         "use-cases": "40565673920a48255a78dccaeb2bfc0e7b104595f8e4281d5c955c0b4c65168a",
         "discovery": "7310d6155907cb41b64c59ff96c04a3a8c4ee2ff5c5cfcb99560db8e0f0dee2f"
       }
     },
+    "README.en.md": {
+      "blocks": {
+        "intro": "d29138d108b3ea205dd15fe8052d4c3772285f95c2856371201468752a7b2fcb",
+        "screenshots": "39d8d0b662976b292cbf916b8ab47033925209a699f2eecb226f687ed7abca08",
+        "capabilities": "a001fbe97b139e2bf119bd54d1b20cfd9d71fe000638921cfa4c887e38ee33b9",
+        "discovery": "ae0e90ee5615380e3f86faf11b6e98530df468c94467797c881c14d418186242"
+      }
+    },
     "README.zh-TW.md": {
       "blocks": {
         "intro": "75e3fff30b969f09be3624e8741121dedac2382559e3a20fc1f839e3ea34717b",
+        "screenshots": "1df02f16455caddee1dd730170d62fbc1dfb0dc9a3496e3a29cadd73fcb1b7de",
         "capabilities": "acbc34854778225e46a3077c84bbd28ed66c35fa2468e3b94bc432f60f3f0868",
         "discovery": "9a611e22865533605318ec724ba6a168af5ca090e5567225f4860163c70d37b0"
       }

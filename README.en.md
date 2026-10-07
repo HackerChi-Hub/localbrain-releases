@@ -28,6 +28,16 @@ Run supported local models, work with authorized files, and manage speech, image
 
 [Release notes and verification files](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.1). Drag the Mac app into Applications or run the Windows installer. On Linux run `chmod +x LocalBrain_1.7.1_amd64.AppImage`, or `sudo apt install ./LocalBrain_1.7.1_amd64.deb` on Debian/Ubuntu. Updater artifacts are signed; Linux updates use AppImage. Older releases are retained.
 
+<!-- evergreen:screenshots:start -->
+## Real application screenshots
+
+Existing public macOS screenshots from version 1.4.6 show model management and client integration in Simplified Chinese. They are historical screenshots, not images of the latest release. Models and memory values reflect the captured session.
+
+![LocalBrain local model workspace, historical 1.4.6 screenshot](screenshots/zh-CN/home.png)
+
+![LocalBrain local tools and AI client integrations, historical 1.4.6 screenshot](screenshots/zh-CN/integrations.png)
+<!-- evergreen:screenshots:end -->
+
 <!-- evergreen:capabilities:start -->
 ## Features and usage
 
