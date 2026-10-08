@@ -35,17 +35,17 @@
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Mac 1.7.5；Windows、Linux 1.7.4
+## 最新下载：1.7.5（Mac、Windows、Linux Debian）
 
 | 平台 | 安装包与状态 |
 | --- | --- |
 | Apple Silicon Mac 1.7.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.5/LocalBrain_1.7.5_aarch64.dmg)，镜像和签名通过、本机安装文件与构建产物一致且已启动；未苹果公证 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_x64-setup.exe)，构建与更新签名通过；未在 Windows 真机安装验收 |
-| Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_amd64.deb)，版本、架构与资源校验通过；AppImage 本版打包失败，暂无 1.7.4 自动更新；未在 Linux 真机安装验收 |
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.5/LocalBrain_1.7.5_x64-setup.exe)，Windows 本机构建、包内资源及更新签名校验通过；尚未完成安装后界面和模型功能验收 |
+| Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.5/LocalBrain_1.7.5_amd64.deb)，Ubuntu 22.04 WSL 构建、安装和 20 秒启动检查通过；预览支持，尚未完成真实桌面与模型功能验收；本版无 AppImage |
 
-[Mac 1.7.5 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.5)。Windows、Linux 暂用上表中的 1.7.4 包，待实体机打包后再更新。Mac 拖入应用程序；Debian/Ubuntu 旧版执行 `sudo apt install ./LocalBrain_1.7.4_amd64.deb`。旧发行保留。
+[1.7.5 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.5)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_1.7.5_amd64.deb`。旧发行保留。
 
-本版构建与验收边界见 [1.7.5 验收记录](VERIFICATION-1.7.5.md)。Windows、Linux 的 1.7.5 构建因 GitHub 额度不足未生成，不可将旧版当成新版。工作区未提交的视频 LoRA 改动未纳入本包。
+本版构建与验收边界见 [1.7.5 验收记录](VERIFICATION-1.7.5.md)。Windows、Linux Debian 已由最新主分支在本机补齐；AppImage 因 musl 原生依赖打包失败，Linux 自动更新清单仍保留实际可用的 1.7.2，升级至 1.7.5 请手动安装 Debian 包。
 
 <!-- evergreen:screenshots:start -->
 ## 实际界面
@@ -81,8 +81,8 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 | 文件 | 散列 |
 | --- | --- |
 | Mac DMG | `a7e76084cdbcad77c424d79f13dfb868976f16460aee6d37a854940b8d0515dc` |
-| Windows安装程序 | `0b4b6d539cd4809aa3e4a6eda919f83f7bac2bf99a4ff1106f0601aa38abc442` |
-| Linux Debian包 | `8043038099c96e55c317f9dafc5aeee5b046564a99bbc05356df79741af503ac` |
+| Windows安装程序 | `8b1e9b5d5036bf82ff6c64417c221d5b6a2c22b2332d31c618cd11fc932e56fe` |
+| Linux Debian包 | `4bb01a404e148e5961c0fa94165d0c470c380cafab84f041d543939f0cfda6e1` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 

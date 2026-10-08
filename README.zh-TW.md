@@ -33,17 +33,17 @@
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Mac 1.7.5；Windows、Linux 1.7.4
+## 最新下載：1.7.5（Mac、Windows、Linux Debian）
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac 1.7.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.5/LocalBrain_1.7.5_aarch64.dmg)，映像及簽章通過，本機安裝檔與建置產物一致且已啟動；未蘋果公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_x64-setup.exe)，建置與更新簽章通過；尚未在 Windows 實機安裝驗收 |
-| Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_amd64.deb)，版本、架構及資源校驗通過；AppImage 本版打包失敗，暫無 1.7.4 自動更新；尚未在 Linux 實機安裝驗收 |
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.5/LocalBrain_1.7.5_x64-setup.exe)，Windows 本機建置、包內資源及更新簽章校驗通過；尚未完成安裝後介面與模型功能驗收 |
+| Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.5/LocalBrain_1.7.5_amd64.deb)，Ubuntu 22.04 WSL 建置、安裝及 20 秒啟動檢查通過；預覽支援，尚未完成實際桌面與模型功能驗收；本版無 AppImage |
 
-[Mac 1.7.5 發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.5)。Windows、Linux 暫用上表的 1.7.4 安裝包，待實體機建置後更新。Mac 拖入應用程式；舊版 Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.7.4_amd64.deb`。保留舊發行。
+[1.7.5 發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.5)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.7.5_amd64.deb`。保留舊發行。
 
-建置與驗收邊界見 [1.7.5 驗收記錄](VERIFICATION-1.7.5.md)。GitHub 建置額度不足，Windows、Linux 1.7.5 尚未產出，不可將舊版視為新版。工作區未提交的影片 LoRA 改動未納入本包。
+建置與驗收邊界見 [1.7.5 驗收記錄](VERIFICATION-1.7.5.md)。Windows、Linux Debian 已從最新主分支於本機補齊；AppImage 因 musl 原生依賴打包失敗，Linux 自動更新清單保留實際可用的 1.7.2，升級至 1.7.5 請手動安裝 Debian 包。
 
 <!-- evergreen:screenshots:start -->
 ## 實際介面
@@ -79,8 +79,8 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | 檔案 | 散列 |
 | --- | --- |
 | Mac DMG | `a7e76084cdbcad77c424d79f13dfb868976f16460aee6d37a854940b8d0515dc` |
-| Windows安裝程式 | `0b4b6d539cd4809aa3e4a6eda919f83f7bac2bf99a4ff1106f0601aa38abc442` |
-| Linux Debian包 | `8043038099c96e55c317f9dafc5aeee5b046564a99bbc05356df79741af503ac` |
+| Windows安裝程式 | `8b1e9b5d5036bf82ff6c64417c221d5b6a2c22b2332d31c618cd11fc932e56fe` |
+| Linux Debian包 | `4bb01a404e148e5961c0fa94165d0c470c380cafab84f041d543939f0cfda6e1` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
 
