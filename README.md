@@ -16,11 +16,11 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **1.7.5** · 内置靶场复用已下载的镜像；专用隔离环境 DNS 失效时可恢复，并区分网络与架构错误。
 - **1.7.4** · 网络安全成为独立工作台；工作区审查、内置靶场、授权主机与容器镜像按任务进入。
 - **1.7.4** · 设置布局更紧凑；安全列表独立加载，历史错误和当前状态分开显示。
 - **1.7.2** · 新版 DeepSeek Harness 接入改用 cordis.patch.yml，保留原配置并提供恢复；已有会话需重新选择模型。
 - **1.7.1** · 新版 Splash 启动与严格工具参数兼容：保留时间、前导零、中文引号和工具标签。
-- **1.7.0** · 表格按真实行列分页读取，可选择工作表和单元格区域，附件显示截取范围。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -35,17 +35,17 @@
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：1.7.4
+## 最新下载：Mac 1.7.5；Windows、Linux 1.7.4
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_aarch64.dmg)，镜像和签名通过、本机已安装并验证独立网络安全工作台；未苹果公证 |
+| Apple Silicon Mac 1.7.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.5/LocalBrain_1.7.5_aarch64.dmg)，镜像和签名通过、本机安装文件与构建产物一致且已启动；未苹果公证 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_x64-setup.exe)，构建与更新签名通过；未在 Windows 真机安装验收 |
 | Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_amd64.deb)，版本、架构与资源校验通过；AppImage 本版打包失败，暂无 1.7.4 自动更新；未在 Linux 真机安装验收 |
 
-[发行说明及全部校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.4)。Mac 拖入应用程序，Windows 运行安装程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_1.7.4_amd64.deb`。Mac 与 Windows 更新包带签名；Linux 本版需手动下载安装。旧发行保留。
+[Mac 1.7.5 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.5)。Windows、Linux 暂用上表中的 1.7.4 包，待实体机打包后再更新。Mac 拖入应用程序；Debian/Ubuntu 旧版执行 `sudo apt install ./LocalBrain_1.7.4_amd64.deb`。旧发行保留。
 
-本版各平台产物的构建提交与验收范围见 [1.7.4 验收记录](VERIFICATION-1.7.4.md)。跨平台打包修复不改变网络安全工作台功能代码；工作区未提交的视频 LoRA 改动未纳入本包。
+本版构建与验收边界见 [1.7.5 验收记录](VERIFICATION-1.7.5.md)。Windows、Linux 的 1.7.5 构建因 GitHub 额度不足未生成，不可将旧版当成新版。工作区未提交的视频 LoRA 改动未纳入本包。
 
 <!-- evergreen:screenshots:start -->
 ## 实际界面
@@ -80,7 +80,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `2e37a452e26b68a5ce35b7dbe1fa5a7b95cb1975f6249295d69fb3b1fcef08db` |
+| Mac DMG | `a7e76084cdbcad77c424d79f13dfb868976f16460aee6d37a854940b8d0515dc` |
 | Windows安装程序 | `0b4b6d539cd4809aa3e4a6eda919f83f7bac2bf99a4ff1106f0601aa38abc442` |
 | Linux Debian包 | `8043038099c96e55c317f9dafc5aeee5b046564a99bbc05356df79741af503ac` |
 

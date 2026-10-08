@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **1.7.5** · Built-in labs reuse cached images; sandbox DNS can recover automatically, with network and architecture errors distinguished.
 - **1.7.4** · A dedicated Security workspace groups workspace review, built-in labs, authorized hosts and container images by task.
 - **1.7.4** · Settings are more compact; security resources load independently and previous errors are distinct from current status.
 - **1.7.2** · Updated DeepSeek Harness integration uses cordis.patch.yml, preserves configuration and supports restore; existing sessions must reselect the model.
 - **1.7.1** · Splash launch and strict tool arguments now preserve times, leading zeroes, quotes and tool markers.
-- **1.7.0** · Read spreadsheets by actual rows, sheets and selected ranges; attachments show truncation boundaries.
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,17 +33,17 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads: 1.7.4
+## Latest downloads: Mac 1.7.5; Windows and Linux 1.7.4
 
 | Platform | Package and acceptance |
 | --- | --- |
-| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_aarch64.dmg), disk image and signatures verified; installed locally and the dedicated Security workspace checked; not Apple-notarized |
+| Apple Silicon Mac 1.7.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.5/LocalBrain_1.7.5_aarch64.dmg), disk image and signature verified; installed app matches the build and launches; not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_x64-setup.exe), build and updater signature verified; not yet installed and checked on a Windows device |
 | Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_amd64.deb), version, architecture and resources verified; AppImage packaging failed for this release, so there is no 1.7.4 Linux automatic update; not yet installed on a Linux device |
 
-[Release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.4). Drag the Mac app into Applications or run the Windows installer. On Debian/Ubuntu run `sudo apt install ./LocalBrain_1.7.4_amd64.deb`. Mac and Windows updater artifacts are signed; Linux requires a manual install for this release. Older releases are retained.
+[Mac 1.7.5 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.5). Windows and Linux remain at the 1.7.4 downloads above until physical-machine builds are available. Drag the Mac app into Applications; for the older Debian/Ubuntu package run `sudo apt install ./LocalBrain_1.7.4_amd64.deb`. Older releases are retained.
 
-See the [1.7.4 verification record](VERIFICATION-1.7.4.md) for platform build commits and acceptance limits. Packaging fixes do not change the Security workspace code. Uncommitted video LoRA changes are excluded.
+See the [1.7.5 verification record](VERIFICATION-1.7.5.md) for build and acceptance limits. Windows and Linux 1.7.5 builds were not produced because GitHub build capacity was unavailable. Uncommitted video LoRA changes are excluded.
 
 <!-- evergreen:screenshots:start -->
 ## Real application screenshots
@@ -78,7 +78,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `2e37a452e26b68a5ce35b7dbe1fa5a7b95cb1975f6249295d69fb3b1fcef08db` |
+| Mac DMG | `a7e76084cdbcad77c424d79f13dfb868976f16460aee6d37a854940b8d0515dc` |
 | Windows installer | `0b4b6d539cd4809aa3e4a6eda919f83f7bac2bf99a4ff1106f0601aa38abc442` |
 | Linux Debian | `8043038099c96e55c317f9dafc5aeee5b046564a99bbc05356df79741af503ac` |
 

@@ -14,11 +14,11 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **1.7.5** · 內建靶場重用本機鏡像；隔離環境 DNS 異常可自動恢復，並區分網路與架構錯誤。
 - **1.7.4** · 網路安全成為獨立工作台；工作區審查、內建靶場、授權主機與容器映像按任務進入。
 - **1.7.4** · 設定版面更緊湊；安全清單獨立載入，歷史錯誤與目前狀態分開顯示。
 - **1.7.2** · 新版 DeepSeek Harness 改用 cordis.patch.yml，保留原設定並提供恢復；既有會話需重新選擇模型。
 - **1.7.1** · 新版 Splash 啟動與嚴格工具參數相容，保留時間、前導零、中文引號與工具標籤。
-- **1.7.0** · 表格按真實列分頁，可選工作表和儲存格範圍；附件標示截取邊界。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,17 +33,17 @@
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：1.7.4
+## 最新下載：Mac 1.7.5；Windows、Linux 1.7.4
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_aarch64.dmg)，映像及簽章通過，已在本機安裝並驗證獨立網路安全工作台；未蘋果公證 |
+| Apple Silicon Mac 1.7.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.5/LocalBrain_1.7.5_aarch64.dmg)，映像及簽章通過，本機安裝檔與建置產物一致且已啟動；未蘋果公證 |
 | Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_x64-setup.exe)，建置與更新簽章通過；尚未在 Windows 實機安裝驗收 |
 | Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.4/LocalBrain_1.7.4_amd64.deb)，版本、架構及資源校驗通過；AppImage 本版打包失敗，暫無 1.7.4 自動更新；尚未在 Linux 實機安裝驗收 |
 
-[發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.4)。Mac 拖入應用程式，Windows 執行安裝程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.7.4_amd64.deb`。Mac 與 Windows 更新包帶簽章；Linux 本版需手動下載安裝。保留舊發行。
+[Mac 1.7.5 發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.5)。Windows、Linux 暫用上表的 1.7.4 安裝包，待實體機建置後更新。Mac 拖入應用程式；舊版 Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.7.4_amd64.deb`。保留舊發行。
 
-各平台產物的建置提交與驗收範圍見 [1.7.4 驗收記錄](VERIFICATION-1.7.4.md)。跨平台打包修復不改變網路安全工作台功能程式碼；工作區未提交的影片 LoRA 改動未納入本包。
+建置與驗收邊界見 [1.7.5 驗收記錄](VERIFICATION-1.7.5.md)。GitHub 建置額度不足，Windows、Linux 1.7.5 尚未產出，不可將舊版視為新版。工作區未提交的影片 LoRA 改動未納入本包。
 
 <!-- evergreen:screenshots:start -->
 ## 實際介面
@@ -78,7 +78,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `2e37a452e26b68a5ce35b7dbe1fa5a7b95cb1975f6249295d69fb3b1fcef08db` |
+| Mac DMG | `a7e76084cdbcad77c424d79f13dfb868976f16460aee6d37a854940b8d0515dc` |
 | Windows安裝程式 | `0b4b6d539cd4809aa3e4a6eda919f83f7bac2bf99a4ff1106f0601aa38abc442` |
 | Linux Debian包 | `8043038099c96e55c317f9dafc5aeee5b046564a99bbc05356df79741af503ac` |
 
