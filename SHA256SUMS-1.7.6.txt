@@ -1,0 +1,6 @@
+8fd14a5b1a88131d4a9e8dc5e4444e68d706eec1468c71588f99ce91756fee6d  LocalBrain_1.7.6_amd64.deb
+dbd803e71a82aa43af3d36487b631a05c5b719da207b29d3853de252cae1bf29  LocalBrain_1.7.6_amd64.deb.build.txt
+e0ba175642f273a23cf0cf4d24121de727038a16a00a9a28578dbc9fa1d38fac  LocalBrain_1.7.6_amd64.deb.sig
+e593eb820bdfc9588b4efc62ec17a19a71bfc90fac6b1a84a04a8506d0805389  LocalBrain_1.7.6_x64-setup.exe
+92ae09a73224a54cecdeb82012918f6ec4dcfa98fd4406a3fa03c1a25288fde6  LocalBrain_1.7.6_x64-setup.exe.build.txt
+233bd7feed46bd6561d672612a6db97e30cd9b7e2e4035a0aee0449f46db4be8  LocalBrain_1.7.6_x64-setup.exe.sig
