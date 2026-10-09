@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **1.7.7** · Mac Discover adds three download tiers for the Swift 1.5 abliterated Flash Next model. Full startup and inference remain unverified; a 64 GB host is not recommended for stable use.
 - **1.7.6** · On Windows, confirmation opens the official Docker Desktop installer through WinGet; existing installations are started while the app waits for the Linux engine.
 - **1.7.6** · Setup distinguishes missing Docker, an unavailable engine and Windows-container mode; cancellation stops preparation and offline container lists no longer appear as refresh failures.
 - **1.7.5** · Built-in labs reuse cached images; sandbox DNS can recover automatically, with network and architecture errors distinguished.
 - **1.7.4** · A dedicated Security workspace groups workspace review, built-in labs, authorized hosts and container images by task.
-- **1.7.4** · Settings are more compact; security resources load independently and previous errors are distinct from current status.
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,17 +33,17 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads: Windows and Linux Debian 1.7.6; Mac 1.7.5
+## Latest downloads: Mac 1.7.7; Windows and Linux Debian 1.7.6
 
 | Platform | Package and acceptance |
 | --- | --- |
-| Apple Silicon Mac 1.7.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.5/LocalBrain_1.7.5_aarch64.dmg), disk image and signature verified; installed app matches the build and launches; not Apple-notarized |
+| Apple Silicon Mac 1.7.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.7/LocalBrain_1.7.7_aarch64.dmg), disk image and signature verified; installed app matches the build and launches; not Apple-notarized; full inference of the newly listed model is unverified |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_x64-setup.exe), built on Windows; packaged resources and updater signature verified; post-install UI and model acceptance remain pending |
 | Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_amd64.deb), built and installed on Ubuntu 22.04 WSL; passed a 20-second startup check; preview support, with real desktop and model acceptance pending; no AppImage for this release |
 
-[1.7.6 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.7.6_amd64.deb`. Older releases are retained.
+[Mac 1.7.7 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.7); [Windows and Linux 1.7.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.7.6_amd64.deb`. Older releases are retained.
 
-See the [1.7.6 verification record](VERIFICATION-1.7.6.md). Windows adds confirmed Docker Desktop installation, startup waiting and status guidance; the complete installation and model-checking workflow is not yet tested end to end. Linux remains a Debian preview package. This release uses the previously verified format and provides no AppImage; its updater retains 1.7.2. Install the Debian package manually to upgrade.
+See the [1.7.7 Mac verification record](VERIFICATION-1.7.7.md). Windows and Linux remain at 1.7.6; see the [1.7.6 verification record](VERIFICATION-1.7.6.md). Their complete installation and model-checking workflow is not yet tested end to end. Linux remains a Debian preview package without an AppImage; install it manually to upgrade.
 
 <!-- evergreen:screenshots:start -->
 ## Real application screenshots
@@ -78,7 +78,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `a7e76084cdbcad77c424d79f13dfb868976f16460aee6d37a854940b8d0515dc` |
+| Mac DMG | `da4c9fbaa9cc4eb55fad3a114eb365e92b98412c5571f6f0d20f3919235f46b9` |
 | Windows installer | `e593eb820bdfc9588b4efc62ec17a19a71bfc90fac6b1a84a04a8506d0805389` |
 | Linux Debian | `8fd14a5b1a88131d4a9e8dc5e4444e68d706eec1468c71588f99ce91756fee6d` |
 

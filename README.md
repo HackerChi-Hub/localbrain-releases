@@ -16,11 +16,11 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **1.7.7** · Mac「发现」页新增 Swift 1.5 Flash Next 去审查模型的三档下载选项；整模启动和推理尚未验证，64 GB 设备不建议作为稳定运行环境。
 - **1.7.6** · Windows 确认后通过 WinGet 打开 Docker Desktop 官方安装器；已安装时尝试启动并等待 Linux 引擎。
 - **1.7.6** · 检查环境区分未安装、引擎未就绪及 Windows 容器模式；取消安装会停止准备，离线容器列表不再误报刷新失败。
 - **1.7.5** · 内置靶场复用本地镜像；隔离环境 DNS 异常可自动恢复，并区分网络与架构错误。
 - **1.7.4** · 网络安全成为独立工作台；工作区审查、内置靶场、授权主机与容器镜像按任务进入。
-- **1.7.4** · 设置布局更紧凑；安全列表独立加载，历史错误和当前状态分开显示。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -35,17 +35,17 @@
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows、Linux Debian 1.7.6；Mac 1.7.5
+## 最新下载：Mac 1.7.7；Windows、Linux Debian 1.7.6
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 1.7.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.5/LocalBrain_1.7.5_aarch64.dmg)，镜像和签名通过、本机安装文件与构建产物一致且已启动；未苹果公证 |
+| Apple Silicon Mac 1.7.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.7/LocalBrain_1.7.7_aarch64.dmg)，镜像和签名通过、本机安装文件与构建产物一致且已启动；未苹果公证；新增模型尚未完成整模推理验收 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_x64-setup.exe)，Windows 本机构建、包内资源及更新签名校验通过；尚未完成安装后界面和模型功能验收 |
 | Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_amd64.deb)，Ubuntu 22.04 WSL 构建、安装和 20 秒启动检查通过；预览支持，尚未完成真实桌面与模型功能验收；本版无 AppImage |
 
-[1.7.6 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_1.7.6_amd64.deb`。旧发行保留。
+[Mac 1.7.7 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.7)；[Windows、Linux 1.7.6 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_1.7.6_amd64.deb`。旧发行保留。
 
-本版构建与验收边界见 [1.7.6 验收记录](VERIFICATION-1.7.6.md)。Windows 提供确认后安装 Docker Desktop、启动等待与状态提示；完整安装及模型检查链路尚未实机验收。Linux 为 Debian 预览包，沿用已验证的格式；本版不提供 AppImage，自动更新清单保留 1.7.2，升级请手动安装 Debian 包。
+Mac 构建与验收边界见 [1.7.7 验收记录](VERIFICATION-1.7.7.md)。Windows、Linux 仍为 1.7.6，见 [1.7.6 验收记录](VERIFICATION-1.7.6.md)；完整安装及模型检查链路尚未实机验收。Linux 为 Debian 预览包，不提供 AppImage；升级请手动安装 Debian 包。
 
 <!-- evergreen:screenshots:start -->
 ## 实际界面
@@ -80,7 +80,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `a7e76084cdbcad77c424d79f13dfb868976f16460aee6d37a854940b8d0515dc` |
+| Mac DMG | `da4c9fbaa9cc4eb55fad3a114eb365e92b98412c5571f6f0d20f3919235f46b9` |
 | Windows安装程序 | `e593eb820bdfc9588b4efc62ec17a19a71bfc90fac6b1a84a04a8506d0805389` |
 | Linux Debian包 | `8fd14a5b1a88131d4a9e8dc5e4444e68d706eec1468c71588f99ce91756fee6d` |
 
