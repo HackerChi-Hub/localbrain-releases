@@ -16,11 +16,11 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
-- **1.7.7** · Mac「发现」页新增 Swift 1.5 Flash Next 去审查模型的三档下载选项；整模启动和推理尚未验证，64 GB 设备不建议作为稳定运行环境。
-- **1.7.6** · Windows 确认后通过 WinGet 打开 Docker Desktop 官方安装器；已安装时尝试启动并等待 Linux 引擎。
-- **1.7.6** · 检查环境区分未安装、引擎未就绪及 Windows 容器模式；取消安装会停止准备，离线容器列表不再误报刷新失败。
-- **1.7.5** · 内置靶场复用本地镜像；隔离环境 DNS 异常可自动恢复，并区分网络与架构错误。
-- **1.7.4** · 网络安全成为独立工作台；工作区审查、内置靶场、授权主机与容器镜像按任务进入。
+- **1.7.9** · 对话、工具任务和独立审查携带真实当前时间与本机时区，工具后及恢复后刷新；“当今、最新”按当前日期核资料范围。
+- **1.7.9** · 长任务连接等待与用户设置的单轮、任务时限协调，保留取消及真实停止原因，避免固定空闲期限提前截断。
+- **1.7.9** · 长工具结果保留完整原始回执，可按字段、分页或原文词句读回；来源、未知字段和产物版本保持可追溯。
+- **1.7.9** · 文档检查分别显示基础、显式条件与版面结果，结构化回执可直接读回；检查失败和审查不可用继续如实保留。
+- **1.7.9** · 中文学术版式可选A4、12磅正文、1.5倍行距、首行两字及页码，并支持可编辑文档与PDF交付。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -35,17 +35,17 @@
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Mac 1.7.7；Windows、Linux Debian 1.7.6
+## 最新下载：Mac 1.7.9；Windows、Linux Debian 1.7.6
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 1.7.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.7/LocalBrain_1.7.7_aarch64.dmg)，镜像和签名通过、本机安装文件与构建产物一致且已启动；未苹果公证；新增模型尚未完成整模推理验收 |
+| Apple Silicon Mac 1.7.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.9/LocalBrain_1.7.9_aarch64.dmg)，镜像与严格签名通过，已在本机安装启动，安装资源与正式构建一致；时间刷新、短文档生成和失败字段读回已验证；未苹果公证，完整模型论文未合格 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_x64-setup.exe)，Windows 本机构建、包内资源及更新签名校验通过；尚未完成安装后界面和模型功能验收 |
 | Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_amd64.deb)，Ubuntu 22.04 WSL 构建、安装和 20 秒启动检查通过；预览支持，尚未完成真实桌面与模型功能验收；本版无 AppImage |
 
-[Mac 1.7.7 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.7)；[Windows、Linux 1.7.6 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_1.7.6_amd64.deb`。旧发行保留。
+[Mac 1.7.9 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.9)；[Windows、Linux 1.7.6 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_1.7.6_amd64.deb`。旧发行保留。
 
-Mac 构建与验收边界见 [1.7.7 验收记录](VERIFICATION-1.7.7.md)。Windows、Linux 仍为 1.7.6，见 [1.7.6 验收记录](VERIFICATION-1.7.6.md)；完整安装及模型检查链路尚未实机验收。Linux 为 Debian 预览包，不提供 AppImage；升级请手动安装 Debian 包。
+Mac 构建与验收边界见 [1.7.9 验收记录](VERIFICATION-1.7.9.md)。Windows、Linux的新构建作业因GitHub账户付款或支出上限限制未启动，备用环境未能连接，安装包保留1.7.6，见 [1.7.6 验收记录](VERIFICATION-1.7.6.md)。Linux仍为Debian预览包；手动安装升级，其分平台自动更新保留1.7.2。原模型论文失败记录保留，其他搁置任务未恢复。
 
 <!-- evergreen:screenshots:start -->
 ## 实际界面
@@ -80,7 +80,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `da4c9fbaa9cc4eb55fad3a114eb365e92b98412c5571f6f0d20f3919235f46b9` |
+| Mac DMG | `5bcb81c90c883f4f5e04707864d23d38bb25eba02ef95b750526dd8ca7060e48` |
 | Windows安装程序 | `e593eb820bdfc9588b4efc62ec17a19a71bfc90fac6b1a84a04a8506d0805389` |
 | Linux Debian包 | `8fd14a5b1a88131d4a9e8dc5e4444e68d706eec1468c71588f99ce91756fee6d` |
 

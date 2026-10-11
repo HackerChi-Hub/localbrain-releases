@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **1.7.7** · Mac Discover adds three download tiers for the Swift 1.5 abliterated Flash Next model. Full startup and inference remain unverified; a 64 GB host is not recommended for stable use.
-- **1.7.6** · On Windows, confirmation opens the official Docker Desktop installer through WinGet; existing installations are started while the app waits for the Linux engine.
-- **1.7.6** · Setup distinguishes missing Docker, an unavailable engine and Windows-container mode; cancellation stops preparation and offline container lists no longer appear as refresh failures.
-- **1.7.5** · Built-in labs reuse cached images; sandbox DNS can recover automatically, with network and architecture errors distinguished.
-- **1.7.4** · A dedicated Security workspace groups workspace review, built-in labs, authorized hosts and container images by task.
+- **1.7.9** · Conversations, tool tasks and independent reviews receive the real current time and device time zone, refreshed after tools and recovery; current/latest requests use today's date to check coverage.
+- **1.7.9** · Long-task connection waits follow user-configured round and task limits, preserving cancellation and real stop reasons instead of ending early at a fixed idle deadline.
+- **1.7.9** · Long tool results retain complete raw receipts and support field, page or exact-text readback, keeping sources, unknown fields and artifact versions traceable.
+- **1.7.9** · Document checks report basic, explicit-condition and layout results separately with directly readable structured receipts; failures and unavailable reviews remain visible.
+- **1.7.9** · The optional Chinese academic layout supports A4, 12-point body text, 1.5 line spacing, a two-character first-line indent and page numbers for editable documents and PDFs.
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,17 +33,17 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads: Mac 1.7.7; Windows and Linux Debian 1.7.6
+## Latest downloads: Mac 1.7.9; Windows and Linux Debian 1.7.6
 
 | Platform | Package and acceptance |
 | --- | --- |
-| Apple Silicon Mac 1.7.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.7/LocalBrain_1.7.7_aarch64.dmg), disk image and signature verified; installed app matches the build and launches; not Apple-notarized; full inference of the newly listed model is unverified |
+| Apple Silicon Mac 1.7.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.9/LocalBrain_1.7.9_aarch64.dmg), disk image and strict code signature verified; installed and launched locally with resources matching the release build; time refresh, short-document generation and failed-field readback verified; not Apple-notarized; the full model-written paper remains unqualified |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_x64-setup.exe), built on Windows; packaged resources and updater signature verified; post-install UI and model acceptance remain pending |
 | Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_amd64.deb), built and installed on Ubuntu 22.04 WSL; passed a 20-second startup check; preview support, with real desktop and model acceptance pending; no AppImage for this release |
 
-[Mac 1.7.7 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.7); [Windows and Linux 1.7.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.7.6_amd64.deb`. Older releases are retained.
+[Mac 1.7.9 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.9); [Windows and Linux 1.7.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.7.6_amd64.deb`. Older releases are retained.
 
-See the [1.7.7 Mac verification record](VERIFICATION-1.7.7.md). Windows and Linux remain at 1.7.6; see the [1.7.6 verification record](VERIFICATION-1.7.6.md). Their complete installation and model-checking workflow is not yet tested end to end. Linux remains a Debian preview package without an AppImage; install it manually to upgrade.
+See the [1.7.9 Mac verification record](VERIFICATION-1.7.9.md). New Windows/Linux jobs did not start because of GitHub account payment or spending-limit restrictions, and the fallback environment was unreachable; installers remain at 1.7.6, with the [1.7.6 verification record](VERIFICATION-1.7.6.md). Linux remains a manually installed Debian preview; its platform updater stays at 1.7.2. Original failed model-paper records are retained and other parked work has not resumed.
 
 <!-- evergreen:screenshots:start -->
 ## Real application screenshots
@@ -78,7 +78,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `da4c9fbaa9cc4eb55fad3a114eb365e92b98412c5571f6f0d20f3919235f46b9` |
+| Mac DMG | `5bcb81c90c883f4f5e04707864d23d38bb25eba02ef95b750526dd8ca7060e48` |
 | Windows installer | `e593eb820bdfc9588b4efc62ec17a19a71bfc90fac6b1a84a04a8506d0805389` |
 | Linux Debian | `8fd14a5b1a88131d4a9e8dc5e4444e68d706eec1468c71588f99ce91756fee6d` |
 
