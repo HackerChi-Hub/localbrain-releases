@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **1.8.0** · Chat calls integrated speech, transcription, image, editing, music and video tools; query compatible models and select one per task without changing defaults.
+- **1.8.0** · Speech accepts per-request reference audio, language and temperature; transcription keeps segment and word timestamps. Parameters follow model capabilities and unsupported fields return explicit errors.
+- **1.8.0** · Image editing adds multiple references, seed, steps and a size budget; music time signatures are passed correctly. Long media generation holds an activity lease to prevent idle unloading during inference.
+- **1.8.0** · Wuli MiniMax-H3-Turbo adds six Mac preparation choices and managed model storage. Download cards focus on steps, quantization and key requirements; video quality remains experimental.
 - **1.7.9** · Conversations, tool tasks and independent reviews receive the real current time and device time zone, refreshed after tools and recovery; current/latest requests use today's date to check coverage.
-- **1.7.9** · Long-task connection waits follow user-configured round and task limits, preserving cancellation and real stop reasons instead of ending early at a fixed idle deadline.
-- **1.7.9** · Long tool results retain complete raw receipts and support field, page or exact-text readback, keeping sources, unknown fields and artifact versions traceable.
-- **1.7.9** · Document checks report basic, explicit-condition and layout results separately with directly readable structured receipts; failures and unavailable reviews remain visible.
-- **1.7.9** · The optional Chinese academic layout supports A4, 12-point body text, 1.5 line spacing, a two-character first-line indent and page numbers for editable documents and PDFs.
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,17 +33,17 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads: Mac 1.7.9; Windows and Linux Debian 1.7.6
+## Latest downloads: Mac 1.8.0; Windows and Linux Debian 1.7.6
 
-| Platform | Package and acceptance |
+| Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 1.7.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.9/LocalBrain_1.7.9_aarch64.dmg), disk image and strict code signature verified; installed and launched locally with resources matching the release build; time refresh, short-document generation and failed-field readback verified; not Apple-notarized; the full model-written paper remains unqualified |
+| Apple Silicon Mac 1.8.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.8.0/LocalBrain_1.8.0_aarch64.dmg), installed from the image and launched; real chat completed six media tool types and two file handoffs. Strict ad-hoc code signing and independent updater signatures verified; not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_x64-setup.exe), built on Windows; packaged resources and updater signature verified; post-install UI and model acceptance remain pending |
 | Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_amd64.deb), built and installed on Ubuntu 22.04 WSL; passed a 20-second startup check; preview support, with real desktop and model acceptance pending; no AppImage for this release |
 
-[Mac 1.7.9 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.9); [Windows and Linux 1.7.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.7.6_amd64.deb`. Older releases are retained.
+[Mac 1.8.0 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.8.0); [Windows and Linux 1.7.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.7.6_amd64.deb`. Older releases are retained.
 
-See the [1.7.9 Mac verification record](VERIFICATION-1.7.9.md). New Windows/Linux jobs did not start because of GitHub account payment or spending-limit restrictions, and the fallback environment was unreachable; installers remain at 1.7.6, with the [1.7.6 verification record](VERIFICATION-1.7.6.md). Linux remains a manually installed Debian preview; its platform updater stays at 1.7.2. Original failed model-paper records are retained and other parked work has not resumed.
+See the [1.8.0 verification record](VERIFICATION-1.8.0.md) for the six models, parameters, artifacts and limits. Speech/transcription has text differences; image editing succeeded after initial startup exits; music listening quality was not verified and its backend does not report actual tempo or seed. Wuli video remains experimental: earlier four-step color blocks and gray frames with first/last-frame conditioning remain documented; API success does not establish image quality. Other parked work has not resumed. GitHub account payment or spending limits prevented remote jobs from starting; local checks are not presented as passing remote CI. Windows/Linux have no new package in this batch; the Linux updater remains at 1.7.2.
 
 <!-- evergreen:screenshots:start -->
 ## Real application screenshots
@@ -54,6 +54,14 @@ Existing public macOS screenshots from version 1.4.6 show model management and c
 
 ![LocalBrain local tools and AI client integrations, historical 1.4.6 screenshot](screenshots/zh-CN/integrations.png)
 <!-- evergreen:screenshots:end -->
+
+## Actual 1.8.0 chat and download page
+
+Actual installed Mac screenshots, with the top control bar cropped; raw execution evidence is retained. The download page uses the same-round Wuli acceptance screenshot; chat shows this media test. The interface shown is Chinese.
+
+![Actual 1.8.0 chat and download page](screenshots/1.8.0-media-chat.png)
+
+![Wuli MiniMax-H3-Turbo](screenshots/1.8.0-wuli-download.png)
 
 <!-- evergreen:capabilities:start -->
 ## Features and usage
@@ -78,7 +86,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `5bcb81c90c883f4f5e04707864d23d38bb25eba02ef95b750526dd8ca7060e48` |
+| Mac DMG | `189922cfa4cd7356f03ffd72a5f1c30556165de64ab7a0796ba70555f391adff` |
 | Windows installer | `e593eb820bdfc9588b4efc62ec17a19a71bfc90fac6b1a84a04a8506d0805389` |
 | Linux Debian | `8fd14a5b1a88131d4a9e8dc5e4444e68d706eec1468c71588f99ce91756fee6d` |
 

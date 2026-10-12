@@ -16,11 +16,11 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **1.8.0** · 对话按已集成能力调用语音、转写、图片、编辑、音乐和视频工具；可查询兼容模型并为本次任务选择模型，不改默认设置。
+- **1.8.0** · 语音支持本次参考声音、语言与温度；转写保留分段和逐词时间戳，参数按模型能力开放，不支持的字段明确报错。
+- **1.8.0** · 图片编辑补齐多参考图、种子、步数与尺寸预算，音乐修正拍号传递；长媒体生成保持活动租约，避免推理中被闲置回收。
+- **1.8.0** · Wuli MiniMax-H3-Turbo 增加 Mac 六档准备选项与受管模型目录，下载卡片简化为步数、量化和关键条件；视频效果仍属实验。
 - **1.7.9** · 对话、工具任务和独立审查携带真实当前时间与本机时区，工具后及恢复后刷新；“当今、最新”按当前日期核资料范围。
-- **1.7.9** · 长任务连接等待与用户设置的单轮、任务时限协调，保留取消及真实停止原因，避免固定空闲期限提前截断。
-- **1.7.9** · 长工具结果保留完整原始回执，可按字段、分页或原文词句读回；来源、未知字段和产物版本保持可追溯。
-- **1.7.9** · 文档检查分别显示基础、显式条件与版面结果，结构化回执可直接读回；检查失败和审查不可用继续如实保留。
-- **1.7.9** · 中文学术版式可选A4、12磅正文、1.5倍行距、首行两字及页码，并支持可编辑文档与PDF交付。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -35,17 +35,17 @@
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Mac 1.7.9；Windows、Linux Debian 1.7.6
+## 最新下载：Mac 1.8.0；Windows、Linux Debian 1.7.6
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 1.7.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.9/LocalBrain_1.7.9_aarch64.dmg)，镜像与严格签名通过，已在本机安装启动，安装资源与正式构建一致；时间刷新、短文档生成和失败字段读回已验证；未苹果公证，完整模型论文未合格 |
+| Apple Silicon Mac 1.8.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.8.0/LocalBrain_1.8.0_aarch64.dmg)，已从镜像安装并启动；真实聊天完成六类媒体调用及两个文件衔接。严格临时签名与独立更新签名通过，未苹果公证 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_x64-setup.exe)，Windows 本机构建、包内资源及更新签名校验通过；尚未完成安装后界面和模型功能验收 |
 | Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_amd64.deb)，Ubuntu 22.04 WSL 构建、安装和 20 秒启动检查通过；预览支持，尚未完成真实桌面与模型功能验收；本版无 AppImage |
 
-[Mac 1.7.9 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.9)；[Windows、Linux 1.7.6 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_1.7.6_amd64.deb`。旧发行保留。
+[Mac 1.8.0 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.8.0)；[Windows、Linux 1.7.6 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_1.7.6_amd64.deb`。旧发行保留。
 
-Mac 构建与验收边界见 [1.7.9 验收记录](VERIFICATION-1.7.9.md)。Windows、Linux的新构建作业因GitHub账户付款或支出上限限制未启动，备用环境未能连接，安装包保留1.7.6，见 [1.7.6 验收记录](VERIFICATION-1.7.6.md)。Linux仍为Debian预览包；手动安装升级，其分平台自动更新保留1.7.2。原模型论文失败记录保留，其他搁置任务未恢复。
+本轮六类模型、参数、产物和边界见 [1.8.0 验收记录](VERIFICATION-1.8.0.md)。语音转写存在文字差异；编辑首次启动退出后重试成功；音乐听感未验，上游没有返回实际采用的节拍和种子。Wuli视频仍属实验：原四步色块、首尾条件灰帧记录保留，不能据接口成功宣称画面质量合格。其他搁置任务未恢复。GitHub账户付款或支出限制使远端作业没有启动；本地检查完成不冒充远端CI通过。Windows、Linux没有本轮新包；Linux自动更新清单仍保留1.7.2。
 
 <!-- evergreen:screenshots:start -->
 ## 实际界面
@@ -56,6 +56,14 @@ Mac 构建与验收边界见 [1.7.9 验收记录](VERIFICATION-1.7.9.md)。Windo
 
 ![方寸智匣本地工具与 AI 客户端接入，历史版本 1.4.6](screenshots/zh-CN/integrations.png)
 <!-- evergreen:screenshots:end -->
+
+## 1.8.0 实际对话与下载页
+
+以下为本机安装版实拍，顶部控制条已裁除；原始运行记录保留。下载页沿用同轮Wuli安装验收截图，对话为本轮媒体实测。
+
+![1.8.0 实际对话与下载页](screenshots/1.8.0-media-chat.png)
+
+![Wuli MiniMax-H3-Turbo](screenshots/1.8.0-wuli-download.png)
 
 <!-- evergreen:capabilities:start -->
 ## 功能和使用
@@ -80,7 +88,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `5bcb81c90c883f4f5e04707864d23d38bb25eba02ef95b750526dd8ca7060e48` |
+| Mac DMG | `189922cfa4cd7356f03ffd72a5f1c30556165de64ab7a0796ba70555f391adff` |
 | Windows安装程序 | `e593eb820bdfc9588b4efc62ec17a19a71bfc90fac6b1a84a04a8506d0805389` |
 | Linux Debian包 | `8fd14a5b1a88131d4a9e8dc5e4444e68d706eec1468c71588f99ce91756fee6d` |
 
