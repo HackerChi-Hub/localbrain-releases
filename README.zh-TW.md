@@ -14,11 +14,11 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **1.8.7** · 相容 Splash 1.3.1 就緒狀態回執並強制本機回環探測繞過系統代理，解決模型載入完成後啟動按鈕仍停留忙碌或逾時自停的問題；切頁保留啟動狀態提示。
+- **1.8.7** · 修復已下載 Splash 模型清單重複顯示兩列的問題，並恢復 Swift 1.5 與 Qwen3.8 去審查版新版 Splash 獨立入口、權重偏移轉換及原生範本組裝。
+- **1.8.6** · 統一探索頁、已安裝、下載工作與快取管理四視圖狀態；支援 Splash 魔搭傳輸並與固定提交檔案雜湊核對，分離受管主模型與共用草稿快取清理。
 - **1.8.0** · 對話依已整合能力呼叫語音、轉寫、圖片、編輯、音樂及影片工具；可查詢相容模型並為本次工作選擇模型，不改預設設定。
-- **1.8.0** · 語音支援本次參考聲音、語言與溫度；轉寫保留分段及逐詞時間戳，參數依模型能力開放，不支援的欄位明確報錯。
 - **1.8.0** · 圖片編輯補齊多參考圖、種子、步數與尺寸預算，音樂修正拍號傳遞；長媒體生成保持活動租約，避免推理中被閒置回收。
-- **1.8.0** · Wuli MiniMax-H3-Turbo 增加 Mac 六檔準備選項與受管模型目錄，下載卡片簡化為步數、量化及關鍵條件；影片效果仍屬實驗。
-- **1.7.9** · 對話、工具工作及獨立審查攜帶真實目前時間與本機時區，工具後及恢復後重新整理；「當今、最新」依目前日期核對資料範圍。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -37,11 +37,11 @@
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 1.8.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.8.0/LocalBrain_1.8.0_aarch64.dmg)，已從映像安裝並啟動；真實對話完成六類媒體呼叫及兩個檔案銜接。嚴格臨時簽章與獨立更新簽章通過，未蘋果公證 |
+| Apple Silicon Mac 1.8.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.8.7/LocalBrain_1.8.7_aarch64.dmg)，已從映像安裝並啟動；真實對話完成六類媒體呼叫及兩個檔案銜接。嚴格臨時簽章與獨立更新簽章通過，未蘋果公證 |
 | Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_x64-setup.exe)，Windows 本機建置、包內資源及更新簽章校驗通過；尚未完成安裝後介面與模型功能驗收 |
-| Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_amd64.deb)，Ubuntu 22.04 WSL 建置、安裝及 20 秒啟動檢查通過；預覽支援，尚未完成實際桌面與模型功能驗收；本版無 AppImage |
+| Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.8.7/LocalBrain_1.8.7_amd64.deb)，Ubuntu 22.04 WSL 建置、安裝及 20 秒啟動檢查通過；預覽支援，尚未完成實際桌面與模型功能驗收；本版無 AppImage |
 
-[Mac 1.8.0 發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.8.0)；[Windows、Linux 1.7.6 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.7.6_amd64.deb`。保留舊發行。
+[Mac 1.8.0 發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.8.7)；[Windows、Linux 1.7.6 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.8.7_amd64.deb`。保留舊發行。
 
 本輪六類模型、參數、產物及邊界見 [1.8.0 驗收記錄](VERIFICATION-1.8.0.md)。語音轉寫存在文字差異；編輯首次啟動退出後重試成功；音樂聽感未驗，上游沒有回傳實際採用的節拍與種子。Wuli影片仍屬實驗：原四步色塊、首尾條件灰幀記錄保留，不能依介面成功宣稱畫面品質合格。其他擱置工作未恢復。GitHub帳戶付款或支出限制使遠端作業沒有啟動；本機檢查完成不冒充遠端CI通過。Windows、Linux沒有本輪新包；Linux自動更新清單仍保留1.7.2。
 
@@ -86,7 +86,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `189922cfa4cd7356f03ffd72a5f1c30556165de64ab7a0796ba70555f391adff` |
+| Mac DMG | `9f5468acabc5f0d6915310ed9ef34d60519432c4771cbfba84e5c5fa99ad5c10` |
 | Windows安裝程式 | `e593eb820bdfc9588b4efc62ec17a19a71bfc90fac6b1a84a04a8506d0805389` |
 | Linux Debian包 | `8fd14a5b1a88131d4a9e8dc5e4444e68d706eec1468c71588f99ce91756fee6d` |
 

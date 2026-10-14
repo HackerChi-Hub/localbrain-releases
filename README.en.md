@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **1.8.7** · Accepts Splash 1.3.1 readiness responses and bypasses system proxies for local loopback probes, preventing models from staying stuck on a busy start button or timing out after loading; keeps startup status visible across page switches.
+- **1.8.7** · Fixes duplicate rows for installed Splash models and restores Swift 1.5 and Qwen3.8 Uncensored entries for current Splash with offset RMSNorm conversion and native template assembly.
+- **1.8.6** · Unifies Discover, Installed, Downloads and Cache views on live disk and task state; adds ModelScope transport with pinned commit hash verification for Splash and separates main model cleanup from shared draft cache.
 - **1.8.0** · Chat calls integrated speech, transcription, image, editing, music and video tools; query compatible models and select one per task without changing defaults.
-- **1.8.0** · Speech accepts per-request reference audio, language and temperature; transcription keeps segment and word timestamps. Parameters follow model capabilities and unsupported fields return explicit errors.
 - **1.8.0** · Image editing adds multiple references, seed, steps and a size budget; music time signatures are passed correctly. Long media generation holds an activity lease to prevent idle unloading during inference.
-- **1.8.0** · Wuli MiniMax-H3-Turbo adds six Mac preparation choices and managed model storage. Download cards focus on steps, quantization and key requirements; video quality remains experimental.
-- **1.7.9** · Conversations, tool tasks and independent reviews receive the real current time and device time zone, refreshed after tools and recovery; current/latest requests use today's date to check coverage.
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,15 +33,15 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads: Mac 1.8.0; Windows and Linux Debian 1.7.6
+## Latest downloads: Mac 1.8.7; Windows and Linux Debian 1.7.6
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 1.8.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.8.0/LocalBrain_1.8.0_aarch64.dmg), installed from the image and launched; real chat completed six media tool types and two file handoffs. Strict ad-hoc code signing and independent updater signatures verified; not Apple-notarized |
+| Apple Silicon Mac 1.8.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.8.7/LocalBrain_1.8.7_aarch64.dmg), installed from the image and launched; real chat completed six media tool types and two file handoffs. Strict ad-hoc code signing and independent updater signatures verified; not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_x64-setup.exe), built on Windows; packaged resources and updater signature verified; post-install UI and model acceptance remain pending |
-| Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_amd64.deb), built and installed on Ubuntu 22.04 WSL; passed a 20-second startup check; preview support, with real desktop and model acceptance pending; no AppImage for this release |
+| Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.8.7/LocalBrain_1.8.7_amd64.deb), built and installed on Ubuntu 22.04 WSL; passed a 20-second startup check; preview support, with real desktop and model acceptance pending; no AppImage for this release |
 
-[Mac 1.8.0 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.8.0); [Windows and Linux 1.7.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.7.6_amd64.deb`. Older releases are retained.
+[Mac 1.8.0 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.8.7); [Windows and Linux 1.7.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.8.7_amd64.deb`. Older releases are retained.
 
 See the [1.8.0 verification record](VERIFICATION-1.8.0.md) for the six models, parameters, artifacts and limits. Speech/transcription has text differences; image editing succeeded after initial startup exits; music listening quality was not verified and its backend does not report actual tempo or seed. Wuli video remains experimental: earlier four-step color blocks and gray frames with first/last-frame conditioning remain documented; API success does not establish image quality. Other parked work has not resumed. GitHub account payment or spending limits prevented remote jobs from starting; local checks are not presented as passing remote CI. Windows/Linux have no new package in this batch; the Linux updater remains at 1.7.2.
 
@@ -86,7 +86,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `189922cfa4cd7356f03ffd72a5f1c30556165de64ab7a0796ba70555f391adff` |
+| Mac DMG | `9f5468acabc5f0d6915310ed9ef34d60519432c4771cbfba84e5c5fa99ad5c10` |
 | Windows installer | `e593eb820bdfc9588b4efc62ec17a19a71bfc90fac6b1a84a04a8506d0805389` |
 | Linux Debian | `8fd14a5b1a88131d4a9e8dc5e4444e68d706eec1468c71588f99ce91756fee6d` |
 
