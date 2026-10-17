@@ -16,11 +16,11 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **1.9.2** · Windows/Linux 可连接独立 PolyStrata 环境并启动 Qwen3.6-35B-A3B 配套模型；读取实际窗口、回收进程树，各平台分别维护引擎依赖。
 - **1.9.1** · 普通聊天自动整理改为增量语义摘要，复用有效旧摘要、合并新增历史；工具会话改用精简中文摘要，保留官方持久化与恢复机制。
 - **1.9.0** · 对话输入区新增“立即压缩”，空闲时可主动整理较早上下文；相同历史重复点击不重复推理，底栏统一标为“上下文已压缩”。
 - **1.9.0** · 原始消息独立归档、摘要另存；失败或取消保留原文，恢复不重执行已完成工具，来源编辑或知识设置变化后不复用旧普通摘要。
 - **1.8.9** · 技能与记忆支持发现外部代理资料、只读挂载或复制导入、内部编辑与按需读取；自动、仅手动、完全关闭模式分别可选，正式版隐藏开发回收站。
-- **1.8.8** · 下载速度使用滑动窗口移动平均，补齐实时速度与预计剩余时间；断流后撤下旧读数并提示等待数据，停滞时速度平滑归零。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -35,17 +35,19 @@
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：1.9.1（Mac、Windows、Linux Debian）
+## 最新下载：Windows/Linux 1.9.2 · Mac 1.9.1
 
 | 平台 | 安装包与状态 |
 | --- | --- |
 | Apple Silicon Mac 1.9.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.1/LocalBrain_1.9.1_aarch64.dmg)，已安装并实测自动增量摘要、“立即压缩”、重复点击和重启续聊；严格本地签名与独立更新签名通过，未苹果公证 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.1/LocalBrain_1.9.1_x64-setup.exe)，Windows 本机构建、包内资源及更新签名校验通过；尚未完成安装后界面和模型功能验收 |
-| Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.1/LocalBrain_1.9.1_amd64.deb)，Ubuntu 22.04 WSL 构建、安装和 20 秒启动检查通过；预览支持，尚未完成真实桌面与模型功能验收；本版无 AppImage |
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_x64-setup.exe) · Windows 正式包的登记、首页显示、真实 8K 模型服务、WebView 跨域连接、工具小任务、停止/重启与退出回收通过本机验收 |
+| Linux x64 | [Debian 包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_amd64.deb) · Ubuntu 22.04 WSL2 构建、安装、启动及包内 PolyStrata/原生 DSH 实际推理通过；Linux 为预览支持，未代替裸机桌面验收；无新 AppImage |
 
 [1.9.1 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.1)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_1.9.1_amd64.deb`。旧发行保留。
 
-本轮上下文整理、技能与记忆的行为、实测与限制见 [1.9.1 验收记录](VERIFICATION-1.9.1.md)。原文与摘要分开保存，恢复不重执行已完成工具；摘要仍有损，可能遗漏事实。历史媒体实测见 [1.8.0 验收记录](VERIFICATION-1.8.0.md)，保留其语音、编辑、音乐和实验视频的问题说明。Windows、Linux Debian 已于 2026-10-17 从同一主分支提交补齐 1.9.1，启用原生工具引擎。Windows 包结构和更新签名通过；Linux 完成 WSL 安装及 20 秒启动检查。完整界面、模型和自动/手动摘要交互尚未在两平台实机验收；Linux 需手动安装 Debian 包，AppImage 自动更新保留 1.7.2。GitHub账户付款或支出限制使远端作业未启动，本地检查不冒充远端CI通过。
+本批仅更新 Windows/Linux 至 **1.9.2**，Mac 保留 **1.9.1**。新功能及限制见 [1.9.2 验收记录](VERIFICATION-1.9.2.md)。先在本平台安装 PolyStrata，在首页「连接 PolyStrata」选择安装根，再启动 Qwen3.6-35B-A3B 配套模型。模型权重另行下载，推荐 NVIDIA 8GB 显存与 32GB 内存；本次实测 Q3，未把 Q2/Q4 入口当成全档验收。Qwen3.8-27B 不兼容此引擎，视觉/AMD 未接入。Windows/Linux 的 Python、CUDA、引擎及 Mac 的 MLX/Splash 分别维护，不在模型启动时隐式更新。详见[平台环境维护](PLATFORM_RUNTIMES.md)。Linux Debian 手动升级；现有 AppImage 自动更新仍为 1.7.2。
+
+以下为 1.9.1 的历史验收说明： 本轮上下文整理、技能与记忆的行为、实测与限制见 [1.9.1 验收记录](VERIFICATION-1.9.1.md)。原文与摘要分开保存，恢复不重执行已完成工具；摘要仍有损，可能遗漏事实。历史媒体实测见 [1.8.0 验收记录](VERIFICATION-1.8.0.md)，保留其语音、编辑、音乐和实验视频的问题说明。Windows、Linux Debian 已于 2026-10-17 从同一主分支提交补齐 1.9.1，启用原生工具引擎。Windows 包结构和更新签名通过；Linux 完成 WSL 安装及 20 秒启动检查。完整界面、模型和自动/手动摘要交互尚未在两平台实机验收；Linux 需手动安装 Debian 包，AppImage 自动更新保留 1.7.2。GitHub账户付款或支出限制使远端作业未启动，本地检查不冒充远端CI通过。
 
 <!-- evergreen:screenshots:start -->
 ## 实际界面
@@ -89,8 +91,8 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 | 文件 | 散列 |
 | --- | --- |
 | Mac DMG | `74725034276f594c5d01556c35a6e12f10c4a636a1b8c9bdea355dd23466d148` |
-| Windows安装程序 | `a14a76342dc6a04b2c4a3edc1e92ca85dd52963789184c5933cdfad4f22cba24` |
-| Linux Debian包 | `234a9005d0c1a18ebb0516924340bfaf618addba8cafc99179ac601cd5d566ac` |
+| Windows安装程序 | `9d8732be966714908e1150a3023508bcd408d7300a7d802ef77d586766b8a137` |
+| Linux Debian包 | `d3829507c24b2a9c3396da63365f7f3cf0895a638fbc1ba93c48ce5b9e56d4af` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 

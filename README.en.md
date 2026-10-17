@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **1.9.2** · Windows/Linux can connect a native PolyStrata installation for Qwen3.6-35B-A3B, report actual context and reclaim inference children; each OS maintains its own engine dependencies.
 - **1.9.1** · Automatic plain-chat compaction reuses valid semantic summaries and merges new history; tool conversations produce concise Chinese summaries while preserving official persistence and recovery.
 - **1.9.0** · Compact now lets idle conversations summarize earlier context on demand. Repeated clicks with unchanged history do not repeat inference; the footer consistently calls this context compaction.
 - **1.9.0** · Original messages are archived separately from summaries. Failure or cancellation retains originals; recovery does not replay completed tools. Source edits or knowledge-policy changes invalidate plain-chat summaries.
 - **1.8.9** · Skills and memory support discovery of other agents' files, read-only mounts, copy imports, internal editing and on-demand reading, with automatic, manual-only and disabled modes. Production builds hide the development recycle-bin panel.
-- **1.8.8** · Download speed uses a sliding-window moving average with live speed and estimated time remaining. Stale readings are withdrawn after a stall, and speed decays smoothly to zero.
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,17 +33,19 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads: 1.9.1 (Mac, Windows and Linux Debian)
+## Latest downloads: Windows/Linux 1.9.2 · Mac 1.9.1
 
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 1.9.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.1/LocalBrain_1.9.1_aarch64.dmg), installed and tested for automatic incremental summaries, Compact now, repeat clicks and continuation after restart. Strict ad-hoc code signing and independent updater signatures verified; not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.1/LocalBrain_1.9.1_x64-setup.exe), built on Windows; packaged resources and updater signature verified; post-install UI and model acceptance remain pending |
-| Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.1/LocalBrain_1.9.1_amd64.deb), built and installed on Ubuntu 22.04 WSL; passed a 20-second startup check; preview support, with real desktop and model acceptance pending; no AppImage for this release |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_x64-setup.exe) · the packaged Windows app passed native registration, Home display, actual 8K inference, WebView CORS, a tool task, stop/restart and full-exit cleanup |
+| Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_amd64.deb) · built and installed on Ubuntu 22.04 WSL2; startup and real inference through packaged PolyStrata/DSH passed. Linux remains preview support, not bare-metal desktop acceptance; no new AppImage |
 
 [1.9.1 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.9.1_amd64.deb`. Older releases are retained.
 
-See the [1.9.1 verification record](VERIFICATION-1.9.1.md) for context compaction, skills, memory and their tested limits. Originals and summaries are saved separately; recovery does not replay completed tools. Summaries remain lossy and can miss facts. Historical media results and their speech, editing, music and experimental-video issues remain in the [1.8.0 verification record](VERIFICATION-1.8.0.md). Windows and Linux Debian 1.9.1 packages were added on 2026-10-17 from the same main-branch commit with the native tool engine enabled. Windows package and updater-signature checks passed; Linux passed installation and a 20-second startup check in WSL. Full UI, model and automatic/manual compaction acceptance remains pending on both platforms. Install Linux Debian manually; its AppImage updater retains 1.7.2. GitHub account payment or spending limits prevented remote jobs from starting; local checks are not presented as passing remote CI.
+This release updates **Windows/Linux to 1.9.2** and keeps **Mac on 1.9.1**. See [1.9.2 verification](VERIFICATION-1.9.2.md). Install the native PolyStrata environment first, choose Connect PolyStrata on Home, select its root and start a supported Qwen3.6-35B-A3B configuration. Model weights are downloaded separately; NVIDIA 8GB VRAM and 32GB RAM recommended. Q3 was tested; Q2/Q4 entries do not imply all variants were validated. Qwen3.8-27B, AMD and vision are not supported by this integration. Each OS maintains its own Python, CUDA or MLX/Splash runtime; starting a model does not update dependencies. See [platform runtime maintenance](PLATFORM_RUNTIMES.md). Install the Linux Debian update manually; the existing AppImage updater remains at 1.7.2.
+
+Historical 1.9.1 acceptance notes: See the [1.9.1 verification record](VERIFICATION-1.9.1.md) for context compaction, skills, memory and their tested limits. Originals and summaries are saved separately; recovery does not replay completed tools. Summaries remain lossy and can miss facts. Historical media results and their speech, editing, music and experimental-video issues remain in the [1.8.0 verification record](VERIFICATION-1.8.0.md). Windows and Linux Debian 1.9.1 packages were added on 2026-10-17 from the same main-branch commit with the native tool engine enabled. Windows package and updater-signature checks passed; Linux passed installation and a 20-second startup check in WSL. Full UI, model and automatic/manual compaction acceptance remains pending on both platforms. Install Linux Debian manually; its AppImage updater retains 1.7.2. GitHub account payment or spending limits prevented remote jobs from starting; local checks are not presented as passing remote CI.
 
 <!-- evergreen:screenshots:start -->
 ## Real application screenshots
@@ -87,8 +89,8 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `74725034276f594c5d01556c35a6e12f10c4a636a1b8c9bdea355dd23466d148` |
-| Windows installer | `a14a76342dc6a04b2c4a3edc1e92ca85dd52963789184c5933cdfad4f22cba24` |
-| Linux Debian | `234a9005d0c1a18ebb0516924340bfaf618addba8cafc99179ac601cd5d566ac` |
+| Windows installer | `9d8732be966714908e1150a3023508bcd408d7300a7d802ef77d586766b8a137` |
+| Linux Debian | `d3829507c24b2a9c3396da63365f7f3cf0895a638fbc1ba93c48ce5b9e56d4af` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 
