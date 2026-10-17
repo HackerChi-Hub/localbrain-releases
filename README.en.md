@@ -33,17 +33,17 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads: Mac 1.9.1; Windows and Linux Debian 1.7.6
+## Latest downloads: 1.9.1 (Mac, Windows and Linux Debian)
 
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 1.9.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.1/LocalBrain_1.9.1_aarch64.dmg), installed and tested for automatic incremental summaries, Compact now, repeat clicks and continuation after restart. Strict ad-hoc code signing and independent updater signatures verified; not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_x64-setup.exe), built on Windows; packaged resources and updater signature verified; post-install UI and model acceptance remain pending |
-| Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_amd64.deb), built and installed on Ubuntu 22.04 WSL; passed a 20-second startup check; preview support, with real desktop and model acceptance pending; no AppImage for this release |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.1/LocalBrain_1.9.1_x64-setup.exe), built on Windows; packaged resources and updater signature verified; post-install UI and model acceptance remain pending |
+| Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.1/LocalBrain_1.9.1_amd64.deb), built and installed on Ubuntu 22.04 WSL; passed a 20-second startup check; preview support, with real desktop and model acceptance pending; no AppImage for this release |
 
-[Mac 1.9.1 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.1); [Windows and Linux 1.7.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.7.6_amd64.deb`. Older releases are retained.
+[1.9.1 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.9.1_amd64.deb`. Older releases are retained.
 
-See the [1.9.1 verification record](VERIFICATION-1.9.1.md) for context compaction, skills, memory and their tested limits. Originals and summaries are saved separately; recovery does not replay completed tools. Summaries remain lossy and can miss facts. Historical media results and their speech, editing, music and experimental-video issues remain in the [1.8.0 verification record](VERIFICATION-1.8.0.md). Windows/Linux have no new package in this batch; the Linux updater remains at 1.7.2. GitHub account payment or spending limits prevented remote jobs from starting; local checks are not presented as passing remote CI.
+See the [1.9.1 verification record](VERIFICATION-1.9.1.md) for context compaction, skills, memory and their tested limits. Originals and summaries are saved separately; recovery does not replay completed tools. Summaries remain lossy and can miss facts. Historical media results and their speech, editing, music and experimental-video issues remain in the [1.8.0 verification record](VERIFICATION-1.8.0.md). Windows and Linux Debian 1.9.1 packages were added on 2026-10-17 from the same main-branch commit with the native tool engine enabled. Windows package and updater-signature checks passed; Linux passed installation and a 20-second startup check in WSL. Full UI, model and automatic/manual compaction acceptance remains pending on both platforms. Install Linux Debian manually; its AppImage updater retains 1.7.2. GitHub account payment or spending limits prevented remote jobs from starting; local checks are not presented as passing remote CI.
 
 <!-- evergreen:screenshots:start -->
 ## Real application screenshots
@@ -87,8 +87,8 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `74725034276f594c5d01556c35a6e12f10c4a636a1b8c9bdea355dd23466d148` |
-| Windows installer | `e593eb820bdfc9588b4efc62ec17a19a71bfc90fac6b1a84a04a8506d0805389` |
-| Linux Debian | `8fd14a5b1a88131d4a9e8dc5e4444e68d706eec1468c71588f99ce91756fee6d` |
+| Windows installer | `a14a76342dc6a04b2c4a3edc1e92ca85dd52963789184c5933cdfad4f22cba24` |
+| Linux Debian | `234a9005d0c1a18ebb0516924340bfaf618addba8cafc99179ac601cd5d566ac` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

@@ -33,17 +33,17 @@
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Mac 1.9.1；Windows、Linux Debian 1.7.6
+## 最新下載：1.9.1（Mac、Windows、Linux Debian）
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac 1.9.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.1/LocalBrain_1.9.1_aarch64.dmg)，已安裝並實測自動增量摘要、「立即壓縮」、重複點擊與重新啟動後接續對話；嚴格本機簽章及獨立更新簽章通過，未經Apple公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_x64-setup.exe)，Windows 本機建置、包內資源及更新簽章校驗通過；尚未完成安裝後介面與模型功能驗收 |
-| Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.7.6/LocalBrain_1.7.6_amd64.deb)，Ubuntu 22.04 WSL 建置、安裝及 20 秒啟動檢查通過；預覽支援，尚未完成實際桌面與模型功能驗收；本版無 AppImage |
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.1/LocalBrain_1.9.1_x64-setup.exe)，Windows 本機建置、包內資源及更新簽章校驗通過；尚未完成安裝後介面與模型功能驗收 |
+| Linux x64 | [Debian包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.1/LocalBrain_1.9.1_amd64.deb)，Ubuntu 22.04 WSL 建置、安裝及 20 秒啟動檢查通過；預覽支援，尚未完成實際桌面與模型功能驗收；本版無 AppImage |
 
-[Mac 1.9.1 發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.1)；[Windows、Linux 1.7.6 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.7.6)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.7.6_amd64.deb`。保留舊發行。
+[1.9.1 發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.1)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.9.1_amd64.deb`。保留舊發行。
 
-本輪上下文整理、技能與記憶的行為、實測與限制見 [1.9.1 驗收記錄](VERIFICATION-1.9.1.md)。原文與摘要分開保存，還原不重新執行已完成工具；摘要仍有損，可能遺漏事實。歷史媒體實測見 [1.8.0 驗收記錄](VERIFICATION-1.8.0.md)，保留其語音、編輯、音樂與實驗影片的問題說明。Windows、Linux沒有本輪新包；Linux自動更新清單仍保留1.7.2。GitHub帳戶付款或支出限制使遠端作業未啟動，本機檢查不冒充遠端CI通過。
+本輪上下文整理、技能與記憶的行為、實測與限制見 [1.9.1 驗收記錄](VERIFICATION-1.9.1.md)。原文與摘要分開保存，還原不重新執行已完成工具；摘要仍有損，可能遺漏事實。歷史媒體實測見 [1.8.0 驗收記錄](VERIFICATION-1.8.0.md)，保留其語音、編輯、音樂與實驗影片的問題說明。Windows、Linux Debian 已於 2026-10-17 從同一主分支提交補齊 1.9.1，啟用原生工具引擎。Windows 套件結構與更新簽章通過；Linux 完成 WSL 安裝及 20 秒啟動檢查。完整介面、模型與自動／手動摘要互動尚未於兩平台實機驗收；Linux 須手動安裝 Debian 包，AppImage 自動更新保留 1.7.2。GitHub帳戶付款或支出限制使遠端作業未啟動，本機檢查不冒充遠端CI通過。
 
 <!-- evergreen:screenshots:start -->
 ## 實際介面
@@ -87,8 +87,8 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | 檔案 | 散列 |
 | --- | --- |
 | Mac DMG | `74725034276f594c5d01556c35a6e12f10c4a636a1b8c9bdea355dd23466d148` |
-| Windows安裝程式 | `e593eb820bdfc9588b4efc62ec17a19a71bfc90fac6b1a84a04a8506d0805389` |
-| Linux Debian包 | `8fd14a5b1a88131d4a9e8dc5e4444e68d706eec1468c71588f99ce91756fee6d` |
+| Windows安裝程式 | `a14a76342dc6a04b2c4a3edc1e92ca85dd52963789184c5933cdfad4f22cba24` |
+| Linux Debian包 | `234a9005d0c1a18ebb0516924340bfaf618addba8cafc99179ac601cd5d566ac` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
 
