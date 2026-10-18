@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **1.9.5** · Device and network checks share one add-target flow and pending list. Computers, phones, network addresses and firmware use one chat handoff; mixed checks retain read-only, low-load limits.
 - **1.9.4** · Personal-device categories cover phones, computers, embedded devices and firmware: fixed read-only collection, network scopes up to 16 ports, single-thread signature identification and offline component matching, with approval before execution.
 - **1.9.4** · Batch-add targets without starting tasks. Multi-selection creates an editable chat draft; add requirements and send manually before execution. Expired authorizations are not restored.
 - **1.9.3** · Restore only managed external-client keys. Empty backups retain later user additions; malformed configurations keep the current file and backup.
 - **1.9.3** · Home pauses memory/backend polling when unfocused or hidden and refreshes on return; switching windows no longer scans Discover model directories.
-- **1.9.3** · Search session titles and bodies and rename inline. Streamed text and input skip unrelated sidebar and attachment renders.
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,17 +33,17 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads: Windows/Linux 1.9.2 · Mac 1.9.4
+## Latest downloads: Windows/Linux 1.9.2 · Mac 1.9.5
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 1.9.4 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.4/LocalBrain_1.9.4_aarch64.dmg) · Installed files match the package; native confirmations, search and renaming were manually confirmed by the user. Strict code-signature and independent updater-signature checks passed; not Apple-notarized |
+| Apple Silicon Mac 1.9.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_aarch64.dmg) · Installed files match the package; native confirmations, search and renaming were manually confirmed by the user. Strict code-signature and independent updater-signature checks passed; not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_x64-setup.exe) · the packaged Windows app passed native registration, Home display, actual 8K inference, WebView CORS, a tool task, stop/restart and full-exit cleanup |
 | Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_amd64.deb) · built and installed on Ubuntu 22.04 WSL2; startup and real inference through packaged PolyStrata/DSH passed. Linux remains preview support, not bare-metal desktop acceptance; no new AppImage |
 
-[1.9.4 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.4). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.9.2_amd64.deb`. Older releases are retained.
+[1.9.5 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.5). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.9.2_amd64.deb`. Older releases are retained.
 
-This release updates **Mac to 1.9.4**; Windows/Linux retain **1.9.2**. See [Mac verification and limits](VERIFICATION-1.9.4.md): installed files and signatures verified; list saving, unsent draft, native approval and a real-model inspection/evidence-read workflow completed. Physical phones and embedded hardware remain unverified. Earlier [Windows/Linux 1.9.2 verification](VERIFICATION-1.9.2.md) remains available. PolyStrata supports Qwen3.6-35B-A3B configurations with separate native runtimes; Q3 was tested, while Q2/Q4 are catalogue entries. Qwen3.8-27B, AMD and vision are outside that integration. Linux Debian upgrades manually; AppImage automatic updates remain at 1.7.2.
+This release updates **Mac to 1.9.5**; Windows/Linux retain **1.9.2**. See [Mac verification and limits](VERIFICATION-1.9.5.md): installed files and signatures verified; the installed app verified the unified list, preserved entries across connection changes, native mixed handoff, unsent draft and cleanup. The 1.9.4 real-model evidence is retained. Physical phones and embedded hardware remain unverified. Earlier [Windows/Linux 1.9.2 verification](VERIFICATION-1.9.2.md) remains available. PolyStrata supports Qwen3.6-35B-A3B configurations with separate native runtimes; Q3 was tested, while Q2/Q4 are catalogue entries. Qwen3.8-27B, AMD and vision are outside that integration. Linux Debian upgrades manually; AppImage automatic updates remain at 1.7.2.
 
 Historical 1.9.1 acceptance notes: See the [1.9.1 verification record](VERIFICATION-1.9.1.md) for context compaction, skills, memory and their tested limits. Originals and summaries are saved separately; recovery does not replay completed tools. Summaries remain lossy and can miss facts. Historical media results and their speech, editing, music and experimental-video issues remain in the [1.8.0 verification record](VERIFICATION-1.8.0.md). Windows and Linux Debian 1.9.1 packages were added on 2026-10-17 from the same main-branch commit with the native tool engine enabled. Windows package and updater-signature checks passed; Linux passed installation and a 20-second startup check in WSL. Full UI, model and automatic/manual compaction acceptance remains pending on both platforms. Install Linux Debian manually; its AppImage updater retains 1.7.2. GitHub account payment or spending limits prevented remote jobs from starting; local checks are not presented as passing remote CI.
 
@@ -88,7 +88,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `f2542209eb8000bf77aacb2bd9b24abaa57613c125bd5a46f44c9bc64475c929` |
+| Mac DMG | `5ea4ee16d9c7254bc7b7639c355b26b9052f993dcb90a8862327f02a029bb7d4` |
 | Windows installer | `9d8732be966714908e1150a3023508bcd408d7300a7d802ef77d586766b8a137` |
 | Linux Debian | `d3829507c24b2a9c3396da63365f7f3cf0895a638fbc1ba93c48ce5b9e56d4af` |
 
