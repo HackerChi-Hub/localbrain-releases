@@ -39,13 +39,13 @@
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 1.9.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.3/LocalBrain_1.9.3_aarch64.dmg) · 本版已安装，全部包内文件一致；原生交互仍受系统捕获错误影响。严格签名及独立更新签名通过，尚未 Apple 公证 |
+| Apple Silicon Mac 1.9.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.3/LocalBrain_1.9.3_aarch64.dmg) · 本版已安装，全部包内文件一致；原生确认框、搜索与改名已获用户手动确认。严格签名及独立更新签名通过，尚未 Apple 公证 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_x64-setup.exe) · Windows 正式包的登记、首页显示、真实 8K 模型服务、WebView 跨域连接、工具小任务、停止/重启与退出回收通过本机验收 |
 | Linux x64 | [Debian 包](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_amd64.deb) · Ubuntu 22.04 WSL2 构建、安装、启动及包内 PolyStrata/原生 DSH 实际推理通过；Linux 为预览支持，未代替裸机桌面验收；无新 AppImage |
 
 [1.9.3 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.3)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_1.9.2_amd64.deb`。旧发行保留。
 
-本批更新 **Mac 至1.9.3**，Windows/Linux 保留 **1.9.2**。见 [Mac 验收与限制](VERIFICATION-1.9.3.md)：安装文件及签名已核对，原生交互仍受系统捕获错误影响。既有 [Windows/Linux 1.9.2 验收](VERIFICATION-1.9.2.md) 保留。PolyStrata 需本平台独立环境，支持 Qwen3.6-35B-A3B 配套模型；实测 Q3，Q2/Q4 入口不代替全档验收，Qwen3.8-27B、AMD、视觉不在该接入范围。Linux Debian 手动升级，AppImage 自动更新保留1.7.2。
+本批更新 **Mac 至1.9.3**，Windows/Linux 保留 **1.9.2**。见 [Mac 验收与限制](VERIFICATION-1.9.3.md)：安装文件及签名已核对，原生确认框、搜索与改名已获用户手动确认。既有 [Windows/Linux 1.9.2 验收](VERIFICATION-1.9.2.md) 保留。PolyStrata 需本平台独立环境，支持 Qwen3.6-35B-A3B 配套模型；实测 Q3，Q2/Q4 入口不代替全档验收，Qwen3.8-27B、AMD、视觉不在该接入范围。Linux Debian 手动升级，AppImage 自动更新保留1.7.2。
 
 以下为 1.9.1 的历史验收说明： 本轮上下文整理、技能与记忆的行为、实测与限制见 [1.9.1 验收记录](VERIFICATION-1.9.1.md)。原文与摘要分开保存，恢复不重执行已完成工具；摘要仍有损，可能遗漏事实。历史媒体实测见 [1.8.0 验收记录](VERIFICATION-1.8.0.md)，保留其语音、编辑、音乐和实验视频的问题说明。Windows、Linux Debian 已于 2026-10-17 从同一主分支提交补齐 1.9.1，启用原生工具引擎。Windows 包结构和更新签名通过；Linux 完成 WSL 安装及 20 秒启动检查。完整界面、模型和自动/手动摘要交互尚未在两平台实机验收；Linux 需手动安装 Debian 包，AppImage 自动更新保留 1.7.2。GitHub账户付款或支出限制使远端作业未启动，本地检查不冒充远端CI通过。
 

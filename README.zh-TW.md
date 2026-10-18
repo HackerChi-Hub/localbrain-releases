@@ -37,13 +37,13 @@
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 1.9.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.3/LocalBrain_1.9.3_aarch64.dmg) · 本版已安裝，全部包內檔案一致；原生互動仍受系統擷取錯誤影響。嚴格簽章及獨立更新簽章通過，尚未 Apple 公證 |
+| Apple Silicon Mac 1.9.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.3/LocalBrain_1.9.3_aarch64.dmg) · 本版已安裝，全部包內檔案一致；原生確認框、搜尋與改名已獲使用者手動確認。嚴格簽章及獨立更新簽章通過，尚未 Apple 公證 |
 | Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_x64-setup.exe) · Windows 正式包的登記、首頁顯示、真實 8K 模型服務、WebView 跨域連線、工具小任務、停止/重啟與退出回收通過本機驗收 |
 | Linux x64 | [Debian 套件](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_amd64.deb) · Ubuntu 22.04 WSL2 建置、安裝、啟動及包內 PolyStrata/原生 DSH 實際推理通過；Linux 為預覽支援，不代替裸機桌面驗收；無新 AppImage |
 
 [1.9.3 發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.3)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.9.2_amd64.deb`。保留舊發行。
 
-本批更新 **Mac 至1.9.3**，Windows/Linux 保留 **1.9.2**。見 [Mac 驗收與限制](VERIFICATION-1.9.3.md)：安裝檔案及簽章已核對，原生互動仍受系統擷取錯誤影響。既有 [Windows/Linux 1.9.2 驗收](VERIFICATION-1.9.2.md) 保留。PolyStrata 需本平台獨立環境，支援 Qwen3.6-35B-A3B 配套模型；實測 Q3，Q2/Q4 入口不代替全檔驗收，Qwen3.8-27B、AMD、視覺不在該接入範圍。Linux Debian 手動升級，AppImage 自動更新保留1.7.2。
+本批更新 **Mac 至1.9.3**，Windows/Linux 保留 **1.9.2**。見 [Mac 驗收與限制](VERIFICATION-1.9.3.md)：安裝檔案及簽章已核對，原生確認框、搜尋與改名已獲使用者手動確認。既有 [Windows/Linux 1.9.2 驗收](VERIFICATION-1.9.2.md) 保留。PolyStrata 需本平台獨立環境，支援 Qwen3.6-35B-A3B 配套模型；實測 Q3，Q2/Q4 入口不代替全檔驗收，Qwen3.8-27B、AMD、視覺不在該接入範圍。Linux Debian 手動升級，AppImage 自動更新保留1.7.2。
 
 以下為 1.9.1 的歷史驗收說明： 本輪上下文整理、技能與記憶的行為、實測與限制見 [1.9.1 驗收記錄](VERIFICATION-1.9.1.md)。原文與摘要分開保存，還原不重新執行已完成工具；摘要仍有損，可能遺漏事實。歷史媒體實測見 [1.8.0 驗收記錄](VERIFICATION-1.8.0.md)，保留其語音、編輯、音樂與實驗影片的問題說明。Windows、Linux Debian 已於 2026-10-17 從同一主分支提交補齊 1.9.1，啟用原生工具引擎。Windows 套件結構與更新簽章通過；Linux 完成 WSL 安裝及 20 秒啟動檢查。完整介面、模型與自動／手動摘要互動尚未於兩平台實機驗收；Linux 須手動安裝 Debian 包，AppImage 自動更新保留 1.7.2。GitHub帳戶付款或支出限制使遠端作業未啟動，本機檢查不冒充遠端CI通過。
 
