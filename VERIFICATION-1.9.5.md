@@ -15,3 +15,20 @@
 最终重新打包安装后核对启动、双入口与空名单；12,978个文件逐个与DMG内一致，严格应用签名及自动更新签名验证通过。DMG为72,651,844字节，SHA-256为`5ea4ee16d9c7254bc7b7639c355b26b9052f993dcb90a8862327f02a029bb7d4`。本机安装位置为/Applications/LocalBrain.app，当前0模型服务。开发签名，未经Apple公证。构建提交a45e4be。
 
 公开发布：v1.9.5上传8份资产后全部重新下载，校验清单7项一致，远端更新包独立验签通过，再设为公开latest。Windows1.9.2、Linux AppImage1.7.2平台清单原样保留，Linux Debian下载保持1.9.2。源码与三语下载说明同步，不调用博客或公众号发布流程。
+
+## Windows / Linux 1.9.5 — 2026-10-19
+
+Built from source `a001efd` on Windows x64 and Ubuntu 22.04 WSL2 x64. Existing Mac 1.9.5 assets and its platform manifest are retained. Native PolyStrata installations, CUDA, model weights and driver versions are unchanged; no implicit third-party engine upgrade.
+
+Frontend: 1583 passed, 2 skipped; production adapters: 12 passed. Windows Rust: 354 passed, 27 ignored. Both platform runtime contracts passed. Windows NSIS installed at D:/LocalBrain; packaged Node 22.23.3, DocFactory files and PolyStrata launcher checked against source. The installed WebView registered the native PolyStrata Q3 model, loaded 8K context, streamed a Chinese reply, completed a DSH countdown task, and stopped/restarted the service with exit cleanup. Tests used an isolated profile; formal user preferences and models were preserved.
+
+Linux Debian installed in Ubuntu 22.04 WSL2; isolated Xvfb startup survived 20 seconds and packaged Node/DSH initialization passed. WSL2 does not replace native Linux desktop, physical-device, or other GPU testing. Existing 1.9.2 real Linux model evidence is retained; this release does not claim a repeated Linux GPU acceptance. No new AppImage; Debian upgrades manually. New personal-device/native confirmation interactions have not been fully exercised on Windows/Linux; physical phones and embedded hardware remain unverified.
+
+Both new installers have independently verified updater signatures (not Windows Authenticode). Earlier Mac acceptance above remains historical evidence for that platform only.
+
+| File | SHA-256 |
+| --- | --- |
+| LocalBrain_1.9.5_x64-setup.exe | `9a6d77fa1dffe3076e3a171edab4c7f422f4a127233c506f4e4bb1d40eb76d82` |
+| LocalBrain_1.9.5_amd64.deb | `882c7800ba8455379bcb1911bc3456dfca8a22612e4e3193cc046f3f50ac9e33` |
+
+Additional checks: 8 targeted Windows Python tests passed (PolyStrata and LTX compatibility). The broader Python run is not green: Linux reported missing Pillow/httpx/Chromium (1 failure, 5 errors, 21 skipped); Windows also exposed POSIX-path/symlink/browser assumptions and was interrupted when H3 dummy-weight fixtures caused real large-file writes. The three generated fixture directories were inspected and removed. No full Python-suite pass is claimed. Private GitHub README CI remains blocked before any steps by account billing/spending limits; local README checks are recorded separately.

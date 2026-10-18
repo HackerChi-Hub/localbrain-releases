@@ -33,17 +33,17 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads: Windows/Linux 1.9.2 · Mac 1.9.5
+## Latest downloads：Windows/Linux 1.9.5 · Mac 1.9.5
 
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 1.9.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_aarch64.dmg) · Installed files match the package; native confirmations, search and renaming were manually confirmed by the user. Strict code-signature and independent updater-signature checks passed; not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_x64-setup.exe) · the packaged Windows app passed native registration, Home display, actual 8K inference, WebView CORS, a tool task, stop/restart and full-exit cleanup |
-| Linux x64 | [Debian package](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_amd64.deb) · built and installed on Ubuntu 22.04 WSL2; startup and real inference through packaged PolyStrata/DSH passed. Linux remains preview support, not bare-metal desktop acceptance; no new AppImage |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_x64-setup.exe) · Installed on Windows; real PolyStrata 8K streaming, DSH task, stop/restart and exit cleanup passed; updater signature verified, not Authenticode |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Installed and startup-tested in Ubuntu 22.04 WSL2; packaged native DSH initialized; preview support, not native desktop acceptance; no new AppImage |
 
-[1.9.5 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.5). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.9.2_amd64.deb`. Older releases are retained.
+[1.9.5 release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.5). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.9.5_amd64.deb`. Older releases are retained.
 
-This release updates **Mac to 1.9.5**; Windows/Linux retain **1.9.2**. See [Mac verification and limits](VERIFICATION-1.9.5.md): installed files and signatures verified; the installed app verified the unified list, preserved entries across connection changes, native mixed handoff, unsent draft and cleanup. The 1.9.4 real-model evidence is retained. Physical phones and embedded hardware remain unverified. Earlier [Windows/Linux 1.9.2 verification](VERIFICATION-1.9.2.md) remains available. PolyStrata supports Qwen3.6-35B-A3B configurations with separate native runtimes; Q3 was tested, while Q2/Q4 are catalogue entries. Qwen3.8-27B, AMD and vision are outside that integration. Linux Debian upgrades manually; AppImage automatic updates remain at 1.7.2.
+This release completes **Windows/Linux 1.9.5**; Mac retains **1.9.5**. See [platform acceptance and limits](VERIFICATION-1.9.5.md). Special runtimes are maintained independently. Upgrade Linux Debian manually; AppImage automatic updates remain at 1.7.2. Physical phones, embedded hardware and new device interactions are not fully tested. Earlier Mac and PolyStrata evidence is retained.
 
 Historical 1.9.1 acceptance notes: See the [1.9.1 verification record](VERIFICATION-1.9.1.md) for context compaction, skills, memory and their tested limits. Originals and summaries are saved separately; recovery does not replay completed tools. Summaries remain lossy and can miss facts. Historical media results and their speech, editing, music and experimental-video issues remain in the [1.8.0 verification record](VERIFICATION-1.8.0.md). Windows and Linux Debian 1.9.1 packages were added on 2026-10-17 from the same main-branch commit with the native tool engine enabled. Windows package and updater-signature checks passed; Linux passed installation and a 20-second startup check in WSL. Full UI, model and automatic/manual compaction acceptance remains pending on both platforms. Install Linux Debian manually; its AppImage updater retains 1.7.2. GitHub account payment or spending limits prevented remote jobs from starting; local checks are not presented as passing remote CI.
 
@@ -89,8 +89,8 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `5ea4ee16d9c7254bc7b7639c355b26b9052f993dcb90a8862327f02a029bb7d4` |
-| Windows installer | `9d8732be966714908e1150a3023508bcd408d7300a7d802ef77d586766b8a137` |
-| Linux Debian | `d3829507c24b2a9c3396da63365f7f3cf0895a638fbc1ba93c48ce5b9e56d4af` |
+| Windows installer | `9a6d77fa1dffe3076e3a171edab4c7f422f4a127233c506f4e4bb1d40eb76d82` |
+| Linux Debian | `882c7800ba8455379bcb1911bc3456dfca8a22612e4e3193cc046f3f50ac9e33` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 
