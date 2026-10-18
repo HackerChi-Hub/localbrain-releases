@@ -14,11 +14,11 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **1.9.4** · 個人裝置依手機、電腦、嵌入式與韌體分類：固定唯讀擷取、最多16個連接埠的網路檢查、單執行緒韌體識別與離線元件比對，執行前逐次確認。
+- **1.9.4** · 目標可批次加入名單，儲存不開始工作；多選後僅產生可編輯對話草稿，補充要求並手動傳送後執行，過期授權不還原。
 - **1.9.3** · 外部客戶端設定僅還原受管欄位；空備份保留後來新增的設定，格式錯誤時保留原檔與備份。
 - **1.9.3** · 首頁失焦或隱藏時暫停記憶體與後端輪詢，回到前景立即刷新；探索頁切換視窗不再掃描模型目錄。
 - **1.9.3** · 對話支援標題與正文搜尋、行內改名；串流正文與輸入不再觸發無關對話清單與附件重新渲染。
-- **1.9.3** · 記憶體仲裁明確指出語言模型阻擋時提供手動切換；停止失敗不繼續啟動媒體模型。
-- **1.9.2** · Windows/Linux 可連接獨立 PolyStrata 環境並啟動 Qwen3.6-35B-A3B 配套模型；讀取實際視窗、回收程序樹，各平台分別維護引擎依賴。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,17 +33,17 @@
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows/Linux 1.9.2 · Mac 1.9.3
+## 最新下載：Windows/Linux 1.9.2 · Mac 1.9.4
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 1.9.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.3/LocalBrain_1.9.3_aarch64.dmg) · 本版已安裝，全部包內檔案一致；原生確認框、搜尋與改名已獲使用者手動確認。嚴格簽章及獨立更新簽章通過，尚未 Apple 公證 |
+| Apple Silicon Mac 1.9.4 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.4/LocalBrain_1.9.4_aarch64.dmg) · 本版已安裝，全部包內檔案一致；原生確認框、搜尋與改名已獲使用者手動確認。嚴格簽章及獨立更新簽章通過，尚未 Apple 公證 |
 | Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_x64-setup.exe) · Windows 正式包的登記、首頁顯示、真實 8K 模型服務、WebView 跨域連線、工具小任務、停止/重啟與退出回收通過本機驗收 |
 | Linux x64 | [Debian 套件](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.2/LocalBrain_1.9.2_amd64.deb) · Ubuntu 22.04 WSL2 建置、安裝、啟動及包內 PolyStrata/原生 DSH 實際推理通過；Linux 為預覽支援，不代替裸機桌面驗收；無新 AppImage |
 
-[1.9.3 發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.3)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.9.2_amd64.deb`。保留舊發行。
+[1.9.4 發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.4)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.9.2_amd64.deb`。保留舊發行。
 
-本批更新 **Mac 至1.9.3**，Windows/Linux 保留 **1.9.2**。見 [Mac 驗收與限制](VERIFICATION-1.9.3.md)：安裝檔案及簽章已核對，原生確認框、搜尋與改名已獲使用者手動確認。既有 [Windows/Linux 1.9.2 驗收](VERIFICATION-1.9.2.md) 保留。PolyStrata 需本平台獨立環境，支援 Qwen3.6-35B-A3B 配套模型；實測 Q3，Q2/Q4 入口不代替全檔驗收，Qwen3.8-27B、AMD、視覺不在該接入範圍。Linux Debian 手動升級，AppImage 自動更新保留1.7.2。
+本批更新 **Mac 至1.9.4**，Windows/Linux 保留 **1.9.2**。見 [Mac 驗收與限制](VERIFICATION-1.9.4.md)：安裝檔案及簽章已核對；名單儲存、未傳送草稿、原生核准及真實模型單次檢查／證據讀取完成。真實手機與嵌入式硬體仍待驗收。既有 [Windows/Linux 1.9.2 驗收](VERIFICATION-1.9.2.md) 保留。PolyStrata 需本平台獨立環境，支援 Qwen3.6-35B-A3B 配套模型；實測 Q3，Q2/Q4 入口不代替全檔驗收，Qwen3.8-27B、AMD、視覺不在該接入範圍。Linux Debian 手動升級，AppImage 自動更新保留1.7.2。
 
 以下為 1.9.1 的歷史驗收說明： 本輪上下文整理、技能與記憶的行為、實測與限制見 [1.9.1 驗收記錄](VERIFICATION-1.9.1.md)。原文與摘要分開保存，還原不重新執行已完成工具；摘要仍有損，可能遺漏事實。歷史媒體實測見 [1.8.0 驗收記錄](VERIFICATION-1.8.0.md)，保留其語音、編輯、音樂與實驗影片的問題說明。Windows、Linux Debian 已於 2026-10-17 從同一主分支提交補齊 1.9.1，啟用原生工具引擎。Windows 套件結構與更新簽章通過；Linux 完成 WSL 安裝及 20 秒啟動檢查。完整介面、模型與自動／手動摘要互動尚未於兩平台實機驗收；Linux 須手動安裝 Debian 包，AppImage 自動更新保留 1.7.2。GitHub帳戶付款或支出限制使遠端作業未啟動，本機檢查不冒充遠端CI通過。
 
@@ -88,7 +88,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `29fb02a61a5350a7381d0d0851be090edb93bd8d809da223db1b14e056991354` |
+| Mac DMG | `f2542209eb8000bf77aacb2bd9b24abaa57613c125bd5a46f44c9bc64475c929` |
 | Windows安裝程式 | `9d8732be966714908e1150a3023508bcd408d7300a7d802ef77d586766b8a137` |
 | Linux Debian包 | `d3829507c24b2a9c3396da63365f7f3cf0895a638fbc1ba93c48ce5b9e56d4af` |
 
