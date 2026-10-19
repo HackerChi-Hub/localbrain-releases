@@ -14,11 +14,11 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **1.9.8** · Mac新增Sushi獨立受管環境：設定顯式安裝與校驗，啟動模型不更新引擎，不依賴Homebrew。
+- **1.9.8** · Sushi專用包可下載或掛載，依架構、分片及真實載入狀態校驗；預設32K與常駐，可手動設定精確SSD預算，125B推理未重測。
 - **1.9.8** · Windows 聊天宿主啟動修復：傳送訊息可正常進入模型；異常保留具體診斷，避免只顯示第0輪通道關閉。 大型工具目錄按需載入，避免8K視窗被說明佔滿；已登記PolyStrata可保存選擇，原權限保留。
 - **1.9.7** · Windows 首次安裝修復：正常建立獨立Python並補齊pip，進度檔案暫時占用可恢復，保留既有下載斷點。
 - **1.9.6** · Windows RTX 40 系可一鍵下載 PolyStrata/Q3 並接入：獨立執行環境、完整性校驗、續傳及取消，不改顯示卡驅動。
-- **1.9.5** · 裝置與網路檢查統一新增入口及待確認名單；本機、手機、網路位址與韌體共用對話確認，混合檢查限制在唯讀低負載範圍。
-- **1.9.4** · 個人裝置依手機、電腦、嵌入式與韌體分類：固定唯讀擷取、最多16個連接埠的網路檢查、單執行緒韌體識別與離線元件比對，執行前逐次確認。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,19 +33,21 @@
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 1.9.8 · Mac/Linux 1.9.5
+## 最新下載：Mac / Windows 1.9.8 · Linux 1.9.5
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 1.9.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_aarch64.dmg) · 本版已安裝，全部包內檔案一致；原生確認框、搜尋與改名已獲使用者手動確認。嚴格簽章及獨立更新簽章通過，尚未 Apple 公證 |
+| Apple Silicon Mac 1.9.8 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.8/LocalBrain_1.9.8_aarch64.dmg) · 本版已安裝，全部包內檔案一致；原生確認框、搜尋與改名已獲使用者手動確認。嚴格簽章及獨立更新簽章通過，尚未 Apple 公證 |
 | Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.8/LocalBrain_1.9.8_x64-setup.exe) · Windows 1.9.8已安裝；原生宿主、真實問候、工具往返及聊天介面通過，更新簽章通過，非Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Ubuntu 22.04 WSL2 已安裝及啟動驗證；套件內原生 DSH 初始化通過，預覽支援，不代替原生桌面驗收；無新 AppImage |
 
 [1.9.8 Windows發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.8)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.9.5_amd64.deb`。保留舊發行。
 
-本次更新 **Windows 1.9.8**，修正傳送「你好」即第0輪「宿主通道關閉」：在原生DSH啟動邊界處理Windows路徑，異常保存具體診斷。最終套件真實模型問候、原生工具往返及聊天介面傳送均通過；本機已安裝，Q3模型完整下載與校驗完成。保留1.9.7首次安裝修復。見[驗收及限制](VERIFICATION-1.9.8.md)。Mac/Linux Debian保留1.9.5，Linux AppImage更新保留1.7.2。
+本次更新 **Windows 1.9.8**，修正傳送「你好」即第0輪「宿主通道關閉」：在原生DSH啟動邊界處理Windows路徑，異常保存具體診斷。最終套件真實模型問候、原生工具往返及聊天介面傳送均通過；本機已安裝，Q3模型完整下載與校驗完成。保留1.9.7首次安裝修復。見[驗收及限制](VERIFICATION-1.9.8.md)。Windows發布時的Mac紀錄已由下方Sushi更新取代；Linux Debian保留1.9.5、AppImage更新保留1.7.2。
 
 以下為 1.9.1 的歷史驗收說明： 本輪上下文整理、技能與記憶的行為、實測與限制見 [1.9.1 驗收記錄](VERIFICATION-1.9.1.md)。原文與摘要分開保存，還原不重新執行已完成工具；摘要仍有損，可能遺漏事實。歷史媒體實測見 [1.8.0 驗收記錄](VERIFICATION-1.8.0.md)，保留其語音、編輯、音樂與實驗影片的問題說明。Windows、Linux Debian 已於 2026-10-17 從同一主分支提交補齊 1.9.1，啟用原生工具引擎。Windows 套件結構與更新簽章通過；Linux 完成 WSL 安裝及 20 秒啟動檢查。完整介面、模型與自動／手動摘要互動尚未於兩平台實機驗收；Linux 須手動安裝 Debian 包，AppImage 自動更新保留 1.7.2。GitHub帳戶付款或支出限制使遠端作業未啟動，本機檢查不冒充遠端CI通過。
+
+Mac 1.9.8 新增可選受管Sushi1.2.4：設定顯式安裝約71MB獨立環境，發現頁下載或掛載Qwen3.8 Flash Next 2.6位專用包。預設32K與完整常駐，可手動設定精確SSD預算；不依賴Homebrew，啟動不更新引擎、不改系統代理與GPU記憶體限制。架構、分片及真實載入狀態檢查後才顯示可用。本輪未重新下載125B權重，不把環境安裝與跨域測試當作完整生成、速度或工具生成驗收。見[使用說明](SUSHI_RUNTIME.md)與[Mac驗收邊界](VERIFICATION-1.9.8-MAC-SUSHI.md)。Windows1.9.8既有修復及驗收保留，Linux發行不變。
 
 <!-- evergreen:screenshots:start -->
 ## 實際介面
@@ -88,7 +90,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `5ea4ee16d9c7254bc7b7639c355b26b9052f993dcb90a8862327f02a029bb7d4` |
+| Mac DMG | `c6a82c9a3c5beef5f0ab8501b3f3d19cbd9106fb532d88488d3f88230906c855` |
 | Windows安裝程式 | `af933c87a14c303be70dd6b107a411083ad704e2c452695493e6ee072b475eb0` |
 | Linux Debian包 | `882c7800ba8455379bcb1911bc3456dfca8a22612e4e3193cc046f3f50ac9e33` |
 

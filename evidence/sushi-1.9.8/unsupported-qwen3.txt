@@ -1,0 +1,17 @@
+Logging to /tmp/localbrain-sushi-native-qa/cache/sushi/server.log (rotates at 32 MB)
+[update] daily check off (--no-update-check)
+sushi 1.2.4 (MLX 0.32.3)
+[args] model: /tmp/localbrain-sushi-qa-model
+[args] serve: 127.0.0.1:53596, ctx-size=32768, vision=default, prevent-sleep=true
+[args] kv-quant: affine 8-bit (group=64)
+Metal GPU: true
+Model: unsupported (28 layers, 1024-dim, head_dim=128, 16h/8kv, 4-bit affine quant)
+Loading tokenizer...
+  parsed tokenizer (10 MB) in 34ms
+  loaded 151643 vocab entries in 3ms
+  loaded 151387 merges in 3ms
+Tokenizer loaded: 151669 vocab, 151387 merges, 26 special tokens (byte-level BPE)
+[registry] max_resident_models=1, max_resident_mem=41.5 GB
+[preflight] weights ~0.31 GB, needs ~2.56 GB, available 46.06 GB (warmup + net or context ~2.25 GB)
+model_type "unsupported" is not served by this build (qwen4_exp, mimo_v2, glm5_next only)
+[scheduler] model load failed: ArchitectureUnsupported

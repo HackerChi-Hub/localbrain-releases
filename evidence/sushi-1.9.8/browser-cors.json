@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-19",
+  "source": "http://127.0.0.1:18020",
+  "upstream": "Sushi 1.2.4 empty registry at 127.0.0.1:18019",
+  "with_trace_headers": {
+    "error": "TypeError: Failed to fetch"
+  },
+  "production_sushi_headers": {
+    "status": 503,
+    "body": {
+      "error": {
+        "message": "No default model configured",
+        "type": "no_model",
+        "param": null,
+        "code": 503
+      }
+    }
+  }
+}

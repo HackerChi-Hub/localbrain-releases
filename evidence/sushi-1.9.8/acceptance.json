@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "date": "2026-10-19",
+  "platform": "macOS arm64",
+  "version": "1.9.8",
+  "sushi_version": "1.2.4",
+  "rust_tests": {
+    "passed": 367,
+    "ignored": 28
+  },
+  "typescript_tests": {
+    "passed": 1585,
+    "skipped": 2
+  },
+  "adapter_tests": {
+    "passed": 12
+  },
+  "dsh_tool_catalog_tests": {
+    "passed": 3
+  },
+  "native_install_download": true,
+  "native_parameter_save_reload": {
+    "context": 16384,
+    "ssd_budget": 8
+  },
+  "native_continuous_typing": {
+    "value": 32768,
+    "focus_retained": true
+  },
+  "native_reset_default_save": {
+    "context": 32768,
+    "ssd_budget": 0
+  },
+  "native_uninstall_final": "pending desktop unlock",
+  "full_125b_inference": "not rerun; no large download",
+  "signature": "strict code signature and minisign verified; not notarized"
+}
