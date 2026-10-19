@@ -3,24 +3,63 @@
   "profiles": {
     "macos": {
       "architecture": "aarch64",
-      "language_engines": ["mlx", "llama.cpp", "splash"],
+      "language_engines": [
+        "mlx",
+        "llama.cpp",
+        "splash"
+      ],
       "special_runtime": "Splash 1.3.1 / Metal; independent of CUDA",
-      "required_resources": ["splash_server.py", "splash_bridge.py", "splash_install_runner.py"],
+      "required_resources": [
+        "splash_server.py",
+        "splash_bridge.py",
+        "splash_install_runner.py"
+      ],
       "polystrata": null
     },
     "windows": {
       "architecture": "x86_64",
-      "language_engines": ["llama.cpp", "polystrata"],
+      "language_engines": [
+        "llama.cpp",
+        "polystrata"
+      ],
       "special_runtime": "PolyStrata NVIDIA CUDA / native Windows .venv and PE engine",
-      "required_resources": ["polystrata_server.py"],
-      "polystrata": {"commit": "e190c1a3bb0eca96b5a50eab172927898ec7ca44", "release": "v0.1.44.1-poly.6", "validated_cuda": "12.9", "prebuilt_cuda13_min_driver": "580", "model_revision": "5bc3e238d916f48a861bac2f8a1990a0e9b7e98d"}
+      "required_resources": [
+        "polystrata_server.py",
+        "install_polystrata_windows.py",
+        "polystrata_windows_recipe.json"
+      ],
+      "polystrata": {
+        "commit": "e190c1a3bb0eca96b5a50eab172927898ec7ca44",
+        "release": "v0.1.44.1-poly.6",
+        "validated_cuda": "12.9",
+        "prebuilt_cuda13_min_driver": "580",
+        "model_revision": "5bc3e238d916f48a861bac2f8a1990a0e9b7e98d",
+        "automatic_install": {
+          "recipe": "src-tauri/resources/polystrata_windows_recipe.json",
+          "gpu": "sm_89 / RTX 40",
+          "cuda": "12.9",
+          "minimum_driver": "528.33",
+          "runtime_sha256": "a4ed0618b92d2326f2b7f5fa1de836c10513c51ffd2056659598a025b09c7aca"
+        }
+      }
     },
     "linux": {
       "architecture": "x86_64",
-      "language_engines": ["llama.cpp", "polystrata"],
+      "language_engines": [
+        "llama.cpp",
+        "polystrata"
+      ],
       "special_runtime": "PolyStrata NVIDIA CUDA / native Linux .venv and ELF engine; WSL GPU test recorded separately",
-      "required_resources": ["polystrata_server.py"],
-      "polystrata": {"commit": "e190c1a3bb0eca96b5a50eab172927898ec7ca44", "release": "v0.1.44.1-poly.6", "validated_cuda": "12.9", "prebuilt_cuda13_min_driver": "580", "model_revision": "5bc3e238d916f48a861bac2f8a1990a0e9b7e98d"}
+      "required_resources": [
+        "polystrata_server.py"
+      ],
+      "polystrata": {
+        "commit": "e190c1a3bb0eca96b5a50eab172927898ec7ca44",
+        "release": "v0.1.44.1-poly.6",
+        "validated_cuda": "12.9",
+        "prebuilt_cuda13_min_driver": "580",
+        "model_revision": "5bc3e238d916f48a861bac2f8a1990a0e9b7e98d"
+      }
     }
   }
 }

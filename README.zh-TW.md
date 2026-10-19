@@ -14,11 +14,11 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **1.9.6** · Windows RTX 40 系可一鍵下載 PolyStrata/Q3 並接入：獨立執行環境、完整性校驗、續傳及取消，不改顯示卡驅動。
 - **1.9.5** · 裝置與網路檢查統一新增入口及待確認名單；本機、手機、網路位址與韌體共用對話確認，混合檢查限制在唯讀低負載範圍。
 - **1.9.4** · 個人裝置依手機、電腦、嵌入式與韌體分類：固定唯讀擷取、最多16個連接埠的網路檢查、單執行緒韌體識別與離線元件比對，執行前逐次確認。
 - **1.9.4** · 目標可批次加入名單，儲存不開始工作；多選後僅產生可編輯對話草稿，補充要求並手動傳送後執行，過期授權不還原。
 - **1.9.3** · 外部客戶端設定僅還原受管欄位；空備份保留後來新增的設定，格式錯誤時保留原檔與備份。
-- **1.9.3** · 首頁失焦或隱藏時暫停記憶體與後端輪詢，回到前景立即刷新；探索頁切換視窗不再掃描模型目錄。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,17 +33,17 @@
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows/Linux 1.9.5 · Mac 1.9.5
+## 最新下載：Windows 1.9.6 · Mac/Linux 1.9.5
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac 1.9.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_aarch64.dmg) · 本版已安裝，全部包內檔案一致；原生確認框、搜尋與改名已獲使用者手動確認。嚴格簽章及獨立更新簽章通過，尚未 Apple 公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_x64-setup.exe) · Windows 已安裝，真實 PolyStrata 8K 串流推理、DSH 小任務及停止／重啟／退出通過；更新簽章通過，非 Authenticode |
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.6/LocalBrain_1.9.6_x64-setup.exe) · Windows 已安裝，真實 PolyStrata 8K 串流推理、DSH 小任務及停止／重啟／退出通過；更新簽章通過，非 Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Ubuntu 22.04 WSL2 已安裝及啟動驗證；套件內原生 DSH 初始化通過，預覽支援，不代替原生桌面驗收；無新 AppImage |
 
-[1.9.5 發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.5)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.9.5_amd64.deb`。保留舊發行。
+[1.9.6 Windows發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.6)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.9.5_amd64.deb`。保留舊發行。
 
-本批補齊 **Windows/Linux 1.9.5**，Mac 保持 **1.9.5**。詳見[分平台驗收及限制](VERIFICATION-1.9.5.md)。特殊執行環境獨立維護；Linux Debian 手動升級，AppImage 自動更新仍為1.7.2。真實手機、嵌入式硬體及新增裝置互動未全面驗收；保留既有 Mac 及 PolyStrata 實測記錄。
+本次更新 **Windows 1.9.6**，Mac及Linux Debian保留 **1.9.5**。首頁「自動安裝並接入」可下載獨立PolyStrata/Q3環境，限RTX 40系、NVIDIA 528.33+及約32GB記憶體；模型約17GB、執行套件約0.6GB。不修改驅動。首次直譯器準備需保持應用開啟，安裝程序啟動後退出仍可繼續，重開首頁查看狀態；既有安裝可手動連接。詳見[驗收及限制](VERIFICATION-1.9.6.md)。Linux Debian手動升級，AppImage自動更新仍為1.7.2。
 
 以下為 1.9.1 的歷史驗收說明： 本輪上下文整理、技能與記憶的行為、實測與限制見 [1.9.1 驗收記錄](VERIFICATION-1.9.1.md)。原文與摘要分開保存，還原不重新執行已完成工具；摘要仍有損，可能遺漏事實。歷史媒體實測見 [1.8.0 驗收記錄](VERIFICATION-1.8.0.md)，保留其語音、編輯、音樂與實驗影片的問題說明。Windows、Linux Debian 已於 2026-10-17 從同一主分支提交補齊 1.9.1，啟用原生工具引擎。Windows 套件結構與更新簽章通過；Linux 完成 WSL 安裝及 20 秒啟動檢查。完整介面、模型與自動／手動摘要互動尚未於兩平台實機驗收；Linux 須手動安裝 Debian 包，AppImage 自動更新保留 1.7.2。GitHub帳戶付款或支出限制使遠端作業未啟動，本機檢查不冒充遠端CI通過。
 
@@ -89,7 +89,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | 檔案 | 散列 |
 | --- | --- |
 | Mac DMG | `5ea4ee16d9c7254bc7b7639c355b26b9052f993dcb90a8862327f02a029bb7d4` |
-| Windows安裝程式 | `9a6d77fa1dffe3076e3a171edab4c7f422f4a127233c506f4e4bb1d40eb76d82` |
+| Windows安裝程式 | `b873cc27d5b33aa3f15dc8d09eb20ade4efb80b30cd939fe082df2bf529e2f22` |
 | Linux Debian包 | `882c7800ba8455379bcb1911bc3456dfca8a22612e4e3193cc046f3f50ac9e33` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
