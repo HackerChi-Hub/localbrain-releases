@@ -33,5 +33,8 @@
   },
   "native_uninstall_final": "pending desktop unlock",
   "full_125b_inference": "not rerun; no large download",
-  "signature": "strict code signature and minisign verified; not notarized"
+  "signature": "strict code signature and minisign verified; not notarized",
+  "temporary_artifacts_cleaned": true,
+  "public_dmg_full_download_sha256": "c6a82c9a3c5beef5f0ab8501b3f3d19cbd9106fb532d88488d3f88230906c855",
+  "cloud_ci": "not started: account billing/spending restriction"
 }

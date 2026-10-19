@@ -37,7 +37,7 @@ These videos show the versions available when recorded. Use the current release 
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 1.9.8 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.8/LocalBrain_1.9.8_aarch64.dmg) · Installed files match the package; native confirmations, search and renaming were manually confirmed by the user. Strict code-signature and independent updater-signature checks passed; not Apple-notarized |
+| Apple Silicon Mac 1.9.8 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.8/LocalBrain_1.9.8_aarch64.dmg) · Installed; Sushi runtime, settings and CORS checks completed. See verification limits for 125B inference and final uninstall interaction. Strict code and independent updater signatures verified; not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.8/LocalBrain_1.9.8_x64-setup.exe) · Windows 1.9.8 installed; native host, real greeting, tool roundtrip and chat UI passed; updater signature verified, not Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Installed and startup-tested in Ubuntu 22.04 WSL2; packaged native DSH initialized; preview support, not native desktop acceptance; no new AppImage |
 
