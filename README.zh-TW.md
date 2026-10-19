@@ -14,11 +14,11 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **2.0.0** · Windows小視窗任務接續修復：略過無收益短摘要，內建工具也按需載入，避免反覆壓縮同一小片段後誤停。
+- **2.0.0** · Windows小視窗對話修復：摘要停用工具與思考，PolyStrata限制思考額度，無法釋放安全空間時保留記錄並停止。
 - **1.9.9** · Mac下載達到100%後依背景、完整檔案及登記結果確認完成；延遲的暫停、取消回執不會覆蓋完成狀態，保留已下載權重。
 - **1.9.9** · Sushi記憶體預檢失敗顯示本次實際原因及操作建議；常駐與精確SSD手動選擇，32K同權重兩模式已實測，不自動降級或繞過保護。
 - **1.9.8** · Windows 聊天宿主啟動修復：傳送訊息可正常進入模型；異常保留具體診斷，避免只顯示第0輪通道關閉。 大型工具目錄按需載入，避免8K視窗被說明佔滿；已登記PolyStrata可保存選擇，原權限保留。
-- **1.9.7** · Windows 首次安裝修復：正常建立獨立Python並補齊pip，進度檔案暫時占用可恢復，保留既有下載斷點。
-- **1.9.6** · Windows RTX 40 系可一鍵下載 PolyStrata/Q3 並接入：獨立執行環境、完整性校驗、續傳及取消，不改顯示卡驅動。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,19 +33,19 @@
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Mac 1.9.9 · Windows 1.9.8 · Linux 1.9.5
+## 最新下載：Windows 2.0.0 · Mac 1.9.9 · Linux 1.9.5
 
 Mac 1.9.9修復下載終態及Sushi啟動錯誤提示，包括狀態重新整理遮蔽記憶體原因的問題。最終安裝版已驗證真實預檢拒絕、恢復32K後完整常駐載入與中文回應；同權重常駐／32 GiB精確SSD分別駐留44.20／31.21 GiB。模式手動選擇，儲存並重啟生效，不自動降級。見[最終安裝與實測範圍](VERIFICATION-1.9.9-MAC.md)。下方1.9.8段落保留當時驗收邊界。
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac 1.9.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.9/LocalBrain_1.9.9_aarch64.dmg) · 已安裝，下載終態、真實啟動錯誤、32K完整常駐及中文回應驗收完成；常駐與SSD比較見紀錄。嚴格簽章與獨立更新簽章通過，尚未 Apple 公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.8/LocalBrain_1.9.8_x64-setup.exe) · Windows 1.9.8已安裝；原生宿主、真實問候、工具往返及聊天介面通過，更新簽章通過，非Authenticode |
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.0/LocalBrain_2.0.0_x64-setup.exe) · Windows 2.0.0已安裝；真實模型摘要、接續及聊天工具驗收通過；更新簽章通過，非Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Ubuntu 22.04 WSL2 已安裝及啟動驗證；套件內原生 DSH 初始化通過，預覽支援，不代替原生桌面驗收；無新 AppImage |
 
-[1.9.8 Windows發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v1.9.8)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.9.5_amd64.deb`。保留舊發行。
+[2.0.0 Windows發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.0)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.9.5_amd64.deb`。保留舊發行。
 
-本次更新 **Windows 1.9.8**，修正傳送「你好」即第0輪「宿主通道關閉」：在原生DSH啟動邊界處理Windows路徑，異常保存具體診斷。最終套件真實模型問候、原生工具往返及聊天介面傳送均通過；本機已安裝，Q3模型完整下載與校驗完成。保留1.9.7首次安裝修復。見[驗收及限制](VERIFICATION-1.9.8.md)。Windows發布時的Mac紀錄已由下方Sushi更新取代；Linux Debian保留1.9.5、AppImage更新保留1.7.2。
+本次更新 **Windows 2.0.0**：修復摘要階段呼叫工具或耗盡思考額度導致壓縮失敗；摘要獨立停用工具及思考，PolyStrata依實際輸出額度保留回答空間。短片段無收益且有輸出空間時保留原文繼續，實際溢出仍停止；內建工具說明亦按需載入。最終套件真實模型自動摘要、接續回答、問候、倒計時及2K/5K連網新聞任務驗收通過，本機已安裝。見[驗收及限制](VERIFICATION-2.0.0.md)。Mac保留1.9.9，Linux Debian1.9.5、AppImage更新1.7.2。
 
 以下為 1.9.1 的歷史驗收說明： 本輪上下文整理、技能與記憶的行為、實測與限制見 [1.9.1 驗收記錄](VERIFICATION-1.9.1.md)。原文與摘要分開保存，還原不重新執行已完成工具；摘要仍有損，可能遺漏事實。歷史媒體實測見 [1.8.0 驗收記錄](VERIFICATION-1.8.0.md)，保留其語音、編輯、音樂與實驗影片的問題說明。Windows、Linux Debian 已於 2026-10-17 從同一主分支提交補齊 1.9.1，啟用原生工具引擎。Windows 套件結構與更新簽章通過；Linux 完成 WSL 安裝及 20 秒啟動檢查。完整介面、模型與自動／手動摘要互動尚未於兩平台實機驗收；Linux 須手動安裝 Debian 包，AppImage 自動更新保留 1.7.2。GitHub帳戶付款或支出限制使遠端作業未啟動，本機檢查不冒充遠端CI通過。
 
@@ -93,7 +93,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | 檔案 | 散列 |
 | --- | --- |
 | Mac DMG | `6fbc94eb895220fbf99a8d497b8ec3506074e6964c51dc895374d985ae5d6c27` |
-| Windows安裝程式 | `af933c87a14c303be70dd6b107a411083ad704e2c452695493e6ee072b475eb0` |
+| Windows安裝程式 | `547c745ad1494b89bc7c4d3ee8646b6fcc28f1c469a59be3496361e149b6e668` |
 | Linux Debian包 | `882c7800ba8455379bcb1911bc3456dfca8a22612e4e3193cc046f3f50ac9e33` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。

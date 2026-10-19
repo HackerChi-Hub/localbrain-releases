@@ -1,0 +1,61 @@
+{
+  "version": "2.0.0",
+  "provenance": {
+    "binaryCommit": "fd769039b171632c73ec4daf8aa394af1879f966",
+    "reason": "Only external summary wire and verification/docs changed after native compilation",
+    "binarySha256": "2D870889EFA2500120B85D3DADF8F2681B412A1DEDC9F3EE6E5AD96D23E37543",
+    "resourcesCommit": "9ad2fedcf6479a7ec177c1d85b5e63d23d95cbd7"
+  },
+  "installed": {
+    "version": "2.0.0",
+    "exeSha256": "5303b8a53eeab122184344739489c1faa16f6ac3b75daea8c984df079897855f",
+    "installerSha256": "547c745ad1494b89bc7c4d3ee8646b6fcc28f1c469a59be3496361e149b6e668",
+    "configUnchanged": true,
+    "verifiedDshResources": true
+  },
+  "realModelChecks": {
+    "greeting": true,
+    "countdownWrites": 1,
+    "pressureReads": 2,
+    "successfulCompactions": 1,
+    "newsSearchCalls": 2,
+    "newsOutputCaps": [
+      2048,
+      5120
+    ],
+    "newsLinksMatchedReceipts": true,
+    "productionChatUI": true,
+    "passed": true
+  },
+  "countdownBrowser": {
+    "errors": [],
+    "initial": "10.00",
+    "running": "8.69",
+    "paused": "8.66",
+    "reset": "10.00",
+    "passed": true
+  },
+  "localRegression": {
+    "typescript": {
+      "passed": 1587,
+      "skipped": 2
+    },
+    "adapters": 12,
+    "dsh": 42,
+    "rust": {
+      "passed": 360,
+      "ignored": 28
+    },
+    "python": {
+      "files": 41,
+      "unittestCasesIncludingPlatformSkips": 329,
+      "htmlBrowserScript": true
+    }
+  },
+  "limits": [
+    "Windows RTX4070 Laptop 8GB / 32GB only; no Linux or Mac 2.0.0 package",
+    "Not a rerun of the original 12-question benchmark",
+    "Lossy summaries can still infer incorrect state; real receipts remain authoritative",
+    "Search reachability, freshness and factual correctness are separate from delivery validation"
+  ]
+}
