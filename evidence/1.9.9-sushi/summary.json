@@ -1,0 +1,182 @@
+[
+  {
+    "mode": "resident",
+    "startupSeconds": 40.38911237499997,
+    "modelResidentGiB": 44.20410537160933,
+    "systemBeforeGiB": 12.613800048828125,
+    "systemAtReadyGiB": 52.39347839355469,
+    "systemPeakGiB": 57.07749938964844,
+    "completed": true,
+    "visionLog": [
+      "[vision] on (default)",
+      "[vision] qwen tower prefix: vision_tower.",
+      "[vision] qwen patch_embed layout: channels_last",
+      "Vision encoder: Qwen3-VL ViT (depth=27, hidden=1152, heads=16, merge=2, out_hidden=2560)"
+    ],
+    "trials": [
+      {
+        "case": "short-first",
+        "firstContentSeconds": 0.4278757920001226,
+        "totalSeconds": 4.013659209002071,
+        "engineDecodeTokensPerSecond": 36.1,
+        "promptTokens": 71,
+        "outputTokens": 127,
+        "cachedTokens": 0,
+        "finishReason": "stop",
+        "contentSha256": "c31be0d023532dc1de6200f8925112aa25ea93dda0304b56f14d6eeac064ffae"
+      },
+      {
+        "case": "short-repeat",
+        "firstContentSeconds": 0.38826491700092447,
+        "totalSeconds": 3.4684685000029276,
+        "engineDecodeTokensPerSecond": 42.3,
+        "promptTokens": 71,
+        "outputTokens": 127,
+        "cachedTokens": 0,
+        "finishReason": "stop",
+        "contentSha256": "c31be0d023532dc1de6200f8925112aa25ea93dda0304b56f14d6eeac064ffae"
+      },
+      {
+        "case": "context-first",
+        "firstContentSeconds": 2.460251625001547,
+        "totalSeconds": 4.993924416001391,
+        "engineDecodeTokensPerSecond": 43.2,
+        "promptTokens": 2626,
+        "outputTokens": 106,
+        "cachedTokens": 0,
+        "finishReason": "stop",
+        "contentSha256": "55f4e6e4e15ff3914c42c789acc97a38fb5b448c9abb03349b9968ed3585e8b7"
+      },
+      {
+        "case": "context-repeat",
+        "firstContentSeconds": 0.2585609160014428,
+        "totalSeconds": 2.6766498329998285,
+        "engineDecodeTokensPerSecond": 44.7,
+        "promptTokens": 2626,
+        "outputTokens": 106,
+        "cachedTokens": 2595,
+        "finishReason": "stop",
+        "contentSha256": "55f4e6e4e15ff3914c42c789acc97a38fb5b448c9abb03349b9968ed3585e8b7"
+      }
+    ]
+  },
+  {
+    "mode": "ssd32",
+    "startupSeconds": 8.982985040998756,
+    "modelResidentGiB": 31.20635368861258,
+    "systemBeforeGiB": 25.02105712890625,
+    "systemAtReadyGiB": 40.64190673828125,
+    "systemPeakGiB": 44.58518981933594,
+    "completed": true,
+    "visionLog": [
+      "[vision] off under expert streaming; pass --vision to load the tower (+0.90 GB, -12 slots/layer)"
+    ],
+    "trials": [
+      {
+        "case": "short-first",
+        "firstContentSeconds": 1.385592208000162,
+        "totalSeconds": 5.882309541000723,
+        "engineDecodeTokensPerSecond": 29.0,
+        "promptTokens": 71,
+        "outputTokens": 127,
+        "cachedTokens": 0,
+        "finishReason": "stop",
+        "contentSha256": "c31be0d023532dc1de6200f8925112aa25ea93dda0304b56f14d6eeac064ffae"
+      },
+      {
+        "case": "short-repeat",
+        "firstContentSeconds": 0.4012641670015,
+        "totalSeconds": 3.6426672500019777,
+        "engineDecodeTokensPerSecond": 40.1,
+        "promptTokens": 71,
+        "outputTokens": 127,
+        "cachedTokens": 0,
+        "finishReason": "stop",
+        "contentSha256": "c31be0d023532dc1de6200f8925112aa25ea93dda0304b56f14d6eeac064ffae"
+      },
+      {
+        "case": "context-first",
+        "firstContentSeconds": 4.900542166997184,
+        "totalSeconds": 8.101527791997796,
+        "engineDecodeTokensPerSecond": 34.9,
+        "promptTokens": 2626,
+        "outputTokens": 106,
+        "cachedTokens": 0,
+        "finishReason": "stop",
+        "contentSha256": "55f4e6e4e15ff3914c42c789acc97a38fb5b448c9abb03349b9968ed3585e8b7"
+      },
+      {
+        "case": "context-repeat",
+        "firstContentSeconds": 0.26912499999889405,
+        "totalSeconds": 2.871722249998129,
+        "engineDecodeTokensPerSecond": 41.8,
+        "promptTokens": 2626,
+        "outputTokens": 106,
+        "cachedTokens": 2595,
+        "finishReason": "stop",
+        "contentSha256": "55f4e6e4e15ff3914c42c789acc97a38fb5b448c9abb03349b9968ed3585e8b7"
+      }
+    ]
+  },
+  {
+    "mode": "ssd32-vision",
+    "startupSeconds": 9.189514375000726,
+    "modelResidentGiB": 31.167079919949174,
+    "systemBeforeGiB": 8.1563720703125,
+    "systemAtReadyGiB": 40.68052673339844,
+    "systemPeakGiB": 44.310516357421875,
+    "completed": true,
+    "visionLog": [
+      "[vision] on (--vision): tower 0.90 GB in the ssd budget (-12 slots/layer); an image encode up to 1.77 GB is billed per request",
+      "[vision] qwen tower prefix: vision_tower.",
+      "[vision] qwen patch_embed layout: channels_last",
+      "Vision encoder: Qwen3-VL ViT (depth=27, hidden=1152, heads=16, merge=2, out_hidden=2560)"
+    ],
+    "trials": [
+      {
+        "case": "short-first",
+        "firstContentSeconds": 1.5725269159993331,
+        "totalSeconds": 6.118583250001393,
+        "engineDecodeTokensPerSecond": 28.6,
+        "promptTokens": 71,
+        "outputTokens": 127,
+        "cachedTokens": 0,
+        "finishReason": "stop",
+        "contentSha256": "c31be0d023532dc1de6200f8925112aa25ea93dda0304b56f14d6eeac064ffae"
+      },
+      {
+        "case": "short-repeat",
+        "firstContentSeconds": 0.407704041001125,
+        "totalSeconds": 3.5783228750005946,
+        "engineDecodeTokensPerSecond": 41.0,
+        "promptTokens": 71,
+        "outputTokens": 127,
+        "cachedTokens": 0,
+        "finishReason": "stop",
+        "contentSha256": "c31be0d023532dc1de6200f8925112aa25ea93dda0304b56f14d6eeac064ffae"
+      },
+      {
+        "case": "context-first",
+        "firstContentSeconds": 5.018111291999958,
+        "totalSeconds": 8.228142374999152,
+        "engineDecodeTokensPerSecond": 33.8,
+        "promptTokens": 2626,
+        "outputTokens": 106,
+        "cachedTokens": 0,
+        "finishReason": "stop",
+        "contentSha256": "55f4e6e4e15ff3914c42c789acc97a38fb5b448c9abb03349b9968ed3585e8b7"
+      },
+      {
+        "case": "context-repeat",
+        "firstContentSeconds": 0.2707974999975704,
+        "totalSeconds": 2.5984424159978516,
+        "engineDecodeTokensPerSecond": 46.5,
+        "promptTokens": 2626,
+        "outputTokens": 106,
+        "cachedTokens": 2595,
+        "finishReason": "stop",
+        "contentSha256": "55f4e6e4e15ff3914c42c789acc97a38fb5b448c9abb03349b9968ed3585e8b7"
+      }
+    ]
+  }
+]

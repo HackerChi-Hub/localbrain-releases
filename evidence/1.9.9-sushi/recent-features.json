@@ -1,0 +1,71 @@
+{
+  "reviewed_version": "1.9.9",
+  "languages": {
+    "zh-CN": [
+      {
+        "version": "1.9.9",
+        "text": "Mac下载达到100%后按后台、完整文件与登记结果确认完成；迟到的暂停、取消回执不会把完成状态改回去，保留已下载权重。"
+      },
+      {
+        "version": "1.9.9",
+        "text": "Sushi内存预检失败显示本次实际原因及操作建议；常驻与精确SSD手动选择，32K同权重两模式已实测，不自动降级或绕过保护。"
+      },
+      {
+        "version": "1.9.8",
+        "text": "Windows 聊天宿主启动修复：发送消息可正常进入模型；异常保留具体诊断，避免只显示第0轮通道关闭。 大工具目录按需加载，避免8K窗口被说明占满；已登记PolyStrata可保存选择，原权限保留。"
+      },
+      {
+        "version": "1.9.7",
+        "text": "Windows 首次安装修复：正常创建独立Python并补齐pip，进度文件短暂占用可恢复，保留既有下载断点。"
+      },
+      {
+        "version": "1.9.6",
+        "text": "Windows RTX 40 系可一键下载 PolyStrata/Q3 并接入：独立运行环境、完整性校验、断点与取消，不改显卡驱动。"
+      }
+    ],
+    "zh-TW": [
+      {
+        "version": "1.9.9",
+        "text": "Mac下載達到100%後依背景、完整檔案及登記結果確認完成；延遲的暫停、取消回執不會覆蓋完成狀態，保留已下載權重。"
+      },
+      {
+        "version": "1.9.9",
+        "text": "Sushi記憶體預檢失敗顯示本次實際原因及操作建議；常駐與精確SSD手動選擇，32K同權重兩模式已實測，不自動降級或繞過保護。"
+      },
+      {
+        "version": "1.9.8",
+        "text": "Windows 聊天宿主啟動修復：傳送訊息可正常進入模型；異常保留具體診斷，避免只顯示第0輪通道關閉。 大型工具目錄按需載入，避免8K視窗被說明佔滿；已登記PolyStrata可保存選擇，原權限保留。"
+      },
+      {
+        "version": "1.9.7",
+        "text": "Windows 首次安裝修復：正常建立獨立Python並補齊pip，進度檔案暫時占用可恢復，保留既有下載斷點。"
+      },
+      {
+        "version": "1.9.6",
+        "text": "Windows RTX 40 系可一鍵下載 PolyStrata/Q3 並接入：獨立執行環境、完整性校驗、續傳及取消，不改顯示卡驅動。"
+      }
+    ],
+    "en": [
+      {
+        "version": "1.9.9",
+        "text": "Mac confirms download completion using backend state, valid files and registration; late pause/cancel acknowledgements cannot undo completion, and downloaded weights are preserved."
+      },
+      {
+        "version": "1.9.9",
+        "text": "Sushi memory preflight errors explain current-launch evidence and actions. Full residency and exact SSD are manually selected and tested at 32K with the same weights, without automatic downgrades or safety bypasses."
+      },
+      {
+        "version": "1.9.8",
+        "text": "Windows native chat host startup is repaired; failures retain concrete diagnostics instead of only reporting a closed channel before the first response. Large tool catalogs load on demand to fit small windows; registered PolyStrata selections can be saved without widening other model permissions."
+      },
+      {
+        "version": "1.9.7",
+        "text": "Windows first-install repair creates isolated Python and bootstraps pip, tolerates transient progress-file locks and retains existing downloads."
+      },
+      {
+        "version": "1.9.6",
+        "text": "Windows RTX 40 GPUs can install and connect PolyStrata/Q3 in one flow, with an isolated runtime, integrity checks, resume and cancellation, without changing the display driver."
+      }
+    ]
+  }
+}

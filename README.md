@@ -16,8 +16,8 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
-- **1.9.8** · Mac新增Sushi独立受管环境：设置显式安装与校验，启动模型不更新引擎，不依赖Homebrew。
-- **1.9.8** · Sushi专用包可下载或挂载，按架构、分片及真实加载状态校验；默认32K与常驻，可手动设置精确SSD预算，125B推理未重测。
+- **1.9.9** · Mac下载达到100%后按后台、完整文件与登记结果确认完成；迟到的暂停、取消回执不会把完成状态改回去，保留已下载权重。
+- **1.9.9** · Sushi内存预检失败显示本次实际原因及操作建议；常驻与精确SSD手动选择，32K同权重两模式已实测，不自动降级或绕过保护。
 - **1.9.8** · Windows 聊天宿主启动修复：发送消息可正常进入模型；异常保留具体诊断，避免只显示第0轮通道关闭。 大工具目录按需加载，避免8K窗口被说明占满；已登记PolyStrata可保存选择，原权限保留。
 - **1.9.7** · Windows 首次安装修复：正常创建独立Python并补齐pip，进度文件短暂占用可恢复，保留既有下载断点。
 - **1.9.6** · Windows RTX 40 系可一键下载 PolyStrata/Q3 并接入：独立运行环境、完整性校验、断点与取消，不改显卡驱动。
@@ -35,11 +35,13 @@
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Mac / Windows 1.9.8 · Linux 1.9.5
+## 最新下载：Mac 1.9.9 · Windows 1.9.8 · Linux 1.9.5
+
+Mac 1.9.9修复下载终态及Sushi启动错误提示，包括状态刷新遮蔽内存原因的问题。最终安装版已验证真实预检拒绝、恢复32K后完整常驻加载与中文响应；同权重常驻／32 GiB精确SSD分别驻留44.20／31.21 GiB。模式手动选择，保存并重启生效，不自动降级。见[最终安装与实测范围](VERIFICATION-1.9.9-MAC.md)。下方1.9.8段落保留其当时验收边界。
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 1.9.8 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.8/LocalBrain_1.9.8_aarch64.dmg) · 本版已安装，Sushi环境、设置与跨域最小验收完成；125B推理及卸载最后交互见验收边界。严格签名与独立更新签名通过，尚未 Apple 公证 |
+| Apple Silicon Mac 1.9.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.9/LocalBrain_1.9.9_aarch64.dmg) · 已安装，下载终态、真实启动错误、32K完整常驻及中文响应验收完成；常驻与SSD比较见记录。严格签名与独立更新签名通过，尚未 Apple 公证 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.8/LocalBrain_1.9.8_x64-setup.exe) · Windows 1.9.8已安装；原生宿主、真实问候、工具往返和聊天界面通过，更新签名通过，非Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Ubuntu 22.04 WSL2 已安装及启动验证；包内原生 DSH 初始化通过，预览支持，未代替裸机桌面验收；无新 AppImage |
 
@@ -92,7 +94,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `c6a82c9a3c5beef5f0ab8501b3f3d19cbd9106fb532d88488d3f88230906c855` |
+| Mac DMG | `6fbc94eb895220fbf99a8d497b8ec3506074e6964c51dc895374d985ae5d6c27` |
 | Windows安装程序 | `af933c87a14c303be70dd6b107a411083ad704e2c452695493e6ee072b475eb0` |
 | Linux Debian包 | `882c7800ba8455379bcb1911bc3456dfca8a22612e4e3193cc046f3f50ac9e33` |
 

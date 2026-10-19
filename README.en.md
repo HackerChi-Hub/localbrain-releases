@@ -14,8 +14,8 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **1.9.8** · Mac adds an isolated managed Sushi runtime: explicitly install or verify in Settings, with no Homebrew dependency or engine updates on model startup.
-- **1.9.8** · Download or mount dedicated Sushi packs with architecture, shard and loaded-model checks. Defaults to 32K and full residency; exact SSD budget is optional. 125B inference was not rerun.
+- **1.9.9** · Mac confirms download completion using backend state, valid files and registration; late pause/cancel acknowledgements cannot undo completion, and downloaded weights are preserved.
+- **1.9.9** · Sushi memory preflight errors explain current-launch evidence and actions. Full residency and exact SSD are manually selected and tested at 32K with the same weights, without automatic downgrades or safety bypasses.
 - **1.9.8** · Windows native chat host startup is repaired; failures retain concrete diagnostics instead of only reporting a closed channel before the first response. Large tool catalogs load on demand to fit small windows; registered PolyStrata selections can be saved without widening other model permissions.
 - **1.9.7** · Windows first-install repair creates isolated Python and bootstraps pip, tolerates transient progress-file locks and retains existing downloads.
 - **1.9.6** · Windows RTX 40 GPUs can install and connect PolyStrata/Q3 in one flow, with an isolated runtime, integrity checks, resume and cancellation, without changing the display driver.
@@ -33,11 +33,13 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Mac / Windows 1.9.8 · Linux 1.9.5
+## Latest downloads：Mac 1.9.9 · Windows 1.9.8 · Linux 1.9.5
+
+Mac 1.9.9 repairs download completion and Sushi startup diagnostics, including status polling masking memory errors. Final installed-app checks exercised real preflight rejection, restoring 32K, full-resident loading and a Chinese response. Matched resident/32 GiB exact SSD tests recorded 44.20/31.21 GiB residency. Modes are selected manually and require saving and restarting; no automatic downgrade. See [final installation and test limits](VERIFICATION-1.9.9-MAC.md). Older 1.9.8 paragraphs retain their original verification scope.
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 1.9.8 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.8/LocalBrain_1.9.8_aarch64.dmg) · Installed; Sushi runtime, settings and CORS checks completed. See verification limits for 125B inference and final uninstall interaction. Strict code and independent updater signatures verified; not Apple-notarized |
+| Apple Silicon Mac 1.9.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.9/LocalBrain_1.9.9_aarch64.dmg) · Installed; download completion, real startup error, 32K residency and a Chinese response verified. Resident/SSD comparison is documented. Strict code and independent updater signatures verified; not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.8/LocalBrain_1.9.8_x64-setup.exe) · Windows 1.9.8 installed; native host, real greeting, tool roundtrip and chat UI passed; updater signature verified, not Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Installed and startup-tested in Ubuntu 22.04 WSL2; packaged native DSH initialized; preview support, not native desktop acceptance; no new AppImage |
 
@@ -90,7 +92,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `c6a82c9a3c5beef5f0ab8501b3f3d19cbd9106fb532d88488d3f88230906c855` |
+| Mac DMG | `6fbc94eb895220fbf99a8d497b8ec3506074e6964c51dc895374d985ae5d6c27` |
 | Windows installer | `af933c87a14c303be70dd6b107a411083ad704e2c452695493e6ee072b475eb0` |
 | Linux Debian | `882c7800ba8455379bcb1911bc3456dfca8a22612e4e3193cc046f3f50ac9e33` |
 
