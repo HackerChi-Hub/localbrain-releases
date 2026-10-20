@@ -1,0 +1,11 @@
+{
+  "version": "2.0.2",
+  "platform": "darwin-aarch64",
+  "source_release_commit": "536ba1716fd9cac3b3f85bb67fe45a893169574c",
+  "source_committed_after_local_build": true,
+  "runtime": "Sushi 1.2.4 unchanged",
+  "installed_file_count": 12995,
+  "native_panel_clicks": "pending-desktop-unlock",
+  "remote_ci": "not-started-account-billing-limit",
+  "dmg_sha256": "60089a54af5a3dbbd5b4e7850214977b33a31e58d10fb225c4329ddbb5c91c66"
+}

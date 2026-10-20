@@ -14,11 +14,11 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **2.0.2** · Mac取樣建議依準確模型與本次思考狀態聯動；未登記微調保留自身設定，不將普通版建議套入Swift或去審查版。
+- **2.0.2** · 溫度與取樣欄位可手動調整並恢復自動；底欄顯示精確數值與來源，明確不傳送Sushi未支援欄位。
 - **2.0.1** · Windows壓縮檢查點增加短回執事實記錄，減少誤判待辦；有效壓縮後僅完整輸出仍可容納才越過提前整理目標。
 - **2.0.0** · Windows小視窗任務接續修復：略過無收益短摘要，內建工具也按需載入，避免反覆壓縮同一小片段後誤停。
 - **2.0.0** · Windows小視窗對話修復：摘要停用工具與思考，PolyStrata限制思考額度，無法釋放安全空間時保留記錄並停止。
-- **1.9.9** · Mac下載達到100%後依背景、完整檔案及登記結果確認完成；延遲的暫停、取消回執不會覆蓋完成狀態，保留已下載權重。
-- **1.9.9** · Sushi記憶體預檢失敗顯示本次實際原因及操作建議；常駐與精確SSD手動選擇，32K同權重兩模式已實測，不自動降級或繞過保護。
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,17 +33,21 @@
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.0.1 · Mac 1.9.9 · Linux 1.9.5
+## 最新下載：Windows 2.0.1 · Mac 2.0.2 · Linux 1.9.5
+
+Mac 2.0.2新增依模型與本次思考模式匹配的取樣建議，手動設定可保留並恢復自動，精確顯示溫度與來源。Sushi/Splash補讀生成設定；Swift與去審查版不套用普通版建議。真實模型、套件內宿主、生產參數元件互動及安裝檔案校驗通過；鎖定畫面阻止安裝版參數面板點選，該項尚未完成。僅更新Mac，不改變模型權重、引擎版本或外部用戶端預設。[2.0.2驗收與限制](VERIFICATION-2.0.2-MAC.md) · [取樣規則](SAMPLING_RECOMMENDATIONS.md)。
 
 Mac 1.9.9修復下載終態及Sushi啟動錯誤提示，包括狀態重新整理遮蔽記憶體原因的問題。最終安裝版已驗證真實預檢拒絕、恢復32K後完整常駐載入與中文回應；同權重常駐／32 GiB精確SSD分別駐留44.20／31.21 GiB。模式手動選擇，儲存並重啟生效，不自動降級。見[最終安裝與實測範圍](VERIFICATION-1.9.9-MAC.md)。下方1.9.8段落保留當時驗收邊界。
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 1.9.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.9/LocalBrain_1.9.9_aarch64.dmg) · 已安裝，下載終態、真實啟動錯誤、32K完整常駐及中文回應驗收完成；常駐與SSD比較見紀錄。嚴格簽章與獨立更新簽章通過，尚未 Apple 公證 |
+| Apple Silicon Mac 2.0.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.2/LocalBrain_2.0.2_aarch64.dmg) · 已安裝；取樣真實模型、套件內工具宿主及生產元件互動通過，原生參數面板受鎖定畫面阻擋待補核。嚴格簽章與獨立更新簽章通過，尚未 Apple 公證 |
 | Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.1/LocalBrain_2.0.1_x64-setup.exe) · Windows 2.0.1已安裝；真實模型摘要、接續及聊天工具驗收通過；更新簽章通過，非Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Ubuntu 22.04 WSL2 已安裝及啟動驗證；套件內原生 DSH 初始化通過，預覽支援，不代替原生桌面驗收；無新 AppImage |
 
 [2.0.1 Windows發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.1)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_1.9.5_amd64.deb`。保留舊發行。
+
+以下Windows 2.0.1及更早段落保留發布時的歷史狀態；目前平台版本以上方下載表為準。
 
 本次更新 **Windows 2.0.1**：壓縮檢查點附加最近3筆程式原始回執短記錄，協助辨識已完成操作；一般請求不增加常駐提示。有效壓縮後，僅完整輸出額度仍可容納時才越過提前整理目標。真實模型故障注入、明確重做、失敗重試、批次呼叫及最終套件聊天/連網回歸通過，本機已安裝。摘要仍有損。見[驗收及限制](VERIFICATION-2.0.1.md)。Mac保留1.9.9，Linux既有套件不變。
 
@@ -92,7 +96,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `6fbc94eb895220fbf99a8d497b8ec3506074e6964c51dc895374d985ae5d6c27` |
+| Mac DMG | `60089a54af5a3dbbd5b4e7850214977b33a31e58d10fb225c4329ddbb5c91c66` |
 | Windows安裝程式 | `e854ac19dd5f9c861f998b2fab313f34a8069a9f562de78d7f37e7f867c74123` |
 | Linux Debian包 | `882c7800ba8455379bcb1911bc3456dfca8a22612e4e3193cc046f3f50ac9e33` |
 

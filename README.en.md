@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.0.2** · Mac sampling recommendations follow the exact model and current thinking state. Unregistered fine-tunes retain their own configurations; ordinary-model policies are not applied to Swift or uncensored variants.
+- **2.0.2** · Temperature and sampling fields support manual adjustment and automatic reset. The footer shows exact values and sources; unsupported Sushi fields are explicitly omitted.
 - **2.0.1** · Windows checkpoints add short committed-receipt records; after useful compaction, a proactive target may be exceeded only when the full output allowance still fits.
 - **2.0.0** · Windows small-window continuation: skip unhelpful short summaries and defer built-in schemas, avoiding false stops after repeated tiny compactions.
 - **2.0.0** · Windows small-window chat: tool-free, non-thinking summaries, bounded PolyStrata reasoning, and preserving records and stopping when safe space cannot be recovered.
-- **1.9.9** · Mac confirms download completion using backend state, valid files and registration; late pause/cancel acknowledgements cannot undo completion, and downloaded weights are preserved.
-- **1.9.9** · Sushi memory preflight errors explain current-launch evidence and actions. Full residency and exact SSD are manually selected and tested at 32K with the same weights, without automatic downgrades or safety bypasses.
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,17 +33,21 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.0.1 · Mac 1.9.9 · Linux 1.9.5
+## Latest downloads：Windows 2.0.1 · Mac 2.0.2 · Linux 1.9.5
+
+Mac 2.0.2 adds model- and thinking-aware sampling recommendations, preserved manual choices, automatic reset, and exact temperature/source display. Sushi/Splash now read generation configurations; Swift and uncensored variants do not inherit ordinary-model policies. Real-model, packaged-host, production-component interaction and installed-file checks passed. A locked desktop prevented native parameter-panel clicks; that check remains pending. Mac only; model weights, engine versions and external-client defaults are unchanged. [2.0.2 verification and limits](VERIFICATION-2.0.2-MAC.md) · [Sampling rules](SAMPLING_RECOMMENDATIONS.md).
 
 Mac 1.9.9 repairs download completion and Sushi startup diagnostics, including status polling masking memory errors. Final installed-app checks exercised real preflight rejection, restoring 32K, full-resident loading and a Chinese response. Matched resident/32 GiB exact SSD tests recorded 44.20/31.21 GiB residency. Modes are selected manually and require saving and restarting; no automatic downgrade. See [final installation and test limits](VERIFICATION-1.9.9-MAC.md). Older 1.9.8 paragraphs retain their original verification scope.
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 1.9.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.9/LocalBrain_1.9.9_aarch64.dmg) · Installed; download completion, real startup error, 32K residency and a Chinese response verified. Resident/SSD comparison is documented. Strict code and independent updater signatures verified; not Apple-notarized |
+| Apple Silicon Mac 2.0.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.2/LocalBrain_2.0.2_aarch64.dmg) · Installed; real-model sampling, packaged tool host and production-component interactions verified. Native parameter-panel clicks remain pending due to the locked desktop. Strict code and updater signatures verified; not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.1/LocalBrain_2.0.1_x64-setup.exe) · Windows 2.0.1 installed; real-model compaction, continuation and chat tools verified; updater signature verified, not Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Installed and startup-tested in Ubuntu 22.04 WSL2; packaged native DSH initialized; preview support, not native desktop acceptance; no new AppImage |
 
 [2.0.1 Windows release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.9.5_amd64.deb`. Older releases are retained.
+
+The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
 This release updates **Windows 2.0.1**: compacted checkpoints append short records from the last three committed tool receipts, without a permanent hint in ordinary requests. After productive compaction, a proactive target may be exceeded only if the full output allowance still fits. Real-model fault injection, explicit redo, failed-tool retry, batching, and final-package chat/search checks passed; installed locally. Summaries remain lossy. See [acceptance and limits](VERIFICATION-2.0.1.md). Mac retains 1.9.9; existing Linux packages are unchanged.
 
@@ -92,7 +96,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `6fbc94eb895220fbf99a8d497b8ec3506074e6964c51dc895374d985ae5d6c27` |
+| Mac DMG | `60089a54af5a3dbbd5b4e7850214977b33a31e58d10fb225c4329ddbb5c91c66` |
 | Windows installer | `e854ac19dd5f9c861f998b2fab313f34a8069a9f562de78d7f37e7f867c74123` |
 | Linux Debian | `882c7800ba8455379bcb1911bc3456dfca8a22612e4e3193cc046f3f50ac9e33` |
 
