@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.0.1** · Windows checkpoints add short committed-receipt records; after useful compaction, a proactive target may be exceeded only when the full output allowance still fits.
 - **2.0.0** · Windows small-window continuation: skip unhelpful short summaries and defer built-in schemas, avoiding false stops after repeated tiny compactions.
 - **2.0.0** · Windows small-window chat: tool-free, non-thinking summaries, bounded PolyStrata reasoning, and preserving records and stopping when safe space cannot be recovered.
 - **1.9.9** · Mac confirms download completion using backend state, valid files and registration; late pause/cancel acknowledgements cannot undo completion, and downloaded weights are preserved.
 - **1.9.9** · Sushi memory preflight errors explain current-launch evidence and actions. Full residency and exact SSD are manually selected and tested at 32K with the same weights, without automatic downgrades or safety bypasses.
-- **1.9.8** · Windows native chat host startup is repaired; failures retain concrete diagnostics instead of only reporting a closed channel before the first response. Large tool catalogs load on demand to fit small windows; registered PolyStrata selections can be saved without widening other model permissions.
 <!-- recent-features:end -->
 
 <!-- evergreen:demos:start -->
@@ -33,19 +33,19 @@ Run supported local models, work with authorized files, and manage speech, image
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.0.0 · Mac 1.9.9 · Linux 1.9.5
+## Latest downloads：Windows 2.0.1 · Mac 1.9.9 · Linux 1.9.5
 
 Mac 1.9.9 repairs download completion and Sushi startup diagnostics, including status polling masking memory errors. Final installed-app checks exercised real preflight rejection, restoring 32K, full-resident loading and a Chinese response. Matched resident/32 GiB exact SSD tests recorded 44.20/31.21 GiB residency. Modes are selected manually and require saving and restarting; no automatic downgrade. See [final installation and test limits](VERIFICATION-1.9.9-MAC.md). Older 1.9.8 paragraphs retain their original verification scope.
 
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 1.9.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.9/LocalBrain_1.9.9_aarch64.dmg) · Installed; download completion, real startup error, 32K residency and a Chinese response verified. Resident/SSD comparison is documented. Strict code and independent updater signatures verified; not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.0/LocalBrain_2.0.0_x64-setup.exe) · Windows 2.0.0 installed; real-model compaction, continuation and chat tools verified; updater signature verified, not Authenticode |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.1/LocalBrain_2.0.1_x64-setup.exe) · Windows 2.0.1 installed; real-model compaction, continuation and chat tools verified; updater signature verified, not Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Installed and startup-tested in Ubuntu 22.04 WSL2; packaged native DSH initialized; preview support, not native desktop acceptance; no new AppImage |
 
-[2.0.0 Windows release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.0). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.9.5_amd64.deb`. Older releases are retained.
+[2.0.1 Windows release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.9.5_amd64.deb`. Older releases are retained.
 
-This release updates **Windows 2.0.0**: summaries disable tools and thinking, while PolyStrata reserves answer space within each actual output allowance. Short non-shrinking spans are kept verbatim when answer space remains; actual overflow still stops. Built-in schemas load on demand too. Final-package real-model automatic compaction, continuation, greeting, countdown, chat UI and 2K/5K news-search delivery checks passed; installed locally. See [acceptance and limits](VERIFICATION-2.0.0.md). Mac retains 1.9.9, Linux Debian 1.9.5 and AppImage updates 1.7.2.
+This release updates **Windows 2.0.1**: compacted checkpoints append short records from the last three committed tool receipts, without a permanent hint in ordinary requests. After productive compaction, a proactive target may be exceeded only if the full output allowance still fits. Real-model fault injection, explicit redo, failed-tool retry, batching, and final-package chat/search checks passed; installed locally. Summaries remain lossy. See [acceptance and limits](VERIFICATION-2.0.1.md). Mac retains 1.9.9; existing Linux packages are unchanged.
 
 Historical 1.9.1 acceptance notes: See the [1.9.1 verification record](VERIFICATION-1.9.1.md) for context compaction, skills, memory and their tested limits. Originals and summaries are saved separately; recovery does not replay completed tools. Summaries remain lossy and can miss facts. Historical media results and their speech, editing, music and experimental-video issues remain in the [1.8.0 verification record](VERIFICATION-1.8.0.md). Windows and Linux Debian 1.9.1 packages were added on 2026-10-17 from the same main-branch commit with the native tool engine enabled. Windows package and updater-signature checks passed; Linux passed installation and a 20-second startup check in WSL. Full UI, model and automatic/manual compaction acceptance remains pending on both platforms. Install Linux Debian manually; its AppImage updater retains 1.7.2. GitHub account payment or spending limits prevented remote jobs from starting; local checks are not presented as passing remote CI.
 
@@ -93,7 +93,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `6fbc94eb895220fbf99a8d497b8ec3506074e6964c51dc895374d985ae5d6c27` |
-| Windows installer | `547c745ad1494b89bc7c4d3ee8646b6fcc28f1c469a59be3496361e149b6e668` |
+| Windows installer | `e854ac19dd5f9c861f998b2fab313f34a8069a9f562de78d7f37e7f867c74123` |
 | Linux Debian | `882c7800ba8455379bcb1911bc3456dfca8a22612e4e3193cc046f3f50ac9e33` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.

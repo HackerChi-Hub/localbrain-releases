@@ -1,0 +1,72 @@
+{
+  "version": "2.0.1",
+  "sourceBuildCommit": "66a5db03b5e60ff7e8a21ac2f19f2a4568ffc65c",
+  "provenance": {
+    "binaryCommit": "73316ef7432d881817cd9ca7fb63285442ceb52d",
+    "reason": "Only external summary wire and verification/docs changed after native compilation",
+    "binarySha256": "D42C9F401B954056ABDBED3B1C3D25B7405D32F746A6ADC391C6AB3DAA867F15",
+    "resourcesCommit": "66a5db03b5e60ff7e8a21ac2f19f2a4568ffc65c"
+  },
+  "installerSha256": "e854ac19dd5f9c861f998b2fab313f34a8069a9f562de78d7f37e7f867c74123",
+  "installedExeSha256": "9fe0ea08810cddb61857987f53d7a4f0b4a12b40d507c6a61c2c6e5cbe89f073",
+  "native": {
+    "passed": true,
+    "receiptCheckpointPassed": true,
+    "compactionPassed": true,
+    "newsPassed": true,
+    "pressureReads": 2,
+    "newsSearchCalls": 2,
+    "writes": 1
+  },
+  "modelFaultInjection": {
+    "passed": true,
+    "injectedSummaries": 2,
+    "cases": [
+      {
+        "name": "natural-compaction",
+        "reads": [
+          1,
+          2
+        ],
+        "passed": true
+      },
+      {
+        "name": "stale-summary-and-explicit-redo",
+        "reads": [
+          1,
+          2,
+          2
+        ],
+        "passed": true
+      },
+      {
+        "name": "error-retry",
+        "reads": [
+          1,
+          2,
+          2
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "modelBatching": {
+    "passed": true,
+    "injectedSummaries": 0,
+    "cases": [
+      {
+        "name": "batched-tools",
+        "reads": [
+          1,
+          2
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "configUnchangedDuringInstall": true,
+  "limits": [
+    "Windows RTX4070 Laptop 8GB / 32GB only",
+    "Summaries remain lossy; not a rerun of the original 12-case benchmark"
+  ]
+}
