@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-20",
+  "method": "Single runs; elapsed time between first and last committed session events. Synthetic read-only tools; real local model. Not a throughput benchmark or comparison to a fully unoptimized release.",
+  "hardware": "RTX 4070 Laptop 8GB VRAM / 32GB RAM",
+  "model": "Qwen3.6-35B-A3B UD Q3_K_M, PolyStrata, 8192 context / 4096 output allowance",
+  "cases": [
+    {
+      "name": "baseline-batch-2.0.0",
+      "eventSpanSeconds": 8.38,
+      "reads": [
+        1,
+        2
+      ],
+      "compactions": 0,
+      "terminalReason": "completed",
+      "originalEventLogSha256": "067b18590b812e02333614aa4d7e2040331c943b2da1b33c9b174c30fcc26beb"
+    },
+    {
+      "name": "current-batch",
+      "eventSpanSeconds": 7.91,
+      "reads": [
+        1,
+        2
+      ],
+      "compactions": 0,
+      "terminalReason": "completed",
+      "originalEventLogSha256": "2ac8aa1068a678f9c7c88e7b0d9d9d02ec983e753de085f609ea117b355ed738"
+    },
+    {
+      "name": "current-natural-compaction",
+      "eventSpanSeconds": 19.7,
+      "reads": [
+        1,
+        2
+      ],
+      "compactions": 1,
+      "terminalReason": "completed",
+      "originalEventLogSha256": "66f6fecca1ca93ab5274fd5361389a39022be9d203d8b15bd88ca83c5d314dc2"
+    },
+    {
+      "name": "current-error-retry-after-compaction",
+      "eventSpanSeconds": 31.66,
+      "reads": [
+        1,
+        2,
+        2
+      ],
+      "compactions": 2,
+      "terminalReason": "completed",
+      "originalEventLogSha256": "b415ec8b548ed7b1edb355cf84dd95a2af4b5e8eccba01079b97e33f5b4c713a"
+    }
+  ]
+}

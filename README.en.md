@@ -21,6 +21,24 @@ Run supported local models, work with authorized files, and manage speech, image
 - **2.0.0** · Windows small-window chat: tool-free, non-thinking summaries, bounded PolyStrata reasoning, and preserving records and stopping when safe space cannot be recovered.
 <!-- recent-features:end -->
 
+<!-- windows-performance:start -->
+## Windows 2.0.1: small-context tasks and runtime speed
+
+For local models with 8K contexts, tool schemas load on demand and short spans avoid repeated summarization. Compacted checkpoints add short records from actual tool receipts to help models recognize completed steps. Ordinary requests gain no permanent hint; original records are preserved and users judge the quality of delivered results.
+
+On 2026-10-20, this RTX 4070 Laptop with 8GB VRAM and 32GB RAM ran Qwen3.6-35B-A3B UD Q3_K_M through PolyStrata. Recent logs commonly showed about 75–90 decoded tokens/s, including thinking, rather than visible-text speed. Single-run timings for synthetic read-only tool tasks:
+
+| Scenario | Earlier 2.0.0 | Current Windows 2.0.1 |
+| --- | --- | --- |
+| Two tools in one step, no compaction | 8.38 s | 7.91 s |
+| Sequential reads with one compaction | No matched comparison | 19.70 s |
+| Failure, compaction, retry and completion; two compactions | No matched comparison | 31.66 s |
+
+These are not repeated performance benchmarks. Version 2.0.0 already included some optimizations; these results do not establish a consistent 6% gain over an unoptimized release. Compaction takes time: one recent summary took about 5 s. Avoiding repeated operations may reduce total task time, but that benefit has not been quantified. Five real-model regression scenarios and 47 engine tests passed; this does not guarantee completion of every task or constitute a rerun of the original 12-question evaluation. See [methods and limits](PERFORMANCE-2.0.1-WINDOWS.md).
+
+Downloads remain independent by platform: Windows 2.0.1, Mac 2.0.2 and Linux Debian 1.9.5; Linux AppImage auto-updates remain at 1.7.2. This update changes documentation only, with no new installer.
+<!-- windows-performance:end -->
+
 <!-- evergreen:demos:start -->
 ## ▶ Watch a practical demo
 
