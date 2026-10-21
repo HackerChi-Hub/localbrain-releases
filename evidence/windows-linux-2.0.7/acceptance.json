@@ -1,0 +1,65 @@
+{
+  "version": "2.0.7",
+  "runtimeSourceCommit": "97d6687",
+  "linuxPackagingFixCommit": "542486c",
+  "linuxFinalizer": "scripts/finalize-linux-appimage.sh (same batch source commit)",
+  "docfactoryCommit": "76fd0e00ebc303c2b1f9bfb4837100bd2ad04786",
+  "sha256": {
+    "LocalBrain_2.0.7_x64-setup.exe": "1acef63f83793b5b28ba0b31cfced1a7f32cb132a75c0f3fcb8dc1c5eb2ec670",
+    "LocalBrain_2.0.7_amd64.deb": "2288a85a22d15b7b4922dc169d184aaa0f09686f5f6d687e958102d586741cf2",
+    "LocalBrain_2.0.7_amd64.AppImage": "0f15d45d54990f853a430db65cdfefd23349e14e28c9dd86c9c50cba1889afb9"
+  },
+  "windowsNative": {
+    "passed": true,
+    "compactionPassed": true,
+    "receiptCheckpointPassed": true,
+    "pressureReads": 2,
+    "writes": 1
+  },
+  "windowsInstalled": {
+    "version": "2.0.7",
+    "configUnchanged": true,
+    "exeSha256": "4a1f3bf02a00b77cf4a361f96437db4be12fecc1281fd27e25b82b8a53da6346",
+    "installerSha256": "1acef63f83793b5b28ba0b31cfced1a7f32cb132a75c0f3fcb8dc1c5eb2ec670"
+  },
+  "linux": [
+    {
+      "package": "deb",
+      "version": "2.0.7",
+      "bundleMarkerVerified": true,
+      "resourcesVerified": true,
+      "nativeNodeHostInitialized": true,
+      "startupSurvived20s": true,
+      "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+    },
+    {
+      "package": "appimage",
+      "version": "2.0.7",
+      "bundleMarkerVerified": true,
+      "resourcesVerified": true,
+      "nativeNodeHostInitialized": true,
+      "startupSurvived20s": true,
+      "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+    }
+  ],
+  "checks": {
+    "typescriptPassed": 1601,
+    "typescriptSkipped": 2,
+    "adaptersPassed": 14,
+    "dshWindowsPassed": 47,
+    "dshLinuxPassed": 47,
+    "rustWindowsPassed": 375,
+    "rustWindowsIgnored": 29
+  },
+  "limitations": [
+    "Linux acceptance uses WSL2 Ubuntu 22.04 + Xvfb, not bare-metal desktop or GPU model acceptance",
+    "Windows/Linux Docker isolation and reverse checks not exercised; security capabilities remain fail-closed",
+    "No third-party model, driver or special engine upgrade",
+    "Updates are signed with the app updater key, not Windows Authenticode"
+  ],
+  "packagingScriptsSha256": {
+    "scripts/prepare-dsh-runtime.mjs": "8505b946005f7420163f3b4d077067ad5d582ce83588a4b2c168d5d760e60326",
+    "scripts/finalize-linux-appimage.sh": "b29d0f1faeab148619132857271cef17cba20c5a332b032e76d1e045fa256e3b",
+    ".github/workflows/linux-package.yml": "c41513982126fbf8132cadedc473741717df26cc285470762fd0bce9cb0888d1"
+  }
+}

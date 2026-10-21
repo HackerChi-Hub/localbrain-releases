@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.0.7** · Windows/Linux 2.0.7 packages include current features and independent updater signatures. Linux provides Debian and AppImage; special engines are not implicitly upgraded.
 - **2.0.7** · Authorized penetration testing arrives in the security workbench: per-target explicit grants, then isolated-sandbox service detection, SQLi probing, TLS audit, content discovery and custom PoCs — each run confirmed, egress locked to granted ports.
 - **2.0.7** · Offline vulnerability DB downloads now show live speed and progress with an honest completion receipt; security reports export verbatim with byte-level checksums — the local model completed a full investigate-verify-retest loop in testing.
 - **2.0.2** · Mac sampling recommendations follow the exact model and current thinking state. Unregistered fine-tunes retain their own configurations; ordinary-model policies are not applied to Swift or uncensored variants.
 - **2.0.2** · Temperature and sampling fields support manual adjustment and automatic reset. The footer shows exact values and sources; unsupported Sushi fields are explicitly omitted.
-- **2.0.1** · Windows checkpoints add short committed-receipt records; after useful compaction, a proactive target may be exceeded only when the full output allowance still fits.
 <!-- recent-features:end -->
 
 <!-- windows-performance:start -->
@@ -28,7 +28,7 @@ For local models with 8K contexts, tool schemas load on demand and short spans a
 
 On 2026-10-20, this RTX 4070 Laptop with 8GB VRAM and 32GB RAM ran Qwen3.6-35B-A3B UD Q3_K_M through PolyStrata. Recent logs commonly showed about 75–90 decoded tokens/s, including thinking, rather than visible-text speed. Single-run timings for synthetic read-only tool tasks:
 
-| Scenario | Earlier 2.0.0 | Current Windows 2.0.1 |
+| Scenario | Earlier 2.0.0 | 2.0.1 (historical sample) |
 | --- | --- | --- |
 | Two tools in one step, no compaction | 8.38 s | 7.91 s |
 | Sequential reads with one compaction | No matched comparison | 19.70 s |
@@ -36,7 +36,7 @@ On 2026-10-20, this RTX 4070 Laptop with 8GB VRAM and 32GB RAM ran Qwen3.6-35B-A
 
 These are not repeated performance benchmarks. Version 2.0.0 already included some optimizations; these results do not establish a consistent 6% gain over an unoptimized release. Compaction takes time: one recent summary took about 5 s. Avoiding repeated operations may reduce total task time, but that benefit has not been quantified. Five real-model regression scenarios and 47 engine tests passed; this does not guarantee completion of every task or constitute a rerun of the original 12-question evaluation. See [methods and limits](PERFORMANCE-2.0.1-WINDOWS.md).
 
-Downloads remain independent by platform: Windows 2.0.1, Mac 2.0.2 and Linux Debian 1.9.5; Linux AppImage auto-updates remain at 1.7.2. This update changes documentation only, with no new installer.
+These are historical samples from 2026-10-20. Use the latest-downloads section for current installers and update manifests.
 <!-- windows-performance:end -->
 
 <!-- evergreen:demos:start -->
@@ -51,19 +51,22 @@ Downloads remain independent by platform: Windows 2.0.1, Mac 2.0.2 and Linux Deb
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.0.1 · Mac 2.0.7 · Linux 1.9.5
+## Latest downloads：Windows 2.0.7 · Mac 2.0.7 · Linux 2.0.7
 
 Mac 2.0.7 completes the authorized penetration line: explicit per-target grants (single address, up to 8 ports, 1–60 minutes, separate confirmation for LAN/local), then isolated-sandbox service detection, read-only SQLi probing, TLS audit, content discovery and custom PoCs — each run natively confirmed, every run a fresh container, egress locked to granted ports, destructive categories refused outright. Offline vulnerability DB downloads show live speed and progress; security reports export verbatim with byte-level checksums. On this machine the local model independently completed a mock-shop IDOR investigation, independent credential verification, post-fix retest and report export. Mac only. [Security capabilities and limits](SECURITY-CAPABILITIES.md) · [2.0.7 verification](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.0.7_MAC_VERIFICATION.md).
 
 Mac 1.9.9 repairs download completion and Sushi startup diagnostics, including status polling masking memory errors. Final installed-app checks exercised real preflight rejection, restoring 32K, full-resident loading and a Chinese response. Matched resident/32 GiB exact SSD tests recorded 44.20/31.21 GiB residency. Modes are selected manually and require saving and restarting; no automatic downgrade. See [final installation and test limits](VERIFICATION-1.9.9-MAC.md). Older 1.9.8 paragraphs retain their original verification scope.
 
+
+Windows/Linux 2.0.7 packages are built and verified: Windows native chat, tool writing and compacted continuation passed; installed with the configuration hash unchanged. Linux Debian/AppImage resources, packaged DSH and WSL2 startup checks passed; Debian is installed. Linux bare-metal desktop/GPU acceptance is not covered; security isolation requires passing local reverse checks. Existing Mac 2.0.7 assets are retained. See [acceptance and limits](VERIFICATION-2.0.7-WIN-LINUX.md). Candidate and older-version paragraphs below are historical.
+
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.0.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.7/LocalBrain_2.0.7_aarch64.dmg) · Installed; native UI regression, byte-level report verification and a full authorized-shop closed loop verified on device. Strict code and updater signatures verified; not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.1/LocalBrain_2.0.1_x64-setup.exe) · Windows 2.0.1 installed; real-model compaction, continuation and chat tools verified; updater signature verified, not Authenticode |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Installed and startup-tested in Ubuntu 22.04 WSL2; packaged native DSH initialized; preview support, not native desktop acceptance; no new AppImage |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.7/LocalBrain_2.0.7_x64-setup.exe) · 2.0.7 installed; native chat, tool and compacted continuation passed; updater signature verified, not Authenticode |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.7/LocalBrain_2.0.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.7/LocalBrain_2.0.7_amd64.AppImage) · 2.0.7; packaged DSH and Ubuntu22.04 WSL2+Xvfb startup verified; Debian installed, preview support, not bare-metal/GPU acceptance |
 
-[2.0.1 Windows release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_1.9.5_amd64.deb`. Older releases are retained.
+[2.0.7 Windows/Linux release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.7). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.0.7_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -126,8 +129,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `1d2914d82a9ba251cdff69f77dd86f7d412a6826d12019e08374a049b1706aa8` |
-| Windows installer | `e854ac19dd5f9c861f998b2fab313f34a8069a9f562de78d7f37e7f867c74123` |
-| Linux Debian | `882c7800ba8455379bcb1911bc3456dfca8a22612e4e3193cc046f3f50ac9e33` |
+| Windows installer | `1acef63f83793b5b28ba0b31cfced1a7f32cb132a75c0f3fcb8dc1c5eb2ec670` |
+| Linux AppImage | `0f15d45d54990f853a430db65cdfefd23349e14e28c9dd86c9c50cba1889afb9` |
+| Linux Debian | `2288a85a22d15b7b4922dc169d184aaa0f09686f5f6d687e958102d586741cf2` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 
