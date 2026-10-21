@@ -16,11 +16,11 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **2.0.7** · 网络安全工作台补齐授权渗透：显式逐目标授权后在隔离沙箱内进行服务识别、注入探测、TLS审计、目录发现与自写PoC，逐次确认、出口锁死授权端口。
+- **2.0.7** · 离线漏洞库下载实时显示速度与进度，完成回执明示缓存复用与文件大小；安全检查报告可原文导出并逐字节校验，本地模型已实测独立完成调查、核对与复测全链路。
 - **2.0.2** · Mac采样推荐按准确模型与本次思考状态联动；未登记微调保留自身配置，不将普通版建议套入Swift或去审查版。
 - **2.0.2** · 温度与采样字段可手动调整并恢复自动；底栏显示精确数值与来源，明确不发送Sushi未支持字段。
 - **2.0.1** · Windows压缩检查点增加短回执事实记录，减少误判待办；有效压缩后只有完整输出仍可容纳才越过提前整理目标。
-- **2.0.0** · Windows小窗口任务继续修复：跳过无收益短摘要，内置工具也按需加载，避免重复压缩同一小片段后误停。
-- **2.0.0** · Windows小窗口对话修复：摘要禁用工具和思考，PolyStrata限制思考额度，无法释放安全空间时保留记录并停止。
 <!-- recent-features:end -->
 
 <!-- windows-performance:start -->
@@ -53,7 +53,7 @@
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows 2.0.1 · Mac 2.0.2 · Linux 1.9.5
+## 最新下载：Windows 2.0.1 · Mac 2.0.7 · Linux 1.9.5
 
 Mac 2.0.2新增按模型与本次思考模式匹配的采样推荐，手动设置可保留并恢复自动，精确显示温度与来源。Sushi/Splash补读生成配置；Swift和去审查版不套用普通版建议。真实模型、安装包内宿主、生产参数组件交互及安装文件校验通过；锁屏阻止安装版参数面板点选，该项尚未完成。仅更新Mac，不改变模型权重、引擎版本或外部客户端默认。[2.0.2验收与限制](VERIFICATION-2.0.2-MAC.md) · [采样规则](SAMPLING_RECOMMENDATIONS.md)。
 
@@ -61,7 +61,7 @@ Mac 1.9.9修复下载终态及Sushi启动错误提示，包括状态刷新遮蔽
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 2.0.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.2/LocalBrain_2.0.2_aarch64.dmg) · 已安装；采样真实模型、包内工具宿主与生产组件交互验收通过，原生参数面板受锁屏阻挡待补核。严格签名与独立更新签名通过，尚未 Apple 公证 |
+| Apple Silicon Mac 2.0.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.7/LocalBrain_2.0.7_aarch64.dmg) · 已安装；采样真实模型、包内工具宿主与生产组件交互验收通过，原生参数面板受锁屏阻挡待补核。严格签名与独立更新签名通过，尚未 Apple 公证 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.1/LocalBrain_2.0.1_x64-setup.exe) · Windows 2.0.1已安装；真实模型摘要、接续及聊天工具验收通过；更新签名通过，非Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Ubuntu 22.04 WSL2 已安装及启动验证；包内原生 DSH 初始化通过，预览支持，未代替裸机桌面验收；无新 AppImage |
 
@@ -116,7 +116,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `60089a54af5a3dbbd5b4e7850214977b33a31e58d10fb225c4329ddbb5c91c66` |
+| Mac DMG | `1d2914d82a9ba251cdff69f77dd86f7d412a6826d12019e08374a049b1706aa8` |
 | Windows安装程序 | `e854ac19dd5f9c861f998b2fab313f34a8069a9f562de78d7f37e7f867c74123` |
 | Linux Debian包 | `882c7800ba8455379bcb1911bc3456dfca8a22612e4e3193cc046f3f50ac9e33` |
 
