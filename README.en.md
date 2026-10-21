@@ -53,13 +53,13 @@ These videos show the versions available when recorded. Use the current release 
 
 ## Latest downloads：Windows 2.0.1 · Mac 2.0.7 · Linux 1.9.5
 
-Mac 2.0.2 adds model- and thinking-aware sampling recommendations, preserved manual choices, automatic reset, and exact temperature/source display. Sushi/Splash now read generation configurations; Swift and uncensored variants do not inherit ordinary-model policies. Real-model, packaged-host, production-component interaction and installed-file checks passed. A locked desktop prevented native parameter-panel clicks; that check remains pending. Mac only; model weights, engine versions and external-client defaults are unchanged. [2.0.2 verification and limits](VERIFICATION-2.0.2-MAC.md) · [Sampling rules](SAMPLING_RECOMMENDATIONS.md).
+Mac 2.0.7 completes the authorized penetration line: explicit per-target grants (single address, up to 8 ports, 1–60 minutes, separate confirmation for LAN/local), then isolated-sandbox service detection, read-only SQLi probing, TLS audit, content discovery and custom PoCs — each run natively confirmed, every run a fresh container, egress locked to granted ports, destructive categories refused outright. Offline vulnerability DB downloads show live speed and progress; security reports export verbatim with byte-level checksums. On this machine the local model independently completed a mock-shop IDOR investigation, independent credential verification, post-fix retest and report export. Mac only. [Security capabilities and limits](SECURITY-CAPABILITIES.md) · [2.0.7 verification](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.0.7_MAC_VERIFICATION.md).
 
 Mac 1.9.9 repairs download completion and Sushi startup diagnostics, including status polling masking memory errors. Final installed-app checks exercised real preflight rejection, restoring 32K, full-resident loading and a Chinese response. Matched resident/32 GiB exact SSD tests recorded 44.20/31.21 GiB residency. Modes are selected manually and require saving and restarting; no automatic downgrade. See [final installation and test limits](VERIFICATION-1.9.9-MAC.md). Older 1.9.8 paragraphs retain their original verification scope.
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.0.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.7/LocalBrain_2.0.7_aarch64.dmg) · Installed; real-model sampling, packaged tool host and production-component interactions verified. Native parameter-panel clicks remain pending due to the locked desktop. Strict code and updater signatures verified; not Apple-notarized |
+| Apple Silicon Mac 2.0.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.7/LocalBrain_2.0.7_aarch64.dmg) · Installed; native UI regression, byte-level report verification and a full authorized-shop closed loop verified on device. Strict code and updater signatures verified; not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.1/LocalBrain_2.0.1_x64-setup.exe) · Windows 2.0.1 installed; real-model compaction, continuation and chat tools verified; updater signature verified, not Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v1.9.5/LocalBrain_1.9.5_amd64.deb) · Installed and startup-tested in Ubuntu 22.04 WSL2; packaged native DSH initialized; preview support, not native desktop acceptance; no new AppImage |
 
@@ -72,6 +72,17 @@ This release updates **Windows 2.0.1**: compacted checkpoints append short recor
 Historical 1.9.1 acceptance notes: See the [1.9.1 verification record](VERIFICATION-1.9.1.md) for context compaction, skills, memory and their tested limits. Originals and summaries are saved separately; recovery does not replay completed tools. Summaries remain lossy and can miss facts. Historical media results and their speech, editing, music and experimental-video issues remain in the [1.8.0 verification record](VERIFICATION-1.8.0.md). Windows and Linux Debian 1.9.1 packages were added on 2026-10-17 from the same main-branch commit with the native tool engine enabled. Windows package and updater-signature checks passed; Linux passed installation and a 20-second startup check in WSL. Full UI, model and automatic/manual compaction acceptance remains pending on both platforms. Install Linux Debian manually; its AppImage updater retains 1.7.2. GitHub account payment or spending limits prevented remote jobs from starting; local checks are not presented as passing remote CI.
 
 Mac 1.9.8 adds optional managed Sushi 1.2.4: explicitly install its ~71MB isolated runtime in Settings, then download or mount a dedicated Qwen3.8 Flash Next 2.6-bit pack. Defaults to 32K context and full residency, with an optional exact SSD budget. No Homebrew dependency, startup updates, system proxy changes or GPU memory-limit changes. Architecture, shards and actual loaded-model state are checked before readiness. The 125B weights were not downloaded again; runtime installation and CORS checks do not establish generation quality, speed or tool generation. See [usage](SUSHI_RUNTIME.md) and [Mac verification limits](VERIFICATION-1.9.8-MAC-SUSHI.md). Existing Windows 1.9.8 fixes and verification remain intact; Linux releases are unchanged.
+
+## Security capabilities and limits (2.0.7)
+
+- What it does: on targets you explicitly authorize, the local model independently runs connect/header checks, web-exposure rules, service detection, SQLi probing, TLS audit, content discovery and custom-PoC verification, then exports a byte-verifiable report.
+- Grant constraints: explicit per-target grants (single address, up to 8 ports, 1–60 minutes, separate LAN confirmation); the model cannot create or widen grants, every tool run needs native confirmation, and grants expire when the app quits.
+- Near-zero destructive reach: each task runs on a zero-route internal network whose only egress is a proxy locked to granted ports; containers are unprivileged, read-only and mount nothing; destructive categories are refused; state-changing scripts need a second confirmation.
+- Not included: exploit frameworks, reverse shells, privilege escalation, lateral movement, full CTF/HTB campaigns; VPN-tunneled targets are unreachable; Windows/Linux isolation is untested and fails closed there too.
+- Legal boundary is yours: obtain written authorization before scanning any system you do not own.
+
+Full text: [Security Capabilities and Limits](SECURITY-CAPABILITIES.md)
+
 
 <!-- evergreen:screenshots:start -->
 ## Real application screenshots
@@ -101,7 +112,7 @@ Local model downloads/import/start/stop; streaming chat, attachments, reasoning 
 3. Select a target and model execution or a direct check; review and confirm the scope.
 4. The environment is prepared automatically. Model tools use native approval and return evidence; maintenance is collapsed by default.
 
-Only inspect owned or explicitly authorized targets. Host grants bind to the reviewed address and ports, without scope expansion. Current coverage centers on TCP, plaintext HTTP and restricted exposure checks, not unrestricted scanning or exploitation. A working-directory restriction is not an OS sandbox, and image auditing is not a full assessment of a running application.
+Only inspect owned or explicitly authorized targets. Host grants bind to the reviewed address and ports, without scope expansion. Current coverage spans connect/header checks, web exposure rules, service detection, SQLi probing, TLS audit, content discovery and authorized custom scripts — still not unrestricted scanning or exploitation. A working-directory restriction is not an OS sandbox, and image auditing is not a full assessment of a running application.
 
 ## Platforms and privacy
 
