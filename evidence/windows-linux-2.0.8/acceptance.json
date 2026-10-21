@@ -1,0 +1,65 @@
+{
+  "version": "2.0.8",
+  "runtimeSourceCommit": "e705d47650b585fbdfe2571b23809558c4679321",
+  "linuxPackagingFixCommit": "542486c",
+  "linuxFinalizer": "Inherited from 2.0.7: scripts/finalize-linux-appimage.sh",
+  "docfactoryCommit": "76fd0e00ebc303c2b1f9bfb4837100bd2ad04786",
+  "sha256": {
+    "LocalBrain_2.0.8_x64-setup.exe": "06f8bbb84cf538bfb9e5b5d9ad0623b343a6d09eb14ea94b1b9e7acb29e4f066",
+    "LocalBrain_2.0.8_amd64.deb": "4cfca85b29dc659f04ef2a9813fbf3d5ff055bcaf080525255c4aa62d0c7f0c9",
+    "LocalBrain_2.0.8_amd64.AppImage": "c67b9bbb2255806df557459e14877ddace203052f5b4f94e32b8ee7a2160698e"
+  },
+  "windowsNative": {
+    "passed": true,
+    "compactionPassed": true,
+    "receiptCheckpointPassed": true,
+    "pressureReads": 2,
+    "writes": 1
+  },
+  "windowsInstalled": {
+    "version": "2.0.8",
+    "configUnchanged": true,
+    "exeSha256": "c3c4e66e054c46e772857736c94ad80c6de4e659d31a8d83b32b9da0b271064b",
+    "installerSha256": "06f8bbb84cf538bfb9e5b5d9ad0623b343a6d09eb14ea94b1b9e7acb29e4f066"
+  },
+  "linux": [
+    {
+      "package": "deb",
+      "version": "2.0.8",
+      "bundleMarkerVerified": true,
+      "resourcesVerified": true,
+      "nativeNodeHostInitialized": true,
+      "startupSurvived20s": true,
+      "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+    },
+    {
+      "package": "appimage",
+      "version": "2.0.8",
+      "bundleMarkerVerified": true,
+      "resourcesVerified": true,
+      "nativeNodeHostInitialized": true,
+      "startupSurvived20s": true,
+      "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+    }
+  ],
+  "checks": {
+    "typescriptPassed": 1607,
+    "typescriptSkipped": 2,
+    "adaptersPassed": 14,
+    "dshWindowsPassed": 47,
+    "dshLinuxPassed": 47,
+    "rustWindowsPassed": 382,
+    "rustWindowsIgnored": 29,
+    "pythonFilesPassed": 42,
+    "pythonUnitCasesRunIncludingPlatformSkips": 335,
+    "pythonWebWindowsPassed": 6,
+    "pythonWebLinuxPassed": 6
+  },
+  "limitations": [
+    "Linux acceptance uses WSL2 Ubuntu 22.04 + Xvfb, not bare-metal desktop or GPU model acceptance",
+    "Windows/Linux Docker isolation and reverse checks not exercised; security capabilities remain fail-closed",
+    "No third-party model, driver or special engine upgrade",
+    "Updates are signed with the app updater key, not Windows Authenticode",
+    "Web CTF production isolated-browser, native approval and real-model end-to-end acceptance remain pending"
+  ]
+}

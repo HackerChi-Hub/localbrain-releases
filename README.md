@@ -16,11 +16,11 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **2.0.8** · 模型设置保存与登记统一路径校验，普通保存不误停独立引擎；不放宽外部目录授权。
+- **2.0.8** · 新增网页CTF基础入口、任务内登录态及分页证据/截图导出；完整隔离浏览器与模型CTF闭环尚未验收。
 - **2.0.7** · Windows/Linux 2.0.7补齐同源功能与独立更新签名；Linux同时提供Debian和AppImage，各平台特殊引擎不随应用隐式升级。
 - **2.0.7** · 网络安全工作台补齐授权渗透：显式逐目标授权后在隔离沙箱内进行服务识别、注入探测、TLS审计、目录发现与自写PoC，逐次确认、出口锁死授权端口。
 - **2.0.7** · 离线漏洞库下载实时显示速度与进度，完成回执明示缓存复用与文件大小；安全检查报告可原文导出并逐字节校验，本地模型已实测独立完成调查、核对与复测全链路。
-- **2.0.2** · Mac采样推荐按准确模型与本次思考状态联动；未登记微调保留自身配置，不将普通版建议套入Swift或去审查版。
-- **2.0.2** · 温度与采样字段可手动调整并恢复自动；底栏显示精确数值与来源，明确不发送Sushi未支持字段。
 <!-- recent-features:end -->
 
 <!-- windows-performance:start -->
@@ -53,22 +53,26 @@
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows 2.0.7 · Mac 2.0.7 · Linux 2.0.7
+## 最新下载：Windows 2.0.8 · Mac 2.0.7 · Linux 2.0.8
 
 Mac 2.0.7补齐授权渗透完整线：逐目标显式授权（单地址、最多8个端口、1–60分钟、内网单独确认），隔离沙箱内进行服务识别、注入探测（限只读技术）、TLS审计、目录发现与自写PoC——逐次原生确认、每次全新容器、出口锁死授权端口、破坏性类别一律拒绝。离线漏洞库下载实时显示速度与进度；安全检查报告可原文导出并逐字节校验。本机实测本地模型独立完成虚构商城越权调查、独立凭证核对、修复后复测与报告导出。此前先发布Mac，本次另补Windows/Linux。[安全能力与限制](SECURITY-CAPABILITIES.md) · [2.0.7验收记录](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.0.7_MAC_VERIFICATION.md)。
 
 Mac 1.9.9修复下载终态及Sushi启动错误提示，包括状态刷新遮蔽内存原因的问题。最终安装版已验证真实预检拒绝、恢复32K后完整常驻加载与中文响应；同权重常驻／32 GiB精确SSD分别驻留44.20／31.21 GiB。模式手动选择，保存并重启生效，不自动降级。见[最终安装与实测范围](VERIFICATION-1.9.9-MAC.md)。下方1.9.8段落保留其当时验收边界。
 
 
-Windows/Linux 2.0.7安装包已构建验收：Windows原生聊天、工具写入与压缩续答通过，已安装且配置哈希不变；Linux Debian与AppImage的资源、包内DSH和WSL2启动检查通过，Debian已安装。Linux未做裸机桌面/GPU验收，安全隔离须本平台反向验证通过。Mac 2.0.7既有资产保留。见[验收与限制](VERIFICATION-2.0.7-WIN-LINUX.md)。下方候选和旧版本段落均为历史状态。
+
+Windows/Linux 2.0.8安装包已构建验收：Windows原生聊天、工具写入与压缩续答通过，已安装且配置哈希不变；Linux Debian与AppImage的资源、包内DSH和WSL2启动检查通过，Debian已安装。Linux未做裸机桌面/GPU验收，安全隔离须本平台反向验证通过。Mac 2.0.7既有资产保留。见[验收与限制](VERIFICATION-2.0.8-WIN-LINUX.md)。下方候选和旧版本段落均为历史状态。
+
+
+2.0.8新增模型设置路径校验修复与网页CTF基础。网页传输6项在Windows/Linux通过，但生产隔离浏览器、原生批准和真实模型CTF完整链路仍未验收；须本平台隔离验证通过才能执行。[机制与限制](SECURITY-WEB-CTF.md)。
 
 | 平台 | 安装包与状态 |
 | --- | --- |
 | Apple Silicon Mac 2.0.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.7/LocalBrain_2.0.7_aarch64.dmg) · 已安装；原生界面回归、报告原文逐字节复核与授权商城完整闭环实测通过。严格签名与独立更新签名通过，尚未 Apple 公证 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.7/LocalBrain_2.0.7_x64-setup.exe) · 2.0.7已安装；原生聊天、工具及压缩续答通过，更新签名通过，非Authenticode |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.7/LocalBrain_2.0.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.7/LocalBrain_2.0.7_amd64.AppImage) · 2.0.7，包内DSH与Ubuntu22.04 WSL2+Xvfb启动核对通过；Debian已安装，预览支持，未代替裸机/GPU验收 |
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_x64-setup.exe) · 2.0.8已安装；原生聊天、工具及压缩续答通过，更新签名通过，非Authenticode |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_amd64.AppImage) · 2.0.8，包内DSH与Ubuntu22.04 WSL2+Xvfb启动核对通过；Debian已安装，预览支持，未代替裸机/GPU验收 |
 
-[2.0.7 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.7)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.0.7_amd64.deb`。旧发行保留。
+[2.0.8 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.8)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.0.8_amd64.deb`。旧发行保留。
 
 以下Windows 2.0.1及更早段落保留其发布时的历史状态；当前平台版本以上方下载表为准。
 
@@ -131,9 +135,9 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 | 文件 | 散列 |
 | --- | --- |
 | Mac DMG | `1d2914d82a9ba251cdff69f77dd86f7d412a6826d12019e08374a049b1706aa8` |
-| Windows安装程序 | `1acef63f83793b5b28ba0b31cfced1a7f32cb132a75c0f3fcb8dc1c5eb2ec670` |
-| Linux AppImage | `0f15d45d54990f853a430db65cdfefd23349e14e28c9dd86c9c50cba1889afb9` |
-| Linux Debian包 | `2288a85a22d15b7b4922dc169d184aaa0f09686f5f6d687e958102d586741cf2` |
+| Windows安装程序 | `06f8bbb84cf538bfb9e5b5d9ad0623b343a6d09eb14ea94b1b9e7acb29e4f066` |
+| Linux AppImage | `c67b9bbb2255806df557459e14877ddace203052f5b4f94e32b8ee7a2160698e` |
+| Linux Debian包 | `4cfca85b29dc659f04ef2a9813fbf3d5ff055bcaf080525255c4aa62d0c7f0c9` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 
