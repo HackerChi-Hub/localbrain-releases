@@ -53,7 +53,7 @@
 
 ## 最新下載：Windows 2.0.8 · Mac 2.1.1 · Linux 2.0.8
 
-Mac 2.0.7補齊授權滲透完整線：逐目標明確授權（單一位址、最多8個連接埠、1–60分鐘、內網單獨確認），隔離沙箱內進行服務識別、注入探測（限唯讀技術）、TLS稽核、目錄發現與自寫PoC——逐次原生確認、每次全新容器、出口鎖死授權連接埠、破壞性類別一律拒絕。離線漏洞庫下載即時顯示速度與進度；安全檢查報告可原文匯出並逐位元組校驗。本機實測本地模型獨立完成虛構商城越權調查、獨立憑證核對、修復後複測與報告匯出。先前先發布Mac，本次另補Windows/Linux。[安全能力與限制](SECURITY-CAPABILITIES.md) · [2.0.7驗收記錄](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.1.1_MAC_VERIFICATION.md)。
+Mac 2.1.1 修復壓縮後使用者原文遺失與會話草稿串用：壓縮時在語意摘要之外保留你給出的目標、帳號、參數與限制，網頁內容與工具回執不能冒充你的要求；草稿與安全任務標記隨所屬對話，刪除後丟棄。單輪時長改為整輪硬上限並分別回報預填／生成耗時；網頁證據支援控制項連結目標、正文續讀區間、核驗失敗分因且不透露候選對錯；授權中途到期明確要求停手；本機清理入口整批預檢並核對保護登記。真實 HTB 握手仍未建立：本輪實測該網路到不了平台邊緣（10 個節點與 TCP/UDP 設定均無伺服器回應），不能據此排除平台或帳號原因；原生批准、含待辦操作的重啟恢復與 Windows/Linux 本輪實收未完成。Windows 2.0.8 與 Linux 2.0.8 保持原版本。[安全能力與限制](SECURITY-CAPABILITIES.md) · [本輪驗收記錄](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.1.1_MAC_VERIFICATION.md)。
 
 Mac 1.9.9修復下載終態及Sushi啟動錯誤提示，包括狀態重新整理遮蔽記憶體原因的問題。最終安裝版已驗證真實預檢拒絕、恢復32K後完整常駐載入與中文回應；同權重常駐／32 GiB精確SSD分別駐留44.20／31.21 GiB。模式手動選擇，儲存並重啟生效，不自動降級。見[最終安裝與實測範圍](VERIFICATION-1.9.9-MAC.md)。下方1.9.8段落保留當時驗收邊界。
 
@@ -66,7 +66,7 @@ Windows/Linux 2.0.8安裝套件已建置驗收：Windows原生聊天、工具寫
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 2.1.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_aarch64.dmg) · 已安裝；原生介面回歸、報告原文逐位元組複核與授權商城完整閉環實測通過。嚴格簽章與獨立更新簽章通過，尚未 Apple 公證 |
+| Apple Silicon Mac 2.1.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_aarch64.dmg) · 已安裝；四道本機閘與包內程式碼／更新簽章通過；壓縮保留原文、草稿隔離、整輪時長與網頁證據已實測。授權商城為指定任務工具鏈驗證（不是無提示盲測）；原生批准、含待辦重啟恢復與真實 HTB 未驗收。尚未 Apple 公證 |
 | Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_x64-setup.exe) · 2.0.8已安裝；原生聊天、工具及壓縮續答通過，更新簽章通過，非Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_amd64.AppImage) · 2.0.8，套件內DSH及Ubuntu22.04 WSL2+Xvfb啟動核對通過；Debian已安裝，預覽支援，未代替裸機/GPU驗收 |
 
