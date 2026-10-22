@@ -1,0 +1,64 @@
+{
+  "version": "2.1.1",
+  "runtimeSourceCommit": "c126e97",
+  "linuxPackagingFixCommit": "542486c",
+  "linuxFinalizer": "scripts/finalize-linux-appimage.sh (same batch source commit)",
+  "docfactoryCommit": "76fd0e00ebc303c2b1f9bfb4837100bd2ad04786",
+  "sha256": {
+    "LocalBrain_2.1.1_x64-setup.exe": "eb8065515b4b40b8966384e0ecc5046e93ee26be5b44e2dad4173545239deb31",
+    "LocalBrain_2.1.1_amd64.deb": "b560fa612b17b05e95078f3c7edc658c9100883d9319859bc2cb796dcce39276",
+    "LocalBrain_2.1.1_amd64.AppImage": "247ac5202fa49db24e7e181411864e133ab1e77ba350cd7e247f14fa6051db99"
+  },
+  "windowsNative": {
+    "passed": true,
+    "compactionPassed": true,
+    "receiptCheckpointPassed": true,
+    "pressureReads": 2,
+    "writes": 1,
+    "userOriginalsCheckpointVerified": true
+  },
+  "windowsInstalled": {
+    "version": "2.1.1",
+    "configUnchanged": true,
+    "exeSha256": "8c8e6a686337ecf66ddd726804cded61039388ec1daaf32ca2d8d84e6f2cc371",
+    "installerSha256": "eb8065515b4b40b8966384e0ecc5046e93ee26be5b44e2dad4173545239deb31"
+  },
+  "linux": [
+    {
+      "package": "deb",
+      "version": "2.1.1",
+      "bundleMarkerVerified": true,
+      "resourcesVerified": true,
+      "nativeNodeHostInitialized": true,
+      "startupSurvived20s": true,
+      "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+    },
+    {
+      "package": "appimage",
+      "version": "2.1.1",
+      "bundleMarkerVerified": true,
+      "resourcesVerified": true,
+      "nativeNodeHostInitialized": true,
+      "startupSurvived20s": true,
+      "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+    }
+  ],
+  "checks": {
+    "typescriptPassed": 1607,
+    "typescriptSkipped": 2,
+    "adaptersPassed": 14,
+    "dshWindowsPassed": 53,
+    "dshLinuxPassed": 53,
+    "rustWindowsPassed": 395,
+    "rustWindowsIgnored": 29,
+    "pythonFilesPassed": 44,
+    "pythonUnitCasesIncludingSkips": 364
+  },
+  "limitations": [
+    "Linux acceptance uses WSL2 Ubuntu 22.04 + Xvfb, not bare-metal desktop or GPU model acceptance",
+    "Windows/Linux Docker isolation and reverse checks not exercised; security capabilities remain fail-closed",
+    "No third-party model, driver or special engine upgrade",
+    "Updates are signed with the app updater key, not Windows Authenticode",
+    "First native pressure run had a provider stream interruption; later completion verified; root cause not established"
+  ]
+}

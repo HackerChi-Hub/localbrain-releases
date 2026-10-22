@@ -14,11 +14,11 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
-- **2.1.1** · 壓縮後仍保留你給出的帳號、目標與參數；網頁內容和工具回執不能冒充你的要求。
-- **2.1.1** · 切換或刪除對話後，安全任務草稿不再串到其他對話；確認框顯示確切操作標題，取消後保留原對話。
-- **2.1.0** · 「單輪時長」改為整輪硬上限，到點分別回報耗時在預填還是生成，長任務更可預期。
-- **2.1.0** · 網頁證據：控制項帶連結目標、正文未讀完給出續讀區間、核驗失敗區分原因且不透露答案對錯。
-- **2.1.0** · 授權到期明確要求停手；本機清理入口整批預檢並核對保護登記，避免誤刪保留資源。
+- **2.1.1** · 壓縮檢查點保留可信提交的使用者原文，減少任務參數遺失；草稿依會話隔離，不恢復舊授權或登入狀態。
+- **2.1.1** · Windows/Linux 2.1.1補齊同源功能與獨立更新簽章；Linux同時提供Debian及AppImage，各平台特殊引擎不隨應用程式隱式升級。
+- **2.0.8** · 模型設定儲存與登記統一路徑驗證，一般儲存不誤停獨立引擎；不放寬外部目錄授權。
+- **2.0.8** · 新增網頁CTF基礎入口、任務內登入狀態及分頁證據/截圖匯出；完整隔離瀏覽器與模型CTF閉環尚未驗收。
+- **2.0.7** · Windows/Linux 2.0.7補齊同源功能與獨立更新簽章；Linux同時提供Debian及AppImage，各平台特殊引擎不隨應用程式隱式升級。
 <!-- recent-features:end -->
 
 <!-- windows-performance:start -->
@@ -51,7 +51,7 @@
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.0.8 · Mac 2.1.1 · Linux 2.0.8
+## 最新下載：Windows 2.1.1 · Mac 2.1.1 · Linux 2.1.1
 
 Mac 2.1.1 修復壓縮後使用者原文遺失與會話草稿串用：壓縮時在語意摘要之外保留你給出的目標、帳號、參數與限制，網頁內容與工具回執不能冒充你的要求；草稿與安全任務標記隨所屬對話，刪除後丟棄。單輪時長改為整輪硬上限並分別回報預填／生成耗時；網頁證據支援控制項連結目標、正文續讀區間、核驗失敗分因且不透露候選對錯；授權中途到期明確要求停手；本機清理入口整批預檢並核對保護登記。真實 HTB 握手仍未建立：本輪實測該網路到不了平台邊緣（10 個節點與 TCP/UDP 設定均無伺服器回應），不能據此排除平台或帳號原因；原生批准、含待辦操作的重啟恢復與 Windows/Linux 本輪實收未完成。Windows 2.0.8 與 Linux 2.0.8 保持原版本。[安全能力與限制](SECURITY-CAPABILITIES.md) · [本輪驗收記錄](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.1.1_MAC_VERIFICATION.md)。
 
@@ -59,18 +59,19 @@ Mac 1.9.9修復下載終態及Sushi啟動錯誤提示，包括狀態重新整理
 
 
 
-Windows/Linux 2.0.8安裝套件已建置驗收：Windows原生聊天、工具寫入與壓縮續答通過，已安裝且設定雜湊不變；Linux Debian及AppImage的資源、套件內DSH與WSL2啟動檢查通過，Debian已安裝。Linux未做裸機桌面/GPU驗收，安全隔離須本平台反向驗證通過。Mac 2.0.7既有資產保留。見[驗收與限制](VERIFICATION-2.0.8-WIN-LINUX.md)。下方候選及舊版本段落皆為歷史狀態。
-
 
 2.0.8新增模型設定路徑驗證修復與網頁CTF基礎。網頁傳輸6項在Windows/Linux通過，但正式隔離瀏覽器、原生批准及真實模型CTF完整鏈路仍未驗收；須本平台隔離驗證通過才能執行。[機制與限制](SECURITY-WEB-CTF.md)。
+
+
+Windows/Linux 2.1.1安裝套件已建置驗收：Windows原生聊天、工具寫入與壓縮續答通過，已安裝且設定雜湊不變；Linux Debian及AppImage的資源、套件內DSH與WSL2啟動檢查通過，Debian已安裝。Linux未做裸機桌面/GPU驗收，安全隔離須本平台反向驗證通過。Mac 2.1.1既有資產保留。見[驗收與限制](VERIFICATION-2.1.1-WIN-LINUX.md)。下方候選及舊版本段落皆為歷史狀態。
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac 2.1.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_aarch64.dmg) · 已安裝；四道本機閘與包內程式碼／更新簽章通過；壓縮保留原文、草稿隔離、整輪時長與網頁證據已實測。授權商城為指定任務工具鏈驗證（不是無提示盲測）；原生批准、含待辦重啟恢復與真實 HTB 未驗收。尚未 Apple 公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_x64-setup.exe) · 2.0.8已安裝；原生聊天、工具及壓縮續答通過，更新簽章通過，非Authenticode |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_amd64.AppImage) · 2.0.8，套件內DSH及Ubuntu22.04 WSL2+Xvfb啟動核對通過；Debian已安裝，預覽支援，未代替裸機/GPU驗收 |
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_x64-setup.exe) · 2.1.1已安裝；原生聊天、工具及壓縮續答通過，更新簽章通過，非Authenticode |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.AppImage) · 2.1.1，套件內DSH及Ubuntu22.04 WSL2+Xvfb啟動核對通過；Debian已安裝，預覽支援，未代替裸機/GPU驗收 |
 
-[2.0.8 Windows/Linux發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.8)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.0.8_amd64.deb`。保留舊發行。
+[2.1.1 Windows/Linux發行說明與校驗檔案](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.1)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.1.1_amd64.deb`。保留舊發行。
 
 以下Windows 2.0.1及更早段落保留發布時的歷史狀態；目前平台版本以上方下載表為準。
 
@@ -133,9 +134,9 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | 檔案 | 散列 |
 | --- | --- |
 | Mac DMG | `20f44469c1ef3804657017965de199fbc0a37f3a484c0c97edecff29ae1aea72` |
-| Windows安裝程式 | `06f8bbb84cf538bfb9e5b5d9ad0623b343a6d09eb14ea94b1b9e7acb29e4f066` |
-| Linux AppImage | `c67b9bbb2255806df557459e14877ddace203052f5b4f94e32b8ee7a2160698e` |
-| Linux Debian包 | `4cfca85b29dc659f04ef2a9813fbf3d5ff055bcaf080525255c4aa62d0c7f0c9` |
+| Windows安裝程式 | `eb8065515b4b40b8966384e0ecc5046e93ee26be5b44e2dad4173545239deb31` |
+| Linux AppImage | `247ac5202fa49db24e7e181411864e133ab1e77ba350cd7e247f14fa6051db99` |
+| Linux Debian包 | `b560fa612b17b05e95078f3c7edc658c9100883d9319859bc2cb796dcce39276` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
 
