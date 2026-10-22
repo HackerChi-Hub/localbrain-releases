@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **2.0.8** · Model settings and registration share path validation; ordinary saves do not incorrectly stop independent engines or relax external-directory authorization.
-- **2.0.8** · Web CTF foundations add task-local login state and paginated evidence/screenshots. Full isolated-browser and model CTF acceptance remains pending.
-- **2.0.7** · Windows/Linux 2.0.7 packages include current features and independent updater signatures. Linux provides Debian and AppImage; special engines are not implicitly upgraded.
-- **2.0.7** · Authorized penetration testing arrives in the security workbench: per-target explicit grants, then isolated-sandbox service detection, SQLi probing, TLS audit, content discovery and custom PoCs — each run confirmed, egress locked to granted ports.
-- **2.0.7** · Offline vulnerability DB downloads now show live speed and progress with an honest completion receipt; security reports export verbatim with byte-level checksums — the local model completed a full investigate-verify-retest loop in testing.
+- **2.1.1** · After compaction, the account, target and parameters you gave are still preserved; web content and tool receipts cannot impersonate your instructions.
+- **2.1.1** · Switching or deleting a conversation no longer leaks security-task drafts into another one; the confirmation dialog shows the exact action title and cancellation keeps the conversation.
+- **2.1.0** · “Per-round duration” is now a hard cap for the whole round, reporting separately whether time went to prefill or generation, so long tasks are more predictable.
+- **2.1.0** · Web evidence: controls expose their link target, unfinished bodies give a continuation range, and verification failures distinguish causes without revealing whether a candidate is right.
+- **2.1.0** · Expired authorization now explicitly stops the run; the local cleanup entry prechecks the whole batch against the protection registry to avoid deleting reserved resources.
 <!-- recent-features:end -->
 
 <!-- windows-performance:start -->
@@ -51,9 +51,9 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.0.8 · Mac 2.0.7 · Linux 2.0.8
+## Latest downloads：Windows 2.0.8 · Mac 2.1.1 · Linux 2.0.8
 
-Mac 2.0.7 completes the authorized penetration line: explicit per-target grants (single address, up to 8 ports, 1–60 minutes, separate confirmation for LAN/local), then isolated-sandbox service detection, read-only SQLi probing, TLS audit, content discovery and custom PoCs — each run natively confirmed, every run a fresh container, egress locked to granted ports, destructive categories refused outright. Offline vulnerability DB downloads show live speed and progress; security reports export verbatim with byte-level checksums. On this machine the local model independently completed a mock-shop IDOR investigation, independent credential verification, post-fix retest and report export. Mac only. [Security capabilities and limits](SECURITY-CAPABILITIES.md) · [2.0.7 verification](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.0.7_MAC_VERIFICATION.md).
+Mac 2.0.7 completes the authorized penetration line: explicit per-target grants (single address, up to 8 ports, 1–60 minutes, separate confirmation for LAN/local), then isolated-sandbox service detection, read-only SQLi probing, TLS audit, content discovery and custom PoCs — each run natively confirmed, every run a fresh container, egress locked to granted ports, destructive categories refused outright. Offline vulnerability DB downloads show live speed and progress; security reports export verbatim with byte-level checksums. On this machine the local model independently completed a mock-shop IDOR investigation, independent credential verification, post-fix retest and report export. Mac only. [Security capabilities and limits](SECURITY-CAPABILITIES.md) · [2.0.7 verification](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.1.1_MAC_VERIFICATION.md).
 
 Mac 1.9.9 repairs download completion and Sushi startup diagnostics, including status polling masking memory errors. Final installed-app checks exercised real preflight rejection, restoring 32K, full-resident loading and a Chinese response. Matched resident/32 GiB exact SSD tests recorded 44.20/31.21 GiB residency. Modes are selected manually and require saving and restarting; no automatic downgrade. See [final installation and test limits](VERIFICATION-1.9.9-MAC.md). Older 1.9.8 paragraphs retain their original verification scope.
 
@@ -66,7 +66,7 @@ Windows/Linux 2.0.8 packages are built and verified: Windows native chat, tool w
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.0.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.7/LocalBrain_2.0.7_aarch64.dmg) · Installed; native UI regression, byte-level report verification and a full authorized-shop closed loop verified on device. Strict code and updater signatures verified; not Apple-notarized |
+| Apple Silicon Mac 2.1.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_aarch64.dmg) · Installed; native UI regression, byte-level report verification and a full authorized-shop closed loop verified on device. Strict code and updater signatures verified; not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_x64-setup.exe) · 2.0.8 installed; native chat, tool and compacted continuation passed; updater signature verified, not Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_amd64.AppImage) · 2.0.8; packaged DSH and Ubuntu22.04 WSL2+Xvfb startup verified; Debian installed, preview support, not bare-metal/GPU acceptance |
 
@@ -132,7 +132,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `1d2914d82a9ba251cdff69f77dd86f7d412a6826d12019e08374a049b1706aa8` |
+| Mac DMG | `20f44469c1ef3804657017965de199fbc0a37f3a484c0c97edecff29ae1aea72` |
 | Windows installer | `06f8bbb84cf538bfb9e5b5d9ad0623b343a6d09eb14ea94b1b9e7acb29e4f066` |
 | Linux AppImage | `c67b9bbb2255806df557459e14877ddace203052f5b4f94e32b8ee7a2160698e` |
 | Linux Debian | `4cfca85b29dc659f04ef2a9813fbf3d5ff055bcaf080525255c4aa62d0c7f0c9` |
