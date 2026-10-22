@@ -70,7 +70,7 @@ Windows/Linux 2.0.8 packages are built and verified: Windows native chat, tool w
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_x64-setup.exe) · 2.0.8 installed; native chat, tool and compacted continuation passed; updater signature verified, not Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.0.8/LocalBrain_2.0.8_amd64.AppImage) · 2.0.8; packaged DSH and Ubuntu22.04 WSL2+Xvfb startup verified; Debian installed, preview support, not bare-metal/GPU acceptance |
 
-[2.0.8 Windows/Linux release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.8). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.0.8_amd64.deb`. Older releases are retained.
+[2.1.1 Mac release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.1) · [2.0.8 Windows/Linux notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.8). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.0.8_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
