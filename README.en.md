@@ -23,6 +23,10 @@ Run supported local models, work with authorized files, and manage speech, image
 
 ## Mac 2.1.4 candidate: one-click runtime setup (pending publication)
 
+The 2026-10-25 candidate adds runtime pause, persisted pending items and explicit continuation, plus Splash pause that preserves original weight fragments. Download, resume, cached installation, removal and cache-cleanup controls follow actual state. Small files and background tasks use real byte units and discard stale speeds on pause. An official approximately 25 MB archive passed exact-offset resumption, full verification, offline reuse and cleanup without downloading a large model. See [usage and verification limits](DOWNLOAD_CONTROLS_2.1.4.md). The independent UI preview below explicitly simulates installation/removal and shows download returning after cache cleanup. Public installers remain at 2.1.3.
+
+![Download-control interaction preview](screenshots/2.1.4-runtime-download-clean-preview.png)
+
 Settings → Runtime and diagnostics shows five groups: model engines, media, security tools, offline data and system services. Built-in document/web tools and the Harness core update with the app without maintenance rows. Choose “Install missing components” and review dependencies to fill missing supported components while skipping ready ones. Reconnection rereads and reuses container images/databases; retries process only what is still missing. Individual installation, updates and verification remain available.
 
 Removal controls appear only for confirmed installed managed components, excluding missing, partial, external and unreadable offline states. Batch removal is hidden without eligible selections. Pinned archives preserve interrupted downloads, validate ranges and verify SHA-256 before extraction. Supported existing official package managers prepare system dependencies, preserving system licensing, administrator and restart requirements. Ready services do not show redundant installation instructions.
