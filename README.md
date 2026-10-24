@@ -55,7 +55,7 @@
 
 ## 最新下载：Windows 2.1.1 · Mac 2.1.2 · Linux 2.1.1
 
-Mac 2.1.1 修复压缩后用户原文丢失与会话草稿串用：压缩时在语义摘要之外保留你给出的目标、账户、参数与限制，网页内容与工具回执不能冒充你的要求；草稿与安全任务标记随所属对话，删除后丢弃。单轮时长改为整轮硬上限并分别报告预填/生成耗时；网页证据支持控件链接目标、正文续读区间、核验失败分因且不透露候选对错；授权中途到期明确要求停手；本地清理入口整批预检并核对保护登记。真实 HTB 握手仍未建立：本轮实测该网络到不了平台边缘（10 个节点与 TCP/UDP 配置均无服务端回应），不能据此排除平台或账号原因；原生批准、含待办操作的重启恢复与 Windows/Linux 本轮实收未完成。Windows 2.0.8 与 Linux 2.0.8 保持原版本。[安全能力与限制](SECURITY-CAPABILITIES.md) · [本轮验收记录](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.1.2_MAC_VERIFICATION.md)。
+Mac 2.1.2 已正式发布：修复只读程序资源引起的 MCP 安装失败，改为向受管 Python 环境注册并验证资源路径；每轮结束仅显示「赞助开发」文字，点击才展开二维码。网络安全名单全宽，连接与工具默认收起；按目标及连接类型显示表单，不再宣称 HTB 已支持。接入仅保留 DeepSeek Harness，另修复短任务耗时显示无穷倍数。已完成本轮本地回归、安装版针对性验收，以及 12,995 个文件与链接的一致性核对。GitHub 检查因账户付款／支出限制未启动，作者明确授权本次仅 Mac 例外发布，不将本地通过冒称线上 CI 通过。Windows/Linux 保留 2.1.1，由作者另行打包。真实 HTB 闭环、原生安全执行批准及含待办操作的重启恢复仍未验收。[验收记录与限制](VERIFICATION-2.1.2-MAC.md)。
 
 Mac 1.9.9修复下载终态及Sushi启动错误提示，包括状态刷新遮蔽内存原因的问题。最终安装版已验证真实预检拒绝、恢复32K后完整常驻加载与中文响应；同权重常驻／32 GiB精确SSD分别驻留44.20／31.21 GiB。模式手动选择，保存并重启生效，不自动降级。见[最终安装与实测范围](VERIFICATION-1.9.9-MAC.md)。下方1.9.8段落保留其当时验收边界。
 
@@ -69,11 +69,11 @@ Windows/Linux 2.1.1安装包已构建验收：Windows原生聊天、工具写入
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 2.1.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_aarch64.dmg) · 已安装；四道本地闸与包内代码/更新签名通过；压缩保留原文、草稿隔离、整轮时长与网页证据已实测。授权商城为指定任务工具链验证（不是无提示盲测）；原生批准、含待办重启恢复与真实 HTB 未验收。尚未 Apple 公证 |
+| Apple Silicon Mac 2.1.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_aarch64.dmg) · 已安装；本轮只读资源注册、赞助入口与全宽安全布局通过针对性验收，包内文件与更新签名核对通过。临时签名、未 Apple 公证；真实 HTB 未验收 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_x64-setup.exe) · 2.1.1已安装；原生聊天、工具及压缩续答通过，更新签名通过，非Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.AppImage) · 2.1.1，包内DSH与Ubuntu22.04 WSL2+Xvfb启动核对通过；Debian已安装，预览支持，未代替裸机/GPU验收 |
 
-[2.1.1 发行说明及校验文件](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.1.1_amd64.deb`。旧发行保留。
+[Mac 2.1.2 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2) · [Mac 校验值](SHA256SUMS-2.1.2-MAC.txt) · [Windows/Linux 2.1.1 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.1)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.1.1_amd64.deb`。旧发行保留。
 
 以下Windows 2.0.1及更早段落保留其发布时的历史状态；当前平台版本以上方下载表为准。
 
@@ -103,6 +103,13 @@ Mac 1.9.8 新增可选受管Sushi1.2.4：设置显式安装约71MB独立环境�
 
 ![方寸智匣本地工具与 AI 客户端接入，历史版本 1.4.6](screenshots/zh-CN/integrations.png)
 <!-- evergreen:screenshots:end -->
+
+## 2.1.2 安装版网络安全页面
+
+名单使用全宽，下方「连接与工具」默认收起；截图来自最终安装版，未添加测试目标，不代表真实 HTB 已连通。
+
+![2.1.2 安装版全宽名单与按需连接工具](screenshots/2.1.2-mac/security-workbench.png)
+
 
 ## 1.8.0 实际对话与下载页
 

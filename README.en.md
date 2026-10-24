@@ -53,7 +53,7 @@ These videos show the versions available when recorded. Use the current release 
 
 ## Latest downloads：Windows 2.1.1 · Mac 2.1.2 · Linux 2.1.1
 
-Mac 2.1.1 fixes loss of your original instructions after compaction and cross-conversation security drafts: alongside the semantic summary it keeps the target, account, parameters and limits you supplied, and web content or tool receipts cannot impersonate them; drafts and security task markers stay with their own conversation and are discarded with it. Per-round duration is now a hard cap for the whole round with separate prefill/generation timings; web evidence exposes control link targets, continuation ranges and verification failure causes without revealing whether a candidate is right; expired authorization explicitly stops the run; the local cleanup entry prechecks the whole batch against the protection registry. The real HTB tunnel is still not up: on this network the platform edge is unreachable (ten nodes plus TCP and UDP profiles all received no server reply), which does not rule out a platform or account-side cause; native approval, restart recovery with a pending operation and this round's Windows/Linux acceptance are incomplete. Windows 2.0.8 and Linux 2.0.8 keep their existing builds. [Security capabilities and limits](SECURITY-CAPABILITIES.md) · [This round's verification](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.1.2_MAC_VERIFICATION.md).
+Mac 2.1.2 is publicly released: fixes MCP installation on read-only app resources by registering and validating the source path only in the managed Python environment; completed turns show a support text entry, with the QR code opened only on click. The security target list uses the full width; connections and tools are collapsed by default, with forms shown by target and connection type. HTB is no longer advertised as supported. Integration offers DeepSeek Harness only, and short-task timing no longer shows an infinite multiplier. Local regression, targeted installed-app acceptance and consistency of 12,995 files and links passed. GitHub checks could not start because of account payment/spending restrictions; the author explicitly authorized this Mac-only exception. Local passing results are not reported as passing online CI. Windows/Linux remain at 2.1.1 and will be built separately by the author. Real HTB end-to-end acceptance, native security execution approval and restart recovery with a pending operation remain unverified. [Acceptance and limits](VERIFICATION-2.1.2-MAC.md).
 
 Mac 1.9.9 repairs download completion and Sushi startup diagnostics, including status polling masking memory errors. Final installed-app checks exercised real preflight rejection, restoring 32K, full-resident loading and a Chinese response. Matched resident/32 GiB exact SSD tests recorded 44.20/31.21 GiB residency. Modes are selected manually and require saving and restarting; no automatic downgrade. See [final installation and test limits](VERIFICATION-1.9.9-MAC.md). Older 1.9.8 paragraphs retain their original verification scope.
 
@@ -67,11 +67,11 @@ Windows/Linux 2.1.1 packages are built and verified: Windows native chat, tool w
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.1.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_aarch64.dmg) · Installed; four local gates plus bundled-code and updater signatures verified; compaction retention, draft isolation, whole-round timing and web evidence tested. The authorized-shop loop is a specified-task tool-chain check, not a prompt-free blind test; native approval, restart recovery with a pending operation and real HTB remain unverified. Not Apple-notarized |
+| Apple Silicon Mac 2.1.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_aarch64.dmg) · Installed; targeted acceptance passed for read-only registration, support entry and full-width security layout; package files and updater signature verified. Ad-hoc signed, not Apple-notarized; real HTB remains unverified |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_x64-setup.exe) · 2.1.1 installed; native chat, tool and compacted continuation passed; updater signature verified, not Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.AppImage) · 2.1.1; packaged DSH and Ubuntu22.04 WSL2+Xvfb startup verified; Debian installed, preview support, not bare-metal/GPU acceptance |
 
-[2.1.1 Mac release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2) · [2.0.8 Windows/Linux notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.8). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.1_amd64.deb`. Older releases are retained.
+[Mac 2.1.2 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2) · [Mac checksums](SHA256SUMS-2.1.2-MAC.txt) · [Windows/Linux 2.1.1 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.1_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -101,6 +101,13 @@ Existing public macOS screenshots from version 1.4.6 show model management and c
 
 ![LocalBrain local tools and AI client integrations, historical 1.4.6 screenshot](screenshots/zh-CN/integrations.png)
 <!-- evergreen:screenshots:end -->
+
+## Installed Mac 2.1.2 security page
+
+The list uses the full width and optional connections/tools are collapsed by default. This is the final installed app with no test target added, not proof of real HTB connectivity. The interface shown is Chinese.
+
+![Installed Mac 2.1.2 full-width list and optional tools](screenshots/2.1.2-mac/security-workbench.png)
+
 
 ## Actual 1.8.0 chat and download page
 
