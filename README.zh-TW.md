@@ -21,6 +21,8 @@
 - **2.1.2** · 網路安全名單改為全寬，連線與工具按需展開；批次交接只產生草稿，真實 HTB 尚未驗收，不作支援承諾。
 <!-- recent-features:end -->
 
+Windows/Linux 2.1.3 候選包已備妥：Windows修復版已安裝；Linux Debian/AppImage已於WSL2 Ubuntu22.04建置，兩包資源、包內DSH、20秒啟動及53條DSH測試通過，Debian已升級安裝，三個安裝包更新簽章已驗證。僅在本機/虛擬機驗收，尚待本次CI例外發布確認；公開下載仍以各平台連結為準，不宣稱Linux裸機GPU或完整DSH圖片/工具相容已通過。見[本批驗收與待解項目](VERIFICATION-2.1.3-WIN-LINUX.md)。
+
 ## Windows 本機修復與 DSH 接入邊界（2026-10-24）
 
 接入頁頂部已補回「一鍵恢復接入」，可集中撤銷 Harness 完整接入及 Codex、Claude Code 的受管 MCP；各用戶端分別回報鎖定、衝突及無恢復點，保留原有設定。Windows 2.1.3 修復包已於本機安裝，公開下載狀態以下方分平台表為準。Linux 新包獨立建置及驗收，不沿用 Windows 結果。

@@ -21,6 +21,8 @@ Run supported local models, work with authorized files, and manage speech, image
 - **2.1.2** · The security target list uses the full width, with optional connections and tools below. Batch handoff creates only a draft; real HTB remains unverified and is not advertised as supported.
 <!-- recent-features:end -->
 
+Windows/Linux2.1.3 candidates are prepared: Windows is installed locally; Linux Debian/AppImage were built under Ubuntu22.04 WSL2. Both Linux packages passed resource checks, packaged DSH initialization,20-second startup and53 DSH tests; Debian is installed. All three updater signatures were verified. Current-batch CI exception approval is pending; public downloads retain their actual platform links. No bare-metal Linux GPU or full DSH image/tool acceptance is claimed. See [acceptance and unresolved items](VERIFICATION-2.1.3-WIN-LINUX.md).
+
 ## Windows local fixes and DSH integration limits (2026-10-24)
 
 The integration page again has a top-level one-click restore for full Harness integration and managed Codex/Claude Code MCP entries. Each client reports locks, conflicts and missing restore points separately while retaining existing settings. The Windows2.1.3 fix is installed locally; public download versions are shown in the platform table. Linux packages are built and verified separately.
