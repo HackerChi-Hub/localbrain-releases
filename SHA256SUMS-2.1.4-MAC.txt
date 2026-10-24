@@ -1,0 +1,3 @@
+f302f0b13e49f2fdc2649ed871022c90d6a38eff9bc135392595cb655dac2f24  LocalBrain_2.1.4_aarch64.dmg
+48447c68d2624613b10e5fbb8b19f2f4940dbcdf92509242fb336b0baa73dc71  LocalBrain.app.tar.gz
+cb5fa9052bdac02bac73d383f4871b1ad4ff6370cee7f0874938a0d4ed4fbd47  LocalBrain.app.tar.gz.sig

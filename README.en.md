@@ -21,6 +21,18 @@ Run supported local models, work with authorized files, and manage speech, image
 - **2.1.2** · Fix MCP installation with read-only app resources by registering and validating managed Python paths; Windows Unicode paths and verification logs explicitly use UTF-8.
 <!-- recent-features:end -->
 
+## Mac 2.1.4 candidate: one-click runtime setup (pending publication)
+
+Settings → Runtime and diagnostics shows five groups: model engines, media, security tools, offline data and system services. Built-in document/web tools and the Harness core update with the app without maintenance rows. Choose “Install missing components” and review dependencies to fill missing supported components while skipping ready ones. Reconnection rereads and reuses container images/databases; retries process only what is still missing. Individual installation, updates and verification remain available.
+
+Removal controls appear only for confirmed installed managed components, excluding missing, partial, external and unreadable offline states. Batch removal is hidden without eligible selections. Pinned archives preserve interrupted downloads, validate ranges and verify SHA-256 before extraction. Supported existing official package managers prepare system dependencies, preserving system licensing, administrator and restart requirements. Ready services do not show redundant installation instructions.
+
+![One-click setup and model environment preview](screenshots/2.1.4-runtime-models-oneclick-preview.jpg)
+
+![Unready security tools show installation controls only](screenshots/2.1.4-runtime-security-oneclick-preview.jpg)
+
+These use the production component with read-only inventory and explicitly mocked changes. The revision is installed; all 12,995 files/links match and signature/image checks pass. Native capture still fails; native clicks, complete container setup and actual removal remain unverified. See [acceptance limits](VERIFICATION-2.1.4-MAC.md) and [runtime scope](RUNTIME_CENTER.md). Weights, external tools, sessions, reports and VMs remain intact. The Harness core stays on 0.2.0-rc.2. The software package remains unpublished; Windows/Linux remain on 2.1.3.
+
 Windows/Linux 2.1.3 are publicly released: Windows and WSL2 Debian are installed; Debian/AppImage resource checks, packaged DSH initialization, 20-second startup and 53 DSH tests passed. All three updater signatures were verified. The author explicitly approved this batch despite source CI account limits; online source CI is not reported as passing. Bare-metal Linux GPU and full DSH image/tool tasks remain unverified; PolyStrata 35B still overflows its 8K window with the desktop agent. See [acceptance and unresolved items](VERIFICATION-2.1.3-WIN-LINUX.md) and [downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3). Earlier local-candidate and initial single-platform paragraphs below are historical; this section states current platform status.
 
 ## Windows local fixes and DSH integration limits (2026-10-24)
