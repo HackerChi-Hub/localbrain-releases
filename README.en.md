@@ -14,14 +14,14 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.1.3** · Windows/Linux restore the top-level one-click integration recovery, reporting client locks and conflicts separately while preserving existing settings and individual undo.
+- **2.1.3** · Windows/Linux local-model integration uses the running PolyStrata/VLM service, exports its real model ID and context window, and rejects offline or stale writes.
 - **2.1.3** · Restore one-click MCP integration for Codex and Claude Code alongside DeepSeek Harness; add tools without changing models, providers or other settings.
 - **2.1.3** · Undo tools separately for each client with external-edit conflict checks; Harness tool undo keeps model blocks and does not use legacy full-file restore points.
 - **2.1.2** · Fix MCP installation with read-only app resources by registering and validating managed Python paths; Windows Unicode paths and verification logs explicitly use UTF-8.
-- **2.1.2** · Each completed chat turn shows a Support development text entry; click to view the QR code, close it temporarily, with no automatic popup or model-context insertion.
-- **2.1.2** · The security target list uses the full width, with optional connections and tools below. Batch handoff creates only a draft; real HTB remains unverified and is not advertised as supported.
 <!-- recent-features:end -->
 
-Windows/Linux2.1.3 candidates are prepared: Windows is installed locally; Linux Debian/AppImage were built under Ubuntu22.04 WSL2. Both Linux packages passed resource checks, packaged DSH initialization,20-second startup and53 DSH tests; Debian is installed. All three updater signatures were verified. Current-batch CI exception approval is pending; public downloads retain their actual platform links. No bare-metal Linux GPU or full DSH image/tool acceptance is claimed. See [acceptance and unresolved items](VERIFICATION-2.1.3-WIN-LINUX.md).
+Windows/Linux 2.1.3 are publicly released: Windows and WSL2 Debian are installed; Debian/AppImage resource checks, packaged DSH initialization, 20-second startup and 53 DSH tests passed. All three updater signatures were verified. The author explicitly approved this batch despite source CI account limits; online source CI is not reported as passing. Bare-metal Linux GPU and full DSH image/tool tasks remain unverified; PolyStrata 35B still overflows its 8K window with the desktop agent. See [acceptance and unresolved items](VERIFICATION-2.1.3-WIN-LINUX.md) and [downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3). Earlier local-candidate and initial single-platform paragraphs below are historical; this section states current platform status.
 
 ## Windows local fixes and DSH integration limits (2026-10-24)
 
@@ -63,7 +63,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.1.2 · Mac 2.1.3 · Linux 2.1.2
+## Latest downloads：Windows 2.1.3 · Mac 2.1.3 · Linux 2.1.3
 
 Mac 2.1.3 restores one-click MCP tools for Codex and Claude Code alongside DeepSeek Harness. OpenCode is not restored. In Integrations, copy, write or undo tools separately for each client. Only LocalBrain tool entries are changed; models, providers, other MCP entries and project settings are preserved. Configuration previews are collapsed by default; new sessions pick up writes. Running desktop clients must be closed after current work finishes; LocalBrain does not terminate them.
 
@@ -88,10 +88,10 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.1.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_aarch64.dmg) · Installed and publicly released; three client tool cards, protocol discovery and a real Codex call passed. Claude Code model-call testing stopped; ad-hoc signed, not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_x64-setup.exe) · 2.1.2 installed; native chat, tool and compacted continuation passed; updater signature verified, not Authenticode |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_amd64.AppImage) · 2.1.2; packaged DSH and Ubuntu22.04 WSL2+Xvfb startup verified; Debian installed, preview support, not bare-metal/GPU acceptance |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_x64-setup.exe) · 2.1.3 installed; integration routing and top recovery UI checked; updater signed, not Authenticode |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.AppImage) · 2.1.3; resources, packaged DSH, WSL2+Xvfb startup and 53 DSH tests passed; Debian installed, preview support, no bare-metal GPU acceptance |
 
-[Mac 2.1.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3) · [Mac checksums](SHA256SUMS-2.1.3-MAC.txt) · [Windows/Linux 2.1.2 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.2_amd64.deb`. Older releases are retained.
+[Mac 2.1.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3) · [Mac checksums](SHA256SUMS-2.1.3-MAC.txt) · [Windows/Linux 2.1.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.3_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -169,9 +169,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `023934d617c93cb50cd3dd41f55bd7ad672d29983548000cfb78d1f7985417b8` |
-| Windows installer | `0bf1da7a736151648fbd75645f8890bdca6295c8ed77fc67c5f0545482dc6b87` |
-| Linux AppImage | `56e26c15bad2915959d35130f56ec47cc9f47d4b8ec8fbf2aa6386d3bc456257` |
-| Linux Debian | `8da5b637f8fd6bd1e48c0df71ac87d7eadd98c35fca6e62f1a80b97440ecb28a` |
+| Windows installer | `1a7cde8c28dc3964f61f5c645cb58e58532a5c43ecff8f17e8a9aaa39b7c81a1` |
+| Linux AppImage | `78a77457f4e8a1fbb0b9c002b131d24099369be670b99dd0616a436eeecbc35d` |
+| Linux Debian | `0de5ac2d3e9a086f5759e8c329ab7cbec94ab7d49c346e87ab38bcfb2a79638f` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

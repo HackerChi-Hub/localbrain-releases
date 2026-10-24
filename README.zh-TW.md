@@ -14,14 +14,14 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **2.1.3** · Windows/Linux 接入頁頂部補回一鍵恢復接入；逐用戶端回報鎖定與衝突，保留原有設定及個別撤銷。
+- **2.1.3** · Windows/Linux 本機模型接入辨識實際執行的 PolyStrata/VLM，匯出真實服務模型名稱與視窗，拒絕離線或過期寫入。
 - **2.1.3** · 恢復 Codex、Claude Code 的 MCP 一鍵接入，保留 DeepSeek Harness；僅新增工具，不變更模型、提供方與其他設定。
 - **2.1.3** · 每個用戶端個別撤銷工具接入，核對外部變更衝突；Harness 工具撤銷保留模型區塊，不讀取舊版整檔恢復點。
 - **2.1.2** · 修正唯讀程式資源造成的 MCP 安裝失敗：向受管 Python 環境註冊並驗證來源；Windows 中文路徑及驗證日誌明確使用 UTF-8。
-- **2.1.2** · 每輪聊天結束顯示「贊助開發」文字，點擊才顯示 QR 碼；可暫時收起，不自動彈出，也不進入模型上下文。
-- **2.1.2** · 網路安全名單改為全寬，連線與工具按需展開；批次交接只產生草稿，真實 HTB 尚未驗收，不作支援承諾。
 <!-- recent-features:end -->
 
-Windows/Linux 2.1.3 候選包已備妥：Windows修復版已安裝；Linux Debian/AppImage已於WSL2 Ubuntu22.04建置，兩包資源、包內DSH、20秒啟動及53條DSH測試通過，Debian已升級安裝，三個安裝包更新簽章已驗證。僅在本機/虛擬機驗收，尚待本次CI例外發布確認；公開下載仍以各平台連結為準，不宣稱Linux裸機GPU或完整DSH圖片/工具相容已通過。見[本批驗收與待解項目](VERIFICATION-2.1.3-WIN-LINUX.md)。
+Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，Debian/AppImage的資源、包內DSH、20秒啟動及53條DSH測試通過，三個安裝包更新簽章已驗證。作者已明確批准本批原始碼CI帳戶限制例外，不冒稱遠端CI通過。Linux裸機GPU與完整DSH圖片/工具任務未驗收，PolyStrata 35B的8K桌面超窗仍未解決。見[本批驗收與待解項目](VERIFICATION-2.1.3-WIN-LINUX.md)及[正式下載](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3)。下方先前本機候選與單平台初發段落保留歷史狀態，目前平台狀態以本節為準。
 
 ## Windows 本機修復與 DSH 接入邊界（2026-10-24）
 
@@ -63,7 +63,7 @@ Windows/Linux 2.1.3 候選包已備妥：Windows修復版已安裝；Linux Debia
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.1.2 · Mac 2.1.3 · Linux 2.1.2
+## 最新下載：Windows 2.1.3 · Mac 2.1.3 · Linux 2.1.3
 
 Mac 2.1.3 恢復 Codex、Claude Code 的 MCP 一鍵工具接入，保留 DeepSeek Harness，不恢復 OpenCode。進入「集成」，按用戶端複製、寫入或個別撤銷；僅操作方寸智匣工具，保留模型、提供方、其他 MCP 與專案設定。設定預設收起，寫入後新會話生效；桌面用戶端執行時要求先結束工作再退出，不自動關閉用戶端。
 
@@ -88,10 +88,10 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac 2.1.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_aarch64.dmg) · 已安裝並發布；三用戶端工具入口、協定自檢及 Codex 實際呼叫通過。Claude Code 模型呼叫停測；臨時簽章、未 Apple 公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_x64-setup.exe) · 2.1.2已安裝；原生聊天、工具及壓縮續答通過，更新簽章通過，非Authenticode |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_amd64.AppImage) · 2.1.2，套件內DSH及Ubuntu22.04 WSL2+Xvfb啟動核對通過；Debian已安裝，預覽支援，未代替裸機/GPU驗收 |
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_x64-setup.exe) · 2.1.3 已安裝；接入路由及頂部恢復入口已核對，更新簽章通過，非 Authenticode |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.AppImage) · 2.1.3；兩包資源、包內DSH、WSL2+Xvfb啟動及53條DSH測試通過；Debian已安裝，預覽支援，未代替裸機GPU驗收 |
 
-[Mac 2.1.3 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3) · [Mac 校驗值](SHA256SUMS-2.1.3-MAC.txt) · [Windows/Linux 2.1.2 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.1.2_amd64.deb`。保留舊發行。
+[Mac 2.1.3 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3) · [Mac 校驗值](SHA256SUMS-2.1.3-MAC.txt) · [Windows/Linux 2.1.3 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.1.3_amd64.deb`。保留舊發行。
 
 以下Windows 2.0.1及更早段落保留發布時的歷史狀態；目前平台版本以上方下載表為準。
 
@@ -169,9 +169,9 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | 檔案 | 散列 |
 | --- | --- |
 | Mac DMG | `023934d617c93cb50cd3dd41f55bd7ad672d29983548000cfb78d1f7985417b8` |
-| Windows安裝程式 | `0bf1da7a736151648fbd75645f8890bdca6295c8ed77fc67c5f0545482dc6b87` |
-| Linux AppImage | `56e26c15bad2915959d35130f56ec47cc9f47d4b8ec8fbf2aa6386d3bc456257` |
-| Linux Debian包 | `8da5b637f8fd6bd1e48c0df71ac87d7eadd98c35fca6e62f1a80b97440ecb28a` |
+| Windows安裝程式 | `1a7cde8c28dc3964f61f5c645cb58e58532a5c43ecff8f17e8a9aaa39b7c81a1` |
+| Linux AppImage | `78a77457f4e8a1fbb0b9c002b131d24099369be670b99dd0616a436eeecbc35d` |
+| Linux Debian包 | `0de5ac2d3e9a086f5759e8c329ab7cbec94ab7d49c346e87ab38bcfb2a79638f` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
 

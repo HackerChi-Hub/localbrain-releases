@@ -1,6 +1,6 @@
-# Windows / Linux 2.1.3 候选包验收
+# Windows / Linux 2.1.3 发行包验收
 
-2026-10-24。Windows修复包已安装；Linux Debian及AppImage已在本地WSL2 Ubuntu22.04独立构建，Debian已安装。本批尚待当前版本的CI例外发布确认，不将本地包写成已公开下载。Mac2.1.3已有发行物保留。
+2026-10-24。Windows修复包已安装；Linux Debian及AppImage已在本地WSL2 Ubuntu22.04独立构建，Debian已安装。作者已于2026-10-24明确批准本批Windows/Linux 2.1.3在记录CI限制与已知问题后例外公开发布。Mac2.1.3已有发行物保留。
 
 修复内容：接入识别实际运行的PolyStrata/VLM，导出真实服务模型名、窗口及模态；接入页顶部补回一键恢复接入，保留各客户端单项撤销。恢复编排分别报告冲突、锁定和无备份；单客户端失败不阻断其它客户端，不强制覆盖用户设置。正式配置未用于恢复测试。
 

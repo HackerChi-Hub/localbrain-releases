@@ -1,0 +1,69 @@
+{
+  "version": "2.1.3",
+  "publicationStatus": "approved for public release; online asset verification recorded separately",
+  "runtimeSourceCommit": "ee80a90439fd55cb4f34237e5949fe9ccd248535",
+  "linuxArchiveCommit": "0ca75f51d9536313b15aeef2cd9d95776d8384d4",
+  "runtimeSourceMatchesAcrossPackages": true,
+  "sha256": {
+    "LocalBrain_2.1.3_x64-setup.exe": "1a7cde8c28dc3964f61f5c645cb58e58532a5c43ecff8f17e8a9aaa39b7c81a1",
+    "LocalBrain_2.1.3_amd64.deb": "0de5ac2d3e9a086f5759e8c329ab7cbec94ab7d49c346e87ab38bcfb2a79638f",
+    "LocalBrain_2.1.3_amd64.AppImage": "78a77457f4e8a1fbb0b9c002b131d24099369be670b99dd0616a436eeecbc35d"
+  },
+  "checks": {
+    "typescriptPassed": 1615,
+    "typescriptSkipped": 2,
+    "adaptersPassed": 14,
+    "dshLinuxPassed": 53
+  },
+  "windows": {
+    "installed": true,
+    "formalConfigurationsPreserved": true,
+    "topRestoreUiAvailableWithoutModel": true,
+    "restoreOrchestrationPartialFailureFixturePassed": true,
+    "noFormalRestoreExecuted": true
+  },
+  "linux": {
+    "packageChecks": [
+      {
+        "package": "deb",
+        "version": "2.1.3",
+        "bundleMarkerVerified": true,
+        "resourcesVerified": true,
+        "nativeNodeHostInitialized": true,
+        "startupSurvived20s": true,
+        "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+      },
+      {
+        "package": "appimage",
+        "version": "2.1.3",
+        "bundleMarkerVerified": true,
+        "resourcesVerified": true,
+        "nativeNodeHostInitialized": true,
+        "startupSurvived20s": true,
+        "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+      }
+    ],
+    "installed": {
+      "passed": true,
+      "version": "2.1.3",
+      "binaryMatchesDebianPackage": true,
+      "binarySha256": "e416444525bb4f2fd983ced82d60c51c4288a6dc0ffa5f8f58d959cee2fba5e2",
+      "scope": "Ubuntu22.04 WSL2; no bare-metal GPU model acceptance"
+    }
+  },
+  "limitations": [
+    "Full DSH desktop agent exceeds actual PolyStrata8K window; unresolved",
+    "Qwen3.8-2B-Distill basic text is user-confirmed; current endpoint has no vision",
+    "262144-token service capacity is not a full-window performance test",
+    "Visual models, MCP image rendering and full DSH tool/multi-turn tasks not fully accepted",
+    "Linux WSL2/Xvfb acceptance is not bare-metal desktop/GPU inference",
+    "Source GitHub CI not started due account billing/spending limits; no online CI success claimed",
+    "App updater signature is not Windows Authenticode; no third-party model/engine/driver upgrades"
+  ],
+  "ciExceptionApproval": {
+    "date": "2026-10-24",
+    "scope": "Windows and Linux 2.1.3 public package release with documented source CI billing limitation and unresolved DSH issues",
+    "userReply": "确定",
+    "approved": true
+  }
+}
