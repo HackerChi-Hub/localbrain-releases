@@ -14,11 +14,11 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
-- **2.1.1** · 壓縮檢查點保留可信提交的使用者原文，減少任務參數遺失；草稿依會話隔離，不恢復舊授權或登入狀態。
-- **2.1.1** · Windows/Linux 2.1.1補齊同源功能與獨立更新簽章；Linux同時提供Debian及AppImage，各平台特殊引擎不隨應用程式隱式升級。
-- **2.0.8** · 模型設定儲存與登記統一路徑驗證，一般儲存不誤停獨立引擎；不放寬外部目錄授權。
-- **2.0.8** · 新增網頁CTF基礎入口、任務內登入狀態及分頁證據/截圖匯出；完整隔離瀏覽器與模型CTF閉環尚未驗收。
-- **2.0.7** · Windows/Linux 2.0.7補齊同源功能與獨立更新簽章；Linux同時提供Debian及AppImage，各平台特殊引擎不隨應用程式隱式升級。
+- **2.1.2** · 修正唯讀程式資源導致的 MCP 安裝失敗：僅向受管 Python 環境註冊路徑，並驗證目前資源來源。
+- **2.1.2** · 每輪聊天結束顯示「贊助開發」文字，點擊才顯示 QR 碼；可暫時收起，不自動彈出，也不進入模型上下文。
+- **2.1.2** · 網路安全名單改為全寬，連線與工具按需展開；批次交接只產生草稿，真實 HTB 尚未驗收，不作支援承諾。
+- **2.1.2** · 接入頁只保留 DeepSeek Harness 的本機工具與本機模型設定；寫入及復原不修改舊用戶端檔案。
+- **2.1.2** · 「提升使用者體驗」收為次要摺疊設定，保留真實狀態、資料範圍說明及啟停開關。
 <!-- recent-features:end -->
 
 <!-- windows-performance:start -->
@@ -51,9 +51,9 @@
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.1.1 · Mac 2.1.1 · Linux 2.1.1
+## 最新下載：Windows 2.1.1 · Mac 2.1.2 · Linux 2.1.1
 
-Mac 2.1.1 修復壓縮後使用者原文遺失與會話草稿串用：壓縮時在語意摘要之外保留你給出的目標、帳號、參數與限制，網頁內容與工具回執不能冒充你的要求；草稿與安全任務標記隨所屬對話，刪除後丟棄。單輪時長改為整輪硬上限並分別回報預填／生成耗時；網頁證據支援控制項連結目標、正文續讀區間、核驗失敗分因且不透露候選對錯；授權中途到期明確要求停手；本機清理入口整批預檢並核對保護登記。真實 HTB 握手仍未建立：本輪實測該網路到不了平台邊緣（10 個節點與 TCP/UDP 設定均無伺服器回應），不能據此排除平台或帳號原因；原生批准、含待辦操作的重啟恢復與 Windows/Linux 本輪實收未完成。Windows 2.0.8 與 Linux 2.0.8 保持原版本。[安全能力與限制](SECURITY-CAPABILITIES.md) · [本輪驗收記錄](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.1.1_MAC_VERIFICATION.md)。
+Mac 2.1.1 修復壓縮後使用者原文遺失與會話草稿串用：壓縮時在語意摘要之外保留你給出的目標、帳號、參數與限制，網頁內容與工具回執不能冒充你的要求；草稿與安全任務標記隨所屬對話，刪除後丟棄。單輪時長改為整輪硬上限並分別回報預填／生成耗時；網頁證據支援控制項連結目標、正文續讀區間、核驗失敗分因且不透露候選對錯；授權中途到期明確要求停手；本機清理入口整批預檢並核對保護登記。真實 HTB 握手仍未建立：本輪實測該網路到不了平台邊緣（10 個節點與 TCP/UDP 設定均無伺服器回應），不能據此排除平台或帳號原因；原生批准、含待辦操作的重啟恢復與 Windows/Linux 本輪實收未完成。Windows 2.0.8 與 Linux 2.0.8 保持原版本。[安全能力與限制](SECURITY-CAPABILITIES.md) · [本輪驗收記錄](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.1.2_MAC_VERIFICATION.md)。
 
 Mac 1.9.9修復下載終態及Sushi啟動錯誤提示，包括狀態重新整理遮蔽記憶體原因的問題。最終安裝版已驗證真實預檢拒絕、恢復32K後完整常駐載入與中文回應；同權重常駐／32 GiB精確SSD分別駐留44.20／31.21 GiB。模式手動選擇，儲存並重啟生效，不自動降級。見[最終安裝與實測範圍](VERIFICATION-1.9.9-MAC.md)。下方1.9.8段落保留當時驗收邊界。
 
@@ -67,7 +67,7 @@ Windows/Linux 2.1.1安裝套件已建置驗收：Windows原生聊天、工具寫
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 2.1.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_aarch64.dmg) · 已安裝；四道本機閘與包內程式碼／更新簽章通過；壓縮保留原文、草稿隔離、整輪時長與網頁證據已實測。授權商城為指定任務工具鏈驗證（不是無提示盲測）；原生批准、含待辦重啟恢復與真實 HTB 未驗收。尚未 Apple 公證 |
+| Apple Silicon Mac 2.1.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_aarch64.dmg) · 已安裝；四道本機閘與包內程式碼／更新簽章通過；壓縮保留原文、草稿隔離、整輪時長與網頁證據已實測。授權商城為指定任務工具鏈驗證（不是無提示盲測）；原生批准、含待辦重啟恢復與真實 HTB 未驗收。尚未 Apple 公證 |
 | Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_x64-setup.exe) · 2.1.1已安裝；原生聊天、工具及壓縮續答通過，更新簽章通過，非Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.AppImage) · 2.1.1，套件內DSH及Ubuntu22.04 WSL2+Xvfb啟動核對通過；Debian已安裝，預覽支援，未代替裸機/GPU驗收 |
 
@@ -133,7 +133,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `20f44469c1ef3804657017965de199fbc0a37f3a484c0c97edecff29ae1aea72` |
+| Mac DMG | `b31de804c4b3cd6e934353c64576e4f7bba0ab0fec523ee150f7ae5aef6992e7` |
 | Windows安裝程式 | `eb8065515b4b40b8966384e0ecc5046e93ee26be5b44e2dad4173545239deb31` |
 | Linux AppImage | `247ac5202fa49db24e7e181411864e133ab1e77ba350cd7e247f14fa6051db99` |
 | Linux Debian包 | `b560fa612b17b05e95078f3c7edc658c9100883d9319859bc2cb796dcce39276` |

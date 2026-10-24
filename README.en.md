@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **2.1.1** · Compaction checkpoints retain trusted submitted user text to reduce lost task parameters. Drafts remain session-bound; old authorizations and login state are not restored.
-- **2.1.1** · Windows/Linux 2.1.1 packages include current features and independent updater signatures. Linux provides Debian and AppImage; special engines are not implicitly upgraded.
-- **2.0.8** · Model settings and registration share path validation; ordinary saves do not incorrectly stop independent engines or relax external-directory authorization.
-- **2.0.8** · Web CTF foundations add task-local login state and paginated evidence/screenshots. Full isolated-browser and model CTF acceptance remains pending.
-- **2.0.7** · Windows/Linux 2.0.7 packages include current features and independent updater signatures. Linux provides Debian and AppImage; special engines are not implicitly upgraded.
+- **2.1.2** · Fix MCP installation with read-only app resources: register paths only in the managed Python environment and verify the current source.
+- **2.1.2** · Each completed chat turn shows a Support development text entry; click to view the QR code, close it temporarily, with no automatic popup or model-context insertion.
+- **2.1.2** · The security target list uses the full width, with optional connections and tools below. Batch handoff creates only a draft; real HTB remains unverified and is not advertised as supported.
+- **2.1.2** · Integration offers only DeepSeek Harness local tools and local models; writing and restoring configuration leaves legacy client files untouched.
+- **2.1.2** · Improve user experience becomes a secondary disclosure retaining the actual state, data scope and enable/disable control.
 <!-- recent-features:end -->
 
 <!-- windows-performance:start -->
@@ -51,9 +51,9 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.1.1 · Mac 2.1.1 · Linux 2.1.1
+## Latest downloads：Windows 2.1.1 · Mac 2.1.2 · Linux 2.1.1
 
-Mac 2.1.1 fixes loss of your original instructions after compaction and cross-conversation security drafts: alongside the semantic summary it keeps the target, account, parameters and limits you supplied, and web content or tool receipts cannot impersonate them; drafts and security task markers stay with their own conversation and are discarded with it. Per-round duration is now a hard cap for the whole round with separate prefill/generation timings; web evidence exposes control link targets, continuation ranges and verification failure causes without revealing whether a candidate is right; expired authorization explicitly stops the run; the local cleanup entry prechecks the whole batch against the protection registry. The real HTB tunnel is still not up: on this network the platform edge is unreachable (ten nodes plus TCP and UDP profiles all received no server reply), which does not rule out a platform or account-side cause; native approval, restart recovery with a pending operation and this round's Windows/Linux acceptance are incomplete. Windows 2.0.8 and Linux 2.0.8 keep their existing builds. [Security capabilities and limits](SECURITY-CAPABILITIES.md) · [This round's verification](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.1.1_MAC_VERIFICATION.md).
+Mac 2.1.1 fixes loss of your original instructions after compaction and cross-conversation security drafts: alongside the semantic summary it keeps the target, account, parameters and limits you supplied, and web content or tool receipts cannot impersonate them; drafts and security task markers stay with their own conversation and are discarded with it. Per-round duration is now a hard cap for the whole round with separate prefill/generation timings; web evidence exposes control link targets, continuation ranges and verification failure causes without revealing whether a candidate is right; expired authorization explicitly stops the run; the local cleanup entry prechecks the whole batch against the protection registry. The real HTB tunnel is still not up: on this network the platform edge is unreachable (ten nodes plus TCP and UDP profiles all received no server reply), which does not rule out a platform or account-side cause; native approval, restart recovery with a pending operation and this round's Windows/Linux acceptance are incomplete. Windows 2.0.8 and Linux 2.0.8 keep their existing builds. [Security capabilities and limits](SECURITY-CAPABILITIES.md) · [This round's verification](https://github.com/HackerChi-Hub/localbrain/blob/main/docs/RELEASE_2.1.2_MAC_VERIFICATION.md).
 
 Mac 1.9.9 repairs download completion and Sushi startup diagnostics, including status polling masking memory errors. Final installed-app checks exercised real preflight rejection, restoring 32K, full-resident loading and a Chinese response. Matched resident/32 GiB exact SSD tests recorded 44.20/31.21 GiB residency. Modes are selected manually and require saving and restarting; no automatic downgrade. See [final installation and test limits](VERIFICATION-1.9.9-MAC.md). Older 1.9.8 paragraphs retain their original verification scope.
 
@@ -67,11 +67,11 @@ Windows/Linux 2.1.1 packages are built and verified: Windows native chat, tool w
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.1.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_aarch64.dmg) · Installed; four local gates plus bundled-code and updater signatures verified; compaction retention, draft isolation, whole-round timing and web evidence tested. The authorized-shop loop is a specified-task tool-chain check, not a prompt-free blind test; native approval, restart recovery with a pending operation and real HTB remain unverified. Not Apple-notarized |
+| Apple Silicon Mac 2.1.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_aarch64.dmg) · Installed; four local gates plus bundled-code and updater signatures verified; compaction retention, draft isolation, whole-round timing and web evidence tested. The authorized-shop loop is a specified-task tool-chain check, not a prompt-free blind test; native approval, restart recovery with a pending operation and real HTB remain unverified. Not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_x64-setup.exe) · 2.1.1 installed; native chat, tool and compacted continuation passed; updater signature verified, not Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.AppImage) · 2.1.1; packaged DSH and Ubuntu22.04 WSL2+Xvfb startup verified; Debian installed, preview support, not bare-metal/GPU acceptance |
 
-[2.1.1 Mac release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.1) · [2.0.8 Windows/Linux notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.8). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.1_amd64.deb`. Older releases are retained.
+[2.1.1 Mac release notes and checksums](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2) · [2.0.8 Windows/Linux notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.0.8). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.1_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -133,7 +133,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `20f44469c1ef3804657017965de199fbc0a37f3a484c0c97edecff29ae1aea72` |
+| Mac DMG | `b31de804c4b3cd6e934353c64576e4f7bba0ab0fec523ee150f7ae5aef6992e7` |
 | Windows installer | `eb8065515b4b40b8966384e0ecc5046e93ee26be5b44e2dad4173545239deb31` |
 | Linux AppImage | `247ac5202fa49db24e7e181411864e133ab1e77ba350cd7e247f14fa6051db99` |
 | Linux Debian | `b560fa612b17b05e95078f3c7edc658c9100883d9319859bc2cb796dcce39276` |
