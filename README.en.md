@@ -21,6 +21,16 @@ Run supported local models, work with authorized files, and manage speech, image
 - **2.1.2** · The security target list uses the full width, with optional connections and tools below. Batch handoff creates only a draft; real HTB remains unverified and is not advertised as supported.
 <!-- recent-features:end -->
 
+## Windows local fixes and DSH integration limits (2026-10-24)
+
+The integration page again has a top-level one-click restore for full Harness integration and managed Codex/Claude Code MCP entries. Each client reports locks, conflicts and missing restore points separately while retaining existing settings. The Windows2.1.3 fix is installed locally; public download versions are shown in the platform table. Linux packages are built and verified separately.
+
+The user has confirmed **basic DSH text usage with Qwen3.8-2B-Distill Q4_K_M**. The live service reports a262144-token window matching the exported configuration. Full-window speed, memory consumption and quality have not been tested, nor does this establish complete tool or multi-turn task compatibility. The current2B endpoint has no vision. Image understanding, MCP image rendering and visual-model integration require separate acceptance.
+
+**The full DSH desktop agent still overflows PolyStrata35B's8K window.** Screenshots show about1.5K system-prompt tokens plus7.4K tool-definition tokens; another request had12728 input tokens. Compressing history or reducing output alone cannot fix an oversized fixed prefix. Reduce task-specific tool overhead or separately test a larger window. Context occupancy does not establish GPU memory exhaustion. The previous short adapter request proved connectivity and routing, not full desktop-agent compatibility.
+
+[Known issues and acceptance scope](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/KNOWN-ISSUES-DSH-LOCAL-MODELS.md). Source GitHub CI remains blocked by account limits; local checks are not represented as online CI success.
+
 <!-- windows-performance:start -->
 ## Windows 2.0.1: small-context tasks and runtime speed
 
