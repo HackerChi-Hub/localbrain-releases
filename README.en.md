@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.1.3** · Restore one-click MCP integration for Codex and Claude Code alongside DeepSeek Harness; add tools without changing models, providers or other settings.
+- **2.1.3** · Undo tools separately for each client with external-edit conflict checks; Harness tool undo keeps model blocks and does not use legacy full-file restore points.
 - **2.1.2** · Fix MCP installation with read-only app resources by registering and validating managed Python paths; Windows Unicode paths and verification logs explicitly use UTF-8.
 - **2.1.2** · Each completed chat turn shows a Support development text entry; click to view the QR code, close it temporarily, with no automatic popup or model-context insertion.
 - **2.1.2** · The security target list uses the full width, with optional connections and tools below. Batch handoff creates only a draft; real HTB remains unverified and is not advertised as supported.
-- **2.1.2** · Integration offers only DeepSeek Harness local tools and local models; writing and restoring configuration leaves legacy client files untouched.
-- **2.1.2** · Improve user experience becomes a secondary disclosure retaining the actual state, data scope and enable/disable control.
 <!-- recent-features:end -->
 
 <!-- windows-performance:start -->
@@ -51,7 +51,13 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.1.2 · Mac 2.1.2 · Linux 2.1.2
+## Latest downloads：Windows 2.1.2 · Mac 2.1.3 · Linux 2.1.2
+
+Mac 2.1.3 restores one-click MCP tools for Codex and Claude Code alongside DeepSeek Harness. OpenCode is not restored. In Integrations, copy, write or undo tools separately for each client. Only LocalBrain tool entries are changed; models, providers, other MCP entries and project settings are preserved. Configuration previews are collapsed by default; new sessions pick up writes. Running desktop clients must be closed after current work finishes; LocalBrain does not terminate them.
+
+Local installation, consistency of 12,995 files and links, app-signature checks and independent updater verification passed. Installed MCP protocol discovery passed 26/26, and a real Codex document-tool call passed. Claude Code testing stopped at the author's request after revoked login credentials returned 401; it is not marked as a passed model-call test. Mac is ad-hoc signed, not Apple-notarized. The GitHub documentation-sync job could not start because of account restrictions; the author explicitly approved this Mac release exception; local passing checks are not passing online CI. [Acceptance and limits](VERIFICATION-2.1.3-MAC.md). Windows/Linux retain 2.1.2 and their existing acceptance records.
+
+The Mac 2.1.2 paragraphs below retain their historical fixes and acceptance records.
 
 Mac 2.1.2 is publicly released: fixes MCP installation on read-only app resources by registering and validating the source path only in the managed Python environment; completed turns show a support text entry, with the QR code opened only on click. The security target list uses the full width; connections and tools are collapsed by default, with forms shown by target and connection type. HTB is no longer advertised as supported. Integration offers DeepSeek Harness only, and short-task timing no longer shows an infinite multiplier. Local regression, targeted installed-app acceptance and consistency of 12,995 files and links passed. GitHub checks could not start because of account payment/spending restrictions; the author explicitly authorized this Mac-only exception. Local passing results are not reported as passing online CI. Windows/Linux 2.1.2 packages are now available; see platform acceptance below. Real HTB end-to-end acceptance, native security execution approval and restart recovery with a pending operation remain unverified. [Acceptance and limits](VERIFICATION-2.1.2-MAC.md).
 
@@ -69,11 +75,11 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.1.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_aarch64.dmg) · Installed; targeted acceptance passed for read-only registration, support entry and full-width security layout; package files and updater signature verified. Ad-hoc signed, not Apple-notarized; real HTB remains unverified |
+| Apple Silicon Mac 2.1.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_aarch64.dmg) · Installed and publicly released; three client tool cards, protocol discovery and a real Codex call passed. Claude Code model-call testing stopped; ad-hoc signed, not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_x64-setup.exe) · 2.1.2 installed; native chat, tool and compacted continuation passed; updater signature verified, not Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_amd64.AppImage) · 2.1.2; packaged DSH and Ubuntu22.04 WSL2+Xvfb startup verified; Debian installed, preview support, not bare-metal/GPU acceptance |
 
-[Mac 2.1.2 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2) · [Mac checksums](SHA256SUMS-2.1.2-MAC.txt) · [Windows/Linux 2.1.2 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.2_amd64.deb`. Older releases are retained.
+[Mac 2.1.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3) · [Mac checksums](SHA256SUMS-2.1.3-MAC.txt) · [Windows/Linux 2.1.2 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.2_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -103,6 +109,14 @@ Existing public macOS screenshots from version 1.4.6 show model management and c
 
 ![LocalBrain local tools and AI client integrations, historical 1.4.6 screenshot](screenshots/zh-CN/integrations.png)
 <!-- evergreen:screenshots:end -->
+
+## Installed Mac 2.1.3 tool integration
+
+The three clients have separate tool controls and collapsed configuration previews. MCP self-check covers protocol and tool discovery, not every media model's generation quality. These are final installed-app screenshots in Simplified Chinese; only the system automation control title bar was cropped, with originals retained locally.
+
+![Installed Mac 2.1.3 tool integration for three clients](screenshots/2.1.3-mac/mcp-clients.png)
+
+![Installed Mac 2.1.3 MCP protocol and tool discovery, 26/26](screenshots/2.1.3-mac/mcp-selfcheck.png)
 
 ## Installed Mac 2.1.2 security page
 
@@ -142,7 +156,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `b31de804c4b3cd6e934353c64576e4f7bba0ab0fec523ee150f7ae5aef6992e7` |
+| Mac DMG | `023934d617c93cb50cd3dd41f55bd7ad672d29983548000cfb78d1f7985417b8` |
 | Windows installer | `0bf1da7a736151648fbd75645f8890bdca6295c8ed77fc67c5f0545482dc6b87` |
 | Linux AppImage | `56e26c15bad2915959d35130f56ec47cc9f47d4b8ec8fbf2aa6386d3bc456257` |
 | Linux Debian | `8da5b637f8fd6bd1e48c0df71ac87d7eadd98c35fca6e62f1a80b97440ecb28a` |

@@ -14,11 +14,11 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **2.1.3** · 恢復 Codex、Claude Code 的 MCP 一鍵接入，保留 DeepSeek Harness；僅新增工具，不變更模型、提供方與其他設定。
+- **2.1.3** · 每個用戶端個別撤銷工具接入，核對外部變更衝突；Harness 工具撤銷保留模型區塊，不讀取舊版整檔恢復點。
 - **2.1.2** · 修正唯讀程式資源造成的 MCP 安裝失敗：向受管 Python 環境註冊並驗證來源；Windows 中文路徑及驗證日誌明確使用 UTF-8。
 - **2.1.2** · 每輪聊天結束顯示「贊助開發」文字，點擊才顯示 QR 碼；可暫時收起，不自動彈出，也不進入模型上下文。
 - **2.1.2** · 網路安全名單改為全寬，連線與工具按需展開；批次交接只產生草稿，真實 HTB 尚未驗收，不作支援承諾。
-- **2.1.2** · 接入頁只保留 DeepSeek Harness 的本機工具與本機模型設定；寫入及復原不修改舊用戶端檔案。
-- **2.1.2** · 「提升使用者體驗」收為次要摺疊設定，保留真實狀態、資料範圍說明及啟停開關。
 <!-- recent-features:end -->
 
 <!-- windows-performance:start -->
@@ -51,7 +51,13 @@
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.1.2 · Mac 2.1.2 · Linux 2.1.2
+## 最新下載：Windows 2.1.2 · Mac 2.1.3 · Linux 2.1.2
+
+Mac 2.1.3 恢復 Codex、Claude Code 的 MCP 一鍵工具接入，保留 DeepSeek Harness，不恢復 OpenCode。進入「集成」，按用戶端複製、寫入或個別撤銷；僅操作方寸智匣工具，保留模型、提供方、其他 MCP 與專案設定。設定預設收起，寫入後新會話生效；桌面用戶端執行時要求先結束工作再退出，不自動關閉用戶端。
+
+已完成本機安裝、12,995 個檔案及連結一致性、簽章檢查與更新套件獨立驗章，安裝版 MCP 自檢 26/26。Codex 實際呼叫文件工具通過；Claude Code 因登入憑證已撤銷，依作者要求停測，不列為實際呼叫通過。Mac 為臨時簽章、未 Apple 公證。GitHub 說明同步作業因帳戶限制未啟動，作者明確授權本次 Mac 例外發布，本機通過不冒稱線上 CI 通過。[本輪驗收與限制](VERIFICATION-2.1.3-MAC.md)。Windows/Linux 保留 2.1.2 及原有驗收。
+
+以下 Mac 2.1.2 段落保留當時修正與驗收紀錄。
 
 Mac 2.1.2 已正式發布：修正唯讀程式資源引起的 MCP 安裝失敗，改為向受管 Python 環境註冊並驗證資源路徑；每輪結束僅顯示「贊助開發」文字，點擊才展開 QR 碼。網路安全名單佔用全寬，連線與工具預設收起；按目標及連線類型顯示表單，不再宣稱已支援 HTB。接入僅保留 DeepSeek Harness，另修正短任務耗時顯示無窮倍數。已完成本輪本機回歸、安裝版針對性驗收，以及 12,995 個檔案與連結的一致性核對。GitHub 檢查因帳戶付款／支出限制未啟動，作者明確授權本次僅 Mac 例外發布，不將本機通過冒稱線上 CI 通過。Windows/Linux 已补齐 2.1.2，详见下方验收。真實 HTB 閉環、原生安全執行批准及含待辦操作的重啟復原仍未驗收。[驗收紀錄與限制](VERIFICATION-2.1.2-MAC.md)。
 
@@ -69,11 +75,11 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 2.1.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_aarch64.dmg) · 已安裝；本輪唯讀資源註冊、贊助入口與全寬安全佈局通過針對性驗收，套件檔案與更新簽章核對通過。臨時簽章、未 Apple 公證；真實 HTB 未驗收 |
+| Apple Silicon Mac 2.1.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_aarch64.dmg) · 已安裝並發布；三用戶端工具入口、協定自檢及 Codex 實際呼叫通過。Claude Code 模型呼叫停測；臨時簽章、未 Apple 公證 |
 | Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_x64-setup.exe) · 2.1.2已安裝；原生聊天、工具及壓縮續答通過，更新簽章通過，非Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_amd64.AppImage) · 2.1.2，套件內DSH及Ubuntu22.04 WSL2+Xvfb啟動核對通過；Debian已安裝，預覽支援，未代替裸機/GPU驗收 |
 
-[Mac 2.1.2 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2) · [Mac 校驗值](SHA256SUMS-2.1.2-MAC.txt) · [Windows/Linux 2.1.2 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.1.2_amd64.deb`。保留舊發行。
+[Mac 2.1.3 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3) · [Mac 校驗值](SHA256SUMS-2.1.3-MAC.txt) · [Windows/Linux 2.1.2 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.1.2_amd64.deb`。保留舊發行。
 
 以下Windows 2.0.1及更早段落保留發布時的歷史狀態；目前平台版本以上方下載表為準。
 
@@ -103,6 +109,14 @@ Mac 1.9.8 新增可選受管Sushi1.2.4：設定顯式安裝約71MB獨立環境�
 
 ![方寸智匣本機工具與 AI 客戶端接入，歷史版本 1.4.6](screenshots/zh-CN/integrations.png)
 <!-- evergreen:screenshots:end -->
+
+## 2.1.3 安裝版工具接入
+
+三個用戶端個別管理工具，範例預設收起；MCP 自檢驗證協定及工具發現，不代表每個媒體模型都已完成生成實測。截圖取自最終安裝版，僅裁除系統自動操作控制列，原圖留存本機；介面為簡體中文。
+
+![2.1.3 安裝版三用戶端工具接入](screenshots/2.1.3-mac/mcp-clients.png)
+
+![2.1.3 安裝版 MCP 協定與工具發現自檢 26/26](screenshots/2.1.3-mac/mcp-selfcheck.png)
 
 ## 2.1.2 安裝版網路安全頁面
 
@@ -142,7 +156,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `b31de804c4b3cd6e934353c64576e4f7bba0ab0fec523ee150f7ae5aef6992e7` |
+| Mac DMG | `023934d617c93cb50cd3dd41f55bd7ad672d29983548000cfb78d1f7985417b8` |
 | Windows安裝程式 | `0bf1da7a736151648fbd75645f8890bdca6295c8ed77fc67c5f0545482dc6b87` |
 | Linux AppImage | `56e26c15bad2915959d35130f56ec47cc9f47d4b8ec8fbf2aa6386d3bc456257` |
 | Linux Debian包 | `8da5b637f8fd6bd1e48c0df71ac87d7eadd98c35fca6e62f1a80b97440ecb28a` |
