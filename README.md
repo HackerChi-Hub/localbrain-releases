@@ -16,7 +16,7 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
-- **2.1.2** · 修复只读程序资源导致的 MCP 安装失败：仅向受管 Python 环境注册路径，并验证当前资源来源。
+- **2.1.2** · 修复只读程序资源导致的 MCP 安装失败：向受管 Python 环境注册并验证来源；Windows 中文路径与验证日志显式使用 UTF-8。
 - **2.1.2** · 每轮聊天结束显示「赞助开发」文字，点击才显示二维码；可临时收起，不自动弹出，也不进入模型上下文。
 - **2.1.2** · 网络安全名单改为全宽，连接与工具按需展开；批量交接只生成草稿，真实 HTB 尚未验收，不作支持承诺。
 - **2.1.2** · 接入页只保留 DeepSeek Harness 的本地工具与本地模型配置；写入和恢复不修改旧客户端文件。
@@ -53,9 +53,9 @@
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows 2.1.1 · Mac 2.1.2 · Linux 2.1.1
+## 最新下载：Windows 2.1.2 · Mac 2.1.2 · Linux 2.1.2
 
-Mac 2.1.2 已正式发布：修复只读程序资源引起的 MCP 安装失败，改为向受管 Python 环境注册并验证资源路径；每轮结束仅显示「赞助开发」文字，点击才展开二维码。网络安全名单全宽，连接与工具默认收起；按目标及连接类型显示表单，不再宣称 HTB 已支持。接入仅保留 DeepSeek Harness，另修复短任务耗时显示无穷倍数。已完成本轮本地回归、安装版针对性验收，以及 12,995 个文件与链接的一致性核对。GitHub 检查因账户付款／支出限制未启动，作者明确授权本次仅 Mac 例外发布，不将本地通过冒称线上 CI 通过。Windows/Linux 保留 2.1.1，由作者另行打包。真实 HTB 闭环、原生安全执行批准及含待办操作的重启恢复仍未验收。[验收记录与限制](VERIFICATION-2.1.2-MAC.md)。
+Mac 2.1.2 已正式发布：修复只读程序资源引起的 MCP 安装失败，改为向受管 Python 环境注册并验证资源路径；每轮结束仅显示「赞助开发」文字，点击才展开二维码。网络安全名单全宽，连接与工具默认收起；按目标及连接类型显示表单，不再宣称 HTB 已支持。接入仅保留 DeepSeek Harness，另修复短任务耗时显示无穷倍数。已完成本轮本地回归、安装版针对性验收，以及 12,995 个文件与链接的一致性核对。GitHub 检查因账户付款／支出限制未启动，作者明确授权本次仅 Mac 例外发布，不将本地通过冒称线上 CI 通过。Windows/Linux 已补齐 2.1.2，详见下方验收。真实 HTB 闭环、原生安全执行批准及含待办操作的重启恢复仍未验收。[验收记录与限制](VERIFICATION-2.1.2-MAC.md)。
 
 Mac 1.9.9修复下载终态及Sushi启动错误提示，包括状态刷新遮蔽内存原因的问题。最终安装版已验证真实预检拒绝、恢复32K后完整常驻加载与中文响应；同权重常驻／32 GiB精确SSD分别驻留44.20／31.21 GiB。模式手动选择，保存并重启生效，不自动降级。见[最终安装与实测范围](VERIFICATION-1.9.9-MAC.md)。下方1.9.8段落保留其当时验收边界。
 
@@ -65,15 +65,17 @@ Mac 1.9.9修复下载终态及Sushi启动错误提示，包括状态刷新遮蔽
 2.0.8新增模型设置路径校验修复与网页CTF基础。网页传输6项在Windows/Linux通过，但生产隔离浏览器、原生批准和真实模型CTF完整链路仍未验收；须本平台隔离验证通过才能执行。[机制与限制](SECURITY-WEB-CTF.md)。
 
 
-Windows/Linux 2.1.1安装包已构建验收：Windows原生聊天、工具写入与压缩续答通过，已安装且配置哈希不变；Linux Debian与AppImage的资源、包内DSH和WSL2启动检查通过，Debian已安装。Linux未做裸机桌面/GPU验收，安全隔离须本平台反向验证通过。Mac 2.1.1既有资产保留。见[验收与限制](VERIFICATION-2.1.1-WIN-LINUX.md)。下方候选和旧版本段落均为历史状态。
+Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Windows 原生真实模型聊天、文件写入与压缩续答通过，已安装且配置哈希未变；Linux Debian/AppImage 的包内宿主、资源及 WSL2 启动检查通过，Debian 已安装。Linux 裸机/GPU及真实 HTB 未验收，特殊引擎不随应用隐式升级。 [2.1.2 verification](VERIFICATION-2.1.2-WIN-LINUX.md).
+
+作者已批准本批 Windows/Linux 2.1.2 例外发布。GitHub 源码检查因账户付款／额度限制未启动，本地通过不冒充线上CI通过。
 
 | 平台 | 安装包与状态 |
 | --- | --- |
 | Apple Silicon Mac 2.1.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_aarch64.dmg) · 已安装；本轮只读资源注册、赞助入口与全宽安全布局通过针对性验收，包内文件与更新签名核对通过。临时签名、未 Apple 公证；真实 HTB 未验收 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_x64-setup.exe) · 2.1.1已安装；原生聊天、工具及压缩续答通过，更新签名通过，非Authenticode |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.AppImage) · 2.1.1，包内DSH与Ubuntu22.04 WSL2+Xvfb启动核对通过；Debian已安装，预览支持，未代替裸机/GPU验收 |
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_x64-setup.exe) · 2.1.2已安装；原生聊天、工具及压缩续答通过，更新签名通过，非Authenticode |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_amd64.AppImage) · 2.1.2，包内DSH与Ubuntu22.04 WSL2+Xvfb启动核对通过；Debian已安装，预览支持，未代替裸机/GPU验收 |
 
-[Mac 2.1.2 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2) · [Mac 校验值](SHA256SUMS-2.1.2-MAC.txt) · [Windows/Linux 2.1.1 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.1)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.1.1_amd64.deb`。旧发行保留。
+[Mac 2.1.2 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2) · [Mac 校验值](SHA256SUMS-2.1.2-MAC.txt) · [Windows/Linux 2.1.2 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.1.2_amd64.deb`。旧发行保留。
 
 以下Windows 2.0.1及更早段落保留其发布时的历史状态；当前平台版本以上方下载表为准。
 
@@ -143,9 +145,9 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 | 文件 | 散列 |
 | --- | --- |
 | Mac DMG | `b31de804c4b3cd6e934353c64576e4f7bba0ab0fec523ee150f7ae5aef6992e7` |
-| Windows安装程序 | `eb8065515b4b40b8966384e0ecc5046e93ee26be5b44e2dad4173545239deb31` |
-| Linux AppImage | `247ac5202fa49db24e7e181411864e133ab1e77ba350cd7e247f14fa6051db99` |
-| Linux Debian包 | `b560fa612b17b05e95078f3c7edc658c9100883d9319859bc2cb796dcce39276` |
+| Windows安装程序 | `0bf1da7a736151648fbd75645f8890bdca6295c8ed77fc67c5f0545482dc6b87` |
+| Linux AppImage | `56e26c15bad2915959d35130f56ec47cc9f47d4b8ec8fbf2aa6386d3bc456257` |
+| Linux Debian包 | `8da5b637f8fd6bd1e48c0df71ac87d7eadd98c35fca6e62f1a80b97440ecb28a` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 

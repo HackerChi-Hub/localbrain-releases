@@ -14,7 +14,7 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **2.1.2** · Fix MCP installation with read-only app resources: register paths only in the managed Python environment and verify the current source.
+- **2.1.2** · Fix MCP installation with read-only app resources by registering and validating managed Python paths; Windows Unicode paths and verification logs explicitly use UTF-8.
 - **2.1.2** · Each completed chat turn shows a Support development text entry; click to view the QR code, close it temporarily, with no automatic popup or model-context insertion.
 - **2.1.2** · The security target list uses the full width, with optional connections and tools below. Batch handoff creates only a draft; real HTB remains unverified and is not advertised as supported.
 - **2.1.2** · Integration offers only DeepSeek Harness local tools and local models; writing and restoring configuration leaves legacy client files untouched.
@@ -51,9 +51,9 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.1.1 · Mac 2.1.2 · Linux 2.1.1
+## Latest downloads：Windows 2.1.2 · Mac 2.1.2 · Linux 2.1.2
 
-Mac 2.1.2 is publicly released: fixes MCP installation on read-only app resources by registering and validating the source path only in the managed Python environment; completed turns show a support text entry, with the QR code opened only on click. The security target list uses the full width; connections and tools are collapsed by default, with forms shown by target and connection type. HTB is no longer advertised as supported. Integration offers DeepSeek Harness only, and short-task timing no longer shows an infinite multiplier. Local regression, targeted installed-app acceptance and consistency of 12,995 files and links passed. GitHub checks could not start because of account payment/spending restrictions; the author explicitly authorized this Mac-only exception. Local passing results are not reported as passing online CI. Windows/Linux remain at 2.1.1 and will be built separately by the author. Real HTB end-to-end acceptance, native security execution approval and restart recovery with a pending operation remain unverified. [Acceptance and limits](VERIFICATION-2.1.2-MAC.md).
+Mac 2.1.2 is publicly released: fixes MCP installation on read-only app resources by registering and validating the source path only in the managed Python environment; completed turns show a support text entry, with the QR code opened only on click. The security target list uses the full width; connections and tools are collapsed by default, with forms shown by target and connection type. HTB is no longer advertised as supported. Integration offers DeepSeek Harness only, and short-task timing no longer shows an infinite multiplier. Local regression, targeted installed-app acceptance and consistency of 12,995 files and links passed. GitHub checks could not start because of account payment/spending restrictions; the author explicitly authorized this Mac-only exception. Local passing results are not reported as passing online CI. Windows/Linux 2.1.2 packages are now available; see platform acceptance below. Real HTB end-to-end acceptance, native security execution approval and restart recovery with a pending operation remain unverified. [Acceptance and limits](VERIFICATION-2.1.2-MAC.md).
 
 Mac 1.9.9 repairs download completion and Sushi startup diagnostics, including status polling masking memory errors. Final installed-app checks exercised real preflight rejection, restoring 32K, full-resident loading and a Chinese response. Matched resident/32 GiB exact SSD tests recorded 44.20/31.21 GiB residency. Modes are selected manually and require saving and restarting; no automatic downgrade. See [final installation and test limits](VERIFICATION-1.9.9-MAC.md). Older 1.9.8 paragraphs retain their original verification scope.
 
@@ -63,15 +63,17 @@ Mac 1.9.9 repairs download completion and Sushi startup diagnostics, including s
 2.0.8 adds model-settings path-validation fixes and Web CTF foundations. Six transport tests passed on Windows/Linux, but production isolated-browser, native approval and real-model CTF acceptance remain pending. Execution requires passing local isolation checks. [Mechanism and limits](SECURITY-WEB-CTF.md).
 
 
-Windows/Linux 2.1.1 packages are built and verified: Windows native chat, tool writing and compacted continuation passed; installed with the configuration hash unchanged. Linux Debian/AppImage resources, packaged DSH and WSL2 startup checks passed; Debian is installed. Linux bare-metal desktop/GPU acceptance is not covered; security isolation requires passing local reverse checks. Existing Mac 2.1.1 assets are retained. See [acceptance and limits](VERIFICATION-2.1.1-WIN-LINUX.md). Candidate and older-version paragraphs below are historical.
+Windows/Linux 2.1.2 now include the bundled-resource registration fix and current UI improvements. Windows native real-model chat, file writing and compacted continuation passed; installed with configuration hash unchanged. Linux Debian/AppImage packaged hosts, resources and WSL2 startup passed; Debian installed. Linux bare-metal/GPU and real HTB are unverified; special engines are not implicitly upgraded. [2.1.2 verification](VERIFICATION-2.1.2-WIN-LINUX.md).
+
+The author approved this Windows/Linux 2.1.2 release exception. The source GitHub check could not start due to account payment/spending restrictions; local passing checks are not passing online CI.
 
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.1.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_aarch64.dmg) · Installed; targeted acceptance passed for read-only registration, support entry and full-width security layout; package files and updater signature verified. Ad-hoc signed, not Apple-notarized; real HTB remains unverified |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_x64-setup.exe) · 2.1.1 installed; native chat, tool and compacted continuation passed; updater signature verified, not Authenticode |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.1/LocalBrain_2.1.1_amd64.AppImage) · 2.1.1; packaged DSH and Ubuntu22.04 WSL2+Xvfb startup verified; Debian installed, preview support, not bare-metal/GPU acceptance |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_x64-setup.exe) · 2.1.2 installed; native chat, tool and compacted continuation passed; updater signature verified, not Authenticode |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.2/LocalBrain_2.1.2_amd64.AppImage) · 2.1.2; packaged DSH and Ubuntu22.04 WSL2+Xvfb startup verified; Debian installed, preview support, not bare-metal/GPU acceptance |
 
-[Mac 2.1.2 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2) · [Mac checksums](SHA256SUMS-2.1.2-MAC.txt) · [Windows/Linux 2.1.1 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.1_amd64.deb`. Older releases are retained.
+[Mac 2.1.2 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2) · [Mac checksums](SHA256SUMS-2.1.2-MAC.txt) · [Windows/Linux 2.1.2 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.2). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.2_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -141,9 +143,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `b31de804c4b3cd6e934353c64576e4f7bba0ab0fec523ee150f7ae5aef6992e7` |
-| Windows installer | `eb8065515b4b40b8966384e0ecc5046e93ee26be5b44e2dad4173545239deb31` |
-| Linux AppImage | `247ac5202fa49db24e7e181411864e133ab1e77ba350cd7e247f14fa6051db99` |
-| Linux Debian | `b560fa612b17b05e95078f3c7edc658c9100883d9319859bc2cb796dcce39276` |
+| Windows installer | `0bf1da7a736151648fbd75645f8890bdca6295c8ed77fc67c5f0545482dc6b87` |
+| Linux AppImage | `56e26c15bad2915959d35130f56ec47cc9f47d4b8ec8fbf2aa6386d3bc456257` |
+| Linux Debian | `8da5b637f8fd6bd1e48c0df71ac87d7eadd98c35fca6e62f1a80b97440ecb28a` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

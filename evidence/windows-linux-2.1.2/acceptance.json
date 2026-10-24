@@ -1,0 +1,99 @@
+{
+  "version": "2.1.2",
+  "runtimeSourceCommit": "799a2e28e8666fee615742b1423099050098dc05",
+  "docfactoryCommit": "76fd0e00ebc303c2b1f9bfb4837100bd2ad04786",
+  "sha256": {
+    "LocalBrain_2.1.2_x64-setup.exe": "0bf1da7a736151648fbd75645f8890bdca6295c8ed77fc67c5f0545482dc6b87",
+    "LocalBrain_2.1.2_amd64.deb": "8da5b637f8fd6bd1e48c0df71ac87d7eadd98c35fca6e62f1a80b97440ecb28a",
+    "LocalBrain_2.1.2_amd64.AppImage": "56e26c15bad2915959d35130f56ec47cc9f47d4b8ec8fbf2aa6386d3bc456257"
+  },
+  "checks": {
+    "typescriptPassed": 1611,
+    "typescriptSkipped": 2,
+    "adaptersPassed": 14,
+    "dshWindowsPassed": 53,
+    "dshLinuxPassed": 53,
+    "rustWindowsPassed": 396,
+    "rustWindowsIgnored": 29,
+    "pythonFilesPassed": 45,
+    "pythonUnitCasesIncludingSkips": 369,
+    "description": "TypeScript 1611通过/2跳过，适配器14通过，Windows Rust396通过/29忽略，Windows与Linux DSH各53通过；完整Windows Python45文件通过（43个unittest文件369条用例，含条件跳过，另2个脚本通过）。Windows编码修复后已重跑Python和Rust，不借用Mac测试数字"
+  },
+  "windowsNative": {
+    "passed": true,
+    "compactionPassed": true,
+    "receiptCheckpointPassed": true,
+    "pressureReads": 2,
+    "writes": 1,
+    "sponsorFooterPassed": true
+  },
+  "windowsInstalled": {
+    "verifiedDshResources": true,
+    "timestamp": "2026-10-24T09:02:38.6102589+08:00",
+    "exitCode": 0,
+    "exeSha256": "919daa041a856dea06507004dc7a1df334bab77a3f8e7dbd8ae130a479e3fb1f",
+    "verifiedResources": true,
+    "installedPath": "D:\\LocalBrain",
+    "version": "2.1.2",
+    "configUnchanged": true,
+    "installerSha256": "0bf1da7a736151648fbd75645f8890bdca6295c8ed77fc67c5f0545482dc6b87"
+  },
+  "linux": [
+    {
+      "package": "deb",
+      "version": "2.1.2",
+      "bundleMarkerVerified": true,
+      "resourcesVerified": true,
+      "nativeNodeHostInitialized": true,
+      "startupSurvived20s": true,
+      "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+    },
+    {
+      "package": "appimage",
+      "version": "2.1.2",
+      "bundleMarkerVerified": true,
+      "resourcesVerified": true,
+      "nativeNodeHostInitialized": true,
+      "startupSurvived20s": true,
+      "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+    }
+  ],
+  "limitations": [
+    "Linux acceptance is Ubuntu22.04 WSL2+Xvfb, not bare-metal desktop/GPU inference",
+    "No Docker isolation, remote SSH/VPN or HTB end-to-end acceptance in this batch",
+    "Updater signatures are not Windows Authenticode",
+    "No upgrade to third-party model engines, weights, CUDA or drivers",
+    "Full automatic update installation and original twelve-question benchmark not rerun"
+  ],
+  "bundledRegistration": {
+    "windows": {
+      "passed": true,
+      "embeddedScriptSha256": "99fae8c820b8b53054300f072df211021bb787715591d192ee18676244d7b2ec",
+      "packageFilesUnchanged": true,
+      "sevenEntrypointsResolved": true,
+      "utf8Diagnostics": true
+    },
+    "linux-deb": {
+      "passed": true,
+      "embeddedScriptSha256": "99fae8c820b8b53054300f072df211021bb787715591d192ee18676244d7b2ec",
+      "packageFilesUnchanged": true,
+      "sevenEntrypointsResolved": true,
+      "utf8Diagnostics": true
+    },
+    "linux-appimage": {
+      "passed": true,
+      "embeddedScriptSha256": "99fae8c820b8b53054300f072df211021bb787715591d192ee18676244d7b2ec",
+      "packageFilesUnchanged": true,
+      "sevenEntrypointsResolved": true,
+      "utf8Diagnostics": true
+    }
+  },
+  "remoteCi": {
+    "runId": 40047103417,
+    "passed": false,
+    "stepsStarted": false,
+    "reason": "Account payments/spending restriction",
+    "releaseExceptionAuthorized": true,
+    "authorization": "User explicitly approved this batch on 2026-10-24, retaining CI limitations"
+  }
+}
