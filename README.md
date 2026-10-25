@@ -16,12 +16,40 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **2.1.6** · Mac 内嵌 Harness 适配到 0.2.1-rc.3，固定依赖并保留中文增量压缩、旧会话恢复与宿主工具授权。
+- **2.1.6** · 已就绪普通组件隐藏重复安装入口，批量安装只处理可安装项；离线数据库保留明确更新。
+- **2.1.6** · 卸载受依赖保护阻止时立即显示原生说明，列出全部未选依赖，不扩大删除范围。
 - **2.1.5** · Mac 新用户一键准备缺少的系统安装管理器、容器服务和构建工具，按依赖清单确认后继续安装组件。
-- **2.1.5** · 已有容器环境优先复用，离线服务单独启动；保留虚拟机资源设置、默认连接和现有容器，不重复安装已就绪依赖。
-- **2.1.5** · 运行环境集中为五类，一键补齐缺少环境、工具和离线数据；内置文档、网页及 Harness 内核随软件更新。
 - **2.1.5** · 下载支持暂停、保留分片和显式继续，归档按范围续传并核对 SHA-256；后台进度使用实际字节。
-- **2.1.5** · 下载、续传、缓存安装、卸载与缓存清理按实际状态显示；共享系统依赖和未安装组件不提供卸载。
 <!-- recent-features:end -->
+
+## Mac 2.1.6：更新 Harness 内核，修正重复安装和卸载提示
+
+Mac 2.1.6 已正式发布并完成本机安装；Windows/Linux 保留已发布的 2.1.3，由作者另行打包。内嵌 DSH 从 0.2.0-rc.2 适配到官方当前候选版 **0.2.1-rc.3**，依赖与锁文件精确固定。它随方寸智匣更新，不修改独立 Harness 客户端、账户或原来的模型配置。
+
+这次修复了“已经全部安装，单独勾选后却还能安装”的矛盾。在“设置 → 运行环境与诊断”，已就绪普通组件不再有单项安装入口，勾选后也不会启用批量安装。确实缺少的组件仍可一键补齐；离线数据库保留明确的“更新并校验”。
+
+![安装版：已安装项不会启用安装](screenshots/2.1.6-mac/installed-selection.png)
+
+卸载也会立即交代原因。只选 Python 而没有选择依赖它的环境时，系统确认框会列出全部未选依赖，本轮实测显示四项；程序不擅自替你勾选，更不会直接删除。Docker 等系统程序继续先检测本地：已有环境复用，离线时提供启动，缺少才准备安装。系统共享组件保留原版本，不提供卸载。
+
+![安装版卸载依赖提示](screenshots/2.1.6-mac/uninstall-blocker.png)
+
+内核更新遇到的实际兼容差异是技能插件新增了工作目录服务。适配后只传递宿主已选的目录身份，工具调用仍回到方寸智匣的授权执行器。技能按需读取、完全关闭、中文增量摘要和旧会话恢复继续保留。
+
+安装版使用已有 Splash 模型完成两轮、一次只读安全能力查询，实际读回 phase=2、dockerInstalled=true，没有扫描目标。随后点击“立即压缩”，持久日志记录了精简中文摘要、可信用户原文与真实回执，原始日志保留。另用旧版生成的会话升级恢复，验证工具只执行一次、不完整尾记录可以恢复；53 项内核回归在随包 Node 上通过，1632 项 TypeScript 与 14 项适配器测试通过，另有 2 项跳过。
+
+![安装版：工具调用与上下文压缩](screenshots/2.1.6-mac/compaction-final.png)
+
+构建包、DMG、更新归档和安装应用的 13,984 个文件、权限与链接一致，应用及更新包签名通过，四处正式配置校验值未变。本轮没有下载模型，也没有卸载环境模拟新机。原生按钮、实际工具结果与压缩终态均已读回；临时验收会话和原始副本已移出正式资料库，证据只留本地。Mac 仍是本地签名、未 Apple 公证；全新 Mac、Windows/Linux 和真实 HTB 不属于本轮实测。
+
+![系统共享服务保留已有版本](screenshots/2.1.6-mac/system-services.png)
+
+源码 GitHub 说明检查因账户付款／支出限制未启动；作者已于 2026-10-25 明确批准本次 Mac 2.1.6 例外发布。本地检查通过，不冒称远端 CI 通过。
+
+
+[本轮验收与限制](VERIFICATION-2.1.6-MAC.md)。
+
 
 ## Mac 2.1.5：新用户依赖与容器服务统一准备
 
@@ -106,7 +134,7 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows 2.1.3 · Mac 2.1.5 · Linux 2.1.3
+## 最新下载：Windows 2.1.3 · Mac 2.1.6 · Linux 2.1.3
 
 以下 2.1.3 为历史工具接入验收记录。
 
@@ -132,11 +160,11 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 2.1.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.5/LocalBrain_2.1.5_aarch64.dmg) · 已安装，原生界面验收通过，已发布；系统依赖复用、确认与取消已核对；本地签名、未 Apple 公证 |
+| Apple Silicon Mac 2.1.6 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_aarch64.dmg) · 已安装，原生界面验收通过，已发布；系统依赖复用、确认与取消已核对；本地签名、未 Apple 公证 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_x64-setup.exe) · 2.1.3 已安装；接入路由及顶部恢复入口已核对，更新签名通过，非 Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.AppImage) · 2.1.3；两包资源、包内DSH、WSL2+Xvfb启动及53条DSH测试通过；Debian已安装，预览支持，未代替裸机GPU验收 |
 
-[Mac 2.1.5 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.5) · [Mac 校验值](SHA256SUMS-2.1.5-MAC.txt) · [Windows/Linux 2.1.3 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.1.3_amd64.deb`。旧发行保留。
+[Mac 2.1.6 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6) · [Mac 校验值](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.3 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.1.3_amd64.deb`。旧发行保留。
 
 以下Windows 2.0.1及更早段落保留其发布时的历史状态；当前平台版本以上方下载表为准。
 
@@ -213,7 +241,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `35323326f50b065abc1e9c089b44b5cc9fe6cdf07625472452e1a6470175f407` |
+| Mac DMG | `5a52f1d0c240e3957d6b62a634267289d3e4d150309f0aa332a026c7466cb776` |
 | Windows安装程序 | `1a7cde8c28dc3964f61f5c645cb58e58532a5c43ecff8f17e8a9aaa39b7c81a1` |
 | Linux AppImage | `78a77457f4e8a1fbb0b9c002b131d24099369be670b99dd0616a436eeecbc35d` |
 | Linux Debian包 | `0de5ac2d3e9a086f5759e8c329ab7cbec94ab7d49c346e87ab38bcfb2a79638f` |

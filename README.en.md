@@ -14,12 +14,40 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.1.6** · Mac embeds the fixed Harness 0.2.1-rc.3 SDK with incremental Chinese compaction, old-session recovery and host-authorized tools.
+- **2.1.6** · Ready ordinary components hide redundant installation and batch install includes only installable items; offline databases retain explicit updates.
+- **2.1.6** · Dependency-blocked removal immediately shows a native explanation listing every unselected dependent without expanding deletion scope.
 - **2.1.5** · Mac newcomers can prepare missing package managers, container services and build tools in one dependency-reviewed setup before dependent components.
-- **2.1.5** · Reuse existing local containers and start offline services while preserving VM resources, the default connection and existing containers; ready prerequisites are not reinstalled.
-- **2.1.5** · Five runtime groups provide one-click setup for missing engines, tools and offline data; built-in document/web tools and the Harness core update with the app.
 - **2.1.5** · Pause downloads with retained chunks and explicit continuation, validate ranges and SHA-256, and show actual byte counts in background progress.
-- **2.1.5** · Download, resume, cached install, uninstall and cache cleanup follow actual state; shared system prerequisites and missing components have no uninstall control.
 <!-- recent-features:end -->
+
+## Mac 2.1.6: updated Harness core and clearer runtime maintenance
+
+Mac 2.1.6 is publicly released and installed. Windows/Linux retain published 2.1.3 builds and will be packaged separately by the author. The embedded DSH SDK moves from 0.2.0-rc.2 to the current official prerelease **0.2.1-rc.3**, with exact dependencies and a lockfile. It updates with LocalBrain without changing the standalone Harness client, accounts or existing model configuration.
+
+Ready ordinary components no longer offer an individual install action in Settings → Runtime and diagnostics. Selecting them does not enable batch installation. Missing components can still be prepared together, while offline databases retain explicit update-and-verify actions.
+
+![Installed selection does not enable installation](screenshots/2.1.6-mac/installed-selection.png)
+
+Dependency-blocked Python removal now immediately shows a native explanation listing every unselected dependent; this installed check listed four. The app neither selects extra components nor deletes them automatically. Shared Docker services are detected locally, reused when available, started when offline and installed only when missing. Shared system components retain their existing versions and have no removal action.
+
+![Native dependency-blocked removal](screenshots/2.1.6-mac/uninstall-blocker.png)
+
+The updated skill plugin introduced a working-directory service dependency. The adapter supplies only the host-owned directory identity; tools still return to LocalBrain’s authorized executor. On-demand skills, full opt-out, incremental Chinese summaries and old-session recovery remain available.
+
+The installed app used an existing Splash model for two rounds and one actual read-only security-capability query, returning phase=2 and dockerInstalled=true without scanning a target. Clicking Compact now produced a durable Chinese summary containing trusted user originals and actual receipts while preserving original records. A separate old-SDK session upgrade verified exactly-once tool execution and incomplete-tail recovery. All 53 core tests passed on the bundled Node runtime; 1632 TypeScript and 14 adapter tests passed, with 2 additional tests skipped.
+
+![Installed tool call and context compaction](screenshots/2.1.6-mac/compaction-final.png)
+
+All 13,984 files, permissions and links matched across the build, DMG, updater archive and installed app; application/updater signatures passed and four existing configuration hashes remained unchanged. No models were downloaded and no environments were removed to simulate a new machine. Native button, actual tool-result and compaction terminal-state readback passed. Temporary verification sessions and originals were removed from the regular stores, with evidence retained locally. The Mac app remains locally signed and not Apple-notarized. First-time Mac setup, Windows/Linux and real HTB are outside this round.
+
+![Existing shared system services retained](screenshots/2.1.6-mac/system-services.png)
+
+The GitHub source documentation job did not start because of account billing/spending restrictions. On 2026-10-25 the author explicitly authorized a Mac 2.1.6 exception based on local checks and the stated verification limits; this is not a remote CI pass.
+
+
+[Verification and limits](VERIFICATION-2.1.6-MAC.md)。
+
 
 ## Mac 2.1.5: prepare prerequisites and container services together
 
@@ -104,7 +132,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.1.3 · Mac 2.1.5 · Linux 2.1.3
+## Latest downloads：Windows 2.1.3 · Mac 2.1.6 · Linux 2.1.3
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -130,11 +158,11 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.1.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.5/LocalBrain_2.1.5_aarch64.dmg) · Installed, native UI checked and publicly released. Dependency reuse, confirmation and cancellation verified; local signing, not Apple-notarized |
+| Apple Silicon Mac 2.1.6 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_aarch64.dmg) · Installed, native UI checked and publicly released. Dependency reuse, confirmation and cancellation verified; local signing, not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_x64-setup.exe) · 2.1.3 installed; integration routing and top recovery UI checked; updater signed, not Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.AppImage) · 2.1.3; resources, packaged DSH, WSL2+Xvfb startup and 53 DSH tests passed; Debian installed, preview support, no bare-metal GPU acceptance |
 
-[Mac 2.1.5 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.5) · [Mac checksums](SHA256SUMS-2.1.5-MAC.txt) · [Windows/Linux 2.1.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.3_amd64.deb`. Older releases are retained.
+[Mac 2.1.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6) · [Mac checksums](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.3_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -211,7 +239,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `35323326f50b065abc1e9c089b44b5cc9fe6cdf07625472452e1a6470175f407` |
+| Mac DMG | `5a52f1d0c240e3957d6b62a634267289d3e4d150309f0aa332a026c7466cb776` |
 | Windows installer | `1a7cde8c28dc3964f61f5c645cb58e58532a5c43ecff8f17e8a9aaa39b7c81a1` |
 | Linux AppImage | `78a77457f4e8a1fbb0b9c002b131d24099369be670b99dd0616a436eeecbc35d` |
 | Linux Debian | `0de5ac2d3e9a086f5759e8c329ab7cbec94ab7d49c346e87ab38bcfb2a79638f` |
