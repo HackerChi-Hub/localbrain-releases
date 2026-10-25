@@ -14,12 +14,18 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.1.7** · Windows now recognizes standard Lib/site-packages, fixing false partially-installed image runtime status while preserving existing Torch, Diffusers and models.
 - **2.1.6** · Mac, Windows and Linux now embed Harness0.2.1-rc.3 with pinned dependencies, Chinese incremental compaction, old-session recovery and host-authorized tools.
 - **2.1.6** · Ready ordinary components hide redundant installation and batch install includes only installable items; offline databases retain explicit updates.
 - **2.1.6** · Dependency-blocked removal immediately shows a native explanation listing every unselected dependent without expanding deletion scope.
 - **2.1.5** · Mac newcomers can prepare missing package managers, container services and build tools in one dependency-reviewed setup before dependent components.
-- **2.1.5** · Pause downloads with retained chunks and explicit continuation, validate ranges and SHA-256, and show actual byte counts in background progress.
 <!-- recent-features:end -->
+
+## Windows / Linux 2.1.7: correct Windows image runtime status
+
+A missing Windows Lib/site-packages lookup made verified image environments appear partially installed. This release fixes detection while preserving Linux/macOS layouts, existing runtimes, models, CUDA and drivers. The native Windows package recognizes existing Torch/Diffusers as installed and offers no reinstall action. Both image pipelines and Torchvision import successfully and CUDA is available; actual image generation was not tested. Windows and WSL2 Debian are installed; Debian/AppImage resources and WSL2+Xvfb startup were checked. Mac retains 2.1.6. Source CI billing limits and this batch publication status are recorded in verification; standalone Harness 8K overflow remains unresolved.
+
+[Verification](VERIFICATION-2.1.7-WIN-LINUX.md) · [Windows/Linux downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.7)
 
 ## Windows / Linux 2.1.6 released
 
@@ -140,7 +146,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.1.6 · Mac 2.1.6 · Linux 2.1.6
+## Latest downloads：Windows 2.1.7 · Mac 2.1.6 · Linux 2.1.7
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -167,10 +173,10 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.1.6 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_aarch64.dmg) · Installed, native UI checked and publicly released. Dependency reuse, confirmation and cancellation verified; local signing, not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_x64-setup.exe) · 2.1.6 installed; pinned DSH0.2.1-rc.3, native runtime center and a real model/tool roundtrip passed; updater signed, not Authenticode |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_amd64.AppImage) · 2.1.6; resources, packaged host, WSL2+Xvfb startup and53 DSH tests passed; Debian installed, preview support, no bare-metal GPU acceptance |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.7/LocalBrain_2.1.7_x64-setup.exe) · Installed; see this batch verification and limitations above|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.7/LocalBrain_2.1.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.7/LocalBrain_2.1.7_amd64.AppImage) · Installed; see this batch verification and limitations above|
 
-[Mac 2.1.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6) · [Mac checksums](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.6_amd64.deb`. Older releases are retained.
+[Mac 2.1.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6) · [Mac checksums](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.7). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.7_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -248,9 +254,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `5a52f1d0c240e3957d6b62a634267289d3e4d150309f0aa332a026c7466cb776` |
-| Windows installer | `1fb51a2bd2a40464bc7327114411225a20ae344a609c563a7a21a91057a99113` |
-| Linux AppImage | `1882e35d2ac79cfa0bec2e5236714bca11b4a9141e01c5a16bb4a343f98ee688` |
-| Linux Debian | `8daa70485a2bba7c2323b581b4cfa8be6ffea5c9c56242d269ea21c9de176758` |
+| Windows installer | `304b9d00203c8cdf94ba7bf210510ee764a01d61f6c67f60a3eeb1e902141a43` |
+| Linux AppImage | `dd51274347276752e36ec42fb9e6fc208387ba08693ad67cf4d6ac0faa76a859` |
+| Linux Debian | `07e0d22feab9f4b8d34832bfe3e79832f4b628eefb8bbc8947e6d79e82aee06d` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

@@ -1,0 +1,89 @@
+{
+  "version": "2.1.7",
+  "runtimeSourceCommit": "f646813d199df840f1fad8698557afe9fda67104",
+  "sha256": {
+    "LocalBrain_2.1.7_x64-setup.exe": "304b9d00203c8cdf94ba7bf210510ee764a01d61f6c67f60a3eeb1e902141a43",
+    "LocalBrain_2.1.7_amd64.deb": "07e0d22feab9f4b8d34832bfe3e79832f4b628eefb8bbc8947e6d79e82aee06d",
+    "LocalBrain_2.1.7_amd64.AppImage": "dd51274347276752e36ec42fb9e6fc208387ba08693ad67cf4d6ac0faa76a859"
+  },
+  "checks": {
+    "rustWindowsPassed": 428,
+    "rustWindowsIgnored": 34,
+    "typescriptPassed": 1632,
+    "typescriptSkipped": 2,
+    "adaptersPassed": 14,
+    "dshWindowsPassed": 53,
+    "dshLinuxPassed": 53,
+    "linuxExactDetectionFunctionLayoutTestPassed": true,
+    "nativeWindowsTorchInstalledStatus": true,
+    "realTorchImportsAndCudaPassed": true
+  },
+  "windows": {
+    "installed": true,
+    "configurationsPreserved": true,
+    "binaryMatchesInstaller": true
+  },
+  "nativeAcceptance": {
+    "version": "2.1.7",
+    "torchState": "managed",
+    "torch": true,
+    "diffusers": true,
+    "nativeTorchRow": "图像生成\n已安装 · 方寸智匣管理\n\n独立 Torch 与 Diffusers 环境；GPU 支持按平台区分。\n\n查看位置与来源\n校验\n卸载组件",
+    "passed": true
+  },
+  "linux": [
+    {
+      "package": "deb",
+      "version": "2.1.7",
+      "bundleMarkerVerified": true,
+      "resourcesVerified": true,
+      "nativeNodeHostInitialized": true,
+      "startupSurvived20s": true,
+      "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+    },
+    {
+      "package": "appimage",
+      "version": "2.1.7",
+      "bundleMarkerVerified": true,
+      "resourcesVerified": true,
+      "nativeNodeHostInitialized": true,
+      "startupSurvived20s": true,
+      "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+    }
+  ],
+  "linuxInstalled": {
+    "version": "2.1.7",
+    "passed": true,
+    "scope": "Ubuntu22.04 WSL2, no bare-metal GPU acceptance",
+    "binaryMatchesDebian": true,
+    "installedVersion": "local-brain\t2.1.7"
+  },
+  "ci": "source job40203809020 did not start due payment/spending limit",
+  "publication": "approved for public release; online verification pending",
+  "limitations": [
+    "No actual image generation test",
+    "No bare-metal Linux GPU acceptance",
+    "Full standalone Harness PolyStrata8K overflow remains unresolved",
+    "No full Python suite or old12-task benchmark rerun",
+    "Updater signatures are not Windows Authenticode",
+    "No third-party engine, model, CUDA or driver upgrade"
+  ],
+  "testEnvironmentNote": "Initial main source DSH tests used stale ignored rc.2 dependencies and failed; actual Windows packaging workspace with bundled rc.3 passed53; Linux independently passed53.",
+  "ciExceptionApproval": {
+    "version": "2.1.7",
+    "approved": true,
+    "date": "2026-10-25",
+    "userReply": "批准本批 Windows/Linux 2.1.7 例外发布",
+    "scope": "Windows/Linux2.1.7 packages, README and Blog, with source CI billing restriction recorded"
+  },
+  "windowsPackageVerification": {
+    "passed": true,
+    "version": "2.1.7",
+    "nodeVersion": "22.23.3",
+    "nodeSha256Verified": true,
+    "directDshPinsVerified": 18,
+    "docfactoryFilesVerified": 72,
+    "docfactoryBaselinePreservedAndMatchesLinuxArchive": true,
+    "nativeTestExecutableMatchesInstaller": true
+  }
+}

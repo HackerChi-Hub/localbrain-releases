@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "version": "2.1.7",
+  "allAssetBytesReadBack": true,
+  "downloadedAssetCount": 13,
+  "allThreePackageSignaturesVerified": true,
+  "macManifestByteIdentical": true,
+  "macMergedEntryPreserved": true,
+  "previousReleaseAssetsUnmodified": true,
+  "release": "https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.7"
+}

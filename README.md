@@ -16,12 +16,18 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **2.1.7** · Windows 修正图像环境已安装却被误报为待修复的问题；识别标准 Lib/site-packages，保留已有 Torch、Diffusers 和模型。
 - **2.1.6** · Mac、Windows、Linux 内嵌 Harness 均适配到0.2.1-rc.3，固定依赖并保留中文增量压缩、旧会话恢复与宿主工具授权。
 - **2.1.6** · 已就绪普通组件隐藏重复安装入口，批量安装只处理可安装项；离线数据库保留明确更新。
 - **2.1.6** · 卸载受依赖保护阻止时立即显示原生说明，列出全部未选依赖，不扩大删除范围。
 - **2.1.5** · Mac 新用户一键准备缺少的系统安装管理器、容器服务和构建工具，按依赖清单确认后继续安装组件。
-- **2.1.5** · 下载支持暂停、保留分片和显式继续，归档按范围续传并核对 SHA-256；后台进度使用实际字节。
 <!-- recent-features:end -->
+
+## Windows / Linux 2.1.7：修正 Windows 图像环境误报
+
+图像生成安装成功后仍显示“部分安装 · 待修复”，原因是状态检测漏查 Windows 的 Lib/site-packages。本版修正该路径，保留 Linux/macOS 的目录识别；不重装已就绪环境，不升级模型、CUDA 或驱动。Windows 安装包已核对原生状态：已有 Torch/Diffusers 显示已安装且不提供重复安装。现有环境两个图像流水线与 Torchvision 可导入、CUDA 可用；未以导入成功冒称真实出图通过。Windows 与 WSL2 Debian 已安装，Linux Debian/AppImage 已完成 WSL2+Xvfb 启动与资源检查，Mac 保留 2.1.6。当前源码 CI 付款/额度限制和本批发布状态见验收记录；既有外部 Harness 8K 超窗问题仍保留。
+
+[Verification](VERIFICATION-2.1.7-WIN-LINUX.md) · [Windows/Linux downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.7)
 
 ## Windows / Linux 2.1.6 已发布
 
@@ -142,7 +148,7 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows 2.1.6 · Mac 2.1.6 · Linux 2.1.6
+## 最新下载：Windows 2.1.7 · Mac 2.1.6 · Linux 2.1.7
 
 以下 2.1.3 为历史工具接入验收记录。
 
@@ -169,10 +175,10 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 | 平台 | 安装包与状态 |
 | --- | --- |
 | Apple Silicon Mac 2.1.6 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_aarch64.dmg) · 已安装，原生界面验收通过，已发布；系统依赖复用、确认与取消已核对；本地签名、未 Apple 公证 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_x64-setup.exe) · 2.1.6已安装；DSH0.2.1-rc.3、原生环境中心与真实模型工具往返通过；更新签名通过，非Authenticode |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_amd64.AppImage) · 2.1.6；两包资源、包内宿主、WSL2+Xvfb启动及53条DSH测试通过；Debian已安装，预览支持，未代替裸机GPU验收 |
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.7/LocalBrain_2.1.7_x64-setup.exe) · 已安装；本批验收与限制见上方记录|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.7/LocalBrain_2.1.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.7/LocalBrain_2.1.7_amd64.AppImage) · 已安装；本批验收与限制见上方记录|
 
-[Mac 2.1.6 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6) · [Mac 校验值](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.6 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.1.6_amd64.deb`。旧发行保留。
+[Mac 2.1.6 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6) · [Mac 校验值](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.6 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.7)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.1.7_amd64.deb`。旧发行保留。
 
 以下Windows 2.0.1及更早段落保留其发布时的历史状态；当前平台版本以上方下载表为准。
 
@@ -250,9 +256,9 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 | 文件 | 散列 |
 | --- | --- |
 | Mac DMG | `5a52f1d0c240e3957d6b62a634267289d3e4d150309f0aa332a026c7466cb776` |
-| Windows安装程序 | `1fb51a2bd2a40464bc7327114411225a20ae344a609c563a7a21a91057a99113` |
-| Linux AppImage | `1882e35d2ac79cfa0bec2e5236714bca11b4a9141e01c5a16bb4a343f98ee688` |
-| Linux Debian包 | `8daa70485a2bba7c2323b581b4cfa8be6ffea5c9c56242d269ea21c9de176758` |
+| Windows安装程序 | `304b9d00203c8cdf94ba7bf210510ee764a01d61f6c67f60a3eeb1e902141a43` |
+| Linux AppImage | `dd51274347276752e36ec42fb9e6fc208387ba08693ad67cf4d6ac0faa76a859` |
+| Linux Debian包 | `07e0d22feab9f4b8d34832bfe3e79832f4b628eefb8bbc8947e6d79e82aee06d` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 
