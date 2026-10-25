@@ -16,14 +16,39 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
-- **2.1.3** · Windows/Linux 接入页顶部补回一键恢复接入；逐客户端报告锁定与冲突，保留原有配置和单项撤销。
-- **2.1.3** · Windows/Linux 本地模型接入识别实际运行的 PolyStrata/VLM，导出真实服务模型名和窗口，拒绝离线或过期写入。
-- **2.1.3** · 恢复 Codex、Claude Code 的 MCP 一键接入，保留 DeepSeek Harness；只添加工具，不改模型、提供方和其他配置。
-- **2.1.3** · 每个客户端独立撤销工具接入，核对外部改动冲突；Harness 工具撤销保留模型块，不读取旧版整文件恢复点。
-- **2.1.2** · 修复只读程序资源导致的 MCP 安装失败：向受管 Python 环境注册并验证来源；Windows 中文路径与验证日志显式使用 UTF-8。
+- **2.1.5** · Mac 新用户一键准备缺少的系统安装管理器、容器服务和构建工具，按依赖清单确认后继续安装组件。
+- **2.1.5** · 已有容器环境优先复用，离线服务单独启动；保留虚拟机资源设置、默认连接和现有容器，不重复安装已就绪依赖。
+- **2.1.5** · 运行环境集中为五类，一键补齐缺少环境、工具和离线数据；内置文档、网页及 Harness 内核随软件更新。
+- **2.1.5** · 下载支持暂停、保留分片和显式继续，归档按范围续传并核对 SHA-256；后台进度使用实际字节。
+- **2.1.5** · 下载、续传、缓存安装、卸载与缓存清理按实际状态显示；共享系统依赖和未安装组件不提供卸载。
 <!-- recent-features:end -->
 
-## Mac 2.1.4 候选：一键补齐运行环境（待发布）
+## Mac 2.1.5：新用户依赖与容器服务统一准备
+
+Mac 2.1.5 已正式发布，完成打包、安装及本轮原生界面验收；Windows/Linux 保留各自已发布的 2.1.3，由作者另行打包。
+
+新用户打开“设置 → 运行环境与诊断”，点击“一键安装缺少组件”，核对清单后开始。程序先准备缺少的系统安装管理器、构建工具和容器服务，再准备依赖它们的环境。一项失败后停止后续，修复后重新补齐；已就绪组件会跳过。容器服务只有连接成功才标记就绪，已安装但离线时提供启动入口。
+
+![2.1.5 安装版运行环境管理](screenshots/2.1.5-mac/runtime-overview.png)
+
+已有本地 Docker Desktop 或 Colima 会优先复用，保留默认连接、虚拟机资源参数和现有容器。系统共享组件不提供卸载；Python、FFmpeg、模型引擎和工具使用各自受管环境。Mac 缺少 Homebrew 时下载校验官方安装包，再交给系统安装器。首次许可、管理员授权和重启仍需用户确认。
+
+![系统共享依赖保留原版本](screenshots/2.1.5-mac/system-services.png)
+
+下载中可暂停并保留分片，恢复后显式继续；解压、pip 或容器步骤在当前组件完成后暂停后续。没有缓存显示下载，有分片显示续传，有完整归档显示使用缓存安装；只对确认已安装的受管组件显示卸载，有缓存才显示清理。内置文档、网页工具和 Harness 内核随软件更新，不再单列维护行。
+
+![筛选、批量选择与条件按钮](screenshots/2.1.5-mac/filter-selection.png)
+
+本轮安装版已核对五类组件、缺少项 0、三项系统依赖无卸载、筛选、批量选择、安装范围确认和取消。取消后未执行安装。此前构建、镜像、更新包与安装应用的 12,995 项文件及链接一致；应用及更新签名通过。真实复用已有环境、官方安装包下载/签名/缓存复用通过。无 Homebrew 全新 Mac、Windows/Linux 首次系统安装仍未实装验收；本轮没有卸载环境模拟新机，也没有下载模型或停止既有容器。
+
+![安装范围确认，取消不执行](screenshots/2.1.5-mac/install-confirmation.png)
+
+Mac 沿用本地签名，未 Apple 公证。源码仓 GitHub 说明检查因账户付款／支出限制未启动；作者已明确批准本次 Mac 2.1.5 例外发布；本地通过不冒称远端 CI 通过。详见[本轮验收](VERIFICATION-2.1.5-MAC.md)及[新用户依赖步骤](SYSTEM_PREREQUISITES_2.1.5.md)。
+
+[下载 Mac 2.1.5 安装包（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.5/LocalBrain_2.1.5_aarch64.dmg)
+
+
+## 历史候选记录：Mac 2.1.4 候选：一键补齐运行环境（待发布）
 
 2026-10-25 候选修订增加运行环境暂停、待办恢复与显式继续，Splash 暂停保留原权重分片；下载、断点续传、使用缓存安装、卸载和缓存清理按实际状态显示。小文件与后台任务使用真实字节单位，暂停后撤下旧速度。官方约 25 MB 归档的准确偏移续传、完整校验、离线复用和清理已实测，未下载大模型。见[使用方式和验收边界](DOWNLOAD_CONTROLS_2.1.4.md)。下图为独立交互预览，安装/卸载明确模拟，清理后恢复下载按钮。正式安装包仍为 2.1.3。
 
@@ -81,7 +106,9 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows 2.1.3 · Mac 2.1.3 · Linux 2.1.3
+## 最新下载：Windows 2.1.3 · Mac 2.1.5 · Linux 2.1.3
+
+以下 2.1.3 为历史工具接入验收记录。
 
 Mac 2.1.3 恢复 Codex、Claude Code 的 MCP 一键工具接入，保留 DeepSeek Harness，不恢复 OpenCode。进入「集成」，按客户端复制、写入或单独撤销；只操作方寸智匣工具，保留模型、提供方、其它 MCP 和项目设置。配置默认收起，写入后在客户端新会话生效；桌面客户端运行时会提示先结束任务再退出，不自动关闭客户端。
 
@@ -105,11 +132,11 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 2.1.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_aarch64.dmg) · 已安装并发布；三个客户端工具入口、协议自检及 Codex 真实调用通过。Claude Code 模型调用停测；临时签名、未 Apple 公证 |
+| Apple Silicon Mac 2.1.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.5/LocalBrain_2.1.5_aarch64.dmg) · 已安装，原生界面验收通过，已发布；系统依赖复用、确认与取消已核对；本地签名、未 Apple 公证 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_x64-setup.exe) · 2.1.3 已安装；接入路由及顶部恢复入口已核对，更新签名通过，非 Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.AppImage) · 2.1.3；两包资源、包内DSH、WSL2+Xvfb启动及53条DSH测试通过；Debian已安装，预览支持，未代替裸机GPU验收 |
 
-[Mac 2.1.3 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3) · [Mac 校验值](SHA256SUMS-2.1.3-MAC.txt) · [Windows/Linux 2.1.3 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.1.3_amd64.deb`。旧发行保留。
+[Mac 2.1.5 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.5) · [Mac 校验值](SHA256SUMS-2.1.5-MAC.txt) · [Windows/Linux 2.1.3 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.1.3_amd64.deb`。旧发行保留。
 
 以下Windows 2.0.1及更早段落保留其发布时的历史状态；当前平台版本以上方下载表为准。
 
@@ -186,7 +213,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `023934d617c93cb50cd3dd41f55bd7ad672d29983548000cfb78d1f7985417b8` |
+| Mac DMG | `35323326f50b065abc1e9c089b44b5cc9fe6cdf07625472452e1a6470175f407` |
 | Windows安装程序 | `1a7cde8c28dc3964f61f5c645cb58e58532a5c43ecff8f17e8a9aaa39b7c81a1` |
 | Linux AppImage | `78a77457f4e8a1fbb0b9c002b131d24099369be670b99dd0616a436eeecbc35d` |
 | Linux Debian包 | `0de5ac2d3e9a086f5759e8c329ab7cbec94ab7d49c346e87ab38bcfb2a79638f` |

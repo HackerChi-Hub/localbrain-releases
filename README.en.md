@@ -14,14 +14,39 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **2.1.3** · Windows/Linux restore the top-level one-click integration recovery, reporting client locks and conflicts separately while preserving existing settings and individual undo.
-- **2.1.3** · Windows/Linux local-model integration uses the running PolyStrata/VLM service, exports its real model ID and context window, and rejects offline or stale writes.
-- **2.1.3** · Restore one-click MCP integration for Codex and Claude Code alongside DeepSeek Harness; add tools without changing models, providers or other settings.
-- **2.1.3** · Undo tools separately for each client with external-edit conflict checks; Harness tool undo keeps model blocks and does not use legacy full-file restore points.
-- **2.1.2** · Fix MCP installation with read-only app resources by registering and validating managed Python paths; Windows Unicode paths and verification logs explicitly use UTF-8.
+- **2.1.5** · Mac newcomers can prepare missing package managers, container services and build tools in one dependency-reviewed setup before dependent components.
+- **2.1.5** · Reuse existing local containers and start offline services while preserving VM resources, the default connection and existing containers; ready prerequisites are not reinstalled.
+- **2.1.5** · Five runtime groups provide one-click setup for missing engines, tools and offline data; built-in document/web tools and the Harness core update with the app.
+- **2.1.5** · Pause downloads with retained chunks and explicit continuation, validate ranges and SHA-256, and show actual byte counts in background progress.
+- **2.1.5** · Download, resume, cached install, uninstall and cache cleanup follow actual state; shared system prerequisites and missing components have no uninstall control.
 <!-- recent-features:end -->
 
-## Mac 2.1.4 candidate: one-click runtime setup (pending publication)
+## Mac 2.1.5: prepare prerequisites and container services together
+
+Mac 2.1.5 is publicly released following packaging, installation and targeted native-interface checks. Windows and Linux retain their published 2.1.3 packages, with new builds handled separately by the author.
+
+Open Settings → Runtime and diagnostics → Install missing components, review the scope and confirm. Missing package managers, build tools and container services are prepared before dependent environments. A failure stops subsequent components; retry fills what is still missing and skips ready items. Containers count as ready only after a successful connection; installed but offline services offer a start action.
+
+![Installed 2.1.5 runtime management](screenshots/2.1.5-mac/runtime-overview.png)
+
+Existing local Docker Desktop or Colima services are reused, preserving the default connection, VM resources and running containers. Shared system components have no removal control; Python, FFmpeg, engines and tools retain separate managed environments. On Macs without Homebrew, the app downloads and verifies the official package before handing it to the system installer. Licensing, administrator approval and restarts still require user action.
+
+![Shared system prerequisites retain existing versions](screenshots/2.1.5-mac/system-services.png)
+
+Downloads can pause with partial files retained and resume explicitly. Extraction, pip and container steps finish the current component before later steps pause. Controls distinguish downloading, resuming and installing a complete cached archive; removal appears only for confirmed installed managed components and cleanup only when cache exists. Built-in document/web tools and the Harness core update with the app without separate maintenance rows.
+
+![Filtering, batch selection and conditional controls](screenshots/2.1.5-mac/filter-selection.png)
+
+Native checks covered five component groups, zero missing items, no removal for the three shared dependencies, filtering, selection, installation-scope confirmation and cancellation. Cancellation did not start installation. The build, disk image, updater archive and installed application matched across 12,995 files and links; application and updater signatures passed. Existing-environment reuse and official-installer download/signature/offline-cache checks passed. First-time setup on a Mac without Homebrew and native Windows/Linux system installation remain untested. Existing environments were not removed to simulate a new machine; no models were downloaded or containers stopped.
+
+![Review installation scope before execution](screenshots/2.1.5-mac/install-confirmation.png)
+
+The Mac app retains local signing and is not Apple-notarized. The GitHub source documentation job did not start because of account billing/spending limits; the author explicitly approved a Mac 2.1.5 release exception. Local checks are not a remote CI pass. See [verification](VERIFICATION-2.1.5-MAC.md) and [prerequisite setup](SYSTEM_PREREQUISITES_2.1.5.md).
+
+[Download Mac 2.1.5 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.5/LocalBrain_2.1.5_aarch64.dmg)
+
+
+## Historical candidate record: Mac 2.1.4 candidate: one-click runtime setup (pending publication)
 
 The 2026-10-25 candidate adds runtime pause, persisted pending items and explicit continuation, plus Splash pause that preserves original weight fragments. Download, resume, cached installation, removal and cache-cleanup controls follow actual state. Small files and background tasks use real byte units and discard stale speeds on pause. An official approximately 25 MB archive passed exact-offset resumption, full verification, offline reuse and cleanup without downloading a large model. See [usage and verification limits](DOWNLOAD_CONTROLS_2.1.4.md). The independent UI preview below explicitly simulates installation/removal and shows download returning after cache cleanup. Public installers remain at 2.1.3.
 
@@ -79,7 +104,9 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.1.3 · Mac 2.1.3 · Linux 2.1.3
+## Latest downloads：Windows 2.1.3 · Mac 2.1.5 · Linux 2.1.3
+
+The following 2.1.3 tool-integration checks are historical.
 
 Mac 2.1.3 restores one-click MCP tools for Codex and Claude Code alongside DeepSeek Harness. OpenCode is not restored. In Integrations, copy, write or undo tools separately for each client. Only LocalBrain tool entries are changed; models, providers, other MCP entries and project settings are preserved. Configuration previews are collapsed by default; new sessions pick up writes. Running desktop clients must be closed after current work finishes; LocalBrain does not terminate them.
 
@@ -103,11 +130,11 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.1.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_aarch64.dmg) · Installed and publicly released; three client tool cards, protocol discovery and a real Codex call passed. Claude Code model-call testing stopped; ad-hoc signed, not Apple-notarized |
+| Apple Silicon Mac 2.1.5 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.5/LocalBrain_2.1.5_aarch64.dmg) · Installed, native UI checked and publicly released. Dependency reuse, confirmation and cancellation verified; local signing, not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_x64-setup.exe) · 2.1.3 installed; integration routing and top recovery UI checked; updater signed, not Authenticode |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.AppImage) · 2.1.3; resources, packaged DSH, WSL2+Xvfb startup and 53 DSH tests passed; Debian installed, preview support, no bare-metal GPU acceptance |
 
-[Mac 2.1.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3) · [Mac checksums](SHA256SUMS-2.1.3-MAC.txt) · [Windows/Linux 2.1.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.3_amd64.deb`. Older releases are retained.
+[Mac 2.1.5 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.5) · [Mac checksums](SHA256SUMS-2.1.5-MAC.txt) · [Windows/Linux 2.1.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.3_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -184,7 +211,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `023934d617c93cb50cd3dd41f55bd7ad672d29983548000cfb78d1f7985417b8` |
+| Mac DMG | `35323326f50b065abc1e9c089b44b5cc9fe6cdf07625472452e1a6470175f407` |
 | Windows installer | `1a7cde8c28dc3964f61f5c645cb58e58532a5c43ecff8f17e8a9aaa39b7c81a1` |
 | Linux AppImage | `78a77457f4e8a1fbb0b9c002b131d24099369be670b99dd0616a436eeecbc35d` |
 | Linux Debian | `0de5ac2d3e9a086f5759e8c329ab7cbec94ab7d49c346e87ab38bcfb2a79638f` |
