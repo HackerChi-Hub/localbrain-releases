@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "release": "https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6",
+  "downloadedAssets": [
+    {
+      "name": "BUILD-2.1.6-WIN-LINUX.json",
+      "sha256": "890bf7afd9c2368cb00a18bf80c64d5e5167a34193ba008b4c9ba373854c62d4"
+    },
+    {
+      "name": "LocalBrain_2.1.6_amd64.AppImage",
+      "sha256": "1882e35d2ac79cfa0bec2e5236714bca11b4a9141e01c5a16bb4a343f98ee688"
+    },
+    {
+      "name": "LocalBrain_2.1.6_amd64.AppImage.sig",
+      "sha256": "1b831deac49cde79708ff52238270d68a8d909cedba687611c775e5d40baa2ed"
+    },
+    {
+      "name": "LocalBrain_2.1.6_amd64.deb",
+      "sha256": "8daa70485a2bba7c2323b581b4cfa8be6ffea5c9c56242d269ea21c9de176758"
+    },
+    {
+      "name": "LocalBrain_2.1.6_amd64.deb.sig",
+      "sha256": "8c47da2ddbee0a507f8529456b4d133355ca7432b11351c8d28d1f8c7d75d3bd"
+    },
+    {
+      "name": "LocalBrain_2.1.6_x64-setup.exe",
+      "sha256": "1fb51a2bd2a40464bc7327114411225a20ae344a609c563a7a21a91057a99113"
+    },
+    {
+      "name": "LocalBrain_2.1.6_x64-setup.exe.sig",
+      "sha256": "df070424f6b211ff8a8d37b5c5867139d73aecec59f5b1fc4c0b4dd73b482c33"
+    },
+    {
+      "name": "SHA256SUMS-2.1.6-WIN-LINUX.txt",
+      "sha256": "612315b46d385c1ead13b13a4fd225fbada195c2c1cc0d566d932d27b794c080"
+    },
+    {
+      "name": "VERIFICATION-2.1.6-WIN-LINUX.md",
+      "sha256": "f255fffd41d758a89d1d089d21c69be46864097b01f995dc4d2ff926acbb88cc"
+    }
+  ],
+  "downloadedAssetsVerified": 9,
+  "allThreeDownloadedPackageSignaturesVerified": true,
+  "updaterManifestsReadbackVerified": true,
+  "macAssetsPreserved": true,
+  "macManifestByteIdentical": true,
+  "legacyMacEntryPreserved": true,
+  "linuxDebianAndAppImageTargetsDistinct": true
+}
