@@ -14,12 +14,20 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **2.1.6** · Mac embeds the fixed Harness 0.2.1-rc.3 SDK with incremental Chinese compaction, old-session recovery and host-authorized tools.
+- **2.1.6** · Mac, Windows and Linux now embed Harness0.2.1-rc.3 with pinned dependencies, Chinese incremental compaction, old-session recovery and host-authorized tools.
 - **2.1.6** · Ready ordinary components hide redundant installation and batch install includes only installable items; offline databases retain explicit updates.
 - **2.1.6** · Dependency-blocked removal immediately shows a native explanation listing every unselected dependent without expanding deletion scope.
 - **2.1.5** · Mac newcomers can prepare missing package managers, container services and build tools in one dependency-reviewed setup before dependent components.
 - **2.1.5** · Pause downloads with retained chunks and explicit continuation, validate ranges and SHA-256, and show actual byte counts in background progress.
 <!-- recent-features:end -->
+
+## Windows / Linux 2.1.6 released
+
+Windows and WSL2 Debian are installed. This release adds runtime management, download pause/resume and pinned Harness0.2.1-rc.3; Node22.23.3, models and drivers are retained. Native Windows runtime-center rendering and a real read-only PolyStrata35B tool roundtrip passed. Both platforms passed53 DSH tests and old-session recovery without tool replay. Windows Rust:427 passed/34 ignored; TypeScript:1632 passed/2 skipped; adapters:14 passed; all45 Python test files and7 additional security tests passed. All three updater signatures were verified. The author explicitly approved this batch despite source CI billing/spending limits; online source CI is not represented as passing. Linux acceptance is WSL2/Xvfb only; standalone Harness8K overflow and full image/tool task limits remain documented.
+
+[Windows/Linux verification](VERIFICATION-2.1.6-WIN-LINUX.md) · [Known issues](KNOWN-ISSUES-DSH-LOCAL-MODELS.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6)
+
+Initial Mac and earlier Windows/Linux sections below retain their historical scope; this section and the download table state current platform versions.
 
 ## Mac 2.1.6: updated Harness core and clearer runtime maintenance
 
@@ -132,7 +140,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.1.3 · Mac 2.1.6 · Linux 2.1.3
+## Latest downloads：Windows 2.1.6 · Mac 2.1.6 · Linux 2.1.6
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -159,10 +167,10 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.1.6 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_aarch64.dmg) · Installed, native UI checked and publicly released. Dependency reuse, confirmation and cancellation verified; local signing, not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_x64-setup.exe) · 2.1.3 installed; integration routing and top recovery UI checked; updater signed, not Authenticode |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.AppImage) · 2.1.3; resources, packaged DSH, WSL2+Xvfb startup and 53 DSH tests passed; Debian installed, preview support, no bare-metal GPU acceptance |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_x64-setup.exe) · 2.1.6 installed; pinned DSH0.2.1-rc.3, native runtime center and a real model/tool roundtrip passed; updater signed, not Authenticode |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_amd64.AppImage) · 2.1.6; resources, packaged host, WSL2+Xvfb startup and53 DSH tests passed; Debian installed, preview support, no bare-metal GPU acceptance |
 
-[Mac 2.1.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6) · [Mac checksums](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.3_amd64.deb`. Older releases are retained.
+[Mac 2.1.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6) · [Mac checksums](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.6_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -240,9 +248,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `5a52f1d0c240e3957d6b62a634267289d3e4d150309f0aa332a026c7466cb776` |
-| Windows installer | `1a7cde8c28dc3964f61f5c645cb58e58532a5c43ecff8f17e8a9aaa39b7c81a1` |
-| Linux AppImage | `78a77457f4e8a1fbb0b9c002b131d24099369be670b99dd0616a436eeecbc35d` |
-| Linux Debian | `0de5ac2d3e9a086f5759e8c329ab7cbec94ab7d49c346e87ab38bcfb2a79638f` |
+| Windows installer | `1fb51a2bd2a40464bc7327114411225a20ae344a609c563a7a21a91057a99113` |
+| Linux AppImage | `1882e35d2ac79cfa0bec2e5236714bca11b4a9141e01c5a16bb4a343f98ee688` |
+| Linux Debian | `8daa70485a2bba7c2323b581b4cfa8be6ffea5c9c56242d269ea21c9de176758` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

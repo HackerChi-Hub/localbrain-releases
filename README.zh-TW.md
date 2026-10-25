@@ -14,12 +14,20 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
-- **2.1.6** · Mac 內嵌 Harness 適配至 0.2.1-rc.3，固定相依版本並保留中文增量壓縮、舊會話恢復與宿主工具授權。
+- **2.1.6** · Mac、Windows、Linux 內嵌 Harness 均適配至0.2.1-rc.3，固定相依版本並保留中文增量壓縮、舊會話恢復及宿主工具授權。
 - **2.1.6** · 已就緒一般元件隱藏重複安裝入口，批次安裝只處理可安裝項目；離線資料庫保留明確更新。
 - **2.1.6** · 移除遭相依保護攔截時立即顯示原生說明，列出全部未選相依項，不擴大刪除範圍。
 - **2.1.5** · Mac 新使用者可一鍵準備缺少的系統安裝管理器、容器服務及建置工具，確認相依清單後繼續安裝元件。
 - **2.1.5** · 下載支援暫停、保留分片及明確繼續，封存檔依範圍續傳並校驗 SHA-256；背景進度採實際位元組。
 <!-- recent-features:end -->
+
+## Windows / Linux 2.1.6 已發布
+
+Windows及WSL2 Debian已升級安裝。新版包含執行環境管理、下載暫停/續傳及固定0.2.1-rc.3 DSH核心；保留Node22.23.3、模型與驅動。Windows原生環境中心渲染及既有PolyStrata35B的真實唯讀工具往返通過；兩平台各53項DSH回歸及舊會話不重放遷移通過。Windows Rust427通過/34略過，TypeScript1632通過/2略過、介面卡14通過，完整Python45檔及額外安全7項通過。三個安裝包更新簽章已驗證。作者已明確批准本批原始碼CI付款/額度限制例外，不冒稱線上原始碼CI通過。Linux僅WSL2/Xvfb驗收，完整外部Harness8K超限及圖片/工具任務邊界仍見已知問題。
+
+[Windows/Linux verification](VERIFICATION-2.1.6-WIN-LINUX.md) · [Known issues](KNOWN-ISSUES-DSH-LOCAL-MODELS.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6)
+
+下方Mac首次發布與舊Windows/Linux段落保留當時記錄，目前平台狀態以本節及下載表為準。
 
 ## Mac 2.1.6：更新 Harness 核心，修正重複安裝與移除提示
 
@@ -132,7 +140,7 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.1.3 · Mac 2.1.6 · Linux 2.1.3
+## 最新下載：Windows 2.1.6 · Mac 2.1.6 · Linux 2.1.6
 
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
@@ -159,10 +167,10 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac 2.1.6 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_aarch64.dmg) · 已安裝，原生介面驗收通過，已發布；已核對系統相依重用、確認及取消；本機簽章、未 Apple 公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_x64-setup.exe) · 2.1.3 已安裝；接入路由及頂部恢復入口已核對，更新簽章通過，非 Authenticode |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.3/LocalBrain_2.1.3_amd64.AppImage) · 2.1.3；兩包資源、包內DSH、WSL2+Xvfb啟動及53條DSH測試通過；Debian已安裝，預覽支援，未代替裸機GPU驗收 |
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_x64-setup.exe) · 2.1.6已安裝；DSH0.2.1-rc.3、原生環境中心及真實模型工具往返通過；更新簽章通過，非Authenticode |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_amd64.AppImage) · 2.1.6；兩包資源、包內宿主、WSL2+Xvfb啟動及53條DSH測試通過；Debian已安裝，預覽支援，未代替裸機GPU驗收 |
 
-[Mac 2.1.6 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6) · [Mac 校驗值](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.3 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.1.3_amd64.deb`。保留舊發行。
+[Mac 2.1.6 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6) · [Mac 校驗值](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.6 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.1.6_amd64.deb`。保留舊發行。
 
 以下Windows 2.0.1及更早段落保留發布時的歷史狀態；目前平台版本以上方下載表為準。
 
@@ -240,9 +248,9 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | 檔案 | 散列 |
 | --- | --- |
 | Mac DMG | `5a52f1d0c240e3957d6b62a634267289d3e4d150309f0aa332a026c7466cb776` |
-| Windows安裝程式 | `1a7cde8c28dc3964f61f5c645cb58e58532a5c43ecff8f17e8a9aaa39b7c81a1` |
-| Linux AppImage | `78a77457f4e8a1fbb0b9c002b131d24099369be670b99dd0616a436eeecbc35d` |
-| Linux Debian包 | `0de5ac2d3e9a086f5759e8c329ab7cbec94ab7d49c346e87ab38bcfb2a79638f` |
+| Windows安裝程式 | `1fb51a2bd2a40464bc7327114411225a20ae344a609c563a7a21a91057a99113` |
+| Linux AppImage | `1882e35d2ac79cfa0bec2e5236714bca11b4a9141e01c5a16bb4a343f98ee688` |
+| Linux Debian包 | `8daa70485a2bba7c2323b581b4cfa8be6ffea5c9c56242d269ea21c9de176758` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
 

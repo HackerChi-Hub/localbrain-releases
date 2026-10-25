@@ -1,0 +1,112 @@
+{
+  "version": "2.1.6",
+  "publicationStatus": "approved for public release; online verification recorded separately",
+  "runtimeSourceCommit": "87f2004817e0ccda7ae7fb51cd706b1a0602ff58",
+  "dshCoreVersion": "0.2.1-rc.3",
+  "directDshPackagesVerified": 18,
+  "nodeVersion": "22.23.3",
+  "sha256": {
+    "LocalBrain_2.1.6_x64-setup.exe": "1fb51a2bd2a40464bc7327114411225a20ae344a609c563a7a21a91057a99113",
+    "LocalBrain_2.1.6_amd64.deb": "8daa70485a2bba7c2323b581b4cfa8be6ffea5c9c56242d269ea21c9de176758",
+    "LocalBrain_2.1.6_amd64.AppImage": "1882e35d2ac79cfa0bec2e5236714bca11b4a9141e01c5a16bb4a343f98ee688"
+  },
+  "checks": {
+    "typescriptPassed": 1632,
+    "typescriptSkipped": 2,
+    "adaptersPassed": 14,
+    "dshWindowsPassed": 53,
+    "dshLinuxPassed": 53,
+    "rustWindowsPassed": 427,
+    "rustWindowsIgnored": 34,
+    "pythonFilesPassed": 45,
+    "pythonUnitCasesIncludingSkips": 369,
+    "pythonSecurityTestsPassed": 7
+  },
+  "windows": {
+    "installed": true,
+    "formalConfigurationsPreserved": true,
+    "nativeRuntimeCenterRendered": true,
+    "actualModel": "Qwen3.6-35B-A3B UD Q3_K_M / PolyStrata",
+    "modelContext": 8192,
+    "modelRequests": 2,
+    "readOnlyToolCalls": 1,
+    "durableTurnEnd": "completed"
+  },
+  "linux": {
+    "packageChecks": [
+      {
+        "package": "deb",
+        "version": "2.1.6",
+        "bundleMarkerVerified": true,
+        "resourcesVerified": true,
+        "nativeNodeHostInitialized": true,
+        "startupSurvived20s": true,
+        "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+      },
+      {
+        "package": "appimage",
+        "version": "2.1.6",
+        "bundleMarkerVerified": true,
+        "resourcesVerified": true,
+        "nativeNodeHostInitialized": true,
+        "startupSurvived20s": true,
+        "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+      }
+    ],
+    "installed": {
+      "passed": true,
+      "version": "2.1.6",
+      "binaryMatchesDebianPackage": true,
+      "binarySha256": "6a35c7ab00d55ef2f0357898eee57baf62667cc82de992eb8ab3f19e5560d6d4",
+      "scope": "Ubuntu22.04 WSL2; no bare-metal GPU model acceptance"
+    }
+  },
+  "upgrade": {
+    "windows": {
+      "sessionId": "upgrade-27095d87-33d5-4e73-b8ef-29e35d2d7784",
+      "requests": 3,
+      "dispatches": 1,
+      "records": 30,
+      "originalBytes": 10006,
+      "originalSha256": "1ac4765662a473f60ddfd99f9bb6aea79bb67c4c7c859370b02706dd0350dda4",
+      "verified": {
+        "originalPrefixUnchanged": true,
+        "noToolReplay": true,
+        "incompleteTailRecovered": true,
+        "receiptInNewRequest": true,
+        "uniqueSequences": true
+      }
+    },
+    "linux": {
+      "sessionId": "upgrade-8e05ae26-12f8-4288-af38-87565a8148ae",
+      "requests": 3,
+      "dispatches": 1,
+      "records": 30,
+      "originalBytes": 10004,
+      "originalSha256": "0d34628b4d68dae84209f89cc2400661eca2e6479f4d3e6ee990edf07a488641",
+      "verified": {
+        "originalPrefixUnchanged": true,
+        "noToolReplay": true,
+        "incompleteTailRecovered": true,
+        "receiptInNewRequest": true,
+        "uniqueSequences": true
+      }
+    }
+  },
+  "testPortabilityAdjustment": "Home-relative Unix socket assertions execute only on Unix hosts; Windows pipe allowlist and production code unchanged. Full Windows Rust suite rerun after test-only adjustment.",
+  "ciExceptionApproval": {
+    "date": "2026-10-25",
+    "scope": "Windows and Linux2.1.6 public package release with source CI billing limitation and unresolved DSH issues",
+    "userReply": "批准本批 Windows＋Linux 2.1.6 例外发布",
+    "approved": true
+  },
+  "limitations": [
+    "Linux acceptance is Ubuntu22.04 WSL2+Xvfb, not bare-metal GPU or interactive full desktop acceptance",
+    "Full standalone Harness desktop PolyStrata8K overflow remains unresolved",
+    "Current2B endpoint is text-only; full image/MCP image and task-suite acceptance not established",
+    "No real Docker/HTB target scan, destructive environment uninstall or new model download in this batch",
+    "No engine, CUDA or driver upgrade beyond the explicitly bundled DSH rc.3 kernel",
+    "Updater signatures are not Windows Authenticode; full cross-version automatic-update installation not exercised",
+    "Source CI not started due billing/spending limit; explicit current-batch exception approved"
+  ]
+}
