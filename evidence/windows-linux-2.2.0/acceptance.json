@@ -1,0 +1,139 @@
+{
+  "version": "2.2.0",
+  "runtimeSourceCommit": "24a9c50beb5dacd769a9cc886e70108a8c3433e3",
+  "sha256": {
+    "LocalBrain_2.2.0_x64-setup.exe": "9d6baddcacebc4d56bc7bdc8db1f4f15171b0f25c38cd4df8d732993d86c2e73",
+    "LocalBrain_2.2.0_amd64.deb": "9181709955ed9d9bb6dd49c4b34e5e29c550a60ef71150b56318a24bc7af799d",
+    "LocalBrain_2.2.0_amd64.AppImage": "9835fda37e88f8b168e053bf3120a594460caaf614194ce3bb41d0c4e4b4d78e"
+  },
+  "checks": {
+    "rustWindowsPassed": 435,
+    "rustWindowsIgnored": 36,
+    "liveModuleTestsPassed": 2,
+    "typescriptPassed": 1638,
+    "typescriptSkipped": 2,
+    "adaptersPassed": 14,
+    "dshWindowsPassed": 53,
+    "dshLinuxPassed": 53,
+    "pythonFilesPassed": 45,
+    "pythonUnittestCasesIncludingSkips": 369,
+    "securityTestsPassed": 7,
+    "pluginPackagingTestsPassed": 2
+  },
+  "windows": {
+    "installed": true,
+    "sixFormalConfigurationsPreserved": true,
+    "nativeFiveSupportedModulesReady": true,
+    "customInstallRejected": true,
+    "torchInstalledStatus": true,
+    "model": "existing Qwen3.8-2B-Distill Q4_K_M",
+    "actualWindow": 262144,
+    "response": "模块验收编号：4276"
+  },
+  "packagedMcp": {
+    "passed": true,
+    "modules": [
+      {
+        "id": "docfactory",
+        "toolCount": 7,
+        "schemaParity": true
+      },
+      {
+        "id": "webminer",
+        "toolCount": 5,
+        "schemaParity": true
+      },
+      {
+        "id": "image",
+        "toolCount": 4,
+        "schemaParity": true
+      },
+      {
+        "id": "system",
+        "toolCount": 10,
+        "schemaParity": true
+      },
+      {
+        "id": "network",
+        "toolCount": 9,
+        "schemaParity": true
+      }
+    ],
+    "totalTools": 35,
+    "docxCreatedAndRead": true,
+    "independentDocxTextVerified": true,
+    "readPreservedOriginalSha256": true,
+    "markdownCreated": true,
+    "runtime": "actual existing managed tools-env Python; no dependency installation"
+  },
+  "linux": [
+    {
+      "package": "deb",
+      "version": "2.2.0",
+      "bundleMarkerVerified": true,
+      "resourcesVerified": true,
+      "nativeNodeHostInitialized": true,
+      "startupSurvived20s": true,
+      "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+    },
+    {
+      "package": "appimage",
+      "version": "2.2.0",
+      "bundleMarkerVerified": true,
+      "resourcesVerified": true,
+      "nativeNodeHostInitialized": true,
+      "startupSurvived20s": true,
+      "scope": "Ubuntu 22.04 WSL2 + Xvfb; no interactive or GPU model acceptance"
+    }
+  ],
+  "linuxInstalled": {
+    "passed": true,
+    "version": "2.2.0",
+    "binaryMatchesDebianPackage": true,
+    "scope": "Ubuntu22.04 WSL2; not bare-metal GPU acceptance"
+  },
+  "documentInput": {
+    "source": "committed LocalBrain2.2.0 docfactory.lbplugin manifest",
+    "packageSha256": "0efcb5ff2f31178023fb72978565c02faecf7c0b89f1d0b1261b7ca8a9ae49d2",
+    "verifiedDocfactoryFiles": 51
+  },
+  "packageVerification": {
+    "passed": true,
+    "version": "2.2.0",
+    "internalPackages": 8,
+    "allPackageAndManifestHashesVerified": true,
+    "docfactoryCompatibilityCopyMatchesActiveModule": true,
+    "nodeVersion": "22.23.3",
+    "nodeBinaryHashVerified": true,
+    "nativeAcceptance": "Final installer will be independently tested; do not reuse pre-installer executable identity"
+  },
+  "publication": "approved for public release; online verification recorded separately",
+  "limitations": [
+    "Linux WSL2/Xvfb, not bare-metal GPU or full native media acceptance",
+    "Eight bundled modules; five supported and enabled on Windows/Linux; three MLX modules not claimed supported",
+    "Real model basic request and real MCP document calls are separate checks, not an autonomous task benchmark",
+    "Full standalone Harness PolyStrata8K overflow remains unresolved",
+    "No Windows image/audio/video generation, full security target chain or old12-task benchmark rerun",
+    "Updater signatures are not Windows Authenticode"
+  ],
+  "diagnostics": [
+    "Initial document acceptance failed because isolated QA missed pywin32 site bootstrap; corrected only QA site configuration",
+    "Real DOCX then exposed stale external DocFactory build input; both platforms rebuilt using verified source from committed2.2.0 document module",
+    "Native helper originally expected all8 modules on Windows; corrected to5 platform-supported modules",
+    "Native helper first chose an occupied local control port; reran using free isolated port11459"
+  ],
+  "ciExceptionApproval": {
+    "version": "2.2.0",
+    "scope": "Windows/Linux",
+    "approved": true,
+    "date": "2026-10-26",
+    "userReply": "批准本批 Windows/Linux 2.2.0 例外发布",
+    "includes": [
+      "packages",
+      "three-language README",
+      "Blog"
+    ],
+    "sourceCiRestriction": "account payment/spending limit; not started"
+  },
+  "latestSourceCiRun": 40342271214
+}
