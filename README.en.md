@@ -23,6 +23,8 @@ Run supported local models, work with authorized files, and manage speech, image
 
 ## Mac 2.2.0: internal modules and consistent context accounting
 
+Publicly released and installed locally on 2026-10-26. The author explicitly authorized this batch's source-CI billing-limit exception. Local checks, signatures and installation verification pass; hosted source CI is not represented as passing.
+
 Eight tool services use internal versioned packages, with shared capability registration for model backends, pages and runtimes. The core retains tasks, authorization, context, skills, memory and user data. Custom plugin installation remains unavailable; existing one-click runtime installation and maintenance remain available. Internal updates validate before activation, defer for active calls and retain the previous implementation on failure.
 
 Manual compaction uses the same engine meter before and after, including summary framing. Originals are retained and completed tools are not replayed. These actual same-source 2.2.0 functional acceptance images are cropped to remove control chrome and unrelated sessions; they do not establish completion of security lab tasks.
