@@ -14,12 +14,24 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.2.0** · Manual compaction uses one engine meter before and after, including summary framing, retaining originals and avoiding completed-tool replay.
+- **2.2.0** · Mac tools and model capabilities share internal registration while retaining existing entry points and user data; custom plugin installation remains closed.
+- **2.2.0** · Mac internal module updates validate before activation, defer for active tasks and retain the prior implementation on failure; runtime maintenance remains available.
 - **2.1.7** · Windows now recognizes standard Lib/site-packages, fixing false partially-installed image runtime status while preserving existing Torch, Diffusers and models.
 - **2.1.6** · Mac, Windows and Linux now embed Harness0.2.1-rc.3 with pinned dependencies, Chinese incremental compaction, old-session recovery and host-authorized tools.
-- **2.1.6** · Ready ordinary components hide redundant installation and batch install includes only installable items; offline databases retain explicit updates.
-- **2.1.6** · Dependency-blocked removal immediately shows a native explanation listing every unselected dependent without expanding deletion scope.
-- **2.1.5** · Mac newcomers can prepare missing package managers, container services and build tools in one dependency-reviewed setup before dependent components.
 <!-- recent-features:end -->
+
+## Mac 2.2.0: internal modules and consistent context accounting
+
+Eight tool services use internal versioned packages, with shared capability registration for model backends, pages and runtimes. The core retains tasks, authorization, context, skills, memory and user data. Custom plugin installation remains unavailable; existing one-click runtime installation and maintenance remain available. Internal updates validate before activation, defer for active calls and retain the previous implementation on failure.
+
+Manual compaction uses the same engine meter before and after, including summary framing. Originals are retained and completed tools are not replayed. These actual same-source 2.2.0 functional acceptance images are cropped to remove control chrome and unrelated sessions; they do not establish completion of security lab tasks.
+
+![2.2.0 context compaction and retained originals](screenshots/2.2.0-mac/context-compaction.png)
+
+![2.2.0 runtime and diagnostics](screenshots/2.2.0-mac/runtime-center.png)
+
+Cached models completed representative real chat, document and media calls. Independent web, SSH and local certificate-VPN adapter tests pass. Three native model lab runs timed out without model proof acceptance, model report export or post-repair model retesting; real HTB remains unverified. Experiment materials stay local and are not distributed with the application. See [installation and release verification](VERIFICATION-2.2.0-MAC.md). This batch updates only Mac; Windows/Linux remain at 2.1.7. Older sections below retain historical status; use the platform download table for current releases.
 
 ## Windows / Linux 2.1.7: correct Windows image runtime status
 
@@ -31,7 +43,7 @@ A missing Windows Lib/site-packages lookup made verified image environments appe
 
 Windows and WSL2 Debian are installed. This release adds runtime management, download pause/resume and pinned Harness0.2.1-rc.3; Node22.23.3, models and drivers are retained. Native Windows runtime-center rendering and a real read-only PolyStrata35B tool roundtrip passed. Both platforms passed53 DSH tests and old-session recovery without tool replay. Windows Rust:427 passed/34 ignored; TypeScript:1632 passed/2 skipped; adapters:14 passed; all45 Python test files and7 additional security tests passed. All three updater signatures were verified. The author explicitly approved this batch despite source CI billing/spending limits; online source CI is not represented as passing. Linux acceptance is WSL2/Xvfb only; standalone Harness8K overflow and full image/tool task limits remain documented.
 
-[Windows/Linux verification](VERIFICATION-2.1.6-WIN-LINUX.md) · [Known issues](KNOWN-ISSUES-DSH-LOCAL-MODELS.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6)
+[Windows/Linux verification](VERIFICATION-2.1.6-WIN-LINUX.md) · [Known issues](KNOWN-ISSUES-DSH-LOCAL-MODELS.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.0)
 
 Initial Mac and earlier Windows/Linux sections below retain their historical scope; this section and the download table state current platform versions.
 
@@ -85,7 +97,7 @@ Native checks covered five component groups, zero missing items, no removal for 
 
 The Mac app retains local signing and is not Apple-notarized. The GitHub source documentation job did not start because of account billing/spending limits; the author explicitly approved a Mac 2.1.5 release exception. Local checks are not a remote CI pass. See [verification](VERIFICATION-2.1.5-MAC.md) and [prerequisite setup](SYSTEM_PREREQUISITES_2.1.5.md).
 
-[Download Mac 2.1.5 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.5/LocalBrain_2.1.5_aarch64.dmg)
+[Download Mac 2.2.0 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_aarch64.dmg)
 
 
 ## Historical candidate record: Mac 2.1.4 candidate: one-click runtime setup (pending publication)
@@ -104,7 +116,7 @@ Removal controls appear only for confirmed installed managed components, excludi
 
 These use the production component with read-only inventory and explicitly mocked changes. The revision is installed; all 12,995 files/links match and signature/image checks pass. Native capture still fails; native clicks, complete container setup and actual removal remain unverified. See [acceptance limits](VERIFICATION-2.1.4-MAC.md) and [runtime scope](RUNTIME_CENTER.md). Weights, external tools, sessions, reports and VMs remain intact. The Harness core stays on 0.2.0-rc.2. The software package remains unpublished; Windows/Linux remain on 2.1.3.
 
-Windows/Linux 2.1.3 are publicly released: Windows and WSL2 Debian are installed; Debian/AppImage resource checks, packaged DSH initialization, 20-second startup and 53 DSH tests passed. All three updater signatures were verified. The author explicitly approved this batch despite source CI account limits; online source CI is not reported as passing. Bare-metal Linux GPU and full DSH image/tool tasks remain unverified; PolyStrata 35B still overflows its 8K window with the desktop agent. See [acceptance and unresolved items](VERIFICATION-2.1.3-WIN-LINUX.md) and [downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.3). Earlier local-candidate and initial single-platform paragraphs below are historical; this section states current platform status.
+Windows/Linux 2.1.3 are publicly released: Windows and WSL2 Debian are installed; Debian/AppImage resource checks, packaged DSH initialization, 20-second startup and 53 DSH tests passed. All three updater signatures were verified. The author explicitly approved this batch despite source CI account limits; online source CI is not reported as passing. Bare-metal Linux GPU and full DSH image/tool tasks remain unverified; PolyStrata 35B still overflows its 8K window with the desktop agent. See [acceptance and unresolved items](VERIFICATION-2.1.3-WIN-LINUX.md) and [downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.0). Earlier local-candidate and initial single-platform paragraphs below are historical; this section states current platform status.
 
 ## Windows local fixes and DSH integration limits (2026-10-24)
 
@@ -146,7 +158,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.1.7 · Mac 2.1.6 · Linux 2.1.7
+## Latest downloads：Windows 2.1.7 · Mac 2.2.0 · Linux 2.1.7
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -172,11 +184,11 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.1.6 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.6/LocalBrain_2.1.6_aarch64.dmg) · Installed, native UI checked and publicly released. Dependency reuse, confirmation and cancellation verified; local signing, not Apple-notarized |
+| Apple Silicon Mac 2.2.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_aarch64.dmg) · Installed, native UI checked and publicly released. Dependency reuse, confirmation and cancellation verified; local signing, not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.7/LocalBrain_2.1.7_x64-setup.exe) · Installed; see this batch verification and limitations above|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.7/LocalBrain_2.1.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.1.7/LocalBrain_2.1.7_amd64.AppImage) · Installed; see this batch verification and limitations above|
 
-[Mac 2.1.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.6) · [Mac checksums](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.7). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.7_amd64.deb`. Older releases are retained.
+[Mac 2.2.0 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.0) · [Mac checksums](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.7). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.7_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -253,7 +265,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `5a52f1d0c240e3957d6b62a634267289d3e4d150309f0aa332a026c7466cb776` |
+| Mac DMG | `7359df6e13a86b315f1dca71c6484d6dd9718350781825e13c941c3479b7658b` |
 | Windows installer | `304b9d00203c8cdf94ba7bf210510ee764a01d61f6c67f60a3eeb1e902141a43` |
 | Linux AppImage | `dd51274347276752e36ec42fb9e6fc208387ba08693ad67cf4d6ac0faa76a859` |
 | Linux Debian | `07e0d22feab9f4b8d34832bfe3e79832f4b628eefb8bbc8947e6d79e82aee06d` |
