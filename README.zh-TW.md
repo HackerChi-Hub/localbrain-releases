@@ -14,12 +14,20 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
-- **2.2.1** · Mac維護按實際階段顯示；僅有真實下載位元組與總量時顯示百分比，完成即結束提示並更新元件與資料庫回執。
+- **2.2.1** · Mac、Windows、Linux維護按實際階段顯示；僅有真實下載位元組與總量時顯示百分比，完成即結束提示並更新元件與資料庫回執。
 - **2.2.0** · 立即壓縮前後統一使用核心計量，包含摘要包裝；保留原文，恢復不重複執行已完成工具。
 - **2.2.0** · Mac、Windows、Linux內部工具與模型能力統一註冊，既有功能入口與使用者資料保留；自訂外掛安裝暫不開放。
 - **2.2.0** · Mac、Windows、Linux內部模組更新先校驗再切換，工作占用時延後，失敗保留原實作；執行環境一鍵維護繼續可用。
 - **2.1.7** · Windows 修正圖像環境已安裝卻被誤報為待修復的問題；辨識標準 Lib/site-packages，保留既有 Torch、Diffusers 與模型。
 <!-- recent-features:end -->
+
+## Windows / Linux 2.2.1：維護階段清楚顯示，完成及時更新
+
+Windows及WSL2 Debian已建置安裝2.2.1，另提供AppImage；保留Mac2.2.1原有安裝包。設定→執行環境與診斷僅在有效下載位元組與總量齊全時顯示百分比；準備、安裝、解壓縮、校驗與卸載顯示階段，切換時清除舊數字。主漏洞庫與Java索引庫分別說明快取、下載來源及校驗；完成、失敗或暫停先結束維護提示，再更新真實清單。Windows原生Torch校驗、既有2B模型請求、35項MCP清單與真實DOCX/Markdown通過；受控介面另驗證37.5%位元組樣本與慢更新，不冒稱Windows真實下載。Windows Rust435通過/36略過，前端1641通過/2略過，介面卡14與佇列3項通過，兩平台DSH各53通過，完整Python45檔與額外安全7項通過。Linux限Ubuntu22.04 WSL2/Xvfb；不擴大為裸機GPU、媒體生成或完整Harness8K任務已通過。作者已明確批准本批Windows/Linux2.2.1以本地驗收例外發布，並記錄原始碼CI帳戶限制；本地通過不冒稱線上原始碼CI通過。
+
+[Windows/Linux verification](VERIFICATION-2.2.1-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1)
+
+以下Mac 2.2.1段落保留2026-10-30首次發布時的獨立範圍；Windows/Linux本批狀態以上文為準。
 
 ## Mac 2.2.1：維護階段與真實下載進度
 
@@ -178,7 +186,7 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.2.0 · Mac 2.2.1 · Linux 2.2.0
+## 最新下載：Windows 2.2.1 · Mac 2.2.1 · Linux 2.2.1
 
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
@@ -205,8 +213,8 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac 2.2.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_aarch64.dmg) · 已安裝；本輪真實下載、維護階段與完成更新驗收通過；本機簽章、未 Apple 公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_x64-setup.exe) · 2.2.0; 已安裝，本批平台驗收與限制見上文|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_amd64.AppImage) · 2.2.0; 已安裝，本批平台驗收與限制見上文|
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_x64-setup.exe) · 2.2.1; 已安裝，本批平台驗收與限制見上文|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_amd64.AppImage) · 2.2.1; 已安裝，本批平台驗收與限制見上文|
 
 [Mac 2.2.1 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1) · [Mac 校驗值](SHA256SUMS-2.2.1-MAC.txt) · [Windows/Linux 2.2.0 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.0)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.2.0_amd64.deb`。保留舊發行。
 
@@ -286,9 +294,9 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | 檔案 | 散列 |
 | --- | --- |
 | Mac DMG | `aa731d2232ac6ff601ffb3cd19a4ff19e43a82deb76444fcceca9456b75ed83d` |
-| Windows安裝程式 | `9d6baddcacebc4d56bc7bdc8db1f4f15171b0f25c38cd4df8d732993d86c2e73` |
-| Linux AppImage | `9835fda37e88f8b168e053bf3120a594460caaf614194ce3bb41d0c4e4b4d78e` |
-| Linux Debian包 | `9181709955ed9d9bb6dd49c4b34e5e29c550a60ef71150b56318a24bc7af799d` |
+| Windows安裝程式 | `96b74a0bf7a9e632a54c1906c596e4d492f1407c6154c0f72defe7a1fba9c60b` |
+| Linux AppImage | `1eff314ba5a80dedfd5b5be3ebcc4f4133a010e660a8d64e2cf0b88598e37dc1` |
+| Linux Debian包 | `55639806039c39ccee7996832428b7c70b99e58c802df4c83b865bbeac9a1f8f` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
 

@@ -14,12 +14,20 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **2.2.1** · Mac maintenance shows actual stages; percentages require measured download bytes and totals. Completion clears the indicator before refreshing components and database receipts.
+- **2.2.1** · Mac, Windows and Linux maintenance shows actual stages; percentages require measured download bytes and totals. Completion clears the indicator before refreshing components and database receipts.
 - **2.2.0** · Manual compaction uses one engine meter before and after, including summary framing, retaining originals and avoiding completed-tool replay.
 - **2.2.0** · Mac, Windows and Linux tools and model capabilities share internal registration while retaining existing entry points and user data; custom plugin installation remains closed.
 - **2.2.0** · Mac, Windows and Linux internal module updates validate before activation, defer for active tasks and retain the prior implementation on failure; runtime maintenance remains available.
 - **2.1.7** · Windows now recognizes standard Lib/site-packages, fixing false partially-installed image runtime status while preserving existing Torch, Diffusers and models.
 <!-- recent-features:end -->
+
+## Windows / Linux 2.2.1: truthful maintenance stages and prompt completion
+
+Windows and WSL2 Debian are built and installed at 2.2.1, with AppImage also prepared; existing Mac 2.2.1 assets are retained. Settings→Runtime and diagnostics shows percentages only with measured download bytes and totals. Preparation, installation, extraction, verification and removal show stages and clear stale numbers. Main vulnerability and Java index databases report cache, source and verification separately. Completion, failure or pause settles the indicator before a fresh inventory read. Native Windows Torch verification, an existing 2B request, 35 MCP schemas and real DOCX/Markdown passed. Separate controlled UI checks cover 37.5% and slow refresh; they are not Windows real-download evidence. Windows Rust 435 passed/36 ignored; frontend 1641 passed/2 skipped; 14 adapters and 3 queue tests passed; 53 DSH checks per platform; 45 Python files plus 7 security tests passed. Linux acceptance is Ubuntu22.04 WSL2/Xvfb, not bare-metal GPU or media inference. Full standalone Harness 8K compatibility remains unresolved. The author explicitly approved this Windows/Linux 2.2.1 batch exception with local acceptance and the source CI account restriction recorded; local checks are not presented as successful online source CI.
+
+[Windows/Linux verification](VERIFICATION-2.2.1-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1)
+
+The Mac 2.2.1 section below retains its initial publication scope; current Windows/Linux batch status is described above.
 
 ## Mac 2.2.1: maintenance stages and measured download progress
 
@@ -178,7 +186,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.2.0 · Mac 2.2.1 · Linux 2.2.0
+## Latest downloads：Windows 2.2.1 · Mac 2.2.1 · Linux 2.2.1
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -205,8 +213,8 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.2.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_aarch64.dmg) · Installed; this batch verified real downloads, maintenance stages and completion refresh; locally signed, not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_x64-setup.exe) · 2.2.0; installed; platform acceptance and limits above|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_amd64.AppImage) · 2.2.0; installed; platform acceptance and limits above|
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_x64-setup.exe) · 2.2.1; installed; platform acceptance and limits above|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_amd64.AppImage) · 2.2.1; installed; platform acceptance and limits above|
 
 [Mac 2.2.1 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1) · [Mac checksums](SHA256SUMS-2.2.1-MAC.txt) · [Windows/Linux 2.2.0 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.0). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.0_amd64.deb`. Older releases are retained.
 
@@ -286,9 +294,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `aa731d2232ac6ff601ffb3cd19a4ff19e43a82deb76444fcceca9456b75ed83d` |
-| Windows installer | `9d6baddcacebc4d56bc7bdc8db1f4f15171b0f25c38cd4df8d732993d86c2e73` |
-| Linux AppImage | `9835fda37e88f8b168e053bf3120a594460caaf614194ce3bb41d0c4e4b4d78e` |
-| Linux Debian | `9181709955ed9d9bb6dd49c4b34e5e29c550a60ef71150b56318a24bc7af799d` |
+| Windows installer | `96b74a0bf7a9e632a54c1906c596e4d492f1407c6154c0f72defe7a1fba9c60b` |
+| Linux AppImage | `1eff314ba5a80dedfd5b5be3ebcc4f4133a010e660a8d64e2cf0b88598e37dc1` |
+| Linux Debian | `55639806039c39ccee7996832428b7c70b99e58c802df4c83b865bbeac9a1f8f` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 
