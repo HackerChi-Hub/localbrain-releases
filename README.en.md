@@ -14,12 +14,24 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.2.1** · Mac maintenance shows actual stages; percentages require measured download bytes and totals. Completion clears the indicator before refreshing components and database receipts.
 - **2.2.0** · Manual compaction uses one engine meter before and after, including summary framing, retaining originals and avoiding completed-tool replay.
 - **2.2.0** · Mac, Windows and Linux tools and model capabilities share internal registration while retaining existing entry points and user data; custom plugin installation remains closed.
 - **2.2.0** · Mac, Windows and Linux internal module updates validate before activation, defer for active tasks and retain the prior implementation on failure; runtime maintenance remains available.
 - **2.1.7** · Windows now recognizes standard Lib/site-packages, fixing false partially-installed image runtime status while preserving existing Torch, Diffusers and models.
-- **2.1.6** · Mac, Windows and Linux now embed Harness0.2.1-rc.3 with pinned dependencies, Chinese incremental compaction, old-session recovery and host-authorized tools.
 <!-- recent-features:end -->
+
+## Mac 2.2.1: maintenance stages and measured download progress
+
+Maintenance no longer stays at a fixed 0%. In Settings → Runtime & Diagnostics, percentages require valid downloaded bytes and a known total. Preparation, extraction, dependency installation, verification and removal show their actual stages. The container database distinguishes the main database and Java index, including freshness checks, valid cache reuse, download sources and commit. Completion clears the busy indicator before refreshing actual state and receipts.
+
+The installed Mac build passed a real 49.0MB tool download and cached container-database maintenance. Download completion automatically changed the component to installed; both valid databases kept their original download times while the latest verification time refreshed. No databases were cleared to force a download, and no large models were downloaded. The Mac app is locally signed and the updater signature was independently verified; it is not Apple-notarized. Windows/Linux remain at 2.2.0 and older releases are retained. See [verification and release boundaries](VERIFICATION-2.2.1-MAC.md).
+
+![Installed app: measured download bytes, speed and percentage](screenshots/2.2.1-mac/measured-download.png)
+
+![Installed app: unknown totals show the verification stage](screenshots/2.2.1-mac/maintenance-stage.png)
+
+![Completed maintenance retains valid caches and refreshes the verification time](screenshots/2.2.1-mac/completed-receipt.png)
 
 ## Windows / Linux 2.2.0: internal modules and real document calls
 
@@ -105,7 +117,7 @@ Native checks covered five component groups, zero missing items, no removal for 
 
 The Mac app retains local signing and is not Apple-notarized. The GitHub source documentation job did not start because of account billing/spending limits; the author explicitly approved a Mac 2.1.5 release exception. Local checks are not a remote CI pass. See [verification](VERIFICATION-2.1.5-MAC.md) and [prerequisite setup](SYSTEM_PREREQUISITES_2.1.5.md).
 
-[Download Mac 2.2.0 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_aarch64.dmg)
+[Download Mac 2.2.1 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_aarch64.dmg)
 
 
 ## Historical candidate record: Mac 2.1.4 candidate: one-click runtime setup (pending publication)
@@ -166,7 +178,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.2.0 · Mac 2.2.0 · Linux 2.2.0
+## Latest downloads：Windows 2.2.0 · Mac 2.2.1 · Linux 2.2.0
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -192,11 +204,11 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.2.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_aarch64.dmg) · Installed, native UI checked and publicly released. Dependency reuse, confirmation and cancellation verified; local signing, not Apple-notarized |
+| Apple Silicon Mac 2.2.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_aarch64.dmg) · Installed; this batch verified real downloads, maintenance stages and completion refresh; locally signed, not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_x64-setup.exe) · 2.2.0; installed; platform acceptance and limits above|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_amd64.AppImage) · 2.2.0; installed; platform acceptance and limits above|
 
-[Mac 2.2.0 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.0) · [Mac checksums](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.6 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.7). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.1.7_amd64.deb`. Older releases are retained.
+[Mac 2.2.1 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1) · [Mac checksums](SHA256SUMS-2.2.1-MAC.txt) · [Windows/Linux 2.2.0 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.0). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.0_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -273,7 +285,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `7359df6e13a86b315f1dca71c6484d6dd9718350781825e13c941c3479b7658b` |
+| Mac DMG | `aa731d2232ac6ff601ffb3cd19a4ff19e43a82deb76444fcceca9456b75ed83d` |
 | Windows installer | `9d6baddcacebc4d56bc7bdc8db1f4f15171b0f25c38cd4df8d732993d86c2e73` |
 | Linux AppImage | `9835fda37e88f8b168e053bf3120a594460caaf614194ce3bb41d0c4e4b4d78e` |
 | Linux Debian | `9181709955ed9d9bb6dd49c4b34e5e29c550a60ef71150b56318a24bc7af799d` |

@@ -16,12 +16,24 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **2.2.1** · Mac维护按实际阶段显示；仅有真实下载字节和总量时显示百分比，完成即结束提示并刷新组件与数据库回执。
 - **2.2.0** · 立即压缩前后统一使用内核计量，包含摘要包装；保留原文，恢复不重复执行已完成工具。
 - **2.2.0** · Mac、Windows、Linux内部工具与模型能力统一注册，现有功能入口和用户数据保留；自定义插件安装暂不开放。
 - **2.2.0** · Mac、Windows、Linux内部模块更新先校验再切换，任务占用时延后，失败保留原实现；运行环境一键维护继续可用。
 - **2.1.7** · Windows 修正图像环境已安装却被误报为待修复的问题；识别标准 Lib/site-packages，保留已有 Torch、Diffusers 和模型。
-- **2.1.6** · Mac、Windows、Linux 内嵌 Harness 均适配到0.2.1-rc.3，固定依赖并保留中文增量压缩、旧会话恢复与宿主工具授权。
 <!-- recent-features:end -->
+
+## Mac 2.2.1：维护阶段与真实下载进度
+
+维护不再固定显示0%。打开“设置 → 运行环境与诊断”：有有效下载字节和总量才显示百分比；准备、解压、依赖安装、校验和卸载显示具体阶段。容器漏洞库分别说明主库与Java索引库的有效期检查、缓存复用、下载源和提交；完成后维护提示立即结束，再刷新真实状态及回执。
+
+本机已安装并完成真实49.0MB工具下载及容器漏洞库缓存维护验收：下载完成后自动变为已安装；两份有效库保留原下载时间，本次核对时间自动更新。没有清库制造重下，没有下载大型模型。Mac本地签名、更新包独立验签通过，未Apple公证。Windows/Linux保持2.2.0，旧发行物保留；完整范围和发布检查边界见[本轮核对](VERIFICATION-2.2.1-MAC.md)。
+
+![安装版真实下载字节、速度与百分比](screenshots/2.2.1-mac/measured-download.png)
+
+![安装版未知总量只显示具体校验阶段](screenshots/2.2.1-mac/maintenance-stage.png)
+
+![维护完成后保留有效缓存并刷新本次核对时间](screenshots/2.2.1-mac/completed-receipt.png)
 
 ## Windows / Linux 2.2.0：内部模块与文档调用验收
 
@@ -107,7 +119,7 @@ Mac 2.1.5 已正式发布，完成打包、安装及本轮原生界面验收；W
 
 Mac 沿用本地签名，未 Apple 公证。源码仓 GitHub 说明检查因账户付款／支出限制未启动；作者已明确批准本次 Mac 2.1.5 例外发布；本地通过不冒称远端 CI 通过。详见[本轮验收](VERIFICATION-2.1.5-MAC.md)及[新用户依赖步骤](SYSTEM_PREREQUISITES_2.1.5.md)。
 
-[下载 Mac 2.2.0 安装包（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_aarch64.dmg)
+[下载 Mac 2.2.1 安装包（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_aarch64.dmg)
 
 
 ## 历史候选记录：Mac 2.1.4 候选：一键补齐运行环境（待发布）
@@ -168,7 +180,7 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows 2.2.0 · Mac 2.2.0 · Linux 2.2.0
+## 最新下载：Windows 2.2.0 · Mac 2.2.1 · Linux 2.2.0
 
 以下 2.1.3 为历史工具接入验收记录。
 
@@ -194,11 +206,11 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 2.2.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_aarch64.dmg) · 已安装，原生界面验收通过，已发布；系统依赖复用、确认与取消已核对；本地签名、未 Apple 公证 |
+| Apple Silicon Mac 2.2.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_aarch64.dmg) · 已安装；本轮真实下载、维护阶段与完成刷新验收通过；本地签名、未 Apple 公证 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_x64-setup.exe) · 2.2.0; 已安装，本批平台验收及限制见上文|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.0/LocalBrain_2.2.0_amd64.AppImage) · 2.2.0; 已安装，本批平台验收及限制见上文|
 
-[Mac 2.2.0 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.0) · [Mac 校验值](SHA256SUMS-2.1.6-MAC.txt) · [Windows/Linux 2.1.6 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.1.7)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.1.7_amd64.deb`。旧发行保留。
+[Mac 2.2.1 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1) · [Mac 校验值](SHA256SUMS-2.2.1-MAC.txt) · [Windows/Linux 2.2.0 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.0)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.2.0_amd64.deb`。旧发行保留。
 
 以下Windows 2.0.1及更早段落保留其发布时的历史状态；当前平台版本以上方下载表为准。
 
@@ -275,7 +287,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `7359df6e13a86b315f1dca71c6484d6dd9718350781825e13c941c3479b7658b` |
+| Mac DMG | `aa731d2232ac6ff601ffb3cd19a4ff19e43a82deb76444fcceca9456b75ed83d` |
 | Windows安装程序 | `9d6baddcacebc4d56bc7bdc8db1f4f15171b0f25c38cd4df8d732993d86c2e73` |
 | Linux AppImage | `9835fda37e88f8b168e053bf3120a594460caaf614194ce3bb41d0c4e4b4d78e` |
 | Linux Debian包 | `9181709955ed9d9bb6dd49c4b34e5e29c550a60ef71150b56318a24bc7af799d` |
