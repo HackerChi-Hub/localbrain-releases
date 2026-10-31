@@ -21,6 +21,14 @@ Run supported local models, work with authorized files, and manage speech, image
 - **2.2.2** · Mac fixes Splash 1.5 launch-argument detection with actual text and vision replies using existing weights; embedded Harness is adapted to 0.2.1-rc.5, preserving models and data.
 <!-- recent-features:end -->
 
+## Windows / Linux 2.2.2: maintenance receipts and pasted attachments
+
+Settings → Runtime and diagnostics unifies maintenance controls and saves outcomes per component. Official update checks are explicit; model startup never upgrades engines. The independent Windows/Linux update channel currently supports Trivy only; llama.cpp and Prism retain verified multi-resource installers. Mac six-engine results are separate. Pasting creates file/image drafts for manual sending; video and unknown binaries remain references without comprehension claims. DSH is pinned to 0.2.1-rc.5 with officially hashed Node 22.23.4. Native Windows checks cover source references, owned paste copies and removal, real Torch verification receipts, an existing 2B request and real DOCX/Markdown. Linux acceptance is WSL2/Xvfb startup and host initialization, not bare-metal GPU, media inference or real OS clipboard gestures. Windows Rust 445 passed/37 ignored; frontend 1650 passed/2 skipped; 14 adapters, 7 queue tests and 53 DSH checks per platform passed. Python 43 files/371 cases and two scripts passed separately; 7 security tests passed. The browser canvas check initially failed and passed an isolated rerun; its instability remains recorded. The author approved this batch CI exception; the account restriction and local acceptance are recorded in verification.
+
+[Verification](VERIFICATION-2.2.2-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.2-win-linux)
+
+The Mac section below retains its initial platform scope.
+
 ## Mac 2.2.2: consistent runtime maintenance and pasted attachments
 
 Mac 2.2.2 is publicly released after installed-app verification. On 2026-10-31 the author approved this batch exception for source CI account billing restrictions; local checks are not a remote CI pass. The installed app verified consistent controls, six independent engine updates, database feedback and a Trivy rollback round trip. Existing weights with Splash 1.5 completed text and vision replies. Images, text files and video references can be pasted into chat and are read only after manual sending; videos currently remain file references. Embedded Harness is adapted to 0.2.1-rc.5. Mac is locally signed and not Apple-notarized. Windows/Linux remain at 2.2.1 and will be packaged separately by the author.
@@ -194,7 +202,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.2.1 · Mac 2.2.2 · Linux 2.2.1
+## Latest downloads：Windows 2.2.2 · Mac 2.2.2 · Linux 2.2.2
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -221,8 +229,8 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.2.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2/LocalBrain_2.2.2_aarch64.dmg) · Installed; this batch verified consistent maintenance, engine updates and pasted attachments; locally signed, not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_x64-setup.exe) · 2.2.1; installed; platform acceptance and limits above|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_amd64.AppImage) · 2.2.1; installed; platform acceptance and limits above|
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_x64-setup.exe) · 2.2.2; installed; platform acceptance and limits above|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_amd64.AppImage) · 2.2.2; installed; platform acceptance and limits above|
 
 [Mac 2.2.2 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.2) · [Mac checksums](SHA256SUMS-2.2.2-MAC.txt) · [Windows/Linux 2.2.1 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.1_amd64.deb`. Older releases are retained.
 
@@ -302,9 +310,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `8304011e22eda8b7e2b6947ae3ba226ceb5412233b3679880702abdc238526d4` |
-| Windows installer | `96b74a0bf7a9e632a54c1906c596e4d492f1407c6154c0f72defe7a1fba9c60b` |
-| Linux AppImage | `1eff314ba5a80dedfd5b5be3ebcc4f4133a010e660a8d64e2cf0b88598e37dc1` |
-| Linux Debian | `55639806039c39ccee7996832428b7c70b99e58c802df4c83b865bbeac9a1f8f` |
+| Windows installer | `4e0f83afe07278f7c7d4d18c308acb858bc5c78c01bce2164dae5708591c62b2` |
+| Linux AppImage | `79444db1a25d39e679e2813616fa2a5fd05cfcf58c7f47fa0a48431b8c94db1b` |
+| Linux Debian | `a2b0fceabcdad6488ccc2377041e8945a77e226776c0f8d817d8f6d6eea5370d` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 
