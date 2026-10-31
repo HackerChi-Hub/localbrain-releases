@@ -14,12 +14,22 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.2.3** · Mac model startup retains the current process failure; Sushi budget and context-cache limits show actual figures instead of a misleading backend-removed error, preserving models and settings.
 - **2.2.2** · Mac runtime actions share names, button styles and order; current and rollback versions appear separately, with install, uninstall and cache actions driven by actual state.
 - **2.2.2** · Mac independent engines support explicit official update checks, validated activation and a retained previous environment; active related tasks are protected and model startup never updates engines.
 - **2.2.2** · Mac maintenance results retain version changes, cache reuse, downloads and database times; unknown progress shows stages, and unrelated model startup no longer blocks independent database updates.
 - **2.2.2** · Mac chat accepts pasted images, files and video references, reading attachments only after manual sending; actual image understanding passed, while video references remain distinct from video understanding.
-- **2.2.2** · Mac fixes Splash 1.5 launch-argument detection with actual text and vision replies using existing weights; embedded Harness is adapted to 0.2.1-rc.5, preserving models and data.
 <!-- recent-features:end -->
+
+## Mac 2.2.3: show actual startup failures
+
+Mac 2.2.3 fixes a misleading backend-removed error during model startup. Each attempt retains its exit status and bounded log even when status polling reaps the process first. Sushi residency-budget and context-cache errors show the engine’s actual figures. Models and runtimes are retained. The app does not silently change parameters, raise system memory limits or download weights again. If the requested budget exceeds the limit, reduce the budget or context manually in Settings → Runtime and diagnostics before retrying.
+
+The installed Mac app verified the actual preflight error from Home, restored controls and retained model cards. All 15,639 entries, permissions and links match, and the configuration hash is unchanged. Rust results are 462 passed and 39 ignored; app signing, updater signature verification and DMG validation passed. The app is not Apple-notarized. On 2026-10-31 the author approved a batch-specific exception for the source documentation CI billing restriction; local checks are not a remote CI pass. Windows/Linux remain at independently released 2.2.2.
+
+[Mac 2.2.3](VERIFICATION-2.2.3-MAC.md)
+
+
 
 ## Windows / Linux 2.2.2: maintenance receipts and pasted attachments
 
@@ -202,7 +212,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.2.2 · Mac 2.2.2 · Linux 2.2.2
+## Latest downloads：Windows 2.2.2 · Mac 2.2.3 · Linux 2.2.2
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -228,11 +238,11 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.2.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2/LocalBrain_2.2.2_aarch64.dmg) · Installed; this batch verified consistent maintenance, engine updates and pasted attachments; locally signed, not Apple-notarized |
+| Apple Silicon Mac 2.2.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.3/LocalBrain_2.2.3_aarch64.dmg) · Installed; this batch verified consistent maintenance, engine updates and pasted attachments; locally signed, not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_x64-setup.exe) · 2.2.2; installed; platform acceptance and limits above|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_amd64.AppImage) · 2.2.2; installed; platform acceptance and limits above|
 
-[Mac 2.2.2 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.2) · [Mac checksums](SHA256SUMS-2.2.2-MAC.txt) · [Windows/Linux 2.2.1 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.1_amd64.deb`. Older releases are retained.
+[Mac 2.2.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.3) · [Mac checksums](SHA256SUMS-2.2.3-MAC.txt) · [Windows/Linux 2.2.1 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.1_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -309,7 +319,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `8304011e22eda8b7e2b6947ae3ba226ceb5412233b3679880702abdc238526d4` |
+| Mac DMG | `ad556e3ef043c5e592e27a642eb876b3c4a635ccc68d6b8470c04cf02442efc3` |
 | Windows installer | `4e0f83afe07278f7c7d4d18c308acb858bc5c78c01bce2164dae5708591c62b2` |
 | Linux AppImage | `79444db1a25d39e679e2813616fa2a5fd05cfcf58c7f47fa0a48431b8c94db1b` |
 | Linux Debian | `a2b0fceabcdad6488ccc2377041e8945a77e226776c0f8d817d8f6d6eea5370d` |
