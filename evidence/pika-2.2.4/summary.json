@@ -1,0 +1,59 @@
+{
+  "version": "2.2.4",
+  "scope": "Apple Silicon Mac only",
+  "buildSourceCommit": "2be0254ffbbc1195385613831daad449a5cd2a0f",
+  "installedEntries": 15401,
+  "appSignaturePassed": true,
+  "updaterSignaturePassed": true,
+  "appleNotarized": false,
+  "targetedPikaMediaTestsPassed": 13,
+  "generationRerunAfterMerge": false,
+  "userWillVerifyGeneration": true,
+  "previousSameDaySamples": [
+    {
+      "mode": "text",
+      "width": 256,
+      "height": 256,
+      "frames": 124,
+      "steps": 6,
+      "elapsedSeconds": 63.707640832988545,
+      "enginePeakGiB": 25.658
+    },
+    {
+      "mode": "first-frame",
+      "width": 256,
+      "height": 256,
+      "frames": 124,
+      "steps": 6,
+      "elapsedSeconds": 64.11754783301149,
+      "enginePeakGiB": 26.54
+    },
+    {
+      "mode": "previous-installed-MCP-text",
+      "width": 448,
+      "height": 256,
+      "frames": 124,
+      "steps": 6,
+      "elapsedSeconds": 102.90431775001343,
+      "enginePeakGiB": 25.658
+    }
+  ],
+  "imageManifest": [
+    {
+      "name": "pika-text-contact.jpg",
+      "sha256": "ff7ab10bf7ee1c68e84054fa88c0555d4d33bd8932dab9af8e567f50ee16e29e",
+      "source": "此前2026-10-31真实生成抽帧",
+      "width": 768,
+      "height": 256
+    },
+    {
+      "name": "pika-first-frame-contact.jpg",
+      "sha256": "d04f502d18b2748b31a46d1c9bb72e4727cff554d7f45c362b35848dd3c59858",
+      "source": "此前2026-10-31真实生成抽帧",
+      "width": 768,
+      "height": 256
+    }
+  ],
+  "windowsLinuxVersion": "2.2.2",
+  "publicReleaseStatus": "published"
+}

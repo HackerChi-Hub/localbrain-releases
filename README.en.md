@@ -14,12 +14,40 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.2.4** · Mac adds Pika H3 Flex text and single-first-frame video with audio, fixed at six steps and about 5.17 seconds, reusing files in managed storage with a separate runtime.
+- **2.2.4** · Internal tool packages follow the host version and defer switching while tasks are active, fixing skipped same-version upgrades and filtering of non-default media models.
 - **2.2.3** · Mac model startup retains the current process failure; Sushi budget and context-cache limits show actual figures instead of a misleading backend-removed error, preserving models and settings.
 - **2.2.2** · Mac runtime actions share names, button styles and order; current and rollback versions appear separately, with install, uninstall and cache actions driven by actual state.
 - **2.2.2** · Mac independent engines support explicit official update checks, validated activation and a retained previous environment; active related tasks are protected and model startup never updates engines.
-- **2.2.2** · Mac maintenance results retain version changes, cache reuse, downloads and database times; unknown progress shows stages, and unrelated model startup no longer blocks independent database updates.
-- **2.2.2** · Mac chat accepts pasted images, files and video references, reading attachments only after manual sending; actual image understanding passed, while video references remain distinct from video understanding.
 <!-- recent-features:end -->
+
+## Mac 2.2.4: Pika H3 Flex text and first-frame video with audio
+
+Pika H3 Flex is integrated into the main LocalBrain project. Generate a short clip from text or supply one local image as its first frame. The current pipeline uses six steps and 124 frames at 24 fps, producing approximately 5.17 seconds of video with audio. Last-frame conditioning, multiple references and automatic continuation are not implemented. It uses the Pika-specific adapter rather than substituting Wuli or ordinary H3 weights.
+
+Use an Apple Silicon Mac with macOS 26 or newer; 64 GB of unified memory is recommended. Original files require approximately 78.2 GB, with another 23 GB for Q8 conversions and the adapter. Complete files and valid partial downloads are reused. Originals, conversions, cache and receipts stay in managed storage, and Pika has a separate runtime. Existing models and environments are retained. Finish other large-model tasks and release their memory before video generation.
+
+To use it:
+
+1. Prepare Pika H3 Flex in Discover; reuse existing files when available.
+2. Install or verify its separate environment in Settings → Runtime and diagnostics.
+3. Select the existing Pika model in Settings → Multimedia backends → Video generation and save.
+4. Choose the video tool in Chat, then Text only or First-frame reference. Start with 256×256 or 448×256, six steps and 124 frames.
+
+Earlier development verification on the same day used an M5 Pro with 64 GB, 256×256, six steps and a fixed seed. Text generation took 63.71 seconds and first-frame generation 64.12 seconds; observed engine peaks were 25.658 GiB and 26.540 GiB. A previous installed-app MCP call produced a 448×256 clip in 102.90 seconds. All three clips had 124 frames and 32 kHz stereo audio, with decoding and non-silence checks completed. These are single-machine samples, not a cross-device speed promise; audio signal checks do not replace a listening-quality assessment.
+
+![Earlier Pika text-generation sample: first, middle and last frames](screenshots/2.2.4-mac/pika-text-contact.jpg)
+
+![Earlier Pika first-frame sample: first, middle and last frames](screenshots/2.2.4-mac/pika-first-frame-contact.jpg)
+
+This main-project rebuild is installed. All 15,401 entries, permissions and links match the DMG and updater archive. App and updater signatures pass; the app is not Apple-notarized. Thirteen targeted Pika/media-interface tests passed; merge-stage records also include 467 passing Rust tests and 1,650 passing frontend tests. This rebuild did not download models again or run video generation; the author chose to verify text and first-frame output personally. Internal tool packages follow the host version and defer switching while related tasks are active, fixing skipped same-version package upgrades and filtering of non-default media models.
+
+Only Mac receives a new installer in this batch. Windows/Linux retain their independently released 2.2.2; Mac Pika results do not establish support on those platforms. [See verification and actual test scope](VERIFICATION-2.2.4-MAC.md).
+
+[Mac 2.2.4 release page](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.4) · [Download Mac 2.2.4 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4/LocalBrain_2.2.4_aarch64.dmg)
+
+Mac DMG SHA-256: `63f040f7ea65df5afe4a28b8e7d9b64c4686db0ed2772ee81b6b70dd3a8495a0`.
+
 
 ## Mac 2.2.3: show actual startup failures
 
@@ -212,7 +240,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.2.2 · Mac 2.2.3 · Linux 2.2.2
+## Latest downloads：Windows 2.2.2 · Mac 2.2.4 · Linux 2.2.2
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -238,7 +266,7 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.2.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.3/LocalBrain_2.2.3_aarch64.dmg) · Installed; this batch verified consistent maintenance, engine updates and pasted attachments; locally signed, not Apple-notarized |
+| Apple Silicon Mac 2.2.4 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4/LocalBrain_2.2.4_aarch64.dmg) · Installed; this batch verified consistent maintenance, engine updates and pasted attachments; locally signed, not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_x64-setup.exe) · 2.2.2; installed; platform acceptance and limits above|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_amd64.AppImage) · 2.2.2; installed; platform acceptance and limits above|
 
@@ -319,7 +347,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `ad556e3ef043c5e592e27a642eb876b3c4a635ccc68d6b8470c04cf02442efc3` |
+| Mac DMG | `63f040f7ea65df5afe4a28b8e7d9b64c4686db0ed2772ee81b6b70dd3a8495a0` |
 | Windows installer | `4e0f83afe07278f7c7d4d18c308acb858bc5c78c01bce2164dae5708591c62b2` |
 | Linux AppImage | `79444db1a25d39e679e2813616fa2a5fd05cfcf58c7f47fa0a48431b8c94db1b` |
 | Linux Debian | `a2b0fceabcdad6488ccc2377041e8945a77e226776c0f8d817d8f6d6eea5370d` |

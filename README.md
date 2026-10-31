@@ -16,12 +16,40 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **2.2.4** · Mac 新增 Pika H3 Flex 专用文字与单张首帧有声视频，固定六步、约5.17秒；原件和转换受管，已有文件复用，使用独立环境。
+- **2.2.4** · 内部工具包跟随宿主版本更新，任务占用时延后切换；修正旧包同版号跳过升级与非默认媒体模型被过滤的问题。
 - **2.2.3** · Mac 模型启动保留本次退出原因；Sushi 预算和上下文缓存超限显示真实数值，不再误报后端被移除，保留模型与参数。
 - **2.2.2** · Mac 运行环境的相同操作统一名称、按钮与顺序；版本和回滚目标单列，安装、卸载与缓存操作按真实状态出现。
 - **2.2.2** · Mac 独立引擎可显式检查官方更新，校验后切换并保留上一环境；相关任务运行时保护原环境，启动模型不自动升级。
-- **2.2.2** · Mac 维护结果保留版本变化、缓存复用、下载与数据库时间；未知进度显示阶段，无关模型启动不再阻挡独立数据库更新。
-- **2.2.2** · Mac 对话支持粘贴图片、文件和视频引用，附件等待手动发送后才读取；已有视觉模型实际识图通过，视频引用不冒充视频理解。
 <!-- recent-features:end -->
+
+## Mac 2.2.4：Pika H3 Flex 文字与首帧有声视频
+
+Pika H3 Flex 已合并到方寸智匣主项目：可以用文字描述生成短视频，也可以用一张本地图片作为首帧。当前管线固定六步、124 帧、24 帧/秒，输出约 5.17 秒的有声视频；尾帧、多参考图和自动续段暂未接入。它使用 Pika 的专用适配器，不会把 Wuli 或普通 H3 权重当成 Pika 运行。
+
+使用 Apple Silicon Mac、macOS 26 或更新系统，建议 64 GB 统一内存。原始文件约 78.2 GB，Q8 转换与适配器另需约 23 GB；下载前请预留足够磁盘空间。已有完整文件和有效下载片段会复用。模型原件、转换文件、缓存和回执留在软件的受管目录，Pika 使用独立运行环境，其他模型和环境保留。准备生成前，请先确认其他大型模型任务结束并释放相应内存。
+
+使用步骤：
+
+1. 在“发现”中准备 Pika H3 Flex；已有文件可直接复用。
+2. 在“设置 → 运行环境与诊断”安装或校验 Pika 专用环境。
+3. 在“设置 → 多媒体后端 → 视频生成”选择已有 Pika 模型并保存。
+4. 在对话页选择视频工具，使用“纯文字生成”或“首帧参考（图生视频）”。先用 256×256 或 448×256、六步、124 帧测试。
+
+同一天此前的开发验收，在 M5 Pro、64 GB、256×256、六步及固定种子条件下，文字生成耗时 63.71 秒，首帧生成 64.12 秒；引擎观测峰值分别为 25.658 GiB 和 26.540 GiB。此前安装版的真实 MCP 调用生成 448×256 样片耗时 102.90 秒。三份样片均有 124 帧和 32 kHz 双声道音轨，完成解码与非静音检查；这些是本机小样，不是跨设备速度承诺，音轨检查也没有代替人耳听感评测。
+
+![此前 Pika 文字生成样片：首、中、末帧](screenshots/2.2.4-mac/pika-text-contact.jpg)
+
+![此前 Pika 首帧生成样片：首、中、末帧](screenshots/2.2.4-mac/pika-first-frame-contact.jpg)
+
+本次从合并后的主项目重新打包安装，15,401 项文件、权限和链接与镜像及更新包一致，应用和更新包签名通过，尚未 Apple 公证。Pika 与媒体接口的 13 项针对性测试通过；合并阶段另有 Rust 467 项和前端 1,650 项通过的记录。本次重打包没有重新下载模型，没有运行视频生成，文字与首帧效果按作者要求留待本人验收。内部工具包随宿主版本更新，活动任务占用时延后切换；修正旧工具包被同版号跳过，以及未设为默认的媒体模型被过滤的问题。
+
+本次只提供 Mac 新包。Windows/Linux 继续使用独立发布的 2.2.2，Mac 的 Pika 结果不代表其他平台已适配。[查看本轮核对与实际验收范围](VERIFICATION-2.2.4-MAC.md)。
+
+[Mac 2.2.4 发行页](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.4) · [下载 Mac 2.2.4（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4/LocalBrain_2.2.4_aarch64.dmg)
+
+Mac DMG SHA-256：`63f040f7ea65df5afe4a28b8e7d9b64c4686db0ed2772ee81b6b70dd3a8495a0`。
+
 
 ## Mac 2.2.3：启动失败显示实际原因
 
@@ -214,7 +242,7 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows 2.2.2 · Mac 2.2.3 · Linux 2.2.2
+## 最新下载：Windows 2.2.2 · Mac 2.2.4 · Linux 2.2.2
 
 以下 2.1.3 为历史工具接入验收记录。
 
@@ -240,7 +268,7 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 2.2.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.3/LocalBrain_2.2.3_aarch64.dmg) · 已安装；统一维护、引擎升级和粘贴附件验收通过；本地签名、未 Apple 公证 |
+| Apple Silicon Mac 2.2.4 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4/LocalBrain_2.2.4_aarch64.dmg) · 已安装；统一维护、引擎升级和粘贴附件验收通过；本地签名、未 Apple 公证 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_x64-setup.exe) · 2.2.2; 已安装，本批平台验收及限制见上文|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_amd64.AppImage) · 2.2.2; 已安装，本批平台验收及限制见上文|
 
@@ -321,7 +349,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `ad556e3ef043c5e592e27a642eb876b3c4a635ccc68d6b8470c04cf02442efc3` |
+| Mac DMG | `63f040f7ea65df5afe4a28b8e7d9b64c4686db0ed2772ee81b6b70dd3a8495a0` |
 | Windows安装程序 | `4e0f83afe07278f7c7d4d18c308acb858bc5c78c01bce2164dae5708591c62b2` |
 | Linux AppImage | `79444db1a25d39e679e2813616fa2a5fd05cfcf58c7f47fa0a48431b8c94db1b` |
 | Linux Debian包 | `a2b0fceabcdad6488ccc2377041e8945a77e226776c0f8d817d8f6d6eea5370d` |
