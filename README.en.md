@@ -14,12 +14,20 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **2.2.1** · Mac, Windows and Linux maintenance shows actual stages; percentages require measured download bytes and totals. Completion clears the indicator before refreshing components and database receipts.
-- **2.2.0** · Manual compaction uses one engine meter before and after, including summary framing, retaining originals and avoiding completed-tool replay.
-- **2.2.0** · Mac, Windows and Linux tools and model capabilities share internal registration while retaining existing entry points and user data; custom plugin installation remains closed.
-- **2.2.0** · Mac, Windows and Linux internal module updates validate before activation, defer for active tasks and retain the prior implementation on failure; runtime maintenance remains available.
-- **2.1.7** · Windows now recognizes standard Lib/site-packages, fixing false partially-installed image runtime status while preserving existing Torch, Diffusers and models.
+- **2.2.2** · Mac runtime actions share names, button styles and order; current and rollback versions appear separately, with install, uninstall and cache actions driven by actual state.
+- **2.2.2** · Mac independent engines support explicit official update checks, validated activation and a retained previous environment; active related tasks are protected and model startup never updates engines.
+- **2.2.2** · Mac maintenance results retain version changes, cache reuse, downloads and database times; unknown progress shows stages, and unrelated model startup no longer blocks independent database updates.
+- **2.2.2** · Mac chat accepts pasted images, files and video references, reading attachments only after manual sending; actual image understanding passed, while video references remain distinct from video understanding.
+- **2.2.2** · Mac fixes Splash 1.5 launch-argument detection with actual text and vision replies using existing weights; embedded Harness is adapted to 0.2.1-rc.5, preserving models and data.
 <!-- recent-features:end -->
+
+## Mac 2.2.2: consistent runtime maintenance and pasted attachments
+
+Mac 2.2.2 is publicly released after installed-app verification. On 2026-10-31 the author approved this batch exception for source CI account billing restrictions; local checks are not a remote CI pass. The installed app verified consistent controls, six independent engine updates, database feedback and a Trivy rollback round trip. Existing weights with Splash 1.5 completed text and vision replies. Images, text files and video references can be pasted into chat and are read only after manual sending; videos currently remain file references. Embedded Harness is adapted to 0.2.1-rc.5. Mac is locally signed and not Apple-notarized. Windows/Linux remain at 2.2.1 and will be packaged separately by the author.
+
+[Mac 2.2.2 verification](VERIFICATION-2.2.2-MAC.md). Historical sections retain their original scopes; see the download table for current platform versions.
+
+
 
 ## Windows / Linux 2.2.1: truthful maintenance stages and prompt completion
 
@@ -186,7 +194,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.2.1 · Mac 2.2.1 · Linux 2.2.1
+## Latest downloads：Windows 2.2.1 · Mac 2.2.2 · Linux 2.2.1
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -212,11 +220,11 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.2.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_aarch64.dmg) · Installed; this batch verified real downloads, maintenance stages and completion refresh; locally signed, not Apple-notarized |
+| Apple Silicon Mac 2.2.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2/LocalBrain_2.2.2_aarch64.dmg) · Installed; this batch verified consistent maintenance, engine updates and pasted attachments; locally signed, not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_x64-setup.exe) · 2.2.1; installed; platform acceptance and limits above|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.1/LocalBrain_2.2.1_amd64.AppImage) · 2.2.1; installed; platform acceptance and limits above|
 
-[Mac 2.2.1 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1) · [Mac checksums](SHA256SUMS-2.2.1-MAC.txt) · [Windows/Linux 2.2.0 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.0). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.0_amd64.deb`. Older releases are retained.
+[Mac 2.2.2 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.2) · [Mac checksums](SHA256SUMS-2.2.2-MAC.txt) · [Windows/Linux 2.2.1 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.1_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -293,7 +301,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `aa731d2232ac6ff601ffb3cd19a4ff19e43a82deb76444fcceca9456b75ed83d` |
+| Mac DMG | `8304011e22eda8b7e2b6947ae3ba226ceb5412233b3679880702abdc238526d4` |
 | Windows installer | `96b74a0bf7a9e632a54c1906c596e4d492f1407c6154c0f72defe7a1fba9c60b` |
 | Linux AppImage | `1eff314ba5a80dedfd5b5be3ebcc4f4133a010e660a8d64e2cf0b88598e37dc1` |
 | Linux Debian | `55639806039c39ccee7996832428b7c70b99e58c802df4c83b865bbeac9a1f8f` |

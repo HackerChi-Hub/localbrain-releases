@@ -9,7 +9,7 @@
         "splash",
         "sushi"
       ],
-      "special_runtime": "Splash 1.3.1 / Metal; managed Sushi 1.2.4 / Apple Silicon macOS 26.2+; independent of CUDA",
+      "special_runtime": "Splash baseline 1.3.1 / Metal / M3+ macOS26.4+; Sushi baseline 1.2.4 / Apple Silicon macOS26.2+; explicit official-release upgrades with protocol probes and rollback; independent of CUDA",
       "required_resources": [
         "splash_server.py",
         "splash_bridge.py",
@@ -25,6 +25,33 @@
         "update_policy": "explicit managed release only; never update at model start",
         "default_context": 32768,
         "default_residency": "full; optional exact SSD budget"
+      },
+      "managed_utilities": {
+        "adb": {
+          "version": "37.0.1",
+          "archive_sha256": "ee39ad5967e95c2a07f04dbcbde96b1a0c916ba376096db5d2f498b7727a5d1d"
+        },
+        "trivy": {
+          "version": "0.75.0",
+          "archive_sha256": "4a77108cccf8e55c8d6823e1e759939a622277e66cd0daa3c1fc621ed69e4568"
+        },
+        "splash": {
+          "version": "1.3.1",
+          "archive_sha256": "f98c602b16a70a7bc01e05b3a9e6034c367aedd47e11a4c63b637d1342756c92"
+        }
+      },
+      "python_archive": {
+        "version": "3.12.13",
+        "release": "20260623",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260623/cpython-3.12.13%2B20260623-aarch64-apple-darwin-install_only.tar.gz",
+        "sha256": "3724aa4dafb5f7b6c2cf98e89914e4248dc6bd2fe40407df4a2d73de99615f16",
+        "policy": "fixed archive; explicit install only; verified cache and HTTP Range resume"
+      },
+      "embedded_dsh": {
+        "version": "0.2.1-rc.5",
+        "node": "22.23.4",
+        "policy": "fixed SDK lockfile; updates with reviewed Mac application package only",
+        "verification": "VERIFICATION-2.2.2-MAC.md"
       }
     },
     "windows": {
