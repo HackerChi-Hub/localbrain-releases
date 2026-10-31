@@ -14,12 +14,26 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.2.4** · Windows/Linux retain startup failure causes and bundled tools upgrade with the application.
 - **2.2.4** · Mac adds Pika H3 Flex text and single-first-frame video with audio, fixed at six steps and about 5.17 seconds, reusing files in managed storage with a separate runtime.
 - **2.2.4** · Internal tool packages follow the host version and defer switching while tasks are active, fixing skipped same-version upgrades and filtering of non-default media models.
 - **2.2.3** · Mac model startup retains the current process failure; Sushi budget and context-cache limits show actual figures instead of a misleading backend-removed error, preserving models and settings.
 - **2.2.2** · Mac runtime actions share names, button styles and order; current and rollback versions appear separately, with install, uninstall and cache actions driven by actual state.
-- **2.2.2** · Mac independent engines support explicit official update checks, validated activation and a retained previous environment; active related tasks are protected and model startup never updates engines.
 <!-- recent-features:end -->
+
+## Windows / Linux 2.2.4: retain startup errors and upgrade internal tools
+
+Startup failures retain their actual cause after process cleanup. Bundled tools follow the host version, fixing skipped updates under a permanent 1.0.0 version; custom plugin installation remains closed.
+
+Isolated native Windows acceptance migrates the 2.2.2 app's1.0.0 modules to 2.2.4 with rollback versions retained. Paste copies, maintenance receipts, an existing 2B request and real document calls are checked separately.
+
+Pika H3 Flex currently requires Apple Silicon/MLX; Windows/Linux reports unsupported, without borrowing Mac generation results or downloading Pika weights.
+
+DSH 53 passed per platform; Windows Rust 454 passed/37 ignored; frontend 1650 passed/2 skipped; 14 adapters and 7 queue tests passed; 46 Python files (44 unittest files, 375 cases and two scripts) plus 7 security tests passed. A 400ms task-start test initially failed; bounded readiness polling and cleanup before assertions passed the full rerun. Linux acceptance is Ubuntu22.04 WSL2/Xvfb resources and startup, not bare-metal GPU or media inference. See verification for source CI restrictions and this batch's publication status.
+
+[Verification](VERIFICATION-2.2.4-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.4-win-linux)
+
+The Mac section below retains its original independent acceptance scope; current Windows/Linux status is described above.
 
 ## Mac 2.2.4: Pika H3 Flex text and first-frame video with audio
 
@@ -267,8 +281,8 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.2.4 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4/LocalBrain_2.2.4_aarch64.dmg) · Installed; this batch verified consistent maintenance, engine updates and pasted attachments; locally signed, not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_x64-setup.exe) · 2.2.2; installed; platform acceptance and limits above|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_amd64.AppImage) · 2.2.2; installed; platform acceptance and limits above|
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.4_x64-setup.exe) · 2.2.2; installed; platform acceptance and limits above|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.4_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.4_amd64.AppImage) · 2.2.2; installed; platform acceptance and limits above|
 
 [Mac 2.2.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.3) · [Mac checksums](SHA256SUMS-2.2.3-MAC.txt) · [Windows/Linux 2.2.1 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.1_amd64.deb`. Older releases are retained.
 
@@ -348,9 +362,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `63f040f7ea65df5afe4a28b8e7d9b64c4686db0ed2772ee81b6b70dd3a8495a0` |
-| Windows installer | `4e0f83afe07278f7c7d4d18c308acb858bc5c78c01bce2164dae5708591c62b2` |
-| Linux AppImage | `79444db1a25d39e679e2813616fa2a5fd05cfcf58c7f47fa0a48431b8c94db1b` |
-| Linux Debian | `a2b0fceabcdad6488ccc2377041e8945a77e226776c0f8d817d8f6d6eea5370d` |
+| Windows installer | `6dfcceddeb2200cb88e833b5210d8e1a715e8f62900af31120d73ae6db870721` |
+| Linux AppImage | `6fe8fb9241a6658e45364abc6713b9b8522cbcd433581d8b13511f4d4565f7a4` |
+| Linux Debian | `0f0d6f686f8921ae53bbef56f14279444e66892271836142962a1d45d228de79` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

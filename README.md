@@ -16,12 +16,26 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **2.2.4** · 模型启动失败时保留真正的错误原因，进程回收后仍可诊断
 - **2.2.4** · Mac 新增 Pika H3 Flex 专用文字与单张首帧有声视频，固定六步、约5.17秒；原件和转换受管，已有文件复用，使用独立环境。
 - **2.2.4** · 内部工具包跟随宿主版本更新，任务占用时延后切换；修正旧包同版号跳过升级与非默认媒体模型被过滤的问题。
 - **2.2.3** · Mac 模型启动保留本次退出原因；Sushi 预算和上下文缓存超限显示真实数值，不再误报后端被移除，保留模型与参数。
 - **2.2.2** · Mac 运行环境的相同操作统一名称、按钮与顺序；版本和回滚目标单列，安装、卸载与缓存操作按真实状态出现。
-- **2.2.2** · Mac 独立引擎可显式检查官方更新，校验后切换并保留上一环境；相关任务运行时保护原环境，启动模型不自动升级。
 <!-- recent-features:end -->
+
+## Windows / Linux 2.2.4：保留启动错误原因，修复内部工具升级
+
+模型启动失败时保留真正的错误原因，进程回收后仍可诊断。内部工具包跟随宿主版本升级，避免固定1.0.0让已有环境跳过工具更新；不开放自定义插件安装。
+
+Windows隔离安装验收从2.2.2应用的1.0.0模块迁移到2.2.4，保留旧模块用于回退；原生粘贴副本、维护回执、已有2B请求和真实文档读写单独核对。
+
+当前Pika H3 Flex运行时仅支持Apple Silicon/MLX；Windows/Linux明确显示不适用，不借用Mac视频成绩，也不下载Pika权重。
+
+两平台各53项DSH通过；Windows Rust454通过/37忽略，前端1650通过/2跳过、适配器14、维护队列7通过，Python46文件（44个单元文件375条用例及两个脚本）和额外安全7项通过。后台任务测试首轮固定400毫秒等待失败，已改为有界就绪轮询并在断言前清理，完整重跑通过。Linux仅Ubuntu22.04 WSL2/Xvfb资源与启动验收，不冒称裸机GPU或媒体推理通过。源码CI账户限制及本批发布状态见验收。
+
+[Verification](VERIFICATION-2.2.4-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.4-win-linux)
+
+以下Mac段落保留首次发布时的独立验收范围，Windows/Linux当前批次以上文为准。
 
 ## Mac 2.2.4：Pika H3 Flex 文字与首帧有声视频
 
@@ -269,8 +283,8 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 | 平台 | 安装包与状态 |
 | --- | --- |
 | Apple Silicon Mac 2.2.4 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4/LocalBrain_2.2.4_aarch64.dmg) · 已安装；统一维护、引擎升级和粘贴附件验收通过；本地签名、未 Apple 公证 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_x64-setup.exe) · 2.2.2; 已安装，本批平台验收及限制见上文|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.2_amd64.AppImage) · 2.2.2; 已安装，本批平台验收及限制见上文|
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.4_x64-setup.exe) · 2.2.2; 已安装，本批平台验收及限制见上文|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.4_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.4_amd64.AppImage) · 2.2.2; 已安装，本批平台验收及限制见上文|
 
 [Mac 2.2.3 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.3) · [Mac 校验值](SHA256SUMS-2.2.3-MAC.txt) · [Windows/Linux 2.2.1 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.2.1_amd64.deb`。旧发行保留。
 
@@ -350,9 +364,9 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 | 文件 | 散列 |
 | --- | --- |
 | Mac DMG | `63f040f7ea65df5afe4a28b8e7d9b64c4686db0ed2772ee81b6b70dd3a8495a0` |
-| Windows安装程序 | `4e0f83afe07278f7c7d4d18c308acb858bc5c78c01bce2164dae5708591c62b2` |
-| Linux AppImage | `79444db1a25d39e679e2813616fa2a5fd05cfcf58c7f47fa0a48431b8c94db1b` |
-| Linux Debian包 | `a2b0fceabcdad6488ccc2377041e8945a77e226776c0f8d817d8f6d6eea5370d` |
+| Windows安装程序 | `6dfcceddeb2200cb88e833b5210d8e1a715e8f62900af31120d73ae6db870721` |
+| Linux AppImage | `6fe8fb9241a6658e45364abc6713b9b8522cbcd433581d8b13511f4d4565f7a4` |
+| Linux Debian包 | `0f0d6f686f8921ae53bbef56f14279444e66892271836142962a1d45d228de79` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 
