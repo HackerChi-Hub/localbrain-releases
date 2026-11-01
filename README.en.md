@@ -14,12 +14,64 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.2.7** · Mac Discover groups H3 four/eight-step acceleration and LTX Transition/Layout under their base models; optional installation and disabling preserve standard generation.
+- **2.2.7** · Video uses one model-first workflow, followed by supported generation modes and settings, with a shared directory and availability across Discover, Home and chat.
+- **2.2.7** · Enhancement setup lists missing files, supports pause/resume and verification, and preserves shared models, runtimes and all recording assets on uninstall.
 - **2.2.4** · Windows/Linux retain startup failure causes and bundled tools upgrade with the application.
 - **2.2.4** · Mac adds Pika H3 Flex text and single-first-frame video with audio, fixed at six steps and about 5.17 seconds, reusing files in managed storage with a separate runtime.
-- **2.2.4** · Internal tool packages follow the host version and defer switching while tasks are active, fixing skipped same-version upgrades and filtering of non-default media models.
-- **2.2.3** · Mac model startup retains the current process failure; Sushi budget and context-cache limits show actual figures instead of a misleading backend-removed error, preserving models and settings.
-- **2.2.2** · Mac runtime actions share names, button styles and order; current and rollback versions appear separately, with install, uninstall and cache actions driven by actual state.
 <!-- recent-features:end -->
+
+## Mac 2.2.7: choose a model, then its video capabilities
+
+Video enhancements now follow one workflow: prepare the model and optional capabilities in Discover, then select the model, generation method, enhancement and parameters in chat before generating. Four/eight-forward acceleration belongs to 8-bit MiniMax H3; endpoint Transition and Layout to Render belong to LTX-2.5. Standard generation remains available; H3 acceleration is off by default.
+
+![Discover: H3 acceleration](screenshots/2.2.7-mac/discover-h3.jpg)
+
+![Discover: LTX capabilities](screenshots/2.2.7-mac/discover-ltx.jpg)
+
+Four capabilities reuse two base models. Complete converted H3 8-bit weights skip approximately 41.4 GB of original backbone weights. Connect a prepared directory with the existing-files selector; new users review the missing shared files, adapters and runtime before installation. Models, conversions, caches and outputs stay in the selected directory, including external disks. Downloads support pause, validated resume and pinned checksums. Installation never starts generation.
+
+1. Find 8-bit MiniMax H3 or LTX-2.5 in Discover, connect existing files and install or enable the required capability.
+2. Open the unified workspace through “Go to use”, then select the model. H3 offers standard sampling, four or eight forwards; LTX offers text generation, endpoint Transition or Layout to Render.
+3. Supply first/last images for Transition; for Layout, supply an equally long 24-fps driving video and an aligned appearance image. Set dimensions, frame count and seed.
+4. Generate, preview, locate the file or reference it in chat. Receipts retain actual parameters, elapsed time and logs.
+
+Layout needs official access approval and a local Hugging Face token; the app never accepts account-data-sharing terms for users. Imported assets are referenced and retained when disabled. Uninstall removes only an adapter downloaded and registered by the app, preserving shared models, runtime, inputs and final videos. An occupied backend blocks a new job without stopping other models. Pika was not downloaded again, and the app does not silently reduce dimensions or decoding precision.
+
+### Four real short-video calls in the installed app
+
+Each call used the installed 2.2.7 native interface on an M5 Pro with 64 GB, the same toy-car prompt, seed 22704 and 24 fps. Approximately one-second samples establish successful calls, not five-second 720P performance. Peaks below are MLX active allocations, not total system memory.
+
+|Capability|Actual output|Elapsed|MLX active peak|
+|---|---|---:|---:|
+|H3 four forwards|256×256, 22 frames, approximately 0.92 s|21.56 s|25.63 GiB|
+|H3 eight forwards|256×256, 22 frames, approximately 0.92 s|25.96 s|25.63 GiB|
+|Transition|384×256, 25 frames, approximately 1.04 s|27.61 s|21.81 GiB|
+|Layout|384×256, 25 frames, approximately 1.04 s|33.28 s|24.57 GiB|
+
+![H3 four-forward sample frames](screenshots/2.2.7-mac/h3-4-contact.jpg)
+
+![H3 eight-forward sample frames](screenshots/2.2.7-mac/h3-8-contact.jpg)
+
+H3 receipts confirm four/eight actual forwards and 208 attached layers, with full 32-bit video decoding. Reduced sampling compute does not guarantee equal detail for every scene.
+
+![Transition sample frames](screenshots/2.2.7-mac/transition-contact.jpg)
+
+Transition uses the 2.3 adapter with the 2.5 eight-bit distilled base in a compatibility recipe, matching 576 adapter pairs. This is not full native 2.3 acceptance.
+
+![Layout sample frames](screenshots/2.2.7-mac/layout-contact.jpg)
+
+Layout uses an explicitly prepared 25-frame driving clip; the original 81-frame source remains intact. All 480 adapter pairs attach and both control stages complete. Inputs must match the requested length; the app does not silently trim or retime them. All four outputs passed video/audio decoding and dimension/frame checks. Original audio is retained; an audio stream does not establish loudness, dialogue quality or synchronization. High-resolution, long-form and complex scenes still require separate evaluation.
+
+### Download and installation checks
+
+The Apple Silicon Mac 2.2.7 DMG is 92,790,171 bytes, approximately 92.8 MB. All 15,652 built, mounted and installed entries, permissions and links match. App/updater signatures and disk-image verification passed; locally signed, not Apple-notarized. Rust 474 and frontend 1660 tests passed with explicit ignored/skipped cases; 49 Python files passed. A complete clean-machine large-model download and Windows/Linux video inference were not tested in this batch.
+
+[Download Mac 2.2.7 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.7/LocalBrain_2.2.7_aarch64.dmg) · [Downloads and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest) · [Acceptance record](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.2.7-MAC.md)
+
+SHA-256: `a0eea9853c6f5c8f8ff142749257c6ae4e5b426bb1a75f0646c21a9f3523c89f`.
+
+This batch updates Mac only; Windows/Linux stay at 2.2.4. Historical sections and images below retain their original conditions and platform boundaries.
 
 ## Windows / Linux 2.2.4: retain startup errors and upgrade internal tools
 
@@ -254,7 +306,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.2.2 · Mac 2.2.4 · Linux 2.2.2
+## Latest downloads：Windows 2.2.4 · Mac 2.2.7 · Linux 2.2.4
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -280,11 +332,11 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.2.4 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4/LocalBrain_2.2.4_aarch64.dmg) · Installed; this batch verified consistent maintenance, engine updates and pasted attachments; locally signed, not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.4_x64-setup.exe) · 2.2.2; installed; platform acceptance and limits above|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.4_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.4_amd64.AppImage) · 2.2.2; installed; platform acceptance and limits above|
+| Apple Silicon Mac 2.2.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.7/LocalBrain_2.2.7_aarch64.dmg) · Installed; four native short-video calls passed; locally signed, not Apple-notarized |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4-win-linux/LocalBrain_2.2.4_x64-setup.exe) · 2.2.4; installed; platform acceptance and limits above|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4-win-linux/LocalBrain_2.2.4_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4-win-linux/LocalBrain_2.2.4_amd64.AppImage) · 2.2.4; installed; platform acceptance and limits above|
 
-[Mac 2.2.3 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.3) · [Mac checksums](SHA256SUMS-2.2.3-MAC.txt) · [Windows/Linux 2.2.1 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.1_amd64.deb`. Older releases are retained.
+[Mac 2.2.7 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.7) · [Mac checksums](SHA256SUMS-2.2.7-MAC.txt) · [Windows/Linux 2.2.4 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.4-win-linux). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.4_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -361,7 +413,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `63f040f7ea65df5afe4a28b8e7d9b64c4686db0ed2772ee81b6b70dd3a8495a0` |
+| Mac DMG | `a0eea9853c6f5c8f8ff142749257c6ae4e5b426bb1a75f0646c21a9f3523c89f` |
 | Windows installer | `6dfcceddeb2200cb88e833b5210d8e1a715e8f62900af31120d73ae6db870721` |
 | Linux AppImage | `6fe8fb9241a6658e45364abc6713b9b8522cbcd433581d8b13511f4d4565f7a4` |
 | Linux Debian | `0f0d6f686f8921ae53bbef56f14279444e66892271836142962a1d45d228de79` |

@@ -1,0 +1,71 @@
+{
+  "reviewed_version": "2.2.7",
+  "languages": {
+    "zh-CN": [
+      {
+        "version": "2.2.7",
+        "text": "Mac 发现页按原模型管理 H3 四步、八步加速及 LTX Transition、Layout；可选安装和关闭，不替换普通生成。"
+      },
+      {
+        "version": "2.2.7",
+        "text": "视频统一先选模型、再选生成方式和参数；发现页、主页与对话共用目录和实际可用状态。"
+      },
+      {
+        "version": "2.2.7",
+        "text": "视频增强列出缺少文件再安装，支持暂停续传与完整校验；卸载保留共享模型、环境和所有录制素材。"
+      },
+      {
+        "version": "2.2.4",
+        "text": "模型启动失败时保留真正的错误原因，进程回收后仍可诊断"
+      },
+      {
+        "version": "2.2.4",
+        "text": "Mac 新增 Pika H3 Flex 专用文字与单张首帧有声视频，固定六步、约5.17秒；原件和转换受管，已有文件复用，使用独立环境。"
+      }
+    ],
+    "zh-TW": [
+      {
+        "version": "2.2.7",
+        "text": "Mac 探索頁依原模型管理 H3 四步、八步加速及 LTX Transition、Layout；可選安裝與關閉，保留一般生成。"
+      },
+      {
+        "version": "2.2.7",
+        "text": "影片統一先選模型，再選生成方式與參數；探索頁、首頁及對話共用目錄與實際可用狀態。"
+      },
+      {
+        "version": "2.2.7",
+        "text": "影片增強先列出缺少檔案再安裝，支援暫停續傳及完整校驗；解除安裝保留共用模型、環境與所有錄製素材。"
+      },
+      {
+        "version": "2.2.4",
+        "text": "模型啟動失敗保留真實錯誤，程序回收後仍可診斷"
+      },
+      {
+        "version": "2.2.4",
+        "text": "Mac 新增 Pika H3 Flex 專用文字及單張首幀有聲影片，固定六步、約5.17秒；原件與轉換受管，沿用既有檔案，使用獨立環境。"
+      }
+    ],
+    "en": [
+      {
+        "version": "2.2.7",
+        "text": "Mac Discover groups H3 four/eight-step acceleration and LTX Transition/Layout under their base models; optional installation and disabling preserve standard generation."
+      },
+      {
+        "version": "2.2.7",
+        "text": "Video uses one model-first workflow, followed by supported generation modes and settings, with a shared directory and availability across Discover, Home and chat."
+      },
+      {
+        "version": "2.2.7",
+        "text": "Enhancement setup lists missing files, supports pause/resume and verification, and preserves shared models, runtimes and all recording assets on uninstall."
+      },
+      {
+        "version": "2.2.4",
+        "text": "Windows/Linux retain startup failure causes and bundled tools upgrade with the application."
+      },
+      {
+        "version": "2.2.4",
+        "text": "Mac adds Pika H3 Flex text and single-first-frame video with audio, fixed at six steps and about 5.17 seconds, reusing files in managed storage with a separate runtime."
+      }
+    ]
+  }
+}

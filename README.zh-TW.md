@@ -14,12 +14,64 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **2.2.7** · Mac 探索頁依原模型管理 H3 四步、八步加速及 LTX Transition、Layout；可選安裝與關閉，保留一般生成。
+- **2.2.7** · 影片統一先選模型，再選生成方式與參數；探索頁、首頁及對話共用目錄與實際可用狀態。
+- **2.2.7** · 影片增強先列出缺少檔案再安裝，支援暫停續傳及完整校驗；解除安裝保留共用模型、環境與所有錄製素材。
 - **2.2.4** · 模型啟動失敗保留真實錯誤，程序回收後仍可診斷
 - **2.2.4** · Mac 新增 Pika H3 Flex 專用文字及單張首幀有聲影片，固定六步、約5.17秒；原件與轉換受管，沿用既有檔案，使用獨立環境。
-- **2.2.4** · 內部工具包跟隨宿主版本更新，任務占用時延後切換；修正舊包因同版號跳過升級及非預設媒體模型被過濾的問題。
-- **2.2.3** · Mac 模型啟動保留本次退出原因；Sushi 預算與上下文快取超限顯示真實數值，不再誤報後端被移除，保留模型與參數。
-- **2.2.2** · Mac 執行環境的相同操作統一名稱、按鈕與順序；版本和回滾目標分列，安裝、解除安裝與快取操作依真實狀態出現。
 <!-- recent-features:end -->
+
+## Mac 2.2.7：選好模型，再選影片功能
+
+影片增強現在共用同一流程：先於探索頁準備模型與可選功能，進入對話後選模型、生成方式、增強和參數，最後點「產生影片」。H3四步、八步加速放在MiniMax H3八位模型下；Transition首尾影格過渡、Layout預演轉成片放在LTX-2.5下。一般生成保留，H3加速預設關閉。
+
+![探索頁 H3 加速](screenshots/2.2.7-mac/discover-h3.jpg)
+
+![探索頁 LTX 功能](screenshots/2.2.7-mac/discover-ltx.jpg)
+
+四項功能重用兩個基礎模型。已有完整H3八位轉換檔時，可跳過約41.4GB原始骨幹。先選擇模型目錄或使用既有檔案；新使用者先核對安裝清單中缺少的共用檔案、適配器及環境。模型、轉換、快取與影片隨所選目錄保存，支援外接磁碟、暫停、續傳及固定摘要校驗；安裝不會自動生成。
+
+1. 在探索頁連接MiniMax H3八位或LTX-2.5既有目錄，安裝或啟用需要的功能。
+2. 點「前往使用」，於統一工作台先選模型；H3選一般取樣、四步或八步，LTX選一般文字、首尾影格過渡或預演轉成片。
+3. Transition提供首尾兩圖；Layout提供24影格/秒、等長預演及同構圖外觀圖，再設定畫幅、影格數與種子。
+4. 生成完成後預覽、定位檔案或引用到對話，並由回執核對實際參數、用時及日誌。
+
+Layout需要官方存取權及本機Hugging Face權杖，軟體不代為同意帳號資訊共享條款。匯入檔案只建立引用，關閉增強保留檔案；解除安裝僅處理軟體下載且登記的適配器，保留共用基模、環境、輸入與影片。既有工作占用時不自動停止其他模型。不重下載Pika，不暗自降低畫幅或解碼精度。
+
+### 四項安裝版短片實測
+
+M5 Pro、64GB，從安裝版2.2.7原生介面逐項生成，同一句玩具小車提示詞、種子22704、24影格/秒。約一秒小樣確認呼叫，不代表五秒720P速度；MLX峰值為活動配置，不是整機記憶體。
+
+|功能|實際輸出|用時|MLX活動峰值|
+|---|---|---:|---:|
+|H3四步|256×256，22影格，約0.92秒|21.56秒|25.63 GiB|
+|H3八步|256×256，22影格，約0.92秒|25.96秒|25.63 GiB|
+|Transition|384×256，25影格，約1.04秒|27.61秒|21.81 GiB|
+|Layout|384×256，25影格，約1.04秒|33.28秒|24.57 GiB|
+
+![H3 四步實測影格](screenshots/2.2.7-mac/h3-4-contact.jpg)
+
+![H3 八步實測影格](screenshots/2.2.7-mac/h3-8-contact.jpg)
+
+H3分別執行四次、八次真實前向計算，208層匹配，完整32位影片解碼。減少取樣計算不保證所有內容細節都等同一般取樣。
+
+![Transition 實測影格](screenshots/2.2.7-mac/transition-contact.jpg)
+
+Transition採2.3適配器搭配2.5八位蒸餾基模的相容配方，576對匹配，非原生2.3全功能驗收。
+
+![Layout 實測影格](screenshots/2.2.7-mac/layout-contact.jpg)
+
+Layout使用明確準備的25影格預演，保留原81影格素材；480對適配層匹配，完成兩階段控制。輸入須與請求等長，不自動截短或變速。四段影片及音訊解碼、畫幅與影格數核對通過，保留原音軌；有音軌不等於聲量、台詞和音畫同步已完成聽感驗收。高解析度、長片與複雜場景仍需另測。
+
+### 下載與安裝核對
+
+Apple Silicon Mac2.2.7 DMG為92,790,171位元組，約92.8MB。構建、映像及安裝的15,652項檔案、權限與連結一致，應用程式、更新簽章及映像校驗通過；本機簽章，未Apple公證。Rust474項、前端1660項通過，另有明確略過項；Python49檔通過。未重下載全部大型基模驗收全新機器，亦未在Windows/Linux驗收影片推論。
+
+[下載 Mac 2.2.7（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.7/LocalBrain_2.2.7_aarch64.dmg) · [完整下載與更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest) · [驗收記錄](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.2.7-MAC.md)
+
+SHA-256：`a0eea9853c6f5c8f8ff142749257c6ae4e5b426bb1a75f0646c21a9f3523c89f`。
+
+本輪只更新Mac，Windows/Linux保持2.2.4。下文保留各版當時說明與舊圖，不將歷史條件當成本輪新成績。
 
 ## Windows / Linux 2.2.4：保留啟動錯誤原因，修正內部工具升級
 
@@ -254,7 +306,7 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.2.2 · Mac 2.2.4 · Linux 2.2.2
+## 最新下載：Windows 2.2.4 · Mac 2.2.7 · Linux 2.2.4
 
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
@@ -280,11 +332,11 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 2.2.4 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4/LocalBrain_2.2.4_aarch64.dmg) · 已安裝；統一維護、引擎升級與貼上附件驗收通過；本機簽章、未 Apple 公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.4_x64-setup.exe) · 2.2.2; 已安裝，本批平台驗收與限制見上文|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.4_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.2-win-linux/LocalBrain_2.2.4_amd64.AppImage) · 2.2.2; 已安裝，本批平台驗收與限制見上文|
+| Apple Silicon Mac 2.2.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.7/LocalBrain_2.2.7_aarch64.dmg) · 已安裝；四項原生超短影片呼叫通過；本機簽章、未 Apple 公證 |
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4-win-linux/LocalBrain_2.2.4_x64-setup.exe) · 2.2.4; 已安裝，本批平台驗收與限制見上文|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4-win-linux/LocalBrain_2.2.4_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4-win-linux/LocalBrain_2.2.4_amd64.AppImage) · 2.2.4; 已安裝，本批平台驗收與限制見上文|
 
-[Mac 2.2.3 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.3) · [Mac 校驗值](SHA256SUMS-2.2.3-MAC.txt) · [Windows/Linux 2.2.1 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.1)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.2.1_amd64.deb`。保留舊發行。
+[Mac 2.2.7 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.7) · [Mac 校驗值](SHA256SUMS-2.2.7-MAC.txt) · [Windows/Linux 2.2.4 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.4-win-linux)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.2.4_amd64.deb`。保留舊發行。
 
 以下Windows 2.0.1及更早段落保留發布時的歷史狀態；目前平台版本以上方下載表為準。
 
@@ -361,7 +413,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `63f040f7ea65df5afe4a28b8e7d9b64c4686db0ed2772ee81b6b70dd3a8495a0` |
+| Mac DMG | `a0eea9853c6f5c8f8ff142749257c6ae4e5b426bb1a75f0646c21a9f3523c89f` |
 | Windows安裝程式 | `6dfcceddeb2200cb88e833b5210d8e1a715e8f62900af31120d73ae6db870721` |
 | Linux AppImage | `6fe8fb9241a6658e45364abc6713b9b8522cbcd433581d8b13511f4d4565f7a4` |
 | Linux Debian包 | `0f0d6f686f8921ae53bbef56f14279444e66892271836142962a1d45d228de79` |
