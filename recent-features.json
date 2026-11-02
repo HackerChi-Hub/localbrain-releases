@@ -4,6 +4,14 @@
     "zh-CN": [
       {
         "version": "2.2.8",
+        "text": "Mac 视频统一常用分辨率预设与自定义，按模型即时显示合法尺寸和内存提示，不自动降画质。"
+      },
+      {
+        "version": "2.2.8",
+        "text": "Mac 同步归档安全修复，拒绝跨平台越界路径、链接与特殊文件，已有模型和环境保留。"
+      },
+      {
+        "version": "2.2.8",
         "text": "Windows/Linux同步2.2.8内部工具与应用资源，源码归档同时拒绝POSIX/Windows绝对路径与目录穿越，保留既有环境。"
       },
       {
@@ -13,17 +21,17 @@
       {
         "version": "2.2.7",
         "text": "视频统一先选模型、再选生成方式和参数；发现页、主页与对话共用目录和实际可用状态。"
-      },
-      {
-        "version": "2.2.7",
-        "text": "视频增强列出缺少文件再安装，支持暂停续传与完整校验；卸载保留共享模型、环境和所有录制素材。"
-      },
-      {
-        "version": "2.2.4",
-        "text": "模型启动失败时保留真正的错误原因，进程回收后仍可诊断"
       }
     ],
     "zh-TW": [
+      {
+        "version": "2.2.8",
+        "text": "Mac 影片統一常用解析度預設及自訂，依模型即時顯示合法尺寸與記憶體提示，不自動降低畫質。"
+      },
+      {
+        "version": "2.2.8",
+        "text": "Mac 同步封存安全修復，拒絕跨平台越界路徑、連結及特殊檔案，保留既有模型與環境。"
+      },
       {
         "version": "2.2.8",
         "text": "Windows/Linux同步2.2.8內部工具與應用資源，原始碼封存同時拒絕POSIX/Windows絕對路徑與目錄穿越，保留既有環境。"
@@ -35,17 +43,17 @@
       {
         "version": "2.2.7",
         "text": "影片統一先選模型，再選生成方式與參數；探索頁、首頁及對話共用目錄與實際可用狀態。"
-      },
-      {
-        "version": "2.2.7",
-        "text": "影片增強先列出缺少檔案再安裝，支援暫停續傳及完整校驗；解除安裝保留共用模型、環境與所有錄製素材。"
-      },
-      {
-        "version": "2.2.4",
-        "text": "模型啟動失敗保留真實錯誤，程序回收後仍可診斷"
       }
     ],
     "en": [
+      {
+        "version": "2.2.8",
+        "text": "Mac video shares resolution presets and custom dimensions with immediate model-specific legality and memory guidance, without automatic quality reduction."
+      },
+      {
+        "version": "2.2.8",
+        "text": "Mac incorporates archive safety fixes, rejecting cross-platform traversal, links and special files while preserving existing models and runtimes."
+      },
       {
         "version": "2.2.8",
         "text": "Windows/Linux2.2.8 refreshes bundled tools and application resources; source extraction rejects POSIX/Windows absolute paths and traversal while preserving environments."
@@ -57,14 +65,6 @@
       {
         "version": "2.2.7",
         "text": "Video uses one model-first workflow, followed by supported generation modes and settings, with a shared directory and availability across Discover, Home and chat."
-      },
-      {
-        "version": "2.2.7",
-        "text": "Enhancement setup lists missing files, supports pause/resume and verification, and preserves shared models, runtimes and all recording assets on uninstall."
-      },
-      {
-        "version": "2.2.4",
-        "text": "Windows/Linux retain startup failure causes and bundled tools upgrade with the application."
       }
     ]
   }
