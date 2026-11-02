@@ -1,0 +1,3 @@
+f41ff80df1bf92dbb1228602b597b13c64a1348fbb5d63401df9c6cd9d1fba59  LocalBrain_2.2.8_x64-setup.exe
+4090c82ca7c75e41780163a17d46a9b829db502c032942657ea9de41c533ff37  LocalBrain_2.2.8_amd64.deb
+b2954b1c95c7285530b6ff6da0e2cf02ec65ec512aa0a89df5a4516fa1a8a6d0  LocalBrain_2.2.8_amd64.AppImage

@@ -14,12 +14,22 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **2.2.8** · Windows/Linux同步2.2.8內部工具與應用資源，原始碼封存同時拒絕POSIX/Windows絕對路徑與目錄穿越，保留既有環境。
 - **2.2.7** · Mac 探索頁依原模型管理 H3 四步、八步加速及 LTX Transition、Layout；可選安裝與關閉，保留一般生成。
 - **2.2.7** · 影片統一先選模型，再選生成方式與參數；探索頁、首頁及對話共用目錄與實際可用狀態。
 - **2.2.7** · 影片增強先列出缺少檔案再安裝，支援暫停續傳及完整校驗；解除安裝保留共用模型、環境與所有錄製素材。
 - **2.2.4** · 模型啟動失敗保留真實錯誤，程序回收後仍可診斷
-- **2.2.4** · Mac 新增 Pika H3 Flex 專用文字及單張首幀有聲影片，固定六步、約5.17秒；原件與轉換受管，沿用既有檔案，使用獨立環境。
 <!-- recent-features:end -->
+
+## Windows / Linux 2.2.8：同步最新資源，補齊跨平台解壓校驗
+
+Windows與Linux本批同步至2.2.8，內部工具套件隨主程式升級。原始碼封存解壓同時檢查POSIX與Windows路徑，拒絕絕對路徑、磁碟機、上層目錄穿越與連結，保留既有原始碼及執行環境。
+
+Windows安裝版核對五個適用模組從2.2.4遷移並保留回退、既有Qwen3.8 2B請求、文件讀寫與維護狀態；Linux分別驗收Debian及AppImage的資源、宿主初始化與WSL2/Xvfb啟動。模型請求和文件工具為獨立檢查，不代表自主完成複雜任務。
+
+H3、LTX、Pika及影片增強仍僅適配Apple Silicon Mac，本批未啟用Windows/Linux影片後端。近期調查的Bonsai、LFM3與低顯示記憶體圖片方案尚未接入，不列為已可用模型。Mac正式下載保持2.2.7，Mac2.2.8六段影片屬獨立候選驗收，不借用為兩平台成績。保留使用者模型、驅動程式、特殊引擎及既有設定。
+
+[Windows](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_x64-setup.exe) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.AppImage) · [Verification](VERIFICATION-2.2.8-WIN-LINUX.md)
 
 ## Mac 2.2.7：選好模型，再選影片功能
 
@@ -306,7 +316,7 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.2.4 · Mac 2.2.7 · Linux 2.2.4
+## 最新下載：Windows 2.2.8 · Mac 2.2.7 · Linux 2.2.8
 
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
@@ -333,10 +343,10 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac 2.2.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.7/LocalBrain_2.2.7_aarch64.dmg) · 已安裝；四項原生超短影片呼叫通過；本機簽章、未 Apple 公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4-win-linux/LocalBrain_2.2.4_x64-setup.exe) · 2.2.4; 已安裝，本批平台驗收與限制見上文|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4-win-linux/LocalBrain_2.2.4_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4-win-linux/LocalBrain_2.2.4_amd64.AppImage) · 2.2.4; 已安裝，本批平台驗收與限制見上文|
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_x64-setup.exe) · 2.2.8; 已安裝，本批平台驗收與限制見上文|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.AppImage) · 2.2.8; 已安裝，本批平台驗收與限制見上文|
 
-[Mac 2.2.7 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.7) · [Mac 校驗值](SHA256SUMS-2.2.7-MAC.txt) · [Windows/Linux 2.2.4 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.4-win-linux)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.2.4_amd64.deb`。保留舊發行。
+[Mac 2.2.7 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.7) · [Mac 校驗值](SHA256SUMS-2.2.7-MAC.txt) · [Windows/Linux 2.2.8 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8-win-linux)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.2.8_amd64.deb`。保留舊發行。
 
 以下Windows 2.0.1及更早段落保留發布時的歷史狀態；目前平台版本以上方下載表為準。
 
@@ -414,8 +424,8 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | 檔案 | 散列 |
 | --- | --- |
 | Mac DMG | `a0eea9853c6f5c8f8ff142749257c6ae4e5b426bb1a75f0646c21a9f3523c89f` |
-| Windows安裝程式 | `6dfcceddeb2200cb88e833b5210d8e1a715e8f62900af31120d73ae6db870721` |
-| Linux AppImage | `6fe8fb9241a6658e45364abc6713b9b8522cbcd433581d8b13511f4d4565f7a4` |
+| Windows安裝程式 | `f41ff80df1bf92dbb1228602b597b13c64a1348fbb5d63401df9c6cd9d1fba59` |
+| Linux AppImage | `b2954b1c95c7285530b6ff6da0e2cf02ec65ec512aa0a89df5a4516fa1a8a6d0` |
 | Linux Debian包 | `0f0d6f686f8921ae53bbef56f14279444e66892271836142962a1d45d228de79` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。

@@ -14,12 +14,22 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.2.8** · Windows/Linux2.2.8 refreshes bundled tools and application resources; source extraction rejects POSIX/Windows absolute paths and traversal while preserving environments.
 - **2.2.7** · Mac Discover groups H3 four/eight-step acceleration and LTX Transition/Layout under their base models; optional installation and disabling preserve standard generation.
 - **2.2.7** · Video uses one model-first workflow, followed by supported generation modes and settings, with a shared directory and availability across Discover, Home and chat.
 - **2.2.7** · Enhancement setup lists missing files, supports pause/resume and verification, and preserves shared models, runtimes and all recording assets on uninstall.
 - **2.2.4** · Windows/Linux retain startup failure causes and bundled tools upgrade with the application.
-- **2.2.4** · Mac adds Pika H3 Flex text and single-first-frame video with audio, fixed at six steps and about 5.17 seconds, reusing files in managed storage with a separate runtime.
 <!-- recent-features:end -->
+
+## Windows / Linux 2.2.8: current resources and cross-platform archive checks
+
+This Windows/Linux batch updates the application and bundled tool packages to 2.2.8. Source extraction checks both POSIX and Windows path conventions, rejecting absolute paths, drive paths, parent traversal and links while preserving existing sources and runtimes.
+
+Installed Windows checks cover migration of five supported modules from2.2.4 with rollback retained, an existing Qwen3.8 2B request, document read/write and maintenance state. Debian and AppImage checks cover packaged resources, host initialization and startup under WSL2/Xvfb. The model request and document tools are separate checks, not an autonomous complex-task benchmark.
+
+H3, LTX, Pika and video enhancements remain Apple Silicon Mac only; this batch adds no Windows/Linux video backend. Newly researched Bonsai, LFM3 and low-VRAM image options are not integrated. The public Mac release stays at2.2.7; six videos generated in the Mac2.2.8 candidate are separate evidence. Existing user models, drivers, special engines and configuration are preserved.
+
+[Windows](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_x64-setup.exe) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.AppImage) · [Verification](VERIFICATION-2.2.8-WIN-LINUX.md)
 
 ## Mac 2.2.7: choose a model, then its video capabilities
 
@@ -306,7 +316,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.2.4 · Mac 2.2.7 · Linux 2.2.4
+## Latest downloads：Windows 2.2.8 · Mac 2.2.7 · Linux 2.2.8
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -333,10 +343,10 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.2.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.7/LocalBrain_2.2.7_aarch64.dmg) · Installed; four native short-video calls passed; locally signed, not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4-win-linux/LocalBrain_2.2.4_x64-setup.exe) · 2.2.4; installed; platform acceptance and limits above|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4-win-linux/LocalBrain_2.2.4_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.4-win-linux/LocalBrain_2.2.4_amd64.AppImage) · 2.2.4; installed; platform acceptance and limits above|
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_x64-setup.exe) · 2.2.8; installed; platform acceptance and limits above|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.AppImage) · 2.2.8; installed; platform acceptance and limits above|
 
-[Mac 2.2.7 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.7) · [Mac checksums](SHA256SUMS-2.2.7-MAC.txt) · [Windows/Linux 2.2.4 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.4-win-linux). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.4_amd64.deb`. Older releases are retained.
+[Mac 2.2.7 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.7) · [Mac checksums](SHA256SUMS-2.2.7-MAC.txt) · [Windows/Linux 2.2.8 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8-win-linux). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.8_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -414,9 +424,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `a0eea9853c6f5c8f8ff142749257c6ae4e5b426bb1a75f0646c21a9f3523c89f` |
-| Windows installer | `6dfcceddeb2200cb88e833b5210d8e1a715e8f62900af31120d73ae6db870721` |
-| Linux AppImage | `6fe8fb9241a6658e45364abc6713b9b8522cbcd433581d8b13511f4d4565f7a4` |
-| Linux Debian | `0f0d6f686f8921ae53bbef56f14279444e66892271836142962a1d45d228de79` |
+| Windows installer | `f41ff80df1bf92dbb1228602b597b13c64a1348fbb5d63401df9c6cd9d1fba59` |
+| Linux AppImage | `b2954b1c95c7285530b6ff6da0e2cf02ec65ec512aa0a89df5a4516fa1a8a6d0` |
+| Linux Debian | `4090c82ca7c75e41780163a17d46a9b829db502c032942657ea9de41c533ff37` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 
