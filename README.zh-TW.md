@@ -14,12 +14,30 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **2.2.8** · Mac 影片統一常用解析度預設及自訂，依模型即時顯示合法尺寸與記憶體提示，不自動降低畫質。
+- **2.2.8** · Mac 同步封存安全修復，拒絕跨平台越界路徑、連結及特殊檔案，保留既有模型與環境。
 - **2.2.8** · Windows/Linux同步2.2.8內部工具與應用資源，原始碼封存同時拒絕POSIX/Windows絕對路徑與目錄穿越，保留既有環境。
 - **2.2.7** · Mac 探索頁依原模型管理 H3 四步、八步加速及 LTX Transition、Layout；可選安裝與關閉，保留一般生成。
 - **2.2.7** · 影片統一先選模型，再選生成方式與參數；探索頁、首頁及對話共用目錄與實際可用狀態。
-- **2.2.7** · 影片增強先列出缺少檔案再安裝，支援暫停續傳及完整校驗；解除安裝保留共用模型、環境與所有錄製素材。
-- **2.2.4** · 模型啟動失敗保留真實錯誤，程序回收後仍可診斷
 <!-- recent-features:end -->
+
+## Mac 2.2.8：影片尺寸提前校驗，同步封存安全修復
+
+Mac正式套件補齊後續安全修復，並公開先前候選的解析度設定。先選模型，再選常用解析度預設或自訂畫幅；即時顯示合法尺寸、對齊、邊長與面積限制。不合法值保留原輸入，使用者主動選取後才變更，不自動縮圖、截短或降低畫質。
+
+![自訂尺寸即時提示，11月2日安裝版驗收](screenshots/2.2.8-mac/resolution-validation.png)
+
+記憶體提示區分引擎預算與目前可用記憶體；未知峰值只作提示，實際執行保留原參數並受引擎預算約束，像素與影格相對規模不冒充精確預測。
+
+![LTX解析度與記憶體提示，11月2日安裝版驗收](screenshots/2.2.8-mac/ltx-resolution-memory.png)
+
+原始碼解壓前同時檢查兩套系統路徑規則，拒絕絕對路徑、磁碟機、目錄穿越、符號連結、硬連結及特殊檔案。合法原始碼正常解壓，既有原始碼直接復用；保留模型、環境、正式設定與錄製素材，不必清空模型重裝。
+
+11月3日新套件已安裝：15,653項檔案、權限及連結一致，應用程式、更新套件及可信簽註驗簽與DMG校驗通過；本機簽章、未Apple公證。安裝套件實際解壓實作8項回歸及系統MCP檔案讀寫通過；前端主測試1668、Rust474、Python395條單元用例及兩項腳本、DSH53項通過，另有明確略過項。原生輔助功能讀回2.2.8、既有模型與0項服務執行中；原生操作工具服務不可用，本輪未重做全部點選或生成新影片。11月2日六段影片與尺寸驗收保留為先前獨立記錄。
+
+[下載 Mac 2.2.8（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8/LocalBrain_2.2.8_aarch64.dmg) · [正式發行與更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8) · [本輪驗收](VERIFICATION-2.2.8-MAC.md)
+
+DMG為75,294,743位元組，SHA-256：`4b66333e2778a637291e069fd2bd7cd7836b3e07f3877cf4bd3795e3ca2e2481`。Windows/Linux保留獨立發布2.2.8的原套件、簽章及清單。下方各版保留當時狀態，現行下載以本節和下載表為準。
 
 ## Windows / Linux 2.2.8：同步最新資源，補齊跨平台解壓校驗
 
@@ -316,7 +334,7 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.2.8 · Mac 2.2.7 · Linux 2.2.8
+## 最新下載：Windows 2.2.8 · Mac 2.2.8 · Linux 2.2.8
 
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
@@ -342,11 +360,11 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 2.2.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.7/LocalBrain_2.2.7_aarch64.dmg) · 已安裝；四項原生超短影片呼叫通過；本機簽章、未 Apple 公證 |
+| Apple Silicon Mac 2.2.8 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8/LocalBrain_2.2.8_aarch64.dmg) · 已安裝；封存安全及真實檔案工具呼叫通過；本機簽章、未 Apple 公證 |
 | Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_x64-setup.exe) · 2.2.8; 已安裝，本批平台驗收與限制見上文|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.AppImage) · 2.2.8; 已安裝，本批平台驗收與限制見上文|
 
-[Mac 2.2.7 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.7) · [Mac 校驗值](SHA256SUMS-2.2.7-MAC.txt) · [Windows/Linux 2.2.8 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8-win-linux)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.2.8_amd64.deb`。保留舊發行。
+[Mac 2.2.8 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8) · [Mac 校驗值](SHA256SUMS-2.2.8-MAC.txt) · [Windows/Linux 2.2.8 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8-win-linux)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.2.8_amd64.deb`。保留舊發行。
 
 以下Windows 2.0.1及更早段落保留發布時的歷史狀態；目前平台版本以上方下載表為準。
 
@@ -423,7 +441,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `a0eea9853c6f5c8f8ff142749257c6ae4e5b426bb1a75f0646c21a9f3523c89f` |
+| Mac DMG | `4b66333e2778a637291e069fd2bd7cd7836b3e07f3877cf4bd3795e3ca2e2481` |
 | Windows安裝程式 | `f41ff80df1bf92dbb1228602b597b13c64a1348fbb5d63401df9c6cd9d1fba59` |
 | Linux AppImage | `b2954b1c95c7285530b6ff6da0e2cf02ec65ec512aa0a89df5a4516fa1a8a6d0` |
 | Linux Debian包 | `4090c82ca7c75e41780163a17d46a9b829db502c032942657ea9de41c533ff37` |

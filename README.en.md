@@ -14,12 +14,30 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.2.8** · Mac video shares resolution presets and custom dimensions with immediate model-specific legality and memory guidance, without automatic quality reduction.
+- **2.2.8** · Mac incorporates archive safety fixes, rejecting cross-platform traversal, links and special files while preserving existing models and runtimes.
 - **2.2.8** · Windows/Linux2.2.8 refreshes bundled tools and application resources; source extraction rejects POSIX/Windows absolute paths and traversal while preserving environments.
 - **2.2.7** · Mac Discover groups H3 four/eight-step acceleration and LTX Transition/Layout under their base models; optional installation and disabling preserve standard generation.
 - **2.2.7** · Video uses one model-first workflow, followed by supported generation modes and settings, with a shared directory and availability across Discover, Home and chat.
-- **2.2.7** · Enhancement setup lists missing files, supports pause/resume and verification, and preserves shared models, runtimes and all recording assets on uninstall.
-- **2.2.4** · Windows/Linux retain startup failure causes and bundled tools upgrade with the application.
 <!-- recent-features:end -->
+
+## Mac 2.2.8: immediate video-size validation and archive safety fixes
+
+The public Mac build incorporates the later archive-safety fix and the resolution controls from the previous candidate. Select a model, then a common preset or custom dimensions. Legal sizes, alignment, side lengths and pixel-area limits are shown immediately. Invalid input remains unchanged until the user selects a correction; the app never silently resizes, trims or reduces quality.
+
+![Immediate size validation, November 2 installed-app acceptance](screenshots/2.2.8-mac/resolution-validation.png)
+
+Memory guidance separates the engine budget from currently available memory. Unknown peaks remain advisory; execution retains the requested parameters within the runtime budget. Relative pixels and frames are not presented as a precise memory prediction.
+
+![LTX dimensions and memory guidance, November 2 acceptance](screenshots/2.2.8-mac/ltx-resolution-memory.png)
+
+Source archives are validated against POSIX and Windows path rules before extraction. Absolute paths, drive paths, traversal, symlinks, hard links and special files are rejected. Valid archives extract normally and existing source trees are reused. Models, runtimes, configuration and recording assets are preserved.
+
+The November 3 build is installed. All15,653 entries, modes and links match; app/updater signatures, trusted comments and the disk image passed verification. Locally signed, not Apple notarized. Eight tests exercised the installed extraction code; real system-MCP file writing and reading passed. The main frontend suite passed1,668, Rust474, Python395 unit cases plus two standalone scripts, and DSH53, with explicit skipped/ignored cases. Native accessibility read back version2.2.8, existing models and zero running services. The native automation service was unavailable; this batch did not repeat all clicks or generate new videos. Six November2 clips and native resolution checks remain separate historical evidence.
+
+[Download Mac 2.2.8 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8/LocalBrain_2.2.8_aarch64.dmg) · [Release and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8) · [Verification](VERIFICATION-2.2.8-MAC.md)
+
+The DMG is75,294,743 bytes. SHA-256: `4b66333e2778a637291e069fd2bd7cd7836b3e07f3877cf4bd3795e3ca2e2481`. Existing Windows/Linux2.2.8 installers, signatures and manifests remain unchanged. Older sections retain their original version context; current downloads follow this section and the download table.
 
 ## Windows / Linux 2.2.8: current resources and cross-platform archive checks
 
@@ -316,7 +334,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.2.8 · Mac 2.2.7 · Linux 2.2.8
+## Latest downloads：Windows 2.2.8 · Mac 2.2.8 · Linux 2.2.8
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -342,11 +360,11 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.2.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.7/LocalBrain_2.2.7_aarch64.dmg) · Installed; four native short-video calls passed; locally signed, not Apple-notarized |
+| Apple Silicon Mac 2.2.8 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8/LocalBrain_2.2.8_aarch64.dmg) · Installed; archive safety and real file-tool calls passed; locally signed, not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_x64-setup.exe) · 2.2.8; installed; platform acceptance and limits above|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.AppImage) · 2.2.8; installed; platform acceptance and limits above|
 
-[Mac 2.2.7 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.7) · [Mac checksums](SHA256SUMS-2.2.7-MAC.txt) · [Windows/Linux 2.2.8 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8-win-linux). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.8_amd64.deb`. Older releases are retained.
+[Mac 2.2.8 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8) · [Mac checksums](SHA256SUMS-2.2.8-MAC.txt) · [Windows/Linux 2.2.8 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8-win-linux). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.8_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -423,7 +441,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `a0eea9853c6f5c8f8ff142749257c6ae4e5b426bb1a75f0646c21a9f3523c89f` |
+| Mac DMG | `4b66333e2778a637291e069fd2bd7cd7836b3e07f3877cf4bd3795e3ca2e2481` |
 | Windows installer | `f41ff80df1bf92dbb1228602b597b13c64a1348fbb5d63401df9c6cd9d1fba59` |
 | Linux AppImage | `b2954b1c95c7285530b6ff6da0e2cf02ec65ec512aa0a89df5a4516fa1a8a6d0` |
 | Linux Debian | `4090c82ca7c75e41780163a17d46a9b829db502c032942657ea9de41c533ff37` |

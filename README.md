@@ -16,12 +16,30 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **2.2.8** · Mac 视频统一常用分辨率预设与自定义，按模型即时显示合法尺寸和内存提示，不自动降画质。
+- **2.2.8** · Mac 同步归档安全修复，拒绝跨平台越界路径、链接与特殊文件，已有模型和环境保留。
 - **2.2.8** · Windows/Linux同步2.2.8内部工具与应用资源，源码归档同时拒绝POSIX/Windows绝对路径与目录穿越，保留既有环境。
 - **2.2.7** · Mac 发现页按原模型管理 H3 四步、八步加速及 LTX Transition、Layout；可选安装和关闭，不替换普通生成。
 - **2.2.7** · 视频统一先选模型、再选生成方式和参数；发现页、主页与对话共用目录和实际可用状态。
-- **2.2.7** · 视频增强列出缺少文件再安装，支持暂停续传与完整校验；卸载保留共享模型、环境和所有录制素材。
-- **2.2.4** · 模型启动失败时保留真正的错误原因，进程回收后仍可诊断
 <!-- recent-features:end -->
+
+## Mac 2.2.8：视频尺寸提前校验，同步归档安全修复
+
+Mac 正式包补齐后续安全修复，并公开此前候选中的分辨率设置。视频工作台先选模型，再从常用分辨率预设或自定义输入中选择画幅；立即显示该模型的合法尺寸、对齐要求、边长与面积限制。非法值保持原输入并提示可选值，用户主动选择后才更改，不自动缩图、截短或降低画质。
+
+![视频自定义尺寸即时提示，11月2日安装版验收](screenshots/2.2.8-mac/resolution-validation.png)
+
+内存提示区分引擎预算和当前可用内存。未知峰值作提示，实际执行保留原参数并受引擎预算约束；像素与帧数的相对规模不冒充精确内存预测。
+
+![LTX分辨率预设与内存提示，11月2日安装版验收](screenshots/2.2.8-mac/ltx-resolution-memory.png)
+
+安全修复在源码包解压前同时检查两套系统路径规则，拒绝绝对路径、盘符、目录穿越、符号链接、硬链接和特殊文件。合法源码正常解压，已有源码直接复用。升级保留用户模型、运行环境、正式配置和录制素材，无需清空模型后重装。
+
+11月3日新包已安装：15,653项文件、权限与链接一致，应用、更新包与可信签注验签通过，DMG校验通过；本地签名、未Apple公证。安装包实际解包实现8项回归、系统MCP文件写入与读取通过；前端主测试1668、Rust474、Python395条单元用例及两项脚本、DSH53项通过，另有明确跳过项。原生辅助功能读回2.2.8、已有模型卡和0个服务运行中；原生操作工具服务不可用，本轮未重做全部点选或生成新视频。11月2日六段视频和原生尺寸验收作为此前独立记录保留。
+
+[下载 Mac 2.2.8（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8/LocalBrain_2.2.8_aarch64.dmg) · [正式发行与更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8) · [本轮验收](VERIFICATION-2.2.8-MAC.md)
+
+DMG为75,294,743字节，SHA-256：`4b66333e2778a637291e069fd2bd7cd7836b3e07f3877cf4bd3795e3ca2e2481`。Windows/Linux保留独立发布的2.2.8原包、签名及清单。以下各版说明保留当时状态，当前下载以本节和下载表为准。
 
 ## Windows / Linux 2.2.8：同步最新资源，补齐跨平台解包校验
 
@@ -320,7 +338,7 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows 2.2.8 · Mac 2.2.7 · Linux 2.2.8
+## 最新下载：Windows 2.2.8 · Mac 2.2.8 · Linux 2.2.8
 
 以下 2.1.3 为历史工具接入验收记录。
 
@@ -346,11 +364,11 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 2.2.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.7/LocalBrain_2.2.7_aarch64.dmg) · 已安装；四项原生超短视频调用通过；本地签名、未 Apple 公证 |
+| Apple Silicon Mac 2.2.8 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8/LocalBrain_2.2.8_aarch64.dmg) · 已安装；归档安全与真实文件工具调用通过；本地签名、未 Apple 公证 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_x64-setup.exe) · 2.2.8; 已安装，本批平台验收及限制见上文|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.AppImage) · 2.2.8; 已安装，本批平台验收及限制见上文|
 
-[Mac 2.2.7 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.7) · [Mac 校验值](SHA256SUMS-2.2.7-MAC.txt) · [Windows/Linux 2.2.8 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8-win-linux)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.2.8_amd64.deb`。旧发行保留。
+[Mac 2.2.8 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8) · [Mac 校验值](SHA256SUMS-2.2.8-MAC.txt) · [Windows/Linux 2.2.8 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8-win-linux)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.2.8_amd64.deb`。旧发行保留。
 
 以下Windows 2.0.1及更早段落保留其发布时的历史状态；当前平台版本以上方下载表为准。
 
@@ -427,7 +445,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `a0eea9853c6f5c8f8ff142749257c6ae4e5b426bb1a75f0646c21a9f3523c89f` |
+| Mac DMG | `4b66333e2778a637291e069fd2bd7cd7836b3e07f3877cf4bd3795e3ca2e2481` |
 | Windows安装程序 | `f41ff80df1bf92dbb1228602b597b13c64a1348fbb5d63401df9c6cd9d1fba59` |
 | Linux AppImage | `b2954b1c95c7285530b6ff6da0e2cf02ec65ec512aa0a89df5a4516fa1a8a6d0` |
 | Linux Debian包 | `4090c82ca7c75e41780163a17d46a9b829db502c032942657ea9de41c533ff37` |
