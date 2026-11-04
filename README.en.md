@@ -14,12 +14,22 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.2.9** · Windows/Linux separates installed runtimes, offline services and unverified images; failed queries no longer inflate the missing-component count or prompt reinstalls.
 - **2.2.9** · Mac runtime inventory separates confirmed missing components from unverified states, prevents duplicate installation and preserves external system dependencies.
 - **2.2.9** · Mac container readiness checks the real service, refreshes in the foreground and separates historical maintenance failures from current recovery.
 - **2.2.8** · Mac video shares resolution presets and custom dimensions with immediate model-specific legality and memory guidance, without automatic quality reduction.
 - **2.2.8** · Mac incorporates archive safety fixes, rejecting cross-platform traversal, links and special files while preserving existing models and runtimes.
-- **2.2.8** · Windows/Linux2.2.8 refreshes bundled tools and application resources; source extraction rejects POSIX/Windows absolute paths and traversal while preserving environments.
 <!-- recent-features:end -->
+
+## Windows / Linux 2.2.9: distinguish installed runtimes from offline containers
+
+Settings → Runtime and diagnostics counts only confirmed missing or incomplete components in the install-missing action. When the container service is disconnected, existing tools are no longer collectively presented as needing reinstallation. Images and volumes remain unverified: start the container service, then refresh. Failed queries retain a specific reason instead of becoming an empty inventory. Installing a managed copy of an existing external tool still requires a separate selection.
+
+The runtime page reloads inventory after maintenance, on entry and when the window becomes active, reducing stale status. Windows x64 ships an installer; Linux amd64 ships Debian and AppImage packages. This batch verifies Linux installation and startup on Ubuntu 22.04 WSL2/Xvfb, not bare-metal GPU operation.
+
+Mac 2.2.9 was published independently during this build; its installation assets and updater manifest are preserved. H3, LTX and Pika video backends remain Apple Silicon Mac only. Newly researched models are not integrated in this batch, and user drivers, model weights and special inference engines are not upgraded.
+
+[Windows](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_x64-setup.exe) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.AppImage) · [Verification](VERIFICATION-2.2.9-WIN-LINUX.md)
 
 ## Mac 2.2.9: separate installed components from service connectivity
 
@@ -348,7 +358,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.2.8 · Mac 2.2.9 · Linux 2.2.8
+## Latest downloads：Windows 2.2.9 · Mac 2.2.9 · Linux 2.2.9
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -375,10 +385,10 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.2.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9/LocalBrain_2.2.9_aarch64.dmg) · Installed; archive safety and real file-tool calls passed; locally signed, not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_x64-setup.exe) · 2.2.8; installed; platform acceptance and limits above|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.AppImage) · 2.2.8; installed; platform acceptance and limits above|
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_x64-setup.exe) · 2.2.9; installed; platform acceptance and limits above|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.AppImage) · 2.2.9; installed; platform acceptance and limits above|
 
-[Mac 2.2.9 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9) · [Mac checksums](SHA256SUMS-2.2.9-MAC.txt) · [Windows/Linux 2.2.8 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8-win-linux). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.8_amd64.deb`. Older releases are retained.
+[Mac 2.2.9 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9) · [Mac checksums](SHA256SUMS-2.2.9-MAC.txt) · [Windows/Linux 2.2.9 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9-win-linux). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.9_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -456,9 +466,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `8323c521ec6d0fb39fcd838a1c38636e775381559c9211213ec24ead39dc342a` |
-| Windows installer | `f41ff80df1bf92dbb1228602b597b13c64a1348fbb5d63401df9c6cd9d1fba59` |
-| Linux AppImage | `b2954b1c95c7285530b6ff6da0e2cf02ec65ec512aa0a89df5a4516fa1a8a6d0` |
-| Linux Debian | `4090c82ca7c75e41780163a17d46a9b829db502c032942657ea9de41c533ff37` |
+| Windows installer | `b1f0e8df75d73186e058473c113d76dfdfe1fb706c50d58b7b8bc78e827f17ef` |
+| Linux AppImage | `05e41debc713cb258dcfbfacc06b3ba6fefca99f66a5ef82d1f206d0e667cfa8` |
+| Linux Debian | `d647f5733d42e05811d42035bf752de3d84c81335e7c4c94995310dc425216cf` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

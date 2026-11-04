@@ -16,12 +16,22 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **2.2.9** · Windows/Linux 区分已安装环境、容器离线和待核实镜像；查询失败不再计入缺少组件，避免重复安装。
 - **2.2.9** · Mac 环境清单区分确认缺少与状态待核实，已安装组件不重复安装，已有系统依赖不提供卸载。
 - **2.2.9** · Mac 容器启动以实际服务响应判断就绪，前台自动刷新，历史维护错误与当前恢复状态分别显示。
 - **2.2.8** · Mac 视频统一常用分辨率预设与自定义，按模型即时显示合法尺寸和内存提示，不自动降画质。
 - **2.2.8** · Mac 同步归档安全修复，拒绝跨平台越界路径、链接与特殊文件，已有模型和环境保留。
-- **2.2.8** · Windows/Linux同步2.2.8内部工具与应用资源，源码归档同时拒绝POSIX/Windows绝对路径与目录穿越，保留既有环境。
 <!-- recent-features:end -->
+
+## Windows / Linux 2.2.9：已安装和容器离线分开显示
+
+设置→运行环境与诊断现在只把确认缺少或文件不完整的组件计入“一键安装缺少组件”。容器服务尚未连接时，已有工具不再一起显示成需要重装；镜像和数据卷标为待核实，先启动容器服务，再刷新状态。查询失败会保留具体原因，不用空清单代替失败。已有外部工具的受管副本仍需单独选择。
+
+运行环境页面在维护结束、重新进入和窗口恢复时重新读取清单，减少旧状态停留。Windows x64 提供安装程序，Linux amd64 提供 Debian 和 AppImage；Linux 本轮安装与启动验收使用 Ubuntu 22.04 WSL2/Xvfb，未作为裸机 GPU 验收。
+
+Mac 端已独立发布 2.2.9，本批保留其正式安装资产和更新清单；H3、LTX、Pika 视频后端仍限 Apple Silicon Mac。本批没有接入此前调查的新模型，也没有升级用户驱动、模型权重或特殊推理引擎。
+
+[Windows](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_x64-setup.exe) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.AppImage) · [Verification](VERIFICATION-2.2.9-WIN-LINUX.md)
 
 ## Mac 2.2.9：环境装没装，与服务通不通分开显示
 
@@ -352,7 +362,7 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows 2.2.8 · Mac 2.2.9 · Linux 2.2.8
+## 最新下载：Windows 2.2.9 · Mac 2.2.9 · Linux 2.2.9
 
 以下 2.1.3 为历史工具接入验收记录。
 
@@ -379,10 +389,10 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 | 平台 | 安装包与状态 |
 | --- | --- |
 | Apple Silicon Mac 2.2.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9/LocalBrain_2.2.9_aarch64.dmg) · 已安装；归档安全与真实文件工具调用通过；本地签名、未 Apple 公证 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_x64-setup.exe) · 2.2.8; 已安装，本批平台验收及限制见上文|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.AppImage) · 2.2.8; 已安装，本批平台验收及限制见上文|
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_x64-setup.exe) · 2.2.9; 已安装，本批平台验收及限制见上文|
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.AppImage) · 2.2.9; 已安装，本批平台验收及限制见上文|
 
-[Mac 2.2.9 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9) · [Mac 校验值](SHA256SUMS-2.2.9-MAC.txt) · [Windows/Linux 2.2.8 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8-win-linux)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.2.8_amd64.deb`。旧发行保留。
+[Mac 2.2.9 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9) · [Mac 校验值](SHA256SUMS-2.2.9-MAC.txt) · [Windows/Linux 2.2.9 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9-win-linux)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.2.9_amd64.deb`。旧发行保留。
 
 以下Windows 2.0.1及更早段落保留其发布时的历史状态；当前平台版本以上方下载表为准。
 
@@ -460,9 +470,9 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 | 文件 | 散列 |
 | --- | --- |
 | Mac DMG | `8323c521ec6d0fb39fcd838a1c38636e775381559c9211213ec24ead39dc342a` |
-| Windows安装程序 | `f41ff80df1bf92dbb1228602b597b13c64a1348fbb5d63401df9c6cd9d1fba59` |
-| Linux AppImage | `b2954b1c95c7285530b6ff6da0e2cf02ec65ec512aa0a89df5a4516fa1a8a6d0` |
-| Linux Debian包 | `4090c82ca7c75e41780163a17d46a9b829db502c032942657ea9de41c533ff37` |
+| Windows安装程序 | `b1f0e8df75d73186e058473c113d76dfdfe1fb706c50d58b7b8bc78e827f17ef` |
+| Linux AppImage | `05e41debc713cb258dcfbfacc06b3ba6fefca99f66a5ef82d1f206d0e667cfa8` |
+| Linux Debian包 | `d647f5733d42e05811d42035bf752de3d84c81335e7c4c94995310dc425216cf` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 

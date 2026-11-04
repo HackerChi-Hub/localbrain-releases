@@ -4,6 +4,10 @@
     "zh-CN": [
       {
         "version": "2.2.9",
+        "text": "Windows/Linux 区分已安装环境、容器离线和待核实镜像；查询失败不再计入缺少组件，避免重复安装。"
+      },
+      {
+        "version": "2.2.9",
         "text": "Mac 环境清单区分确认缺少与状态待核实，已安装组件不重复安装，已有系统依赖不提供卸载。"
       },
       {
@@ -17,13 +21,13 @@
       {
         "version": "2.2.8",
         "text": "Mac 同步归档安全修复，拒绝跨平台越界路径、链接与特殊文件，已有模型和环境保留。"
-      },
-      {
-        "version": "2.2.8",
-        "text": "Windows/Linux同步2.2.8内部工具与应用资源，源码归档同时拒绝POSIX/Windows绝对路径与目录穿越，保留既有环境。"
       }
     ],
     "zh-TW": [
+      {
+        "version": "2.2.9",
+        "text": "Windows/Linux 區分已安裝環境、容器離線及待核實映像；查詢失敗不再計入缺少元件，避免重複安裝。"
+      },
       {
         "version": "2.2.9",
         "text": "Mac 環境清單區分確認缺少與狀態待核實，已安裝元件不重複安裝，既有系統依賴不提供解除安裝。"
@@ -39,13 +43,13 @@
       {
         "version": "2.2.8",
         "text": "Mac 同步封存安全修復，拒絕跨平台越界路徑、連結及特殊檔案，保留既有模型與環境。"
-      },
-      {
-        "version": "2.2.8",
-        "text": "Windows/Linux同步2.2.8內部工具與應用資源，原始碼封存同時拒絕POSIX/Windows絕對路徑與目錄穿越，保留既有環境。"
       }
     ],
     "en": [
+      {
+        "version": "2.2.9",
+        "text": "Windows/Linux separates installed runtimes, offline services and unverified images; failed queries no longer inflate the missing-component count or prompt reinstalls."
+      },
       {
         "version": "2.2.9",
         "text": "Mac runtime inventory separates confirmed missing components from unverified states, prevents duplicate installation and preserves external system dependencies."
@@ -61,10 +65,6 @@
       {
         "version": "2.2.8",
         "text": "Mac incorporates archive safety fixes, rejecting cross-platform traversal, links and special files while preserving existing models and runtimes."
-      },
-      {
-        "version": "2.2.8",
-        "text": "Windows/Linux2.2.8 refreshes bundled tools and application resources; source extraction rejects POSIX/Windows absolute paths and traversal while preserving environments."
       }
     ]
   }
