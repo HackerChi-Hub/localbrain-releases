@@ -1,7 +1,15 @@
 {
-  "reviewed_version": "2.2.8",
+  "reviewed_version": "2.2.9",
   "languages": {
     "zh-CN": [
+      {
+        "version": "2.2.9",
+        "text": "Mac 环境清单区分确认缺少与状态待核实，已安装组件不重复安装，已有系统依赖不提供卸载。"
+      },
+      {
+        "version": "2.2.9",
+        "text": "Mac 容器启动以实际服务响应判断就绪，前台自动刷新，历史维护错误与当前恢复状态分别显示。"
+      },
       {
         "version": "2.2.8",
         "text": "Mac 视频统一常用分辨率预设与自定义，按模型即时显示合法尺寸和内存提示，不自动降画质。"
@@ -13,17 +21,17 @@
       {
         "version": "2.2.8",
         "text": "Windows/Linux同步2.2.8内部工具与应用资源，源码归档同时拒绝POSIX/Windows绝对路径与目录穿越，保留既有环境。"
-      },
-      {
-        "version": "2.2.7",
-        "text": "Mac 发现页按原模型管理 H3 四步、八步加速及 LTX Transition、Layout；可选安装和关闭，不替换普通生成。"
-      },
-      {
-        "version": "2.2.7",
-        "text": "视频统一先选模型、再选生成方式和参数；发现页、主页与对话共用目录和实际可用状态。"
       }
     ],
     "zh-TW": [
+      {
+        "version": "2.2.9",
+        "text": "Mac 環境清單區分確認缺少與狀態待核實，已安裝元件不重複安裝，既有系統依賴不提供解除安裝。"
+      },
+      {
+        "version": "2.2.9",
+        "text": "Mac 容器啟動依實際服務回應判斷就緒，前景自動重新整理，歷史維護錯誤與目前恢復狀態分別顯示。"
+      },
       {
         "version": "2.2.8",
         "text": "Mac 影片統一常用解析度預設及自訂，依模型即時顯示合法尺寸與記憶體提示，不自動降低畫質。"
@@ -35,17 +43,17 @@
       {
         "version": "2.2.8",
         "text": "Windows/Linux同步2.2.8內部工具與應用資源，原始碼封存同時拒絕POSIX/Windows絕對路徑與目錄穿越，保留既有環境。"
-      },
-      {
-        "version": "2.2.7",
-        "text": "Mac 探索頁依原模型管理 H3 四步、八步加速及 LTX Transition、Layout；可選安裝與關閉，保留一般生成。"
-      },
-      {
-        "version": "2.2.7",
-        "text": "影片統一先選模型，再選生成方式與參數；探索頁、首頁及對話共用目錄與實際可用狀態。"
       }
     ],
     "en": [
+      {
+        "version": "2.2.9",
+        "text": "Mac runtime inventory separates confirmed missing components from unverified states, prevents duplicate installation and preserves external system dependencies."
+      },
+      {
+        "version": "2.2.9",
+        "text": "Mac container readiness checks the real service, refreshes in the foreground and separates historical maintenance failures from current recovery."
+      },
       {
         "version": "2.2.8",
         "text": "Mac video shares resolution presets and custom dimensions with immediate model-specific legality and memory guidance, without automatic quality reduction."
@@ -57,14 +65,6 @@
       {
         "version": "2.2.8",
         "text": "Windows/Linux2.2.8 refreshes bundled tools and application resources; source extraction rejects POSIX/Windows absolute paths and traversal while preserving environments."
-      },
-      {
-        "version": "2.2.7",
-        "text": "Mac Discover groups H3 four/eight-step acceleration and LTX Transition/Layout under their base models; optional installation and disabling preserve standard generation."
-      },
-      {
-        "version": "2.2.7",
-        "text": "Video uses one model-first workflow, followed by supported generation modes and settings, with a shared directory and availability across Discover, Home and chat."
       }
     ]
   }

@@ -16,12 +16,26 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **2.2.9** · Mac 环境清单区分确认缺少与状态待核实，已安装组件不重复安装，已有系统依赖不提供卸载。
+- **2.2.9** · Mac 容器启动以实际服务响应判断就绪，前台自动刷新，历史维护错误与当前恢复状态分别显示。
 - **2.2.8** · Mac 视频统一常用分辨率预设与自定义，按模型即时显示合法尺寸和内存提示，不自动降画质。
 - **2.2.8** · Mac 同步归档安全修复，拒绝跨平台越界路径、链接与特殊文件，已有模型和环境保留。
 - **2.2.8** · Windows/Linux同步2.2.8内部工具与应用资源，源码归档同时拒绝POSIX/Windows绝对路径与目录穿越，保留既有环境。
-- **2.2.7** · Mac 发现页按原模型管理 H3 四步、八步加速及 LTX Transition、Layout；可选安装和关闭，不替换普通生成。
-- **2.2.7** · 视频统一先选模型、再选生成方式和参数；发现页、主页与对话共用目录和实际可用状态。
 <!-- recent-features:end -->
+
+## Mac 2.2.9：环境装没装，与服务通不通分开显示
+
+已经安装的工具，却被统计成“缺少13项”，这次修复的就是这个问题。容器服务连接失效时，软件无法确认里面的工具；现在会显示“状态待核实”，先恢复连接再读清单，不再把查询失败算成文件丢失。
+
+进入“设置→运行环境与诊断”，顶部只统计确认缺少或不完整的组件。已安装组件不重复安装；已有的容器服务、包管理器和构建工具保留原版本，单项不提供卸载。前台每30秒自动检测，返回窗口立即刷新，维护期间暂停轮询。
+
+容器启动会等待真实服务响应。“已经运行”一条日志不再代替服务就绪结果。历史维护失败仍能展开查看；当前已恢复时显示“上次维护未完成；当前检测已就绪”。连接失效时保留原磁盘、镜像与数据，不自动重启或重建虚拟机。
+
+11月5日实际安装版识别27项受管组件、3项已有系统依赖，缺少0项、待核实0项；单选Sushi、系统依赖按钮、旧错误详情及手动刷新均已点选核实。15,653项安装子条目、权限和链接一致，模型与运行环境目录、配置及视频资料库摘要保持。应用和更新包验签、DMG校验与挂载核对通过；本地签名，未Apple公证。本轮不重新生成视频，原有视频测试与截图继续保留各自日期。
+
+[下载 Mac 2.2.9（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9/LocalBrain_2.2.9_aarch64.dmg) · [发行与更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9) · [完整验收](VERIFICATION-2.2.9-MAC.md)
+
+安装包为75,310,516字节，约75.3MB。SHA-256：`8323c521ec6d0fb39fcd838a1c38636e775381559c9211213ec24ead39dc342a`。Windows/Linux继续使用现有2.2.8原包、签名和独立更新清单；下方旧文、旧图与历史验收记录保留，当前下载以本节和下载表为准。
 
 ## Mac 2.2.8：视频尺寸提前校验，同步归档安全修复
 
@@ -338,7 +352,7 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows 2.2.8 · Mac 2.2.8 · Linux 2.2.8
+## 最新下载：Windows 2.2.8 · Mac 2.2.9 · Linux 2.2.8
 
 以下 2.1.3 为历史工具接入验收记录。
 
@@ -364,11 +378,11 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 2.2.8 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8/LocalBrain_2.2.8_aarch64.dmg) · 已安装；归档安全与真实文件工具调用通过；本地签名、未 Apple 公证 |
+| Apple Silicon Mac 2.2.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9/LocalBrain_2.2.9_aarch64.dmg) · 已安装；归档安全与真实文件工具调用通过；本地签名、未 Apple 公证 |
 | Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_x64-setup.exe) · 2.2.8; 已安装，本批平台验收及限制见上文|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.8-win-linux/LocalBrain_2.2.8_amd64.AppImage) · 2.2.8; 已安装，本批平台验收及限制见上文|
 
-[Mac 2.2.8 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8) · [Mac 校验值](SHA256SUMS-2.2.8-MAC.txt) · [Windows/Linux 2.2.8 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8-win-linux)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.2.8_amd64.deb`。旧发行保留。
+[Mac 2.2.9 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9) · [Mac 校验值](SHA256SUMS-2.2.9-MAC.txt) · [Windows/Linux 2.2.8 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.8-win-linux)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.2.8_amd64.deb`。旧发行保留。
 
 以下Windows 2.0.1及更早段落保留其发布时的历史状态；当前平台版本以上方下载表为准。
 
@@ -445,7 +459,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `4b66333e2778a637291e069fd2bd7cd7836b3e07f3877cf4bd3795e3ca2e2481` |
+| Mac DMG | `8323c521ec6d0fb39fcd838a1c38636e775381559c9211213ec24ead39dc342a` |
 | Windows安装程序 | `f41ff80df1bf92dbb1228602b597b13c64a1348fbb5d63401df9c6cd9d1fba59` |
 | Linux AppImage | `b2954b1c95c7285530b6ff6da0e2cf02ec65ec512aa0a89df5a4516fa1a8a6d0` |
 | Linux Debian包 | `4090c82ca7c75e41780163a17d46a9b829db502c032942657ea9de41c533ff37` |
