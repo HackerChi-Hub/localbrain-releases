@@ -14,12 +14,46 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.3.0** · Mac adds Drama 3 reference-voice cloning and bracketed delivery cues across Discover, Home and Speech, reusing existing weights.
+- **2.3.0** · Mac long-form speech uses native chunking and saves full scripts, segments, complete WAV, projects and logs without removing words or compressing duration.
+- **2.3.0** · Mac speech projects can regenerate one segment's words and delivery; other audio stays byte-identical and a new version preserves the originals.
 - **2.2.9** · Windows/Linux separates installed runtimes, offline services and unverified images; failed queries no longer inflate the missing-component count or prompt reinstalls.
 - **2.2.9** · Mac runtime inventory separates confirmed missing components from unverified states, prevents duplicate installation and preserves external system dependencies.
-- **2.2.9** · Mac container readiness checks the real service, refreshes in the foreground and separates historical maintenance failures from current recovery.
-- **2.2.8** · Mac video shares resolution presets and custom dimensions with immediate model-specific legality and memory guidance, without automatic quality reduction.
-- **2.2.8** · Mac incorporates archive safety fixes, rejecting cross-platform traversal, links and special files while preserving existing models and runtimes.
 <!-- recent-features:end -->
+
+## Mac 2.3.0: Drama 3 voice cloning, long-form speech and segment editing
+
+Fish Audio Drama 3 now follows one speech workflow: choose the model and your own reference voice, then enter the full script. To change a time, number or delivery later, select a segment in the project and regenerate it. Other audio stays intact, and the complete new version is saved alongside the original script and audio.
+
+Mac uses the [community MLX 4-bit conversion of Drama 3](https://huggingface.co/mlx-community/fish-audio-drama-3-4bit), not an official Fish Audio Mac release. The [original model and documentation](https://huggingface.co/fishaudio/drama-3) are linked separately. Import complete existing weights without downloading them again. Drama 3 has a separate speech environment, leaving existing language-model, speech and transcription environments unchanged. Read the current original-model and conversion-repository licenses before downloading or commercial use.
+
+### Use your own voice
+
+1. Find Drama 3 in Discover and download or import existing weights; only missing files need downloading. Prepare or verify its dedicated speech environment in Settings → Runtime and diagnostics.
+2. In Settings → Speech synthesis, select your reference recording and enter an accurate transcript of that recording. Check both together whenever you change the recording.
+3. Open speech synthesis from Home or Chat → Local media tools → Speech, select Drama 3, enter the script and generate. Both entries share the selected model and reference voice. Play the result or open its output file when complete.
+
+### Control delivery and emotion
+
+The delivery field can describe a light, natural voice with a hint of a smile, or a calm explanation. The app converts this into the bracketed delivery cue accepted by the model. You can also place native tags such as `[laughs]`, `[sighs]` and `[whispers]` in the script. Audition a short passage before applying a delivery to a long script; results vary with the text and reference voice.
+
+Exact speed, forced language and millisecond-accurate pauses are not supported; unsupported parameters produce a clear error. Free-form descriptions are not promised as a stable, measurable emotion-strength control.
+
+### Save a long script and edit it later
+
+Submit the full script. Native model chunking carries the first and previous chunks as context. The app saves the full text, native audio segments, complete WAV, project, settings and logs without deleting words or compressing duration. Open the resulting speech project, select a segment, change its words or delivery and choose the action to regenerate only that segment. Compare the saved new version with the original.
+
+The edit unit is **one complete segment**. Other segments remain byte-identical; the selected segment is regenerated and losslessly assembled into a new output without overwriting the original. This differs from sample-level audio infilling or the official server's historical VQ continuation interface. Audition the new segment's pacing, length and joins. New requests report an occupied generator rather than interrupting active synthesis.
+
+### What was verified in the installed app
+
+An independent HTTP test generated three native segments and 45.929 seconds of audio from a 211-character script. Editing only the middle segment saved a 36.409-second version while the other two segments remained byte-identical. The installed native UI separately generated two segments totaling 24.335 seconds; changing the first segment's time from three to four and its delivery saved a 24.102-second version with the second segment unchanged. Independent transcription read back the new time as 4 p.m. Voice similarity, emotional naturalness and join quality still require listening; transcription scores are not audio-quality ratings.
+
+All 15,655 installation entries, permissions and links match the build. App signature, updater signature and DMG integrity checks passed. The app is locally signed and not Apple-notarized. Frontend 1,671 tests, Rust 478 tests and 399 managed-Python cases passed, with separate skipped or ignored cases. Long-form execution was exercised; hours-long output and a fresh online environment installation on a new machine were not separately verified.
+
+[Download Mac 2.3.0 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.0/LocalBrain_2.3.0_aarch64.dmg) · [Release and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.0) · [Full verification](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.3.0-MAC.md)
+
+The installer is 75,327,316 bytes, about 75.3 MB. SHA-256: `1f5140a4ce612651ac01c7c1116395044fda71e2d186e9f7bf412f804a1743fc`. This release updates only Mac to 2.3.0; Windows/Linux retain their released 2.2.9 packages, signatures and platform-specific manifests. Existing models, environments, data and active tasks are unchanged. Older text, images and release records below retain their dates and verification scopes; use this section and the download table for current downloads.
 
 ## Windows / Linux 2.2.9: distinguish installed runtimes from offline containers
 
@@ -358,7 +392,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.2.9 · Mac 2.2.9 · Linux 2.2.9
+## Latest downloads：Windows 2.2.9 · Mac 2.3.0 · Linux 2.2.9
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -384,11 +418,11 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.2.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9/LocalBrain_2.2.9_aarch64.dmg) · Installed; archive safety and real file-tool calls passed; locally signed, not Apple-notarized |
+| Apple Silicon Mac 2.3.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.0/LocalBrain_2.3.0_aarch64.dmg) · Installed; real Drama 3 speech and segment editing verified; locally signed, not Apple-notarized |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_x64-setup.exe) · 2.2.9; installed; platform acceptance and limits above|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.AppImage) · 2.2.9; installed; platform acceptance and limits above|
 
-[Mac 2.2.9 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9) · [Mac checksums](SHA256SUMS-2.2.9-MAC.txt) · [Windows/Linux 2.2.9 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9-win-linux). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.9_amd64.deb`. Older releases are retained.
+[Mac 2.3.0 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.0) · [Mac checksums](SHA256SUMS-2.3.0-MAC.txt) · [Windows/Linux 2.2.9 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9-win-linux). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.9_amd64.deb`. Older releases are retained.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 
@@ -465,7 +499,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `8323c521ec6d0fb39fcd838a1c38636e775381559c9211213ec24ead39dc342a` |
+| Mac DMG | `1f5140a4ce612651ac01c7c1116395044fda71e2d186e9f7bf412f804a1743fc` |
 | Windows installer | `b1f0e8df75d73186e058473c113d76dfdfe1fb706c50d58b7b8bc78e827f17ef` |
 | Linux AppImage | `05e41debc713cb258dcfbfacc06b3ba6fefca99f66a5ef82d1f206d0e667cfa8` |
 | Linux Debian | `d647f5733d42e05811d42035bf752de3d84c81335e7c4c94995310dc425216cf` |

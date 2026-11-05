@@ -14,12 +14,46 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **2.3.0** · Mac 加入 Drama 3 本人參考聲複製與方括號情緒標籤，統一發現、首頁及配音入口，重用既有權重。
+- **2.3.0** · Mac 長稿配音使用模型原生分塊，儲存全文、分段音訊、完整 WAV、工程及日誌，不自動刪字或壓縮時長。
+- **2.3.0** · Mac 配音工程可修改單段文字與情緒；其餘音訊逐位元組保留，新版本另存，原稿與原音訊保留。
 - **2.2.9** · Windows/Linux 區分已安裝環境、容器離線及待核實映像；查詢失敗不再計入缺少元件，避免重複安裝。
 - **2.2.9** · Mac 環境清單區分確認缺少與狀態待核實，已安裝元件不重複安裝，既有系統依賴不提供解除安裝。
-- **2.2.9** · Mac 容器啟動依實際服務回應判斷就緒，前景自動重新整理，歷史維護錯誤與目前恢復狀態分別顯示。
-- **2.2.8** · Mac 影片統一常用解析度預設及自訂，依模型即時顯示合法尺寸與記憶體提示，不自動降低畫質。
-- **2.2.8** · Mac 同步封存安全修復，拒絕跨平台越界路徑、連結及特殊檔案，保留既有模型與環境。
 <!-- recent-features:end -->
+
+## Mac 2.3.0：Drama 3 本人聲音複製、長稿配音與分段修改
+
+這次把 Fish Audio Drama 3 放進同一套配音流程：選好模型與本人參考聲，輸入全文；生成後若只想改時間、數字或語氣，可在工程中選一段重新生成，其餘音訊沿用原檔，完整新版本另存，原稿與原音訊均保留。
+
+Mac 使用 [Drama 3 的 MLX 4bit 社群轉換版](https://huggingface.co/mlx-community/fish-audio-drama-3-4bit)，不是 Fish Audio 官方 Mac 發行版；[官方原模型與說明](https://huggingface.co/fishaudio/drama-3)另列。既有完整權重可匯入，不必重新下載。Drama 3 使用獨立語音環境，不升級原有語言模型、語音或轉寫環境。下載及商用前，請分別閱讀原模型與轉換倉庫的現行授權條款。
+
+### 本人聲音怎麼用
+
+1. 在「發現」找到 Drama 3，下載或匯入既有模型，只補缺少檔案。需要準備環境時，到「設定→執行環境與診斷」安裝或驗證 Drama 3 語音環境。
+2. 在「設定→語音合成」選擇本人參考錄音，填入與錄音一致的準確轉寫。參考聲與轉寫是一組，更換錄音時一起核對。
+3. 從首頁或「對話→本機多媒體工具→配音」進入，選擇 Drama 3，輸入正文並生成。配音入口共用所選模型與參考聲，完成後可播放及開啟輸出檔案。
+
+### 情緒怎樣控制
+
+「語氣補充」可寫「輕快自然，帶一點笑意」或「平靜地解釋」。程式會轉成模型實際接受的方括號表達標籤；正文亦可在相應位置寫 `[laughs]`、`[sighs]`、`[whispers]`。先用一小段試聽，再套用至長稿；不同文本與參考聲的表現會有差異。
+
+目前沒有精確語速、強制語言或精確毫秒停頓控制；不支援的參數會明確提示。也不將所有自然語言描述宣稱為穩定、可量化的情緒強度控制。
+
+### 長稿怎樣儲存及繼續改
+
+輸入完整稿件後直接生成。模型原生分塊時攜帶首段與前一段上下文，程式保留全文、分段音訊、完整 WAV、工程、設定及日誌，不自動刪字或壓縮時長。生成後開啟配音工程，選擇要修改的段落，改詞或調整情緒，再點「僅重生成這一段」；新版本儲存後可與舊版對照試聽。
+
+局部修改的範圍是**一個完整分段**。其他段落逐位元組保留，所選段重新生成並無損拼接，原版本不覆蓋；這與取樣級音訊填補或官方伺服器端的歷史 VQ 延續介面不同。修改後的語速、段長及接縫自然度仍須試聽。既有生成任務執行時，新請求提示佔用，不停止目前任務。
+
+### 已安裝版本實際核對了什麼
+
+獨立 HTTP 測試輸入211字，生成3個原生段、45.929秒音訊；只修改中間段後另存36.409秒版本，另外兩段逐位元組一致。安裝版原生介面另生成2段、24.335秒配音，把首段「三點」改成「四點」並調整情緒後儲存24.102秒新版本，第二段位元組保持；獨立轉寫讀回「明天下午4點」。音色相似度、情緒自然度及拼接聽感留待試聽，不以轉寫分數代替音質評分。
+
+15,655項安裝檔案、權限與連結和建構一致；應用程式簽章、更新套件驗章與 DMG 校驗通過，為本機簽章、未經 Apple 公證。前端1671項、Rust478項、受管 Python399條案例通過，另有跳過或忽略項。長稿鏈路已測試，數小時成品及新機器線上從零安裝環境未單獨驗收。
+
+[下載 Mac 2.3.0（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.0/LocalBrain_2.3.0_aarch64.dmg) · [發行與更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.0) · [完整驗收](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.3.0-MAC.md)
+
+安裝包75,327,316位元組，約75.3MB。SHA-256：`1f5140a4ce612651ac01c7c1116395044fda71e2d186e9f7bf412f804a1743fc`。本次僅發布 Mac 2.3.0；Windows/Linux 保持正式2.2.9原包、簽章與分平台更新清單。既有模型、環境、資料及任務不作變動。下方舊文、舊圖及各版記錄保留原日期與驗收範圍，目前下載以本節及下載表為準。
 
 ## Windows / Linux 2.2.9：分開顯示已安裝環境與容器離線
 
@@ -358,7 +392,7 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.2.9 · Mac 2.2.9 · Linux 2.2.9
+## 最新下載：Windows 2.2.9 · Mac 2.3.0 · Linux 2.2.9
 
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
@@ -384,11 +418,11 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 2.2.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9/LocalBrain_2.2.9_aarch64.dmg) · 已安裝；封存安全及真實檔案工具呼叫通過；本機簽章、未 Apple 公證 |
+| Apple Silicon Mac 2.3.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.0/LocalBrain_2.3.0_aarch64.dmg) · 已安裝，Drama 3 配音及分段修改實際呼叫通過；本機簽章、未 Apple 公證 |
 | Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_x64-setup.exe) · 2.2.9; 已安裝，本批平台驗收與限制見上文|
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.AppImage) · 2.2.9; 已安裝，本批平台驗收與限制見上文|
 
-[Mac 2.2.9 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9) · [Mac 校驗值](SHA256SUMS-2.2.9-MAC.txt) · [Windows/Linux 2.2.9 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9-win-linux)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.2.9_amd64.deb`。保留舊發行。
+[Mac 2.3.0 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.0) · [Mac 校驗值](SHA256SUMS-2.3.0-MAC.txt) · [Windows/Linux 2.2.9 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9-win-linux)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.2.9_amd64.deb`。保留舊發行。
 
 以下Windows 2.0.1及更早段落保留發布時的歷史狀態；目前平台版本以上方下載表為準。
 
@@ -465,7 +499,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `8323c521ec6d0fb39fcd838a1c38636e775381559c9211213ec24ead39dc342a` |
+| Mac DMG | `1f5140a4ce612651ac01c7c1116395044fda71e2d186e9f7bf412f804a1743fc` |
 | Windows安裝程式 | `b1f0e8df75d73186e058473c113d76dfdfe1fb706c50d58b7b8bc78e827f17ef` |
 | Linux AppImage | `05e41debc713cb258dcfbfacc06b3ba6fefca99f66a5ef82d1f206d0e667cfa8` |
 | Linux Debian包 | `d647f5733d42e05811d42035bf752de3d84c81335e7c4c94995310dc425216cf` |
