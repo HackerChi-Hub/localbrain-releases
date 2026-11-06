@@ -21,6 +21,14 @@
 - **2.3.2** · 本機驗收：httpd 2.4.49 命中 CVE-2021-41773，自寫 PoC 重現並核驗通過。
 <!-- recent-features:end -->
 
+## Windows / Linux 2.3.2：線上建置與簽章
+
+2026-11-06，原始碼 `b7eb0eb`。Windows x64 NSIS、Linux amd64 Debian 與 AppImage 由 GitHub Actions 線上建置；更新器簽章由本機私鑰對 CI 產物產生。**只完成建置、簽章與雜湊核對，未在 Windows / Linux 上安裝執行**；功能驗收在 macOS 2.3.2 完成。
+
+[Windows](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_x64-setup.exe) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.AppImage) · [完整驗收](VERIFICATION-2.3.2-WIN-LINUX.md)
+
+SHA-256：exe `d3ac974d4b912d9aab2a57e2f49cde2ee4ed4dfcc39d4da72d40b28108eaeaab`、deb `bac2cbdaa804dc70057b6418d072593533b00ae108c6c43b7a4f8faf931e3d12`、AppImage `853f0a49e3a78e5bd260ddba5f188d4cdc7cb98ea43e8bc42c59e85ba494ce2b`。
+
 ## Mac 2.3.0：Drama 3 本人聲音複製、長稿配音與分段修改
 
 這次把 Fish Audio Drama 3 放進同一套配音流程：選好模型與本人參考聲，輸入全文；生成後若只想改時間、數字或語氣，可在工程中選一段重新生成，其餘音訊沿用原檔，完整新版本另存，原稿與原音訊均保留。
@@ -53,7 +61,7 @@ Mac 使用 [Drama 3 的 MLX 4bit 社群轉換版](https://huggingface.co/mlx-com
 
 [下載 Mac 2.3.2（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2/LocalBrain_2.3.2_aarch64.dmg) · [發行與更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.2) · [完整驗收](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.3.0-MAC.md)
 
-安裝包75,327,316位元組，約75.3MB。SHA-256：`96753fee6fd9cd4437b8e9568ab5bced4499cfc1e8b90c1f9589cf0a5feb1d9f`。本次僅發布 Mac 2.3.0；Windows/Linux 保持正式2.2.9原包、簽章與分平台更新清單。既有模型、環境、資料及任務不作變動。下方舊文、舊圖及各版記錄保留原日期與驗收範圍，目前下載以本節及下載表為準。
+安裝包75,327,316位元組，約75.3MB。SHA-256：`96753fee6fd9cd4437b8e9568ab5bced4499cfc1e8b90c1f9589cf0a5feb1d9f`。本次同時提供 Windows/Linux 2.3.2 線上建置包（見上方小節，未在對應平台安裝執行）；2.2.9 原包與分平台清單保留。既有模型、環境、資料及任務不作變動。下方舊文、舊圖及各版記錄保留原日期與驗收範圍，目前下載以本節及下載表為準。
 
 ## Windows / Linux 2.2.9：分開顯示已安裝環境與容器離線
 
