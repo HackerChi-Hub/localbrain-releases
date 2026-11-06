@@ -21,6 +21,14 @@ Run supported local models, work with authorized files, and manage speech, image
 - **2.3.2** · Verified locally: httpd 2.4.49 hits CVE-2021-41773, reproduced by a self-written PoC and verified.
 <!-- recent-features:end -->
 
+## Windows / Linux 2.3.2: built in CI and signed
+
+2026-11-06, source `b7eb0eb`. The Windows x64 NSIS installer and the Linux amd64 Debian and AppImage packages were built by GitHub Actions; updater signatures were generated locally over those CI artifacts. **Only the build, signing and hash checks were done — none of them was installed or run on Windows or Linux.** Functional verification was done on macOS 2.3.2.
+
+[Windows](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_x64-setup.exe) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.AppImage) · [Full verification](VERIFICATION-2.3.2-WIN-LINUX.md)
+
+SHA-256: exe `d3ac974d4b912d9aab2a57e2f49cde2ee4ed4dfcc39d4da72d40b28108eaeaab`, deb `bac2cbdaa804dc70057b6418d072593533b00ae108c6c43b7a4f8faf931e3d12`, AppImage `853f0a49e3a78e5bd260ddba5f188d4cdc7cb98ea43e8bc42c59e85ba494ce2b`.
+
 ## Mac 2.3.0: Drama 3 voice cloning, long-form speech and segment editing
 
 Fish Audio Drama 3 now follows one speech workflow: choose the model and your own reference voice, then enter the full script. To change a time, number or delivery later, select a segment in the project and regenerate it. Other audio stays intact, and the complete new version is saved alongside the original script and audio.
@@ -53,7 +61,7 @@ All 15,655 installation entries, permissions and links match the build. App sign
 
 [Download Mac 2.3.2 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2/LocalBrain_2.3.2_aarch64.dmg) · [Release and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.2) · [Full verification](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.3.0-MAC.md)
 
-The installer is 75,327,316 bytes, about 75.3 MB. SHA-256: `96753fee6fd9cd4437b8e9568ab5bced4499cfc1e8b90c1f9589cf0a5feb1d9f`. This release updates only Mac to 2.3.0; Windows/Linux retain their released 2.2.9 packages, signatures and platform-specific manifests. Existing models, environments, data and active tasks are unchanged. Older text, images and release records below retain their dates and verification scopes; use this section and the download table for current downloads.
+The installer is 75,327,316 bytes, about 75.3 MB. SHA-256: `96753fee6fd9cd4437b8e9568ab5bced4499cfc1e8b90c1f9589cf0a5feb1d9f`. This batch also ships Windows/Linux 2.3.2 builds made in CI (see the section above; not installed or run on those platforms); the 2.2.9 packages and platform manifests remain available. Existing models, environments, data and active tasks are unchanged. Older text, images and release records below retain their dates and verification scopes; use this section and the download table for current downloads.
 
 ## Windows / Linux 2.2.9: distinguish installed runtimes from offline containers
 
