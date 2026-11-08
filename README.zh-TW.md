@@ -14,12 +14,24 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **2.3.3** · Mac 受管 Splash 更新到 1.6.0，改善記憶體受限時的排程和復原，既有模型權重繼續使用。
 - **2.3.2** · Android 裝置唯讀檢查新增固定命令集：SELinux、核心、運行時間、/data 空間、電量、開機完成、第三方應用數量。
 - **2.3.2** · 網頁檢查支援依 tags、嚴重度、範本 ID 在檔位內篩選 nuclei 範本。
 - **2.3.2** · 依範本 ID 或 full 檔掃描時自動提高沙箱記憶體，避免載入上萬條範本被 OOM。
 - **2.3.2** · 範本篩選範圍與載入數量寫入報告；高風險標籤、路徑與自由命令一律拒絕。
-- **2.3.2** · 本機驗收：httpd 2.4.49 命中 CVE-2021-41773，自寫 PoC 重現並核驗通過。
 <!-- recent-features:end -->
+
+## Mac 2.3.3：受管 Splash 1.6.0
+
+Mac 受管 Splash 的新裝基準升至 1.6.0。既有使用者可到「設定 → 執行環境與診斷」檢查環境更新，確認 Splash 版本後升級。程式驗證官方封存檔與服務介面，保留上一版供回復，繼續使用既有模型權重。
+
+上游這版集中改善記憶體受限時的請求排程、快取回收和異常復原，並強化分片 GGUF 支援。速度仍受模型、草稿配對和並行負載影響。
+
+安裝版沿用 Qwen3.8-27B-4bit，在 256K 服務視窗下通過中文回覆、串流輸出和嚴格工具參數往返。實際切換過 1.5.0 → 1.6.0 → 1.5.0 → 1.6.0。256K 是服務視窗，回覆驗收使用短輸入。
+
+Mac 安裝包為 75,350,839 位元組，使用本機臨時簽章，未經 Apple 公證。Windows 和 Linux 正式版為 2.3.2。安裝包的 SHA-256 為 `50755c412ccacccbe1350aab9026aa561b137e8d7c0d161fdce8344adc8d1983`。
+
+[下載 Mac 2.3.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.3/LocalBrain_2.3.3_aarch64.dmg) · [發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.3) · [SHA-256 校驗檔](SHA256SUMS-2.3.3-MAC.txt) · [實測範圍](VERIFICATION-2.3.3-MAC.md) · [官方發行說明](https://github.com/incoai/splash/releases/tag/1.6.0)
 
 ## Windows / Linux 2.3.2：線上建置與簽章
 
@@ -400,7 +412,7 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.2.9 · Mac 2.3.2 · Linux 2.2.9
+## 最新下載：Windows 2.3.2 · Mac 2.3.3 · Linux 2.3.2
 
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
@@ -426,11 +438,13 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 2.3.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2/LocalBrain_2.3.2_aarch64.dmg) · 已安裝，Drama 3 配音及分段修改實際呼叫通過；本機簽章、未 Apple 公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_x64-setup.exe) · 2.2.9; 已安裝，本批平台驗收與限制見上文|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.AppImage) · 2.2.9; 已安裝，本批平台驗收與限制見上文|
+| Apple Silicon Mac 2.3.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.3/LocalBrain_2.3.3_aarch64.dmg) · 已安裝，Splash 1.6.0 實測通過；本機臨時簽章，未經 Apple 公證 |
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_x64-setup.exe) · 2.3.2；線上建置與簽章核對 |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.AppImage) · 2.3.2；線上建置與簽章核對 |
 
-[Mac 2.3.2 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.2) · [Mac 校驗值](SHA256SUMS-2.3.0-MAC.txt) · [Windows/Linux 2.2.9 發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9-win-linux)。Mac 拖入應用程式；Debian/Ubuntu 執行 `sudo apt install ./LocalBrain_2.2.9_amd64.deb`。保留舊發行。
+[發行說明 Mac 2.3.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.3) · [SHA-256 校驗檔](SHA256SUMS-2.3.3-MAC.txt) · [Windows/Linux 2.3.2](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.2-win-linux) · [Windows/Linux SHA-256](SHA256SUMS-2.3.2-WIN-LINUX.txt) · 保留舊發行。
+
+Mac 拖入「應用程式」；Debian 或 Ubuntu 可執行 `sudo apt install ./LocalBrain_2.3.2_amd64.deb`。
 
 以下Windows 2.0.1及更早段落保留發布時的歷史狀態；目前平台版本以上方下載表為準。
 

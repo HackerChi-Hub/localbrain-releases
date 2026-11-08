@@ -14,12 +14,24 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.3.3** · Managed Splash on Mac moves to 1.6.0 with better scheduling and recovery under memory pressure. Existing model weights are reused.
 - **2.3.2** · Android read-only checks gain a fixed command set: SELinux, kernel, uptime, /data space, battery, boot completion and third-party package count.
 - **2.3.2** · Web checks can filter nuclei templates by tags, severity and template ID inside the selected profile.
 - **2.3.2** · Template-ID or full-profile scans raise sandbox memory so thousands of templates are not OOM-killed.
 - **2.3.2** · Reports record the filter and loaded count; high-risk tags, paths and free-form commands are rejected.
-- **2.3.2** · Verified locally: httpd 2.4.49 hits CVE-2021-41773, reproduced by a self-written PoC and verified.
 <!-- recent-features:end -->
+
+## Mac 2.3.3: managed Splash 1.6.0
+
+New managed Splash installations on Mac use 1.6.0. Existing users can check for runtime updates in Settings → Runtime and Diagnostics and confirm the Splash upgrade there. LocalBrain verifies the official archive and service interface, keeps the previous release for rollback, and reuses existing model weights.
+
+The upstream release focuses on request scheduling under memory pressure, cache reclamation, engine recovery and improved support for split GGUF files. Speed depends on the model, draft compatibility and concurrent load.
+
+The installed app ran an existing Qwen3.8-27B-4bit model with a 256K serving window and passed Chinese chat, streaming and a strict tool-argument round trip. The actual engine sequence was 1.5.0 → 1.6.0 → 1.5.0 → 1.6.0. The chat checks used short prompts.
+
+The Mac DMG is 75,350,839 bytes, ad-hoc signed and not Apple-notarized. Windows and Linux remain at 2.3.2. SHA-256 `50755c412ccacccbe1350aab9026aa561b137e8d7c0d161fdce8344adc8d1983`.
+
+[Download Mac 2.3.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.3/LocalBrain_2.3.3_aarch64.dmg) · [Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.3) · [SHA-256 file](SHA256SUMS-2.3.3-MAC.txt) · [Verification scope](VERIFICATION-2.3.3-MAC.md) · [Upstream release notes](https://github.com/incoai/splash/releases/tag/1.6.0)
 
 ## Windows / Linux 2.3.2: built in CI and signed
 
@@ -400,7 +412,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.2.9 · Mac 2.3.2 · Linux 2.2.9
+## Latest downloads：Windows 2.3.2 · Mac 2.3.3 · Linux 2.3.2
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -426,11 +438,13 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.3.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2/LocalBrain_2.3.2_aarch64.dmg) · Installed; real Drama 3 speech and segment editing verified; locally signed, not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_x64-setup.exe) · 2.2.9; installed; platform acceptance and limits above|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.AppImage) · 2.2.9; installed; platform acceptance and limits above|
+| Apple Silicon Mac 2.3.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.3/LocalBrain_2.3.3_aarch64.dmg) · Installed and tested with Splash 1.6.0; ad-hoc signed, not Apple-notarized |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_x64-setup.exe) · 2.3.2, CI build and signature verified |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.AppImage) · 2.3.2, CI build and signature verified |
 
-[Mac 2.3.2 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.2) · [Mac checksums](SHA256SUMS-2.3.0-MAC.txt) · [Windows/Linux 2.2.9 release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9-win-linux). Drag the Mac app into Applications; on Debian/Ubuntu run `sudo apt install ./LocalBrain_2.2.9_amd64.deb`. Older releases are retained.
+[Release notes Mac 2.3.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.3) · [SHA-256 file](SHA256SUMS-2.3.3-MAC.txt) · [Windows/Linux 2.3.2](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.2-win-linux) · [Windows/Linux SHA-256](SHA256SUMS-2.3.2-WIN-LINUX.txt) · Older releases are retained.
+
+Drag the Mac app into Applications. On Debian or Ubuntu, use `sudo apt install ./LocalBrain_2.3.2_amd64.deb`.
 
 The following Windows 2.0.1 and earlier paragraphs retain their original historical status. Current platform versions are listed in the download table above.
 

@@ -16,12 +16,24 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **2.3.3** · Mac 受管 Splash 更新到 1.6.0，改善内存受限时的调度和恢复，已有模型权重继续使用。
 - **2.3.2** · Android 设备只读检查新增固定命令集：SELinux、内核、运行时长、/data 空间、电量、启动完成、第三方应用数量。
 - **2.3.2** · 网页检查支持按 tags、严重度、模板 ID 在档位内筛选 nuclei 模板。
 - **2.3.2** · 按模板 ID 或 full 档扫描时自动提高沙箱内存，避免加载上万条模板被 OOM。
 - **2.3.2** · 模板筛选范围与加载数量写入报告；高危标签、路径与自由命令一律拒绝。
-- **2.3.2** · 本机验收：httpd 2.4.49 命中 CVE-2021-41773，自写 PoC 复现并核验通过。
 <!-- recent-features:end -->
+
+## Mac 2.3.3：受管 Splash 1.6.0
+
+Mac 受管 Splash 的新装基线升到 1.6.0。已有用户可到「设置 → 运行环境与诊断」检查环境更新，确认 Splash 版本后升级。应用校验官方归档和服务接口，保留上一版供回滚，模型权重继续使用。
+
+上游本版集中改善内存受限时的请求调度、缓存回收和异常恢复，并增强分片 GGUF 支持。速度仍受模型、草稿匹配和并发负载影响。
+
+安装版复用 Qwen3.8-27B-4bit，在 256K 服务窗口下通过中文回复、流式输出和严格工具参数往返。实际切换过 1.5.0 → 1.6.0 → 1.5.0 → 1.6.0。256K 是服务窗口，回复验收使用短输入。
+
+Mac 安装包为 75,350,839 字节，使用本地临时签名，未 Apple 公证。Windows 和 Linux 正式版为 2.3.2。安装包的 SHA-256 为 `50755c412ccacccbe1350aab9026aa561b137e8d7c0d161fdce8344adc8d1983`。
+
+[下载 Mac 2.3.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.3/LocalBrain_2.3.3_aarch64.dmg) · [发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.3) · [SHA-256 校验文件](SHA256SUMS-2.3.3-MAC.txt) · [实测范围](VERIFICATION-2.3.3-MAC.md) · [官方发行说明](https://github.com/incoai/splash/releases/tag/1.6.0)
 
 ## Windows / Linux 2.3.2：在线构建与签名
 
@@ -404,7 +416,7 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载：Windows 2.2.9 · Mac 2.3.2 · Linux 2.2.9
+## 最新下载：Windows 2.3.2 · Mac 2.3.3 · Linux 2.3.2
 
 以下 2.1.3 为历史工具接入验收记录。
 
@@ -430,11 +442,13 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 
 | 平台 | 安装包与状态 |
 | --- | --- |
-| Apple Silicon Mac 2.3.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2/LocalBrain_2.3.2_aarch64.dmg) · 已安装，Drama 3 配音与分段修改实际调用通过；本地签名、未 Apple 公证 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_x64-setup.exe) · 2.2.9; 已安装，本批平台验收及限制见上文|
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.2.9-win-linux/LocalBrain_2.2.9_amd64.AppImage) · 2.2.9; 已安装，本批平台验收及限制见上文|
+| Apple Silicon Mac 2.3.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.3/LocalBrain_2.3.3_aarch64.dmg) · 已安装，Splash 1.6.0 实测通过；本地临时签名，未 Apple 公证 |
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_x64-setup.exe) · 2.3.2；在线构建与签名核对 |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.AppImage) · 2.3.2；在线构建与签名核对 |
 
-[Mac 2.3.2 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.2) · [Mac 校验值](SHA256SUMS-2.3.0-MAC.txt) · [Windows/Linux 2.2.9 发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.2.9-win-linux)。Mac 拖入应用程序；Debian/Ubuntu 执行 `sudo apt install ./LocalBrain_2.2.9_amd64.deb`。旧发行保留。
+[发行说明 Mac 2.3.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.3) · [SHA-256 校验文件](SHA256SUMS-2.3.3-MAC.txt) · [Windows/Linux 2.3.2](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.2-win-linux) · [Windows/Linux SHA-256](SHA256SUMS-2.3.2-WIN-LINUX.txt) · 旧发行保留。
+
+Mac 拖入「应用程序」；Debian 或 Ubuntu 可运行 `sudo apt install ./LocalBrain_2.3.2_amd64.deb`。
 
 以下Windows 2.0.1及更早段落保留其发布时的历史状态；当前平台版本以上方下载表为准。
 

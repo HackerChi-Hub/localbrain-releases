@@ -1,70 +1,70 @@
 {
-  "reviewed_version": "2.2.9",
+  "reviewed_version": "2.3.3",
   "languages": {
     "zh-CN": [
       {
-        "version": "2.2.9",
-        "text": "Windows/Linux 区分已安装环境、容器离线和待核实镜像；查询失败不再计入缺少组件，避免重复安装。"
+        "version": "2.3.3",
+        "text": "Mac 受管 Splash 更新到 1.6.0，改善内存受限时的调度和恢复，已有模型权重继续使用。"
       },
       {
-        "version": "2.2.9",
-        "text": "Mac 环境清单区分确认缺少与状态待核实，已安装组件不重复安装，已有系统依赖不提供卸载。"
+        "version": "2.3.2",
+        "text": "Android 设备只读检查新增固定命令集：SELinux、内核、运行时长、/data 空间、电量、启动完成、第三方应用数量。"
       },
       {
-        "version": "2.2.9",
-        "text": "Mac 容器启动以实际服务响应判断就绪，前台自动刷新，历史维护错误与当前恢复状态分别显示。"
+        "version": "2.3.2",
+        "text": "网页检查支持按 tags、严重度、模板 ID 在档位内筛选 nuclei 模板。"
       },
       {
-        "version": "2.2.8",
-        "text": "Mac 视频统一常用分辨率预设与自定义，按模型即时显示合法尺寸和内存提示，不自动降画质。"
+        "version": "2.3.2",
+        "text": "按模板 ID 或 full 档扫描时自动提高沙箱内存，避免加载上万条模板被 OOM。"
       },
       {
-        "version": "2.2.8",
-        "text": "Mac 同步归档安全修复，拒绝跨平台越界路径、链接与特殊文件，已有模型和环境保留。"
+        "version": "2.3.2",
+        "text": "模板筛选范围与加载数量写入报告；高危标签、路径与自由命令一律拒绝。"
       }
     ],
     "zh-TW": [
       {
-        "version": "2.2.9",
-        "text": "Windows/Linux 區分已安裝環境、容器離線及待核實映像；查詢失敗不再計入缺少元件，避免重複安裝。"
+        "version": "2.3.3",
+        "text": "Mac 受管 Splash 更新到 1.6.0，改善記憶體受限時的排程和復原，既有模型權重繼續使用。"
       },
       {
-        "version": "2.2.9",
-        "text": "Mac 環境清單區分確認缺少與狀態待核實，已安裝元件不重複安裝，既有系統依賴不提供解除安裝。"
+        "version": "2.3.2",
+        "text": "Android 裝置唯讀檢查新增固定命令集：SELinux、核心、運行時間、/data 空間、電量、開機完成、第三方應用數量。"
       },
       {
-        "version": "2.2.9",
-        "text": "Mac 容器啟動依實際服務回應判斷就緒，前景自動重新整理，歷史維護錯誤與目前恢復狀態分別顯示。"
+        "version": "2.3.2",
+        "text": "網頁檢查支援依 tags、嚴重度、範本 ID 在檔位內篩選 nuclei 範本。"
       },
       {
-        "version": "2.2.8",
-        "text": "Mac 影片統一常用解析度預設及自訂，依模型即時顯示合法尺寸與記憶體提示，不自動降低畫質。"
+        "version": "2.3.2",
+        "text": "依範本 ID 或 full 檔掃描時自動提高沙箱記憶體，避免載入上萬條範本被 OOM。"
       },
       {
-        "version": "2.2.8",
-        "text": "Mac 同步封存安全修復，拒絕跨平台越界路徑、連結及特殊檔案，保留既有模型與環境。"
+        "version": "2.3.2",
+        "text": "範本篩選範圍與載入數量寫入報告；高風險標籤、路徑與自由命令一律拒絕。"
       }
     ],
     "en": [
       {
-        "version": "2.2.9",
-        "text": "Windows/Linux separates installed runtimes, offline services and unverified images; failed queries no longer inflate the missing-component count or prompt reinstalls."
+        "version": "2.3.3",
+        "text": "Managed Splash on Mac moves to 1.6.0 with better scheduling and recovery under memory pressure. Existing model weights are reused."
       },
       {
-        "version": "2.2.9",
-        "text": "Mac runtime inventory separates confirmed missing components from unverified states, prevents duplicate installation and preserves external system dependencies."
+        "version": "2.3.2",
+        "text": "Android read-only checks gain a fixed command set: SELinux, kernel, uptime, /data space, battery, boot completion and third-party package count."
       },
       {
-        "version": "2.2.9",
-        "text": "Mac container readiness checks the real service, refreshes in the foreground and separates historical maintenance failures from current recovery."
+        "version": "2.3.2",
+        "text": "Web checks can filter nuclei templates by tags, severity and template ID inside the selected profile."
       },
       {
-        "version": "2.2.8",
-        "text": "Mac video shares resolution presets and custom dimensions with immediate model-specific legality and memory guidance, without automatic quality reduction."
+        "version": "2.3.2",
+        "text": "Template-ID or full-profile scans raise sandbox memory so thousands of templates are not OOM-killed."
       },
       {
-        "version": "2.2.8",
-        "text": "Mac incorporates archive safety fixes, rejecting cross-platform traversal, links and special files while preserving existing models and runtimes."
+        "version": "2.3.2",
+        "text": "Reports record the filter and loaded count; high-risk tags, paths and free-form commands are rejected."
       }
     ]
   }

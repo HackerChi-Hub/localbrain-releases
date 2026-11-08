@@ -9,7 +9,7 @@
         "splash",
         "sushi"
       ],
-      "special_runtime": "Splash baseline 1.3.1 / Metal / M3+ macOS26.4+; Sushi baseline 1.2.4 / Apple Silicon macOS26.2+; explicit official-release upgrades with protocol probes and rollback; independent of CUDA",
+      "special_runtime": "Splash baseline 1.6.0 / Metal / M3+ macOS26.4+; Sushi baseline 1.2.4 / Apple Silicon macOS26.2+; explicit official-release upgrades with protocol probes and rollback; independent of CUDA",
       "required_resources": [
         "splash_server.py",
         "splash_bridge.py",
@@ -36,8 +36,8 @@
           "archive_sha256": "4a77108cccf8e55c8d6823e1e759939a622277e66cd0daa3c1fc621ed69e4568"
         },
         "splash": {
-          "version": "1.3.1",
-          "archive_sha256": "f98c602b16a70a7bc01e05b3a9e6034c367aedd47e11a4c63b637d1342756c92"
+          "version": "1.6.0",
+          "archive_sha256": "da3aef0a581491b0eb4c1168bda07f520e5ca8368764abff426d95ac1c77e5c4"
         }
       },
       "python_archive": {

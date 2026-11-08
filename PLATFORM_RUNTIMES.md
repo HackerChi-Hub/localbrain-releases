@@ -4,7 +4,7 @@
 
 | 平台 | 特殊语言运行环境 | 维护与发布边界 |
 | --- | --- | --- |
-| Mac Apple Silicon | MLX、llama.cpp Metal、Splash 1.3.1 | 独立的 Python/Metal 依赖和模型组装协议。本批不改 Splash；保留已发布的 Mac 1.9.5，见 RELEASE_1.9.5_VERIFICATION.md。 |
+| Mac Apple Silicon | MLX、llama.cpp Metal、Splash 1.6.0 | Mac 2.3.3 更新受管 Splash 基线，已有用户可独立升级、回滚并沿用模型权重。详见 [Mac 2.3.3 验收](VERIFICATION-2.3.3-MAC.md)。 |
 | Windows x64 | llama.cpp、PolyStrata NVIDIA CUDA | Windows 原生 `.venv/Scripts/python.exe` 与 `engine-poly/strata-poly.exe`，不使用 Linux/WSL 的文件。 |
 | Linux x64 | llama.cpp、PolyStrata NVIDIA CUDA | Linux 原生 `.venv/bin/python` 与 ELF `engine-poly/strata-poly`，单独构建及验收；WSL2 实测须标注，不能冒充裸机测试。 |
 
