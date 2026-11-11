@@ -14,12 +14,18 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.3.4** · Apple Silicon Mac adds MiniMax H3-Image for text-to-image and reference editing, with reuse of complete existing weights.
+- **2.3.4** · H3-Image shares image size presets and custom validation, showing size limits before submission without silently downscaling.
 - **2.3.3** · Managed Splash on Mac moves to 1.6.0 with better scheduling and recovery under memory pressure. Existing model weights are reused.
 - **2.3.2** · Android read-only checks gain a fixed command set: SELinux, kernel, uptime, /data space, battery, boot completion and third-party package count.
 - **2.3.2** · Web checks can filter nuclei templates by tags, severity and template ID inside the selected profile.
-- **2.3.2** · Template-ID or full-profile scans raise sandbox memory so thousands of templates are not OOM-killed.
-- **2.3.2** · Reports record the filter and loaded count; high-risk tags, paths and free-form commands are rejected.
 <!-- recent-features:end -->
+
+## 2.3.4 · Mac image generation and editing
+
+LocalBrain 2.3.4 has packages for Mac, Windows and Linux. MiniMax H3-Image runs on Apple Silicon with macOS 26 or later. Use Chat → Local Multimedia Tools to generate images, edit reference images or select an existing official prompt expander. Mac testing covered native 4096×4096 generation and reference editing.
+
+[Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.4) · [SHA-256 checksums](SHA256SUMS-2.3.4.txt) · [Verification](VERIFICATION-2.3.4.md)
 
 ## Mac 2.3.3: managed Splash 1.6.0
 
@@ -412,7 +418,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads：Windows 2.3.2 · Mac 2.3.3 · Linux 2.3.2
+## Latest downloads · Windows 2.3.4 · Mac 2.3.4 · Linux 2.3.4
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -438,11 +444,11 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.3.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.3/LocalBrain_2.3.3_aarch64.dmg) · Installed and tested with Splash 1.6.0; ad-hoc signed, not Apple-notarized |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_x64-setup.exe) · 2.3.2, CI build and signature verified |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.AppImage) · 2.3.2, CI build and signature verified |
+| Apple Silicon Mac 2.3.4 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_aarch64.dmg) · Installed on a physical Mac. H3-Image generation and editing passed. Ad-hoc signed, without Apple notarization. |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_x64-setup.exe) · 2.3.4 · Installed and launched on a Windows Server 2022 runner. |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_amd64.AppImage) · 2.3.4 · Debian installed and launched on an Ubuntu 22.04 runner. AppImage launched after extraction. |
 
-[Release notes Mac 2.3.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.3) · [SHA-256 file](SHA256SUMS-2.3.3-MAC.txt) · [Windows/Linux 2.3.2](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.2-win-linux) · [Windows/Linux SHA-256](SHA256SUMS-2.3.2-WIN-LINUX.txt) · Older releases are retained.
+[Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.4) · [SHA-256 checksums](SHA256SUMS-2.3.4.txt) · [Verification](VERIFICATION-2.3.4.md)
 
 Drag the Mac app into Applications. On Debian or Ubuntu, use `sudo apt install ./LocalBrain_2.3.2_amd64.deb`.
 
@@ -521,10 +527,10 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `96753fee6fd9cd4437b8e9568ab5bced4499cfc1e8b90c1f9589cf0a5feb1d9f` |
-| Windows installer | `b1f0e8df75d73186e058473c113d76dfdfe1fb706c50d58b7b8bc78e827f17ef` |
-| Linux AppImage | `05e41debc713cb258dcfbfacc06b3ba6fefca99f66a5ef82d1f206d0e667cfa8` |
-| Linux Debian | `d647f5733d42e05811d42035bf752de3d84c81335e7c4c94995310dc425216cf` |
+| Mac DMG | `97e1693f77fb315428151c4d330f5192eb83e143560ac36403a65e647391469b` |
+| Windows installer | `cdee8cde7c1581a6867239ffeafcf814ac8e9799a9596e5936c37774c007f1e2` |
+| Linux AppImage | `68eb2eadba7b25581b596b58cc670f611e1b76a4d32eaec10f870aefe1a3eb19` |
+| Linux Debian | `845da4660a6aad1ec627471e23278301f759b7fa87459facb38f1417436ad3bb` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

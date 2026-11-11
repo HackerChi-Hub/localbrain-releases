@@ -14,12 +14,18 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **2.3.4** · Apple Silicon Mac 接入 MiniMax H3-Image，支援文字生圖與參考圖編輯，沿用既有完整權重。
+- **2.3.4** · H3-Image 統一提供圖片尺寸預設和自訂驗證，送出前說明尺寸限制，不自動降低解析度。
 - **2.3.3** · Mac 受管 Splash 更新到 1.6.0，改善記憶體受限時的排程和復原，既有模型權重繼續使用。
 - **2.3.2** · Android 裝置唯讀檢查新增固定命令集：SELinux、核心、運行時間、/data 空間、電量、開機完成、第三方應用數量。
 - **2.3.2** · 網頁檢查支援依 tags、嚴重度、範本 ID 在檔位內篩選 nuclei 範本。
-- **2.3.2** · 依範本 ID 或 full 檔掃描時自動提高沙箱記憶體，避免載入上萬條範本被 OOM。
-- **2.3.2** · 範本篩選範圍與載入數量寫入報告；高風險標籤、路徑與自由命令一律拒絕。
 <!-- recent-features:end -->
+
+## 2.3.4 · Mac 生圖與改圖
+
+方寸智匣 2.3.4 提供 Mac、Windows 和 Linux 安裝套件。MiniMax H3-Image 可在 Apple Silicon 與 macOS 26 以上使用。進入「對話 → 本機多媒體工具」即可生圖或編輯參考圖，也可選擇已有的官方提示詞擴寫模型。Mac 實測通過原生 4096×4096 生圖與參考圖編輯。
+
+[發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.4) · [SHA-256 校驗檔](SHA256SUMS-2.3.4.txt) · [驗收紀錄](VERIFICATION-2.3.4.md)
 
 ## Mac 2.3.3：受管 Splash 1.6.0
 
@@ -412,7 +418,7 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載：Windows 2.3.2 · Mac 2.3.3 · Linux 2.3.2
+## 最新下載 · Windows 2.3.4 · Mac 2.3.4 · Linux 2.3.4
 
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
@@ -438,11 +444,11 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 2.3.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.3/LocalBrain_2.3.3_aarch64.dmg) · 已安裝，Splash 1.6.0 實測通過；本機臨時簽章，未經 Apple 公證 |
-| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_x64-setup.exe) · 2.3.2；線上建置與簽章核對 |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.2-win-linux/LocalBrain_2.3.2_amd64.AppImage) · 2.3.2；線上建置與簽章核對 |
+| Apple Silicon Mac 2.3.4 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_aarch64.dmg) · 實機安裝及 H3-Image 生圖、改圖通過。臨時簽章，未經 Apple 公證。 |
+| Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_x64-setup.exe) · 2.3.4 · 在 Windows Server 2022 建置機安裝並啟動。 |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_amd64.AppImage) · 2.3.4 · 在 Ubuntu 22.04 建置機安裝 Debian 套件並啟動。AppImage 解包啟動通過。 |
 
-[發行說明 Mac 2.3.3](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.3) · [SHA-256 校驗檔](SHA256SUMS-2.3.3-MAC.txt) · [Windows/Linux 2.3.2](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.2-win-linux) · [Windows/Linux SHA-256](SHA256SUMS-2.3.2-WIN-LINUX.txt) · 保留舊發行。
+[發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.4) · [SHA-256 校驗檔](SHA256SUMS-2.3.4.txt) · [驗收紀錄](VERIFICATION-2.3.4.md)
 
 Mac 拖入「應用程式」；Debian 或 Ubuntu 可執行 `sudo apt install ./LocalBrain_2.3.2_amd64.deb`。
 
@@ -521,10 +527,10 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `96753fee6fd9cd4437b8e9568ab5bced4499cfc1e8b90c1f9589cf0a5feb1d9f` |
-| Windows安裝程式 | `b1f0e8df75d73186e058473c113d76dfdfe1fb706c50d58b7b8bc78e827f17ef` |
-| Linux AppImage | `05e41debc713cb258dcfbfacc06b3ba6fefca99f66a5ef82d1f206d0e667cfa8` |
-| Linux Debian包 | `d647f5733d42e05811d42035bf752de3d84c81335e7c4c94995310dc425216cf` |
+| Mac DMG | `97e1693f77fb315428151c4d330f5192eb83e143560ac36403a65e647391469b` |
+| Windows安裝程式 | `cdee8cde7c1581a6867239ffeafcf814ac8e9799a9596e5936c37774c007f1e2` |
+| Linux AppImage | `68eb2eadba7b25581b596b58cc670f611e1b76a4d32eaec10f870aefe1a3eb19` |
+| Linux Debian包 | `845da4660a6aad1ec627471e23278301f759b7fa87459facb38f1417436ad3bb` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
 

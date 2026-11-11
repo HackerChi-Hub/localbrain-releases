@@ -1,0 +1,36 @@
+{
+  "ciSource": "c9eda35b63a3f6e19011d7ac4fd23515e2d1ddf6",
+  "macSource": "647328a6fc05ca20117de2858db3af82ccc4ba10",
+  "windowsRun": "https://github.com/HackerChi-Hub/localbrain/actions/runs/42952248281",
+  "linuxRun": "https://github.com/HackerChi-Hub/localbrain/actions/runs/42952248286",
+  "readmeRun": "https://github.com/HackerChi-Hub/localbrain/actions/runs/42952239220",
+  "docfactoryWindowsLinux": "e51c7670be3a1e816f8df61adab61beda3aebf97",
+  "version": "2.3.4",
+  "artifacts": {
+    "mac": {
+      "name": "LocalBrain_2.3.4_aarch64.dmg",
+      "bytes": 75397375,
+      "sha256": "97e1693f77fb315428151c4d330f5192eb83e143560ac36403a65e647391469b"
+    },
+    "macUpdate": {
+      "name": "LocalBrain.app.tar.gz",
+      "bytes": 76522764,
+      "sha256": "576d83bfb2411ebb31f646608b69d56b1e1c51edfb1eb744bc8d892d1597edbb"
+    },
+    "win": {
+      "name": "LocalBrain_2.3.4_x64-setup.exe",
+      "bytes": 43898406,
+      "sha256": "cdee8cde7c1581a6867239ffeafcf814ac8e9799a9596e5936c37774c007f1e2"
+    },
+    "deb": {
+      "name": "LocalBrain_2.3.4_amd64.deb",
+      "bytes": 81927828,
+      "sha256": "845da4660a6aad1ec627471e23278301f759b7fa87459facb38f1417436ad3bb"
+    },
+    "app": {
+      "name": "LocalBrain_2.3.4_amd64.AppImage",
+      "bytes": 159910392,
+      "sha256": "68eb2eadba7b25581b596b58cc670f611e1b76a4d32eaec10f870aefe1a3eb19"
+    }
+  }
+}
