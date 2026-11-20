@@ -1,70 +1,70 @@
 {
-  "reviewed_version": "2.3.3",
+  "reviewed_version": "2.3.7",
   "languages": {
     "zh-CN": [
       {
-        "version": "2.3.3",
-        "text": "Mac 受管 Splash 更新到 1.6.0，改善内存受限时的调度和恢复，已有模型权重继续使用。"
+        "version": "2.3.7",
+        "text": "Windows/Linux 2.3.7 补齐 FLUX 3 Image Klein：Windows 按驱动自动选 CUDA 12.8（≥570.26）/ Vulkan（旧驱动 NVIDIA）/ CPU，Linux 提供 Ubuntu 22.04 兼容 CPU 包；实测 1024×1024 十六步生图 32–59 秒、显存峰值 5.3–7.1 GiB。"
       },
       {
-        "version": "2.3.2",
-        "text": "Android 设备只读检查新增固定命令集：SELinux、内核、运行时长、/data 空间、电量、启动完成、第三方应用数量。"
+        "version": "2.3.7",
+        "text": "GGUF 图像引擎改为官方预编译包并按驱动选后端，移除 Git/CMake 与 5GB Torch 前置依赖；`--auto-fit` 是引擎内部按空闲显存自动规划，不是命令行参数。"
       },
       {
-        "version": "2.3.2",
-        "text": "网页检查支持按 tags、严重度、模板 ID 在档位内筛选 nuclei 模板。"
+        "version": "2.3.6",
+        "text": "修复运行环境与诊断确认弹窗切回窗口时的刷新撞锁与持久化挂起死锁，置顶显示占用任务、耗时及无损重置维护队列入口。"
       },
       {
-        "version": "2.3.2",
-        "text": "按模板 ID 或 full 档扫描时自动提高沙箱内存，避免加载上万条模板被 OOM。"
+        "version": "2.3.6",
+        "text": "Drama 3、H3-Image、Wuli、Pika 等受管环境缺失配方印章时支持校验或启动前自动核验补签，并并发提速官方引擎更新检测、去重同版归档索引。"
       },
       {
-        "version": "2.3.2",
-        "text": "模板筛选范围与加载数量写入报告；高危标签、路径与自由命令一律拒绝。"
+        "version": "2.3.5",
+        "text": "升级内嵌任务内核至 0.2.2-rc.3 与 Node 24.22.3，Mac 受管引擎基线升至 Splash 1.7.0、Sushi 1.6.0、mlx-serve 26.11.2、llama.cpp b12477。"
       }
     ],
     "zh-TW": [
       {
-        "version": "2.3.3",
-        "text": "Mac 受管 Splash 更新到 1.6.0，改善記憶體受限時的排程和復原，既有模型權重繼續使用。"
+        "version": "2.3.7",
+        "text": "Windows/Linux 2.3.7 補齊 FLUX 3 Image Klein：Windows 依驅動自動選 CUDA 12.8（≥570.26）／Vulkan（舊驅動 NVIDIA）／CPU，Linux 提供 Ubuntu 22.04 相容 CPU 包；實測 1024×1024 十六步生圖 32–59 秒、顯存峰值 5.3–7.1 GiB。"
       },
       {
-        "version": "2.3.2",
-        "text": "Android 裝置唯讀檢查新增固定命令集：SELinux、核心、運行時間、/data 空間、電量、開機完成、第三方應用數量。"
+        "version": "2.3.7",
+        "text": "GGUF 圖像引擎改為官方預編譯包並依驅動選後端，移除 Git/CMake 與 5GB Torch 前置依賴；`--auto-fit` 是引擎內部依可用顯存自動規劃，不是命令列參數。"
       },
       {
-        "version": "2.3.2",
-        "text": "網頁檢查支援依 tags、嚴重度、範本 ID 在檔位內篩選 nuclei 範本。"
+        "version": "2.3.6",
+        "text": "修復執行環境與診斷確認彈窗切回視窗時的重新整理撞鎖與持久化擱置死鎖，置頂顯示佔用任務、耗時及無損重設維護佇列入口。"
       },
       {
-        "version": "2.3.2",
-        "text": "依範本 ID 或 full 檔掃描時自動提高沙箱記憶體，避免載入上萬條範本被 OOM。"
+        "version": "2.3.6",
+        "text": "Drama 3、H3-Image、Wuli、Pika 等受管環境缺失配方印章時支援校驗或啟動前自動核驗補簽，並並行提速官方引擎更新檢測、去重同版封存索引。"
       },
       {
-        "version": "2.3.2",
-        "text": "範本篩選範圍與載入數量寫入報告；高風險標籤、路徑與自由命令一律拒絕。"
+        "version": "2.3.5",
+        "text": "升級內嵌任務核心至 0.2.2-rc.3 與 Node 24.22.3，Mac 受管引擎基線升至 Splash 1.7.0、Sushi 1.6.0、mlx-serve 26.11.2、llama.cpp b12477。"
       }
     ],
     "en": [
       {
-        "version": "2.3.3",
-        "text": "Managed Splash on Mac moves to 1.6.0 with better scheduling and recovery under memory pressure. Existing model weights are reused."
+        "version": "2.3.7",
+        "text": "Windows and Linux 2.3.7 now ship FLUX 3 Image Klein: Windows automatically picks CUDA 12.8 (driver 570.26+), Vulkan (older NVIDIA drivers) or CPU, and Linux gets an Ubuntu 22.04-compatible CPU build; a 16-step 1024×1024 generation took 32–59 s with a 5.3–7.1 GiB VRAM peak."
       },
       {
-        "version": "2.3.2",
-        "text": "Android read-only checks gain a fixed command set: SELinux, kernel, uptime, /data space, battery, boot completion and third-party package count."
+        "version": "2.3.7",
+        "text": "The GGUF image engine now uses official prebuilt packages chosen by driver and drops the Git/CMake and 5 GB Torch prerequisites; `--auto-fit` is the engine planning from free VRAM, not a CLI flag."
       },
       {
-        "version": "2.3.2",
-        "text": "Web checks can filter nuclei templates by tags, severity and template ID inside the selected profile."
+        "version": "2.3.6",
+        "text": "Fixes Runtime & Diagnostics confirmation-dialog focus refresh lockups and persisted paused-queue deadlocks, surfacing active holders, elapsed time and a non-destructive queue reset at the top."
       },
       {
-        "version": "2.3.2",
-        "text": "Template-ID or full-profile scans raise sandbox memory so thousands of templates are not OOM-killed."
+        "version": "2.3.6",
+        "text": "Auto-verifies and reconstructs missing recipe stamps for Drama 3, H3-Image, Wuli and Pika runtimes, while parallelizing bounded engine update checks and deduplicating archive indexes."
       },
       {
-        "version": "2.3.2",
-        "text": "Reports record the filter and loaded count; high-risk tags, paths and free-form commands are rejected."
+        "version": "2.3.5",
+        "text": "Upgrades the embedded task kernel to 0.2.2-rc.3 on Node 24.22.3 and updates Mac managed baselines to Splash 1.7.0, Sushi 1.6.0, mlx-serve 26.11.2 and llama.cpp b12477."
       }
     ]
   }

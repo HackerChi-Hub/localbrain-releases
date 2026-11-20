@@ -23,11 +23,20 @@
 - **2.3.5** · 升级内嵌任务内核至 0.2.2-rc.3 与 Node 24.22.3，Mac 受管引擎基线升至 Splash 1.7.0、Sushi 1.6.0、mlx-serve 26.11.2、llama.cpp b12477。
 <!-- recent-features:end -->
 
+## Windows / Linux 2.3.7：FLUX 3 Image Klein 可用，GGUF 图像引擎按驱动选后端
+
+Windows x64 与 Linux amd64 现在能下载、启动并实际生图与改图。GGUF 图像引擎（`stable-diffusion.cpp` `master-1106-532d2c1`）按驱动选包：Windows 驱动 ≥570.26 装 CUDA 12.8 版，低于该门槛的 NVIDIA 装同版本 Vulkan 版（仍走显卡），没有 NVIDIA 才装 CPU 版；Linux 使用同一提交在 Ubuntu 22.04（glibc 2.35）上构建的 CPU 包，绕开上游包对 glibc 2.43 的要求。所选归档与 6.30 GiB 三件套都先核对 SHA-256，安装回执记录实际后端。
+
+RTX 4070 Laptop 8GB、驱动 546.26 实测（应用内受管链路，自动选 Vulkan）：`1024×1024` 十六步文生图服务端 32–59 秒、显存峰值 5.3–7.1 GiB；单参考图加坐标框编辑 72–84 秒、显存峰值 6.3–7.1 GiB。Ubuntu 22.04 WSL2（32 线程 CPU）`512×512` 十六步 190.4 秒；Linux 本批只有 CPU 后端。CUDA 12.8 分支需要 NVIDIA 570.26 及以上，本机驱动 546.26 未实测该分支。`--auto-fit` 不是命令行参数，而是引擎按实时空闲显存自动规划。
+
+[Windows](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_x64-setup.exe) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.AppImage) · [完整验收](VERIFICATION-2.3.7-WIN-LINUX.md)
+
+
 ## 2.3.4 · Mac 生图与改图
 
 方寸智匣 2.3.4 提供 Mac、Windows 和 Linux 安装包。MiniMax H3-Image 可在 Apple Silicon 与 macOS 26 及以上使用。进入「对话 → 本地多媒体工具」即可生图或编辑参考图，也可选择已有的官方提示词扩写模型。Mac 实测跑通原生 4096×4096 生图与参考图编辑。
 
-[发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7) · [SHA-256 校验文件](SHA256SUMS-2.3.4.txt) · [验收记录](VERIFICATION-2.3.4.md)
+[发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 校验文件](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [验收记录](VERIFICATION-2.3.7-WIN-LINUX.md)
 
 ## Mac 2.3.3：受管 Splash 1.6.0
 
@@ -422,7 +431,7 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载 · Windows 2.3.4 · Mac 2.3.7 · Linux 2.3.4
+## 最新下载 · Windows 2.3.7 · Mac 2.3.7 · Linux 2.3.7
 
 以下 2.1.3 为历史工具接入验收记录。
 
@@ -449,8 +458,8 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 | 平台 | 安装包与状态 |
 | --- | --- |
 | Apple Silicon Mac 2.3.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7/LocalBrain_2.3.7_aarch64.dmg) · 实机安装及 H3-Image 生图、改图通过。临时签名，未经 Apple 公证。 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_x64-setup.exe) · 2.3.4 · 在 Windows Server 2022 构建机安装并启动。 |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_amd64.AppImage) · 2.3.4 · 在 Ubuntu 22.04 构建机安装 Debian 包并启动。AppImage 解包启动通过。 |
+| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_x64-setup.exe) · 2.3.7 · 本机安装并通过 FLUX 生图与参考图编辑（RTX 4070 8GB，驱动 546.26 自动选 Vulkan）。更新器签名已生成。 |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.AppImage) · 2.3.7 · Ubuntu 22.04 WSL2 从 deb 解包启动；受管链路安装 CPU 版 GGUF 引擎并完成 FLUX 生图（512×512，190.4 秒）。 |
 
 [发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7) · [SHA-256 校验文件](SHA256SUMS-2.3.4.txt) · [验收记录](VERIFICATION-2.3.4.md)
 
@@ -531,10 +540,10 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `bc5c9039aeb9bc0fda3bd3175605ed0c009ffd0538c7e7146f6381e56086ff91` |
-| Windows安装程序 | `cdee8cde7c1581a6867239ffeafcf814ac8e9799a9596e5936c37774c007f1e2` |
-| Linux AppImage | `68eb2eadba7b25581b596b58cc670f611e1b76a4d32eaec10f870aefe1a3eb19` |
-| Linux Debian包 | `845da4660a6aad1ec627471e23278301f759b7fa87459facb38f1417436ad3bb` |
+| Mac DMG | `27d6abbfc04dd0bb43cc543d23a6193401dedbbc816b9ba2889f4e18209e7a5a` |
+| Windows安装程序 | `f3c4bdf65c914fee9ad49e8abe99975db771f99be0206e3d59b6efdb4e181efb` |
+| Linux AppImage | `82a327dafd24f50f9c8530793aa36ed7a4206b0466195cff131f915df0c6402a` |
+| Linux Debian包 | `9bdc2a0260e51f641347ed6aa379d5a8ed676d11c2c254031d748a9582605fff` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 

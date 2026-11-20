@@ -21,11 +21,20 @@ Run supported local models, work with authorized files, and manage speech, image
 - **2.3.5** · Upgrades the embedded task kernel to 0.2.2-rc.3 on Node 24.22.3 and updates Mac managed baselines to Splash 1.7.0, Sushi 1.6.0, mlx-serve 26.11.2 and llama.cpp b12477.
 <!-- recent-features:end -->
 
+## Windows / Linux 2.3.7: FLUX 3 Image Klein works with a driver-aware GGUF image engine
+
+Windows x64 and Linux amd64 can now download, launch, generate and edit images. The GGUF image engine (`stable-diffusion.cpp` `master-1106-532d2c1`) picks its package by driver: Windows installs the CUDA 12.8 build with NVIDIA driver 570.26+, the same-version Vulkan build below that threshold, and the CPU build without an NVIDIA GPU; Linux uses a CPU build compiled from the same commit on Ubuntu 22.04 (glibc 2.35) because upstream Linux prebuilts require glibc 2.43. The selected archive and all 6.30 GiB of model components are checked with SHA-256, and the install receipt records the actual backend.
+
+Measured on an RTX 4070 Laptop 8 GB with driver 546.26 through the app's managed path (Vulkan): a 16-step `1024×1024` generation took 32–59 s with a 5.3–7.1 GiB VRAM peak; a single-reference box edit took 72–84 s with a 6.3–7.1 GiB peak. Ubuntu 22.04 WSL2 (32-thread CPU) took 190.4 s for `512×512`; Linux is CPU-only in this batch. The CUDA 12.8 branch needs NVIDIA 570.26+ and was not verified locally on 546.26. `--auto-fit` is not a CLI flag; it is the engine planning from live free VRAM.
+
+[Windows](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_x64-setup.exe) · [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.AppImage) · [Full verification](VERIFICATION-2.3.7-WIN-LINUX.md)
+
+
 ## 2.3.4 · Mac image generation and editing
 
 LocalBrain 2.3.4 has packages for Mac, Windows and Linux. MiniMax H3-Image runs on Apple Silicon with macOS 26 or later. Use Chat → Local Multimedia Tools to generate images, edit reference images or select an existing official prompt expander. Mac testing covered native 4096×4096 generation and reference editing.
 
-[Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7) · [SHA-256 checksums](SHA256SUMS-2.3.4.txt) · [Verification](VERIFICATION-2.3.4.md)
+[Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 checksums](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [Verification](VERIFICATION-2.3.7-WIN-LINUX.md)
 
 ## Mac 2.3.3: managed Splash 1.6.0
 
@@ -79,7 +88,7 @@ All 15,655 installation entries, permissions and links match the build. App sign
 
 [Download Mac 2.3.2 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7/LocalBrain_2.3.7_aarch64.dmg) · [Release and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7) · [Full verification](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.3.0-MAC.md)
 
-The installer is 75,327,316 bytes, about 75.3 MB. SHA-256: `bc5c9039aeb9bc0fda3bd3175605ed0c009ffd0538c7e7146f6381e56086ff91`. This batch also ships Windows/Linux 2.3.2 builds made in CI (see the section above; not installed or run on those platforms); the 2.2.9 packages and platform manifests remain available. Existing models, environments, data and active tasks are unchanged. Older text, images and release records below retain their dates and verification scopes; use this section and the download table for current downloads.
+The installer is 75,327,316 bytes, about 75.3 MB. SHA-256: `27d6abbfc04dd0bb43cc543d23a6193401dedbbc816b9ba2889f4e18209e7a5a`. This batch also ships Windows/Linux 2.3.2 builds made in CI (see the section above; not installed or run on those platforms); the 2.2.9 packages and platform manifests remain available. Existing models, environments, data and active tasks are unchanged. Older text, images and release records below retain their dates and verification scopes; use this section and the download table for current downloads.
 
 ## Windows / Linux 2.2.9: distinguish installed runtimes from offline containers
 
@@ -418,7 +427,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads · Windows 2.3.4 · Mac 2.3.7 · Linux 2.3.4
+## Latest downloads · Windows 2.3.7 · Mac 2.3.7 · Linux 2.3.7
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -445,8 +454,8 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.3.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7/LocalBrain_2.3.7_aarch64.dmg) · Installed on a physical Mac. H3-Image generation and editing passed. Ad-hoc signed, without Apple notarization. |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_x64-setup.exe) · 2.3.4 · Installed and launched on a Windows Server 2022 runner. |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.4/LocalBrain_2.3.4_amd64.AppImage) · 2.3.4 · Debian installed and launched on an Ubuntu 22.04 runner. AppImage launched after extraction. |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_x64-setup.exe) · 2.3.7 · Installed on this Windows machine; FLUX text-to-image and reference editing passed (RTX 4070 Laptop 8 GB, driver 546.26, Vulkan selected automatically). Updater signature generated. |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.AppImage) · 2.3.7 · Launched from the extracted deb on Ubuntu 22.04 WSL2; the managed path installed the CPU GGUF engine and completed a 512×512 FLUX generation (190.4 s). |
 
 [Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7) · [SHA-256 checksums](SHA256SUMS-2.3.4.txt) · [Verification](VERIFICATION-2.3.4.md)
 
@@ -527,10 +536,10 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `bc5c9039aeb9bc0fda3bd3175605ed0c009ffd0538c7e7146f6381e56086ff91` |
-| Windows installer | `cdee8cde7c1581a6867239ffeafcf814ac8e9799a9596e5936c37774c007f1e2` |
-| Linux AppImage | `68eb2eadba7b25581b596b58cc670f611e1b76a4d32eaec10f870aefe1a3eb19` |
-| Linux Debian | `845da4660a6aad1ec627471e23278301f759b7fa87459facb38f1417436ad3bb` |
+| Mac DMG | `27d6abbfc04dd0bb43cc543d23a6193401dedbbc816b9ba2889f4e18209e7a5a` |
+| Windows installer | `f3c4bdf65c914fee9ad49e8abe99975db771f99be0206e3d59b6efdb4e181efb` |
+| Linux AppImage | `82a327dafd24f50f9c8530793aa36ed7a4206b0466195cff131f915df0c6402a` |
+| Linux Debian | `9bdc2a0260e51f641347ed6aa379d5a8ed676d11c2c254031d748a9582605fff` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 
