@@ -34,7 +34,7 @@ Measured on an RTX 4070 Laptop 8 GB with driver 546.26 through the app's managed
 
 LocalBrain 2.3.4 has packages for Mac, Windows and Linux. MiniMax H3-Image runs on Apple Silicon with macOS 26 or later. Use Chat → Local Multimedia Tools to generate images, edit reference images or select an existing official prompt expander. Mac testing covered native 4096×4096 generation and reference editing.
 
-[Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 checksums](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [Verification](VERIFICATION-2.3.7-WIN-LINUX.md)
+[Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7) · [SHA-256 checksums](SHA256SUMS-2.3.4.txt) · [Verification](VERIFICATION-2.3.4.md)
 
 ## Mac 2.3.3: managed Splash 1.6.0
 
@@ -457,7 +457,7 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_x64-setup.exe) · 2.3.7 · Installed on this Windows machine; FLUX text-to-image and reference editing passed (RTX 4070 Laptop 8 GB, driver 546.26, Vulkan selected automatically). Updater signature generated. |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.AppImage) · 2.3.7 · Launched from the extracted deb on Ubuntu 22.04 WSL2; the managed path installed the CPU GGUF engine and completed a 512×512 FLUX generation (190.4 s). |
 
-[Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7) · [SHA-256 checksums](SHA256SUMS-2.3.4.txt) · [Verification](VERIFICATION-2.3.4.md)
+[Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 checksums](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [Verification](VERIFICATION-2.3.7-WIN-LINUX.md)
 
 Drag the Mac app into Applications. On Debian or Ubuntu, use `sudo apt install ./LocalBrain_2.3.2_amd64.deb`.
 

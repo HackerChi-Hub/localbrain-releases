@@ -34,7 +34,7 @@ RTX 4070 Laptop 8GB、驅動 546.26 實測（應用內受管鏈路，自動選 V
 
 方寸智匣 2.3.4 提供 Mac、Windows 和 Linux 安裝套件。MiniMax H3-Image 可在 Apple Silicon 與 macOS 26 以上使用。進入「對話 → 本機多媒體工具」即可生圖或編輯參考圖，也可選擇已有的官方提示詞擴寫模型。Mac 實測通過原生 4096×4096 生圖與參考圖編輯。
 
-[發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 校驗檔](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [驗收紀錄](VERIFICATION-2.3.7-WIN-LINUX.md)
+[發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7) · [SHA-256 校驗檔](SHA256SUMS-2.3.4.txt) · [驗收紀錄](VERIFICATION-2.3.4.md)
 
 ## Mac 2.3.3：受管 Splash 1.6.0
 
@@ -457,7 +457,7 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 | Windows x64 | [安裝程式](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_x64-setup.exe) · 2.3.7 · 本機安裝並通過 FLUX 生圖與參考圖編輯（RTX 4070 Laptop 8GB，驅動 546.26 自動選 Vulkan）。更新器簽章已產生。 |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.AppImage) · 2.3.7 · Ubuntu 22.04 WSL2 從 deb 解包啟動；受管鏈路安裝 CPU 版 GGUF 引擎並完成 512×512 FLUX 生圖（190.4 秒）。 |
 
-[發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7) · [SHA-256 校驗檔](SHA256SUMS-2.3.4.txt) · [驗收紀錄](VERIFICATION-2.3.4.md)
+[發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 校驗檔](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [驗收紀錄](VERIFICATION-2.3.7-WIN-LINUX.md)
 
 Mac 拖入「應用程式」；Debian 或 Ubuntu 可執行 `sudo apt install ./LocalBrain_2.3.2_amd64.deb`。
 
