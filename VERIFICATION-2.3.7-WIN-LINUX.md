@@ -42,7 +42,7 @@ FLUX 3 Image Klein 的模型三件套与引擎归档都做 SHA-256 校验；安�
 
 ## 构建与安装
 
-- Windows x64 NSIS：`LocalBrain_2.3.7_x64-setup.exe`，43,773,712 字节，更新器签名已生成（`.sig`）。签名是 Tauri 更新器签名，不是 Windows Authenticode。
+- Windows x64 NSIS：`LocalBrain_2.3.7_x64-setup.exe`，43,756,731 字节，更新器签名已生成（`.sig`）。签名是 Tauri 更新器签名，不是 Windows Authenticode。
 - Linux amd64：`LocalBrain_2.3.7_amd64.deb` 122,085,936 字节、`LocalBrain_2.3.7_amd64.AppImage` 195,377,656 字节，均生成更新器签名。
 - 构建环境：Windows 本机（Rust 1.98.1、Node 24.19.0、NSIS 3.11）；Linux 在 WSL2 Ubuntu 22.04 内构建（Rust 1.98.1、Node 22.23.3），打包资源中的 DocFactory 使用本机 `9fec4dda5e31dd1063f971db8d566c41414bbf20` 副本。
 - 本批改动经 `cargo check --release` 通过；Windows 与 Linux 两条构建线均从含本批改动的源码产出安装包。完整前端/Python/Rust 测试沿用 Mac 2.3.7 批次记录，本批未重跑全套。
