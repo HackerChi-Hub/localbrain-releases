@@ -79,7 +79,7 @@ All 15,655 installation entries, permissions and links match the build. App sign
 
 [Download Mac 2.3.2 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7/LocalBrain_2.3.7_aarch64.dmg) · [Release and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7) · [Full verification](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.3.0-MAC.md)
 
-The installer is 75,327,316 bytes, about 75.3 MB. SHA-256: `27d6abbfc04dd0bb43cc543d23a6193401dedbbc816b9ba2889f4e18209e7a5a`. This batch also ships Windows/Linux 2.3.2 builds made in CI (see the section above; not installed or run on those platforms); the 2.2.9 packages and platform manifests remain available. Existing models, environments, data and active tasks are unchanged. Older text, images and release records below retain their dates and verification scopes; use this section and the download table for current downloads.
+The installer is 75,327,316 bytes, about 75.3 MB. SHA-256: `bc5c9039aeb9bc0fda3bd3175605ed0c009ffd0538c7e7146f6381e56086ff91`. This batch also ships Windows/Linux 2.3.2 builds made in CI (see the section above; not installed or run on those platforms); the 2.2.9 packages and platform manifests remain available. Existing models, environments, data and active tasks are unchanged. Older text, images and release records below retain their dates and verification scopes; use this section and the download table for current downloads.
 
 ## Windows / Linux 2.2.9: distinguish installed runtimes from offline containers
 
@@ -527,7 +527,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `27d6abbfc04dd0bb43cc543d23a6193401dedbbc816b9ba2889f4e18209e7a5a` |
+| Mac DMG | `bc5c9039aeb9bc0fda3bd3175605ed0c009ffd0538c7e7146f6381e56086ff91` |
 | Windows installer | `cdee8cde7c1581a6867239ffeafcf814ac8e9799a9596e5936c37774c007f1e2` |
 | Linux AppImage | `68eb2eadba7b25581b596b58cc670f611e1b76a4d32eaec10f870aefe1a3eb19` |
 | Linux Debian | `845da4660a6aad1ec627471e23278301f759b7fa87459facb38f1417436ad3bb` |

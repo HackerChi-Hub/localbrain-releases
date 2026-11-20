@@ -81,7 +81,7 @@ Mac 使用 [Drama 3 的 MLX 4bit 社区转换版](https://huggingface.co/mlx-com
 
 [下载 Mac 2.3.2（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7/LocalBrain_2.3.7_aarch64.dmg) · [发行与更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7) · [完整验收](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.3.0-MAC.md)
 
-安装包75,327,316字节，约75.3MB。SHA-256：`27d6abbfc04dd0bb43cc543d23a6193401dedbbc816b9ba2889f4e18209e7a5a`。本次同时提供 Windows/Linux 2.3.2 在线构建包（见上方小节，未在对应平台安装运行）；2.2.9 原包与分平台清单保留。现有模型、环境、数据与任务不作改动。下方旧文、旧图及各版记录保留其原日期与验收范围，当前下载以本节和下载表为准。
+安装包75,327,316字节，约75.3MB。SHA-256：`bc5c9039aeb9bc0fda3bd3175605ed0c009ffd0538c7e7146f6381e56086ff91`。本次同时提供 Windows/Linux 2.3.2 在线构建包（见上方小节，未在对应平台安装运行）；2.2.9 原包与分平台清单保留。现有模型、环境、数据与任务不作改动。下方旧文、旧图及各版记录保留其原日期与验收范围，当前下载以本节和下载表为准。
 
 ## Windows / Linux 2.2.9：已安装和容器离线分开显示
 
@@ -531,7 +531,7 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 
 | 文件 | 散列 |
 | --- | --- |
-| Mac DMG | `27d6abbfc04dd0bb43cc543d23a6193401dedbbc816b9ba2889f4e18209e7a5a` |
+| Mac DMG | `bc5c9039aeb9bc0fda3bd3175605ed0c009ffd0538c7e7146f6381e56086ff91` |
 | Windows安装程序 | `cdee8cde7c1581a6867239ffeafcf814ac8e9799a9596e5936c37774c007f1e2` |
 | Linux AppImage | `68eb2eadba7b25581b596b58cc670f611e1b76a4d32eaec10f870aefe1a3eb19` |
 | Linux Debian包 | `845da4660a6aad1ec627471e23278301f759b7fa87459facb38f1417436ad3bb` |
