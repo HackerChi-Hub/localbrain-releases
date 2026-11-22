@@ -14,11 +14,11 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **2.4.1** · Mac 2.4.1 eliminates mid-task disconnections and speed distortion: removes hidden 5-min Undici and 10-min bridge timeouts with SSE keepalive, enforces per-engine thinking budgets, raises default output cap to 32K with auto-chunked continuation on max-tokens, and separates prefill TTFT from live decode tok/s with full breakdown stats.
+- **2.4.2** · Mac 2.4.2 eliminates mid-task disconnections and speed distortion: removes hidden 5-min Undici and 10-min bridge timeouts with SSE keepalive, enforces per-engine thinking budgets, raises default output cap to 32K with auto-chunked continuation on max-tokens, and separates prefill TTFT from live decode tok/s with full breakdown stats.
+- **2.4.1** · Windows/Linux add three Inkling 2 Mini GGUF downloads with DSpark enabled and a separate pinned engine plus CUDA dependency checks. Windows Q2 code execution, tools and simple vision passed; one matched test was about 1.85x faster. Q3/Q4 and Linux inference remain untested.
 - **2.4.0** · Mac 2.4.0 lifts the conservative 33 GB Inkling oMLX memory cap (`--memory-guard balanced`), enables prefix caching (expanding 64GB Mac Inkling context to 96K), and raises MLX KV memory budget share to 70% of free RAM so every model gets maximum safe context.
 - **2.3.9** · Mac 2.3.9 scales Inkling 2 Mini context by unified memory and raises per-turn output budget to 30% across engines; enables default LLM auto-compaction without aborting replies, true Inkling thinking-off, cleaner external model discovery with Home deletion, and clearer usage labels.
 - **2.3.8** · Mac adds Inkling 2 Mini base and OpenUncensored abliterated MLX oQ4 builds. Download the weights or connect an existing copy for text, image input and tools in the same chat.
-- **2.3.7** · Windows and Linux 2.3.7 now ship FLUX 3 Image Klein: Windows automatically picks CUDA 12.8 (driver 570.26+), Vulkan (older NVIDIA drivers) or CPU, and Linux gets an Ubuntu 22.04-compatible CPU build; a 16-step 1024×1024 generation took 32–59 s with a 5.3–7.1 GiB VRAM peak.
 <!-- recent-features:end -->
 
 ## Windows / Linux 2.3.7: FLUX 3 Image Klein works with a driver-aware GGUF image engine
@@ -34,7 +34,7 @@ Measured on an RTX 4070 Laptop 8 GB with driver 546.26 through the app's managed
 
 LocalBrain 2.3.4 has packages for Mac, Windows and Linux. MiniMax H3-Image runs on Apple Silicon with macOS 26 or later. Use Chat → Local Multimedia Tools to generate images, edit reference images or select an existing official prompt expander. Mac testing covered native 4096×4096 generation and reference editing.
 
-[Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.1) · [SHA-256 checksums](SHA256SUMS-2.3.4.txt) · [Verification](VERIFICATION-2.3.4.md)
+[Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.2) · [SHA-256 checksums](SHA256SUMS-2.3.4.txt) · [Verification](VERIFICATION-2.3.4.md)
 
 ## Mac 2.3.3: managed Splash 1.6.0
 
@@ -46,7 +46,7 @@ The installed app ran an existing Qwen3.8-27B-4bit model with a 256K serving win
 
 The Mac DMG is 75,350,839 bytes, ad-hoc signed and not Apple-notarized. Windows and Linux remain at 2.3.2. SHA-256 `50755c412ccacccbe1350aab9026aa561b137e8d7c0d161fdce8344adc8d1983`.
 
-[Download Mac 2.4.1](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.1/LocalBrain_2.4.1_aarch64.dmg) · [Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.1) · [SHA-256 file](SHA256SUMS-2.3.3-MAC.txt) · [Verification scope](VERIFICATION-2.3.3-MAC.md) · [Upstream release notes](https://github.com/incoai/splash/releases/tag/1.6.0)
+[Download Mac 2.4.2](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.2/LocalBrain_2.4.2_aarch64.dmg) · [Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.2) · [SHA-256 file](SHA256SUMS-2.3.3-MAC.txt) · [Verification scope](VERIFICATION-2.3.3-MAC.md) · [Upstream release notes](https://github.com/incoai/splash/releases/tag/1.6.0)
 
 ## Windows / Linux 2.3.2: built in CI and signed
 
@@ -86,9 +86,9 @@ An independent HTTP test generated three native segments and 45.929 seconds of a
 
 All 15,655 installation entries, permissions and links match the build. App signature, updater signature and DMG integrity checks passed. The app is locally signed and not Apple-notarized. Frontend 1,671 tests, Rust 478 tests and 399 managed-Python cases passed, with separate skipped or ignored cases. Long-form execution was exercised; hours-long output and a fresh online environment installation on a new machine were not separately verified.
 
-[Download Mac 2.3.2 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.1/LocalBrain_2.4.1_aarch64.dmg) · [Release and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.1) · [Full verification](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.3.0-MAC.md)
+[Download Mac 2.3.2 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.2/LocalBrain_2.4.2_aarch64.dmg) · [Release and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.2) · [Full verification](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.3.0-MAC.md)
 
-The installer is 75,327,316 bytes, about 75.3 MB. SHA-256: `2b17facdf72a3d0be4f1906cdddac267b9193036fe1a6aca0a6dd47b3bd2275e`. This batch also ships Windows/Linux 2.3.2 builds made in CI (see the section above; not installed or run on those platforms); the 2.2.9 packages and platform manifests remain available. Existing models, environments, data and active tasks are unchanged. Older text, images and release records below retain their dates and verification scopes; use this section and the download table for current downloads.
+The installer is 75,327,316 bytes, about 75.3 MB. SHA-256: `2eba9b8cbcff2159ec25f4a0ed31598715d64ea82bc89ffd0c8a4ca3c2b4f104`. This batch also ships Windows/Linux 2.3.2 builds made in CI (see the section above; not installed or run on those platforms); the 2.2.9 packages and platform manifests remain available. Existing models, environments, data and active tasks are unchanged. Older text, images and release records below retain their dates and verification scopes; use this section and the download table for current downloads.
 
 ## Windows / Linux 2.2.9: distinguish installed runtimes from offline containers
 
@@ -110,7 +110,7 @@ Container startup waits for an actual service response. An “already running”
 
 The November 5 installed native UI identified 27 managed components and three existing system dependencies, with zero missing and zero unverified. Selecting Sushi, system-dependency buttons, historical error details and manual refresh were exercised in the actual app. All 15,653 installed child entries, modes and links match. Model/runtime directory fingerprints, configuration and the video library are unchanged. App/updater signatures, disk-image integrity and mounted contents passed verification. Locally signed, not Apple notarized. This batch generated no new videos; earlier video tests and screenshots retain their original dates.
 
-[Download Mac 2.2.9 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.1/LocalBrain_2.4.1_aarch64.dmg) · [Release and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.1) · [Acceptance record](VERIFICATION-2.2.9-MAC.md)
+[Download Mac 2.2.9 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.2/LocalBrain_2.4.2_aarch64.dmg) · [Release and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.2) · [Acceptance record](VERIFICATION-2.2.9-MAC.md)
 
 The DMG is 75,310,516 bytes, approximately 75.3 MB. SHA-256: `8323c521ec6d0fb39fcd838a1c38636e775381559c9211213ec24ead39dc342a`. Existing Windows/Linux 2.2.8 packages, signatures and independent update manifests remain unchanged. Older text, images and acceptance records are retained; current downloads follow this section and the download table.
 
@@ -128,7 +128,7 @@ Source archives are validated against POSIX and Windows path rules before extrac
 
 The November 3 build is installed. All15,653 entries, modes and links match; app/updater signatures, trusted comments and the disk image passed verification. Locally signed, not Apple notarized. Eight tests exercised the installed extraction code; real system-MCP file writing and reading passed. The main frontend suite passed1,668, Rust474, Python395 unit cases plus two standalone scripts, and DSH53, with explicit skipped/ignored cases. Native accessibility read back version2.2.8, existing models and zero running services. The native automation service was unavailable; this batch did not repeat all clicks or generate new videos. Six November2 clips and native resolution checks remain separate historical evidence.
 
-[Download Mac 2.2.8 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.1/LocalBrain_2.4.1_aarch64.dmg) · [Release and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.1) · [Verification](VERIFICATION-2.2.8-MAC.md)
+[Download Mac 2.2.8 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.2/LocalBrain_2.4.2_aarch64.dmg) · [Release and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.2) · [Verification](VERIFICATION-2.2.8-MAC.md)
 
 The DMG is75,294,743 bytes. SHA-256: `4b66333e2778a637291e069fd2bd7cd7836b3e07f3877cf4bd3795e3ca2e2481`. Existing Windows/Linux2.2.8 installers, signatures and manifests remain unchanged. Older sections retain their original version context; current downloads follow this section and the download table.
 
@@ -188,7 +188,7 @@ Layout uses an explicitly prepared 25-frame driving clip; the original 81-frame 
 
 The Apple Silicon Mac 2.2.7 DMG is 92,790,171 bytes, approximately 92.8 MB. All 15,652 built, mounted and installed entries, permissions and links match. App/updater signatures and disk-image verification passed; locally signed, not Apple-notarized. Rust 474 and frontend 1660 tests passed with explicit ignored/skipped cases; 49 Python files passed. A complete clean-machine large-model download and Windows/Linux video inference were not tested in this batch.
 
-[Download Mac 2.2.7 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.1/LocalBrain_2.4.1_aarch64.dmg) · [Downloads and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest) · [Acceptance record](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.2.7-MAC.md)
+[Download Mac 2.2.7 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.2/LocalBrain_2.4.2_aarch64.dmg) · [Downloads and updates](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest) · [Acceptance record](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.2.7-MAC.md)
 
 SHA-256: `a0eea9853c6f5c8f8ff142749257c6ae4e5b426bb1a75f0646c21a9f3523c89f`.
 
@@ -231,7 +231,7 @@ This main-project rebuild is installed. All 15,401 entries, permissions and link
 
 Only Mac receives a new installer in this batch. Windows/Linux retain their independently released 2.2.2; Mac Pika results do not establish support on those platforms. [See verification and actual test scope](VERIFICATION-2.2.4-MAC.md).
 
-[Mac 2.4.1 release page](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.1) · [Download Mac 2.2.4 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.1/LocalBrain_2.4.1_aarch64.dmg)
+[Mac 2.4.2 release page](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.2) · [Download Mac 2.2.4 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.2/LocalBrain_2.4.2_aarch64.dmg)
 
 Mac DMG SHA-256: `63f040f7ea65df5afe4a28b8e7d9b64c4686db0ed2772ee81b6b70dd3a8495a0`.
 
@@ -258,7 +258,7 @@ The Mac section below retains its initial platform scope.
 
 Mac 2.2.2 is publicly released after installed-app verification. On 2026-10-31 the author approved this batch exception for source CI account billing restrictions; local checks are not a remote CI pass. The installed app verified consistent controls, six independent engine updates, database feedback and a Trivy rollback round trip. Existing weights with Splash 1.5 completed text and vision replies. Images, text files and video references can be pasted into chat and are read only after manual sending; videos currently remain file references. Embedded Harness is adapted to 0.2.1-rc.5. Mac is locally signed and not Apple-notarized. Windows/Linux remain at 2.2.1 and will be packaged separately by the author.
 
-[Mac 2.4.1 verification](VERIFICATION-2.2.2-MAC.md). Historical sections retain their original scopes; see the download table for current platform versions.
+[Mac 2.4.2 verification](VERIFICATION-2.2.2-MAC.md). Historical sections retain their original scopes; see the download table for current platform versions.
 
 
 
@@ -266,7 +266,7 @@ Mac 2.2.2 is publicly released after installed-app verification. On 2026-10-31 t
 
 Windows and WSL2 Debian are built and installed at 2.2.1, with AppImage also prepared; existing Mac 2.2.1 assets are retained. Settings→Runtime and diagnostics shows percentages only with measured download bytes and totals. Preparation, installation, extraction, verification and removal show stages and clear stale numbers. Main vulnerability and Java index databases report cache, source and verification separately. Completion, failure or pause settles the indicator before a fresh inventory read. Native Windows Torch verification, an existing 2B request, 35 MCP schemas and real DOCX/Markdown passed. Separate controlled UI checks cover 37.5% and slow refresh; they are not Windows real-download evidence. Windows Rust 435 passed/36 ignored; frontend 1641 passed/2 skipped; 14 adapters and 3 queue tests passed; 53 DSH checks per platform; 45 Python files plus 7 security tests passed. Linux acceptance is Ubuntu22.04 WSL2/Xvfb, not bare-metal GPU or media inference. Full standalone Harness 8K compatibility remains unresolved. The author explicitly approved this Windows/Linux 2.2.1 batch exception with local acceptance and the source CI account restriction recorded; local checks are not presented as successful online source CI.
 
-[Windows/Linux verification](VERIFICATION-2.2.1-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.1)
+[Windows/Linux verification](VERIFICATION-2.2.1-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.2)
 
 The Mac 2.2.1 section below retains its initial publication scope; current Windows/Linux batch status is described above.
 
@@ -286,7 +286,7 @@ The installed Mac build passed a real 49.0MB tool download and cached container-
 
 Windows and WSL2 Debian are installed at2.2.0; AppImage is available alongside existing Mac2.2.0 packages. Eight tool packages ship with the app; five apply on Windows/Linux and all are ready at1.0.0. Custom plugin UI and installation commands remain closed. Engine, page and runtime registration is shared; compaction uses consistent kernel measurements including summary framing. Windows image runtime detection remains fixed. An existing2B model completed a real request;35 tools across five packaged MCPs matched compatibility schemas, and real DOCX create/read plus Markdown export passed. Model and MCP tests are separate, not an autonomous end-to-end task benchmark. An initial document failure exposed stale build inputs; final packages use the document implementation from the2.2.0 source package. Windows Rust435 passed/36 ignored;2 live module tests passed; TypeScript1638 passed/2 skipped;14 adapters passed;53 DSH tests passed per platform;45 Python files and7 security plus2 packaging tests passed. Linux acceptance is WSL2/Xvfb only. Windows media generation, standalone Harness8K tasks and real HTB remain outside acceptance. Batch CI limits and approval status are recorded; Mac sections below retain their separate test scope.
 
-[Windows/Linux verification](VERIFICATION-2.2.0-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.1)
+[Windows/Linux verification](VERIFICATION-2.2.0-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.2)
 
 ## Mac 2.2.0: internal modules and consistent context accounting
 
@@ -312,7 +312,7 @@ A missing Windows Lib/site-packages lookup made verified image environments appe
 
 Windows and WSL2 Debian are installed. This release adds runtime management, download pause/resume and pinned Harness0.2.1-rc.3; Node22.23.3, models and drivers are retained. Native Windows runtime-center rendering and a real read-only PolyStrata35B tool roundtrip passed. Both platforms passed53 DSH tests and old-session recovery without tool replay. Windows Rust:427 passed/34 ignored; TypeScript:1632 passed/2 skipped; adapters:14 passed; all45 Python test files and7 additional security tests passed. All three updater signatures were verified. The author explicitly approved this batch despite source CI billing/spending limits; online source CI is not represented as passing. Linux acceptance is WSL2/Xvfb only; standalone Harness8K overflow and full image/tool task limits remain documented.
 
-[Windows/Linux verification](VERIFICATION-2.1.6-WIN-LINUX.md) · [Known issues](KNOWN-ISSUES-DSH-LOCAL-MODELS.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.1)
+[Windows/Linux verification](VERIFICATION-2.1.6-WIN-LINUX.md) · [Known issues](KNOWN-ISSUES-DSH-LOCAL-MODELS.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.2)
 
 Initial Mac and earlier Windows/Linux sections below retain their historical scope; this section and the download table state current platform versions.
 
@@ -366,7 +366,7 @@ Native checks covered five component groups, zero missing items, no removal for 
 
 The Mac app retains local signing and is not Apple-notarized. The GitHub source documentation job did not start because of account billing/spending limits; the author explicitly approved a Mac 2.1.5 release exception. Local checks are not a remote CI pass. See [verification](VERIFICATION-2.1.5-MAC.md) and [prerequisite setup](SYSTEM_PREREQUISITES_2.1.5.md).
 
-[Download Mac 2.2.1 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.1/LocalBrain_2.4.1_aarch64.dmg)
+[Download Mac 2.2.1 (Apple Silicon DMG)](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.2/LocalBrain_2.4.2_aarch64.dmg)
 
 
 ## Historical candidate record: Mac 2.1.4 candidate: one-click runtime setup (pending publication)
@@ -385,7 +385,7 @@ Removal controls appear only for confirmed installed managed components, excludi
 
 These use the production component with read-only inventory and explicitly mocked changes. The revision is installed; all 12,995 files/links match and signature/image checks pass. Native capture still fails; native clicks, complete container setup and actual removal remain unverified. See [acceptance limits](VERIFICATION-2.1.4-MAC.md) and [runtime scope](RUNTIME_CENTER.md). Weights, external tools, sessions, reports and VMs remain intact. The Harness core stays on 0.2.0-rc.2. The software package remains unpublished; Windows/Linux remain on 2.1.3.
 
-Windows/Linux 2.1.3 are publicly released: Windows and WSL2 Debian are installed; Debian/AppImage resource checks, packaged DSH initialization, 20-second startup and 53 DSH tests passed. All three updater signatures were verified. The author explicitly approved this batch despite source CI account limits; online source CI is not reported as passing. Bare-metal Linux GPU and full DSH image/tool tasks remain unverified; PolyStrata 35B still overflows its 8K window with the desktop agent. See [acceptance and unresolved items](VERIFICATION-2.1.3-WIN-LINUX.md) and [downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.1). Earlier local-candidate and initial single-platform paragraphs below are historical; this section states current platform status.
+Windows/Linux 2.1.3 are publicly released: Windows and WSL2 Debian are installed; Debian/AppImage resource checks, packaged DSH initialization, 20-second startup and 53 DSH tests passed. All three updater signatures were verified. The author explicitly approved this batch despite source CI account limits; online source CI is not reported as passing. Bare-metal Linux GPU and full DSH image/tool tasks remain unverified; PolyStrata 35B still overflows its 8K window with the desktop agent. See [acceptance and unresolved items](VERIFICATION-2.1.3-WIN-LINUX.md) and [downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.4.2). Earlier local-candidate and initial single-platform paragraphs below are historical; this section states current platform status.
 
 ## Windows local fixes and DSH integration limits (2026-10-24)
 
@@ -427,7 +427,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads · Windows 2.3.7 · Mac 2.4.1 · Linux 2.3.7
+## Latest downloads · Windows 2.3.7 · Mac 2.4.2 · Linux 2.3.7
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -453,7 +453,7 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 
 | Platform | Package and status |
 | --- | --- |
-| Apple Silicon Mac 2.4.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.1/LocalBrain_2.4.1_aarch64.dmg) · Installed on a physical Mac. H3-Image generation and editing passed. Ad-hoc signed, without Apple notarization. |
+| Apple Silicon Mac 2.4.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.2/LocalBrain_2.4.2_aarch64.dmg) · Installed on a physical Mac. H3-Image generation and editing passed. Ad-hoc signed, without Apple notarization. |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_x64-setup.exe) · 2.3.7 · Installed on this Windows machine; FLUX text-to-image and reference editing passed (RTX 4070 Laptop 8 GB, driver 546.26, Vulkan selected automatically). Updater signature generated. |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.AppImage) · 2.3.7 · Launched from the extracted deb on Ubuntu 22.04 WSL2; the managed path installed the CPU GGUF engine and completed a 512×512 FLUX generation (190.4 s). |
 
@@ -536,7 +536,7 @@ Local inference does not require sending conversations to the cloud; downloads, 
 
 | File | Hash |
 | --- | --- |
-| Mac DMG | `2b17facdf72a3d0be4f1906cdddac267b9193036fe1a6aca0a6dd47b3bd2275e` |
+| Mac DMG | `2eba9b8cbcff2159ec25f4a0ed31598715d64ea82bc89ffd0c8a4ca3c2b4f104` |
 | Windows installer | `f3c4bdf65c914fee9ad49e8abe99975db771f99be0206e3d59b6efdb4e181efb` |
 | Linux AppImage | `82a327dafd24f50f9c8530793aa36ed7a4206b0466195cff131f915df0c6402a` |
 | Linux Debian | `9bdc2a0260e51f641347ed6aa379d5a8ed676d11c2c254031d748a9582605fff` |
