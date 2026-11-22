@@ -14,12 +14,18 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **2.4.3** · Mac 2.4.3 eliminates mid-task disconnections, SSE split-frame corruption and speed distortion: switches bridge streaming to immediate read1 passthrough, guards local-wire keepalive on complete frame boundaries, removes hidden Undici/bridge timeouts, enforces per-engine thinking budgets with 32K output cap and auto-continuation, and reports true decode tok/s.
-- **2.4.1** · Windows/Linux add three Inkling 2 Mini GGUF downloads with DSpark enabled and a separate pinned engine plus CUDA dependency checks. Windows Q2 code execution, tools and simple vision passed; one matched test was about 1.85x faster. Q3/Q4 and Linux inference remain untested.
+- **2.4.3** · 2.4.3 shares streaming fixes: immediate bridge forwarding and SSE keepalive only between complete frames, updated long-task timeouts, engine-specific thinking budgets and continuation, with decode speed excluding time to first token. Windows/Linux packages passed local validation; Mac is maintained independently.
+- **2.4.3** · Windows/Linux add three Inkling 2 Mini GGUF downloads with DSpark enabled and a separate pinned engine plus CUDA dependency checks. Windows Q2 code execution, tools and simple vision passed; one matched test was about 1.85x faster. Q3/Q4 and Linux inference remain untested.
 - **2.4.0** · Mac 2.4.0 lifts the conservative 33 GB Inkling oMLX memory cap (`--memory-guard balanced`), enables prefix caching (expanding 64GB Mac Inkling context to 96K), and raises MLX KV memory budget share to 70% of free RAM so every model gets maximum safe context.
 - **2.3.9** · Mac 2.3.9 scales Inkling 2 Mini context by unified memory and raises per-turn output budget to 30% across engines; enables default LLM auto-compaction without aborting replies, true Inkling thinking-off, cleaner external model discovery with Home deletion, and clearer usage labels.
 - **2.3.8** · Mac adds Inkling 2 Mini base and OpenUncensored abliterated MLX oQ4 builds. Download the weights or connect an existing copy for text, image input and tools in the same chat.
 <!-- recent-features:end -->
+
+## Windows/Linux 2.4.3 · Inkling GGUF and DSpark
+
+Three quantization downloads and a pinned separate engine, with DSpark enabled. Windows installation, native Q2, tools and RAM labels passed. Linux packages and native engine initialization were checked on WSL2 Ubuntu22.04. Q3/Q4 and Linux model inference remain untested. Small output budgets can be consumed by reasoning. Source CI did not run due to billing limits; local checks are not remote CI success. Mac stays at2.4.3.
+
+
 
 ## Windows / Linux 2.3.7: FLUX 3 Image Klein works with a driver-aware GGUF image engine
 
@@ -427,7 +433,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads · Windows 2.3.7 · Mac 2.4.3 · Linux 2.3.7
+## Latest downloads · Windows 2.4.3 · Mac 2.4.3 · Linux 2.4.3
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -454,8 +460,8 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.4.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.3/LocalBrain_2.4.3_aarch64.dmg) · Installed on a physical Mac. H3-Image generation and editing passed. Ad-hoc signed, without Apple notarization. |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_x64-setup.exe) · 2.3.7 · Installed on this Windows machine; FLUX text-to-image and reference editing passed (RTX 4070 Laptop 8 GB, driver 546.26, Vulkan selected automatically). Updater signature generated. |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.AppImage) · 2.3.7 · Launched from the extracted deb on Ubuntu 22.04 WSL2; the managed path installed the CPU GGUF engine and completed a 512×512 FLUX generation (190.4 s). |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.3-win-linux/LocalBrain_2.4.3_x64-setup.exe) · 2.4.3 · Installed; native Q2, CUDA checks and tools passed. Tauri updater signature included. |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.3-win-linux/LocalBrain_2.4.3_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.3-win-linux/LocalBrain_2.4.3_amd64.AppImage) · 2.4.3 · Installed/launched on WSL2 Ubuntu22.04; not a bare-metal GPU or model-inference validation. |
 
 [Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 checksums](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [Verification](VERIFICATION-2.3.7-WIN-LINUX.md)
 
@@ -537,9 +543,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `4477017197008f71c30de6a6c1a1ddcba101b8f9df7f32fb4b6810797e839e14` |
-| Windows installer | `f3c4bdf65c914fee9ad49e8abe99975db771f99be0206e3d59b6efdb4e181efb` |
-| Linux AppImage | `82a327dafd24f50f9c8530793aa36ed7a4206b0466195cff131f915df0c6402a` |
-| Linux Debian | `9bdc2a0260e51f641347ed6aa379d5a8ed676d11c2c254031d748a9582605fff` |
+| Windows installer | `7816ecb53e08af1f53a2dd65c3166d19872c61c336212a5973442b8b01a4fb11` |
+| Linux AppImage | `b672146edff768e22f0610e5082e9d652117e4f058bfa20add0f4ba709a8f582` |
+| Linux Debian | `f3d74f0bc49c3a6e44ca335f403896e86bbdd2a4fd3207040d6baf79f08b23e9` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

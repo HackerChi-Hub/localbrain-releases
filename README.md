@@ -16,12 +16,18 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
-- **2.4.3** · Mac 2.4.3 根治大型任务断连、SSE 分片截断与测速失真：桥接层改用 read1 即刻透传消除 4KB 攒字与半行切割，local-wire 保活严格守住完整帧边界，拆除 Undici 与桥接隐藏超时；补齐各引擎思考预算、32K 默认输出与撞上限自动分段续写；扣除预填耗时还原真实解码 tok/s 与内容构成统计。
-- **2.4.1** · Windows/Linux 新增 Inkling 2 Mini 的 Q2_K_XL、Q3_K_XL、Q4_K_M 下载，自动启用 DSpark；独立固定引擎与 CUDA 依赖校验。Windows Q2 通过代码执行、工具往返和简单读图，同题生成速率约1.85倍；Q3/Q4及Linux推理尚未实测。
+- **2.4.3** · 2.4.3 同步流式连接修复：桥接及时转发数据，SSE 保活只在完整帧之间插入；更新长任务超时、各引擎思考预算与输出续写逻辑，速度统计扣除首字等待。Windows/Linux 安装包已通过本地验收；Mac 独立维护。
+- **2.4.3** · Windows/Linux 新增 Inkling 2 Mini 的 Q2_K_XL、Q3_K_XL、Q4_K_M 下载，自动启用 DSpark；独立固定引擎与 CUDA 依赖校验。Windows Q2 通过代码执行、工具往返和简单读图，同题生成速率约1.85倍；Q3/Q4及Linux推理尚未实测。
 - **2.4.0** · Mac 2.4.0 解除 Inkling oMLX 33GB 保守内存上限并开启前缀缓存（改为 balanced 护栏，64GB Mac 窗口扩至 96K），同时将全 MLX 模型 KV 可用比例提至剩余内存 70%，各模型在不爆内存的前提下尽可能扩大上下文。
 - **2.3.9** · Mac 2.3.9 按本机内存动态扩充 Inkling 2 Mini 上下文并提高全引擎单次输出比例至 30%；默认全场景开启大模型自动压缩不中断回答，打通 Inkling 真关思考、外部模型去杂与主页统一删除，用量明细改版为直白中文。
 - **2.3.8** · Mac 新增 Inkling 2 Mini 原版与 OpenUncensored 去对齐版（MLX oQ4），可下载或连接现有权重，在同一个对话里使用文字、图片和工具。
 <!-- recent-features:end -->
+
+## Windows/Linux 2.4.3 · Inkling GGUF 与 DSpark
+
+三档量化下载与独立固定引擎；默认 DSpark。Windows 已安装并通过原生 Q2、工具往返与内存标签检查；Linux 已在 WSL2 Ubuntu22.04 安装、启动并检查包内引擎。Q3/Q4及Linux模型推理未实测，小输出预算仍可能被思考耗尽。源码CI因账户额度／付款限制未运行，本地测试不冒充远端CI。Mac保留2.4.3。
+
+
 
 ## Windows / Linux 2.3.7：FLUX 3 Image Klein 可用，GGUF 图像引擎按驱动选后端
 
@@ -431,7 +437,7 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载 · Windows 2.3.7 · Mac 2.4.3 · Linux 2.3.7
+## 最新下载 · Windows 2.4.3 · Mac 2.4.3 · Linux 2.4.3
 
 以下 2.1.3 为历史工具接入验收记录。
 
@@ -458,8 +464,8 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 | 平台 | 安装包与状态 |
 | --- | --- |
 | Apple Silicon Mac 2.4.3 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.3/LocalBrain_2.4.3_aarch64.dmg) · 实机安装及 H3-Image 生图、改图通过。临时签名，未经 Apple 公证。 |
-| Windows x64 | [安装程序](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_x64-setup.exe) · 2.3.7 · 本机安装并通过 FLUX 生图与参考图编辑（RTX 4070 8GB，驱动 546.26 自动选 Vulkan）。更新器签名已生成。 |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.3.7-win-linux/LocalBrain_2.3.7_amd64.AppImage) · 2.3.7 · Ubuntu 22.04 WSL2 从 deb 解包启动；受管链路安装 CPU 版 GGUF 引擎并完成 FLUX 生图（512×512，190.4 秒）。 |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.3-win-linux/LocalBrain_2.4.3_x64-setup.exe) · 2.4.3 · 已安装；原生 Q2、CUDA 自检和工具往返通过，使用更新器签名。 |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.3-win-linux/LocalBrain_2.4.3_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.3-win-linux/LocalBrain_2.4.3_amd64.AppImage) · 2.4.3 · WSL2 Ubuntu22.04 安装与两种包启动通过；不代表裸机GPU或模型推理验收。 |
 
 [发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 校验文件](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [验收记录](VERIFICATION-2.3.7-WIN-LINUX.md)
 
@@ -541,9 +547,9 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 | 文件 | 散列 |
 | --- | --- |
 | Mac DMG | `4477017197008f71c30de6a6c1a1ddcba101b8f9df7f32fb4b6810797e839e14` |
-| Windows安装程序 | `f3c4bdf65c914fee9ad49e8abe99975db771f99be0206e3d59b6efdb4e181efb` |
-| Linux AppImage | `82a327dafd24f50f9c8530793aa36ed7a4206b0466195cff131f915df0c6402a` |
-| Linux Debian包 | `9bdc2a0260e51f641347ed6aa379d5a8ed676d11c2c254031d748a9582605fff` |
+| Windows安装程序 | `7816ecb53e08af1f53a2dd65c3166d19872c61c336212a5973442b8b01a4fb11` |
+| Linux AppImage | `b672146edff768e22f0610e5082e9d652117e4f058bfa20add0f4ba709a8f582` |
+| Linux Debian包 | `f3d74f0bc49c3a6e44ca335f403896e86bbdd2a4fd3207040d6baf79f08b23e9` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 

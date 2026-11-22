@@ -1,0 +1,22 @@
+{
+  "version": "2.4.3",
+  "source": "33e8741ac45586c238f9a6c51784d4a5b67b8115",
+  "artifacts": {
+    "LocalBrain_2.4.3_x64-setup.exe": {
+      "bytes": 43778840,
+      "sha256": "7816ecb53e08af1f53a2dd65c3166d19872c61c336212a5973442b8b01a4fb11"
+    },
+    "LocalBrain_2.4.3_amd64.deb": {
+      "bytes": 122112586,
+      "sha256": "f3d74f0bc49c3a6e44ca335f403896e86bbdd2a4fd3207040d6baf79f08b23e9"
+    },
+    "LocalBrain_2.4.3_amd64.AppImage": {
+      "bytes": 195394040,
+      "sha256": "b672146edff768e22f0610e5082e9d652117e4f058bfa20add0f4ba709a8f582"
+    }
+  },
+  "scope": "Windows native Q2 and fresh CUDA runtime; Linux WSL2 package/startup and ext4 native DSH initialization. Linux model inference untested.",
+  "CI": "GitHub source CI unavailable due to account billing/spending limit; local tests are not remote CI success.",
+  "knownIssues": "Small output budgets may be consumed by reasoning. Q3/Q4 inference untested. WSL NTFS workspace initialization exceeded40s; ext4 passed.",
+  "Mac": "2.4.3 unchanged"
+}
