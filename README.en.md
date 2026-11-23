@@ -14,12 +14,18 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
+- **2.4.8** · 2.4.8 resolves newly added models still showing incomplete after download, landing on uninstalled quant tiers, leaking sibling cache bytes, and failing to manage/remove external folders: unifies nested quant + shared root component matching, auto-focuses installed tiers, isolates resumable cache by primary weight, and fixes external library/reference removal targets (Windows/Linux packages locally validated; shared Mac source fixed while Mac installers stay on 2.4.7).
 - **2.4.7** · Windows/Linux Home uses a unified model list without the separate PolyStrata explanation card. Installation/connection actions move to Add model; status appears only while active or on error.
 - **2.4.7** · Mac 2.4.7 adds `Inkling-2-Mini-Strata` (`SQ-10/15/20` with `Vision.strata`) to Discover and fixes `inkling-omlx` shadowing local `.strata` directories alongside Strata v0.2.20 (`76.26 tok/s` 4x concurrency) and native multi-subagent parallelism.
 - **2.4.5** · Mac 2.4.5 fixes `DFA exceeds 400000 states` when calling Locals from DeepSeek Harness or multi-MCP clients (auto-falling back to untyped tool grammar on large schemas), tightens external model discovery to hide `_src-*` staging dirs, loose LoRA/`mmproj`/draft/embedding helpers and symlink backing-base duplicates while following weight symlinks in size calculation, and completes the matched 7-task M5 Pro non-vision benchmark (`T7` dual HTML+DOCX finished in 4 rounds / `270.7 s`).
 - **2.4.4** · Mac 2.4.4 adds Inkling 2 Mini Uncensored · Locals NVFP4 (fits 24GB Macs): installs an isolated Locals runtime, auto-converts the official weights + AtomicChat abliterated LoRA to NVFP4 + 0.64GB draft model on first launch, and enables fused Metal kernels and GPU typed-tool grammar (text-only; keeps oMLX build for vision).
-- **2.4.3** · 2.4.3 shares streaming fixes: immediate bridge forwarding and SSE keepalive only between complete frames, updated long-task timeouts, engine-specific thinking budgets and continuation, with decode speed excluding time to first token. Windows/Linux packages passed local validation; Mac is maintained independently.
 <!-- recent-features:end -->
+
+## Windows / Linux 2.4.8
+
+Windows/Linux 2.4.8 passed local installation and real-model UI verification, resolving newly added models still showing incomplete after download, landing on uninstalled quant tiers when reopening Discover, leaking sibling cache byte counts, and failing to manage or remove external folders. It unifies nested quant (`Q2_K_XL/` + shared root `dspark`/`mmproj`) and external library matching, auto-focuses already-installed tiers, isolates resumable cache counts by primary weight, unifies `managed` / `library` / `reference` removal targets and prompts, and adds catalog-wide cross-layout regression gates across all `CURATED_MODELS`. Windows x64 installation (`13,994` files matched), CUDA runtime verification, native GGUF Q2 tool round trips, and isolated UI checks against local `Q2_K_XL` / `Strata SQ-10` folders and external library deletion passed; Debian/AppImage installation, startup and ext4 native DSH host checks passed on WSL2 Ubuntu 22.04. Strata inference on Windows/Linux and Linux model inference remain untested; source CI could not run due to GitHub billing/spending limits, and local checks (Rust 501, TS 1695, DSH 60) are recorded separately from remote CI. Shared Mac model-management code is fixed in source, while published Mac installers and `latest-darwin-aarch64.json` remain preserved at 2.4.7 pending native macOS build and validation.
+
+[Windows x64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_x64-setup.exe) · [Debian amd64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.AppImage) · [SHA-256](SHA256SUMS-2.4.8-WIN-LINUX.txt) · [Verification](VERIFICATION-2.4.8-WIN-LINUX.md)
 
 ## Windows / Linux 2.4.7
 
@@ -440,7 +446,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads · Windows 2.4.3 · Mac 2.4.7 · Linux 2.4.3
+## Latest downloads · Windows 2.4.8 · Mac 2.4.7 · Linux 2.4.8
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -467,8 +473,8 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.4.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7/LocalBrain_2.4.7_aarch64.dmg) · Installed on a physical Mac. H3-Image generation and editing passed. Ad-hoc signed, without Apple notarization. |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7-win-linux/LocalBrain_2.4.7_x64-setup.exe) · 2.4.7 · Installed; native Q2, CUDA checks and tools passed. Tauri updater signature included. |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7-win-linux/LocalBrain_2.4.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7-win-linux/LocalBrain_2.4.7_amd64.AppImage) · 2.4.7 · Installed/launched on WSL2 Ubuntu22.04; not a bare-metal GPU or model-inference validation. |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_x64-setup.exe) · 2.4.8 · Installed; native Q2, CUDA checks, tools and multi-layout model status/removal checks passed. Tauri updater signature included. |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.AppImage) · 2.4.8 · Installed/launched on WSL2 Ubuntu22.04 with ext4 DSH host check passed; not a bare-metal GPU or model-inference validation. |
 
 [Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 checksums](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [Verification](VERIFICATION-2.3.7-WIN-LINUX.md)
 
@@ -550,9 +556,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `8a3ca09ece28855c70c2fb216326a03207e39645060a48cf2b2f8533d32023ba` |
-| Windows installer | `25d872f50465f72148786466653884c6ed0a4e225ef6df57e4ac7089ccc5a6f0` |
-| Linux AppImage | `348bc9085796b928adca165ddb9de5a6c4336f68fc50bdd2d0c0af0177836132` |
-| Linux Debian | `d819f1c9ed2c5d81edecc0bcc5f8af900735dd563f9a3d046955a876fe4b50d2` |
+| Windows installer | `7c8c5af46d9132a23dd56533c9974d1ad10961122ae2cc48166034122cd6213e` |
+| Linux AppImage | `132ee00849cc356968c7c7b96bfd106c2f2b75314a12fb3e04ff3d08fbdec259` |
+| Linux Debian | `a786efb899f275008a910863d76332544344de3f46f583aa831cfbc55dcaaba0` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

@@ -14,12 +14,18 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
+- **2.4.8** · 2.4.8 徹底解決新上架模型下載完畢仍顯示未完成、量化檔位錯落、跨檔位虛報快取與外部目錄無法管理移除的問題：統一量化子目錄與根部共享元件辨識、自動聚焦已安裝檔位、依主權重隔離斷點快取，並打通外部模型庫與引用目錄移除入口（Windows/Linux 安裝包已本機驗收；Mac 共用原始碼已修復，安裝包保留 2.4.7 獨立維護）。
 - **2.4.7** · Windows/Linux 首頁模型統一列表，移除 PolyStrata 獨立說明；安裝與接入收進新增模型，狀態僅在執行或出錯時顯示。
 - **2.4.7** · Mac 2.4.7 於發現頁上線 Strata 原生 Inkling 2 Mini（SQ-10/15/20 均附 Vision.strata），修復 `inkling-omlx` 因同款 config.json 搶占並隱藏本機 `.strata` 目錄的辨識衝突（同步完善 Strata v0.2.20 引擎與原生多子代理並行排程）。
 - **2.4.5** · Mac 2.4.5 修復 Locals 引擎面對 DeepSeek Harness 等大工具集觸發 `DFA exceeds 400000 states` 報錯（超出預算自動退回非強型別工具語法），並收緊外部模型掃描以隱藏 `_src-*` 過渡目錄、鬆散 LoRA/`mmproj`/草稿/向量小部件與軟連結底座重複入口，同步修正軟連結疊層模型體積統計；M5 Pro 7/7 非視覺對照驗證 `T7` 雙交付 4 輪 `270.7s` 完工。
 - **2.4.4** · Mac 2.4.4 新增 Inkling 2 Mini Uncensored · Locals NVFP4 極速通道（24GB 記憶體可用）：獨立安裝 Locals 環境並於首次啟動自動轉換為 NVFP4 + 0.64GB 草稿模型 + AtomicChat 去對齊 LoRA，啟用融合核與 GPU 工具語法約束（僅純文字，保留 oMLX 版供看圖）。
-- **2.4.3** · 2.4.3 同步串流連線修復：橋接即時轉發資料，SSE 保活只在完整幀之間插入；更新長任務逾時、各引擎思考額度與輸出續寫，速度統計扣除首字等待。Windows/Linux 安裝包已通過本機驗收；Mac 獨立維護。
 <!-- recent-features:end -->
+
+## Windows / Linux 2.4.8
+
+Windows/Linux 2.4.8 已完成本機安裝與真實模型目錄介面驗收：徹底解決新上架模型下載完畢仍顯示未完成、重開發現頁錯落到未安裝量化檔位、跨檔位虛報快取位元組與外部模型目錄無法移除的問題。統一量化子目錄（如 `Q2_K_XL/` + 根部共享 `dspark`/`mmproj`）與外部庫辨識、預設聚焦已安裝檔位、依主權重隔離斷點快取，並打通 `managed` / `library` / `reference` 三類來源的移除目標路徑與確認提示，補齊涵蓋全量 `CURATED_MODELS` 的跨配置回歸門禁。Windows x64 安裝核對（13,994 項）、CUDA 執行環境校驗、GGUF Q2 工具往返及本機 `Q2_K_XL` / `Strata SQ-10` 狀態與外部庫移除驗收通過；Linux Debian/AppImage 在 WSL2 Ubuntu 22.04 安裝啟動與 ext4 包內 DSH 宿主校驗通過。Strata 在 Windows/Linux 上的推論及 Linux 模型推論尚未實測；原始碼 CI 受 GitHub 帳單／額度限制未執行，本機測試（Rust 501、TS 1695、DSH 60）與遠端 CI 分開記錄。Mac 共用模型管理原始碼已修復，線上 Mac 安裝包與更新清單保留 2.4.7 原件，須在 macOS 本機建置驗收後單獨更新。
+
+[Windows x64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_x64-setup.exe) · [Debian amd64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.AppImage) · [SHA-256](SHA256SUMS-2.4.8-WIN-LINUX.txt) · [驗收紀錄](VERIFICATION-2.4.8-WIN-LINUX.md)
 
 ## Windows / Linux 2.4.7
 
@@ -440,7 +446,7 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載 · Windows 2.4.3 · Mac 2.4.7 · Linux 2.4.3
+## 最新下載 · Windows 2.4.8 · Mac 2.4.7 · Linux 2.4.8
 
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
@@ -467,8 +473,8 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac 2.4.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7/LocalBrain_2.4.7_aarch64.dmg) · 實機安裝及 H3-Image 生圖、改圖通過。臨時簽章，未經 Apple 公證。 |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7-win-linux/LocalBrain_2.4.7_x64-setup.exe) · 2.4.7 · 已安裝；原生 Q2、CUDA 自檢和工具往返通過，使用更新器簽章。 |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7-win-linux/LocalBrain_2.4.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7-win-linux/LocalBrain_2.4.7_amd64.AppImage) · 2.4.7 · WSL2 Ubuntu22.04 安裝與兩種包啟動通過；不代表裸機GPU或模型推論驗收。 |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_x64-setup.exe) · 2.4.8 · 已安裝；原生 Q2、CUDA 自檢、工具往返及多配置模型狀態/移除驗收通過，使用更新器簽章。 |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.AppImage) · 2.4.8 · WSL2 Ubuntu22.04 安裝、兩種包啟動與 ext4 宿主校驗通過；不代表裸機GPU或模型推論驗收。 |
 
 [發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 校驗檔](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [驗收紀錄](VERIFICATION-2.3.7-WIN-LINUX.md)
 
@@ -550,9 +556,9 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | 檔案 | 散列 |
 | --- | --- |
 | Mac DMG | `8a3ca09ece28855c70c2fb216326a03207e39645060a48cf2b2f8533d32023ba` |
-| Windows安裝程式 | `25d872f50465f72148786466653884c6ed0a4e225ef6df57e4ac7089ccc5a6f0` |
-| Linux AppImage | `348bc9085796b928adca165ddb9de5a6c4336f68fc50bdd2d0c0af0177836132` |
-| Linux Debian包 | `d819f1c9ed2c5d81edecc0bcc5f8af900735dd563f9a3d046955a876fe4b50d2` |
+| Windows安裝程式 | `7c8c5af46d9132a23dd56533c9974d1ad10961122ae2cc48166034122cd6213e` |
+| Linux AppImage | `132ee00849cc356968c7c7b96bfd106c2f2b75314a12fb3e04ff3d08fbdec259` |
+| Linux Debian包 | `a786efb899f275008a910863d76332544344de3f46f583aa831cfbc55dcaaba0` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
 
