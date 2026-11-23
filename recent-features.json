@@ -1,70 +1,70 @@
 {
-  "reviewed_version": "2.4.3",
+  "reviewed_version": "2.4.7",
   "languages": {
     "zh-CN": [
       {
+        "version": "2.4.7",
+        "text": "Windows/Linux 首页模型统一列表，移除 PolyStrata 独立说明；安装和接入收进添加模型，状态仅在运行或出错时显示。"
+      },
+      {
+        "version": "2.4.7",
+        "text": "Mac 2.4.7 在发现页上线 Strata 原生 Inkling 2 Mini（SQ-10/15/20 均带 Vision.strata），修复 `inkling-omlx` 因同款 config.json 抢占并隐藏本地 `.strata` 目录的识别冲突（同步完善 Strata v0.2.20 引擎与原生多子代理并发调度）。"
+      },
+      {
+        "version": "2.4.5",
+        "text": "Mac 2.4.5 修复 Locals 引擎面对 DeepSeek Harness 等大工具集触发 `DFA exceeds 400000 states` 报错（超出预算自动退回非强类型工具语法），并彻底收紧外部模型扫描以隐藏 `_src-*` 过渡目录、松散 LoRA/`mmproj`/草稿/向量小部件与软链底座重复入口，同步修正软链叠层模型体积统计；M5 Pro 7/7 非视觉对照验证 `T7` 双交付 4 轮 `270.7s` 完工。"
+      },
+      {
+        "version": "2.4.4",
+        "text": "Mac 2.4.4 新增 Inkling 2 Mini Uncensored · Locals NVFP4 极速通道（24GB 内存可用）：独立安装 Locals 环境并在首次启动自动转换为 NVFP4 + 0.64GB 草稿模型 + AtomicChat 去对齐 LoRA，启用融合核与 GPU 工具语法约束（仅纯文本，保留 oMLX 版用于看图）。"
+      },
+      {
         "version": "2.4.3",
         "text": "2.4.3 同步流式连接修复：桥接及时转发数据，SSE 保活只在完整帧之间插入；更新长任务超时、各引擎思考预算与输出续写逻辑，速度统计扣除首字等待。Windows/Linux 安装包已通过本地验收；Mac 独立维护。"
-      },
-      {
-        "version": "2.4.3",
-        "text": "Windows/Linux 新增 Inkling 2 Mini 的 Q2_K_XL、Q3_K_XL、Q4_K_M 下载，自动启用 DSpark；独立固定引擎与 CUDA 依赖校验。Windows Q2 通过代码执行、工具往返和简单读图，同题生成速率约1.85倍；Q3/Q4及Linux推理尚未实测。"
-      },
-      {
-        "version": "2.4.0",
-        "text": "Mac 2.4.0 解除 Inkling oMLX 33GB 保守内存上限并开启前缀缓存（改为 balanced 护栏，64GB Mac 窗口扩至 96K），同时将全 MLX 模型 KV 可用比例提至剩余内存 70%，各模型在不爆内存的前提下尽可能扩大上下文。"
-      },
-      {
-        "version": "2.3.9",
-        "text": "Mac 2.3.9 按本机内存动态扩充 Inkling 2 Mini 上下文并提高全引擎单次输出比例至 30%；默认全场景开启大模型自动压缩不中断回答，打通 Inkling 真关思考、外部模型去杂与主页统一删除，用量明细改版为直白中文。"
-      },
-      {
-        "version": "2.3.8",
-        "text": "Mac 新增 Inkling 2 Mini 原版与 OpenUncensored 去对齐版（MLX oQ4），可下载或连接现有权重，在同一个对话里使用文字、图片和工具。"
       }
     ],
     "zh-TW": [
       {
+        "version": "2.4.7",
+        "text": "Windows/Linux 首頁模型統一列表，移除 PolyStrata 獨立說明；安裝與接入收進新增模型，狀態僅在執行或出錯時顯示。"
+      },
+      {
+        "version": "2.4.7",
+        "text": "Mac 2.4.7 於發現頁上線 Strata 原生 Inkling 2 Mini（SQ-10/15/20 均附 Vision.strata），修復 `inkling-omlx` 因同款 config.json 搶占並隱藏本機 `.strata` 目錄的辨識衝突（同步完善 Strata v0.2.20 引擎與原生多子代理並行排程）。"
+      },
+      {
+        "version": "2.4.5",
+        "text": "Mac 2.4.5 修復 Locals 引擎面對 DeepSeek Harness 等大工具集觸發 `DFA exceeds 400000 states` 報錯（超出預算自動退回非強型別工具語法），並收緊外部模型掃描以隱藏 `_src-*` 過渡目錄、鬆散 LoRA/`mmproj`/草稿/向量小部件與軟連結底座重複入口，同步修正軟連結疊層模型體積統計；M5 Pro 7/7 非視覺對照驗證 `T7` 雙交付 4 輪 `270.7s` 完工。"
+      },
+      {
+        "version": "2.4.4",
+        "text": "Mac 2.4.4 新增 Inkling 2 Mini Uncensored · Locals NVFP4 極速通道（24GB 記憶體可用）：獨立安裝 Locals 環境並於首次啟動自動轉換為 NVFP4 + 0.64GB 草稿模型 + AtomicChat 去對齊 LoRA，啟用融合核與 GPU 工具語法約束（僅純文字，保留 oMLX 版供看圖）。"
+      },
+      {
         "version": "2.4.3",
         "text": "2.4.3 同步串流連線修復：橋接即時轉發資料，SSE 保活只在完整幀之間插入；更新長任務逾時、各引擎思考額度與輸出續寫，速度統計扣除首字等待。Windows/Linux 安裝包已通過本機驗收；Mac 獨立維護。"
-      },
-      {
-        "version": "2.4.3",
-        "text": "Windows/Linux 新增 Inkling 2 Mini 的 Q2_K_XL、Q3_K_XL、Q4_K_M 下載，自動啟用 DSpark；獨立固定引擎與 CUDA 依賴校驗。Windows Q2 通過程式執行、工具往返和簡單讀圖，同題生成速率約1.85倍；Q3/Q4及Linux推論尚未實測。"
-      },
-      {
-        "version": "2.4.0",
-        "text": "Mac 2.4.0 解除 Inkling oMLX 33GB 保守記憶體上限並開啟前綴快取（改為 balanced 護欄，64GB Mac 視窗擴至 96K），同時將全 MLX 模型 KV 可用比例提至剩餘記憶體 70%，各模型在不爆記憶體的前提下盡可能擴大上下文。"
-      },
-      {
-        "version": "2.3.9",
-        "text": "Mac 2.3.9 依本機記憶體動態擴充 Inkling 2 Mini 上下文並將全引擎單次輸出比例提至 30%；預設全場景開啟大模型自動壓縮不中斷回答，打通 Inkling 真關思考、外部模型去雜與首頁統一刪除，用量明細改版為直白中文。"
-      },
-      {
-        "version": "2.3.8",
-        "text": "Mac 新增 Inkling 2 Mini 原版與 OpenUncensored 去對齊版（MLX oQ4），可下載或連接既有權重，在同一個對話中使用文字、圖片與工具。"
       }
     ],
     "en": [
       {
+        "version": "2.4.7",
+        "text": "Windows/Linux Home uses a unified model list without the separate PolyStrata explanation card. Installation/connection actions move to Add model; status appears only while active or on error."
+      },
+      {
+        "version": "2.4.7",
+        "text": "Mac 2.4.7 adds `Inkling-2-Mini-Strata` (`SQ-10/15/20` with `Vision.strata`) to Discover and fixes `inkling-omlx` shadowing local `.strata` directories alongside Strata v0.2.20 (`76.26 tok/s` 4x concurrency) and native multi-subagent parallelism."
+      },
+      {
+        "version": "2.4.5",
+        "text": "Mac 2.4.5 fixes `DFA exceeds 400000 states` when calling Locals from DeepSeek Harness or multi-MCP clients (auto-falling back to untyped tool grammar on large schemas), tightens external model discovery to hide `_src-*` staging dirs, loose LoRA/`mmproj`/draft/embedding helpers and symlink backing-base duplicates while following weight symlinks in size calculation, and completes the matched 7-task M5 Pro non-vision benchmark (`T7` dual HTML+DOCX finished in 4 rounds / `270.7 s`)."
+      },
+      {
+        "version": "2.4.4",
+        "text": "Mac 2.4.4 adds Inkling 2 Mini Uncensored · Locals NVFP4 (fits 24GB Macs): installs an isolated Locals runtime, auto-converts the official weights + AtomicChat abliterated LoRA to NVFP4 + 0.64GB draft model on first launch, and enables fused Metal kernels and GPU typed-tool grammar (text-only; keeps oMLX build for vision)."
+      },
+      {
         "version": "2.4.3",
         "text": "2.4.3 shares streaming fixes: immediate bridge forwarding and SSE keepalive only between complete frames, updated long-task timeouts, engine-specific thinking budgets and continuation, with decode speed excluding time to first token. Windows/Linux packages passed local validation; Mac is maintained independently."
-      },
-      {
-        "version": "2.4.3",
-        "text": "Windows/Linux add three Inkling 2 Mini GGUF downloads with DSpark enabled and a separate pinned engine plus CUDA dependency checks. Windows Q2 code execution, tools and simple vision passed; one matched test was about 1.85x faster. Q3/Q4 and Linux inference remain untested."
-      },
-      {
-        "version": "2.4.0",
-        "text": "Mac 2.4.0 lifts the conservative 33 GB Inkling oMLX memory cap (`--memory-guard balanced`), enables prefix caching (expanding 64GB Mac Inkling context to 96K), and raises MLX KV memory budget share to 70% of free RAM so every model gets maximum safe context."
-      },
-      {
-        "version": "2.3.9",
-        "text": "Mac 2.3.9 scales Inkling 2 Mini context by unified memory and raises per-turn output budget to 30% across engines; enables default LLM auto-compaction without aborting replies, true Inkling thinking-off, cleaner external model discovery with Home deletion, and clearer usage labels."
-      },
-      {
-        "version": "2.3.8",
-        "text": "Mac adds Inkling 2 Mini base and OpenUncensored abliterated MLX oQ4 builds. Download the weights or connect an existing copy for text, image input and tools in the same chat."
       }
     ]
   }

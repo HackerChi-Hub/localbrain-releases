@@ -16,12 +16,19 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
+- **2.4.7** · Windows/Linux 首页模型统一列表，移除 PolyStrata 独立说明；安装和接入收进添加模型，状态仅在运行或出错时显示。
 - **2.4.7** · Mac 2.4.7 在发现页上线 Strata 原生 Inkling 2 Mini（SQ-10/15/20 均带 Vision.strata），修复 `inkling-omlx` 因同款 config.json 抢占并隐藏本地 `.strata` 目录的识别冲突（同步完善 Strata v0.2.20 引擎与原生多子代理并发调度）。
 - **2.4.5** · Mac 2.4.5 修复 Locals 引擎面对 DeepSeek Harness 等大工具集触发 `DFA exceeds 400000 states` 报错（超出预算自动退回非强类型工具语法），并彻底收紧外部模型扫描以隐藏 `_src-*` 过渡目录、松散 LoRA/`mmproj`/草稿/向量小部件与软链底座重复入口，同步修正软链叠层模型体积统计；M5 Pro 7/7 非视觉对照验证 `T7` 双交付 4 轮 `270.7s` 完工。
 - **2.4.4** · Mac 2.4.4 新增 Inkling 2 Mini Uncensored · Locals NVFP4 极速通道（24GB 内存可用）：独立安装 Locals 环境并在首次启动自动转换为 NVFP4 + 0.64GB 草稿模型 + AtomicChat 去对齐 LoRA，启用融合核与 GPU 工具语法约束（仅纯文本，保留 oMLX 版用于看图）。
 - **2.4.3** · 2.4.3 同步流式连接修复：桥接及时转发数据，SSE 保活只在完整帧之间插入；更新长任务超时、各引擎思考预算与输出续写逻辑，速度统计扣除首字等待。Windows/Linux 安装包已通过本地验收；Mac 独立维护。
-- **2.4.3** · Windows/Linux 新增 Inkling 2 Mini 的 Q2_K_XL、Q3_K_XL、Q4_K_M 下载，自动启用 DSpark；独立固定引擎与 CUDA 依赖校验。Windows Q2 通过代码执行、工具往返和简单读图，同题生成速率约1.85倍；Q3/Q4及Linux推理尚未实测。
 <!-- recent-features:end -->
+
+## Windows / Linux 2.4.7
+
+Windows/Linux 2.4.7 已完成本地安装验收，首页模型统一展示，移除 PolyStrata 独立说明卡片，安装和接入收进「添加模型」。Windows GGUF Q2、CUDA 引擎与工具往返通过；Linux Debian/AppImage 在 WSL2 Ubuntu22.04 安装启动、宿主检查通过。Strata Windows/Linux 推理尚未实测，Locals 限 Apple Silicon。Python 全套未通过：Mac Locals 测试缺少 locals 依赖，画布变化断言连续复测失败；这两项不列为已验证能力。源码 CI 因 GitHub 账单／额度限制未运行，作者已授权先发布已验证范围。Mac 原包保留。
+
+[Windows x64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7-win-linux/LocalBrain_2.4.7_x64-setup.exe) · [Debian amd64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7-win-linux/LocalBrain_2.4.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7-win-linux/LocalBrain_2.4.7_amd64.AppImage)
+
 
 ## Windows/Linux 2.4.3 · Inkling GGUF 与 DSpark
 
@@ -464,8 +471,8 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 | 平台 | 安装包与状态 |
 | --- | --- |
 | Apple Silicon Mac 2.4.7 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7/LocalBrain_2.4.7_aarch64.dmg) · 实机安装及 H3-Image 生图、改图通过。临时签名，未经 Apple 公证。 |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.3-win-linux/LocalBrain_2.4.3_x64-setup.exe) · 2.4.3 · 已安装；原生 Q2、CUDA 自检和工具往返通过，使用更新器签名。 |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.3-win-linux/LocalBrain_2.4.3_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.3-win-linux/LocalBrain_2.4.3_amd64.AppImage) · 2.4.3 · WSL2 Ubuntu22.04 安装与两种包启动通过；不代表裸机GPU或模型推理验收。 |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7-win-linux/LocalBrain_2.4.7_x64-setup.exe) · 2.4.7 · 已安装；原生 Q2、CUDA 自检和工具往返通过，使用更新器签名。 |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7-win-linux/LocalBrain_2.4.7_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.7-win-linux/LocalBrain_2.4.7_amd64.AppImage) · 2.4.7 · WSL2 Ubuntu22.04 安装与两种包启动通过；不代表裸机GPU或模型推理验收。 |
 
 [发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 校验文件](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [验收记录](VERIFICATION-2.3.7-WIN-LINUX.md)
 
@@ -547,9 +554,9 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 | 文件 | 散列 |
 | --- | --- |
 | Mac DMG | `8a3ca09ece28855c70c2fb216326a03207e39645060a48cf2b2f8533d32023ba` |
-| Windows安装程序 | `7816ecb53e08af1f53a2dd65c3166d19872c61c336212a5973442b8b01a4fb11` |
-| Linux AppImage | `b672146edff768e22f0610e5082e9d652117e4f058bfa20add0f4ba709a8f582` |
-| Linux Debian包 | `f3d74f0bc49c3a6e44ca335f403896e86bbdd2a4fd3207040d6baf79f08b23e9` |
+| Windows安装程序 | `25d872f50465f72148786466653884c6ed0a4e225ef6df57e4ac7089ccc5a6f0` |
+| Linux AppImage | `348bc9085796b928adca165ddb9de5a6c4336f68fc50bdd2d0c0af0177836132` |
+| Linux Debian包 | `d819f1c9ed2c5d81edecc0bcc5f8af900735dd563f9a3d046955a876fe4b50d2` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 

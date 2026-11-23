@@ -1,0 +1,22 @@
+{
+  "version": "2.4.7",
+  "source": "f16fee15d162fd6f1dbfffabcce540c1b87b20ac",
+  "artifacts": {
+    "LocalBrain_2.4.7_x64-setup.exe": {
+      "bytes": 43813937,
+      "sha256": "25d872f50465f72148786466653884c6ed0a4e225ef6df57e4ac7089ccc5a6f0"
+    },
+    "LocalBrain_2.4.7_amd64.deb": {
+      "bytes": 122168610,
+      "sha256": "d819f1c9ed2c5d81edecc0bcc5f8af900735dd563f9a3d046955a876fe4b50d2"
+    },
+    "LocalBrain_2.4.7_amd64.AppImage": {
+      "bytes": 195426808,
+      "sha256": "348bc9085796b928adca165ddb9de5a6c4336f68fc50bdd2d0c0af0177836132"
+    }
+  },
+  "scope": "Updated Home layout. Windows installed GGUF Q2, CUDA runtime and tool round trip; Linux WSL2 Debian/AppImage installation and startup. Not full model or browser-feature certification.",
+  "CI": "GitHub source CI unavailable due to account billing/spending limit; local tests are not remote CI success.",
+  "knownIssues": "Python suite did not pass: Mac Locals tests lack locals dependency; canvas-change assertion failed repeated runs. Strata Windows/Linux inference untested. Q3/Q4 untested; small budgets may be consumed by reasoning.",
+  "Mac": "2.4.7 unchanged"
+}
