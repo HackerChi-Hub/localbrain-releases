@@ -14,12 +14,18 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
-- **2.4.9** · Mac 2.4.9 全面升級 Inkling 2 Mini 四大引擎並上線四款新變體：新增 Atomic Engine 冷專家 SSD 串流（16GB Mac 僅占 6.34 GiB RSS 即可跑 30B Inkling）、Strata Uncensored SQ-10/15/20（程式碼重寫 102.4 tok/s、看圖 6.82s）、Unbound v2.1 去拒答多模態 GGUF（Unsloth b12651 解鎖 Q8_0 KV）及 oMLX 0.8.3（MTP + 4-bit TurboQuant KV 省下近 7 GiB 記憶體）。
+- **2.4.9** · 2.4.9 升級跨平台獨立 Inkling GGUF 引擎至 Unsloth b12651（Mac Metal / Win CUDA12·Vulkan / Linux Vulkan，解鎖 Q8_0 KV 快取）並上線 Unbound v2.1 去拒答多模態 GGUF 與 Strata Uncensored SQ-10/15/20；Mac 專屬新增 Atomic Engine 冷專家 SSD 串流（16GB Mac 僅占 6.34 GiB RSS 跑 30B Inkling）與 oMLX 0.8.3（MTP + 4-bit TurboQuant KV 省約 7 GiB 記憶體）。
 - **2.4.8** · 2.4.8 全平台打通模型下載、外部模型庫（含軟連結目錄）、本機目錄與單檔案 GGUF 掛載、檔位自動優選、設定儲存與載入授權、對話看圖單源判定及移除閉環：修復 Locals NVFP4、Strata SQ-15 等外部模型誤顯未安裝與掛載路徑被拒載入問題，首頁預設顯示常用規模外部模型（Mac / Windows / Linux 2.4.8 均已實裝上線）。
 - **2.4.7** · Windows/Linux 首頁模型統一列表，移除 PolyStrata 獨立說明；安裝與接入收進新增模型，狀態僅在執行或出錯時顯示。
 - **2.4.7** · Mac 2.4.7 於發現頁上線 Strata 原生 Inkling 2 Mini（SQ-10/15/20 均附 Vision.strata），修復 `inkling-omlx` 因同款 config.json 搶占並隱藏本機 `.strata` 目錄的辨識衝突（同步完善 Strata v0.2.20 引擎與原生多子代理並行排程）。
 - **2.4.5** · Mac 2.4.5 修復 Locals 引擎面對 DeepSeek Harness 等大工具集觸發 `DFA exceeds 400000 states` 報錯（超出預算自動退回非強型別工具語法），並收緊外部模型掃描以隱藏 `_src-*` 過渡目錄、鬆散 LoRA/`mmproj`/草稿/向量小部件與軟連結底座重複入口，同步修正軟連結疊層模型體積統計；M5 Pro 7/7 非視覺對照驗證 `T7` 雙交付 4 輪 `270.7s` 完工。
 <!-- recent-features:end -->
+
+## Windows / Linux 2.4.9
+
+Windows/Linux 2.4.9 已完成本機安裝、引擎升級與多配置掛載驗收：跨平台獨立 `inkling-gguf` 升級至 `Unsloth b12651-mix-c7059d6`（Windows CUDA 12.8 / Vulkan、Linux Vulkan），同時相容 `inkling2` 與主線 `inkling2_loop` 並解鎖 `Q8_0` KV 快取；發現頁上線 `nokeepai/Inkling-2-Mini-Unbound-GGUF`（`v2.1` `IQ2_M / IQ3_M / Q4_K_M` + `mmproj-Q8_0` + `DSpark`）、主線 `unsloth/Inkling-2-Mini-GGUF` 與 `RX5950XT/Inkling-2-Mini-Uncensored-Strata`（`SQ-10/15/20` + `Vision.strata`），合併獨立單檔案 `.gguf` 掛載、軟連結外部目錄防環掃描、`.localbrain-reference.json` 路徑載入授權及對話原生看圖統一判定。Windows x64 覆蓋安裝、`Unsloth b12651` CUDA 12.8 探針、原生 GGUF Q2 工具往返、新舊卡片隔離及單檔案 `.gguf` 掛載/移除驗收通過；Linux Debian/AppImage 在 WSL2 Ubuntu 22.04 安裝啟動與 ext4 包內 DSH 宿主校驗通過。`Atomic Engine` 冷專家串流與 `oMLX 0.8.3` 僅限 Apple Silicon Mac；Strata 在 Windows/Linux 上的推論、Unbound v2.1 權重及 Linux 模型推論尚未在本機實測；原始碼 CI 受 GitHub 帳單／額度限制未執行，本機測試（Rust 505、TS 1720+、DSH 60）與遠端 CI 分開記錄。Mac 2.4.9 原包保留，三平台 `latest.json` 統一對齊至 2.4.9。
+
+[Windows x64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9-win-linux/LocalBrain_2.4.9_x64-setup.exe) · [Debian amd64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9-win-linux/LocalBrain_2.4.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9-win-linux/LocalBrain_2.4.9_amd64.AppImage) · [SHA-256](SHA256SUMS-2.4.9-WIN-LINUX.txt) · [驗收紀錄](VERIFICATION-2.4.9-WIN-LINUX.md)
 
 ## Windows / Linux 2.4.8
 
@@ -446,7 +452,7 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載 · Windows 2.4.8 · Mac 2.4.9 · Linux 2.4.8
+## 最新下載 · Windows 2.4.9 · Mac 2.4.9 · Linux 2.4.9
 
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
@@ -473,8 +479,8 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac 2.4.9 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9/LocalBrain_2.4.9_aarch64.dmg) · 實機安裝及 H3-Image 生圖、改圖通過。臨時簽章，未經 Apple 公證。 |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_x64-setup.exe) · 2.4.8 · 已安裝；原生 Q2、CUDA 自檢、工具往返及多配置模型狀態/移除驗收通過，使用更新器簽章。 |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.AppImage) · 2.4.8 · WSL2 Ubuntu22.04 安裝、兩種包啟動與 ext4 宿主校驗通過；不代表裸機GPU或模型推論驗收。 |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9-win-linux/LocalBrain_2.4.9_x64-setup.exe) · 2.4.9 · 已安裝；Unsloth b12651 CUDA 12.8 自檢、原生 Q2 工具往返、單檔案掛載與卡片隔離驗收通過，使用更新器簽章。 |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9-win-linux/LocalBrain_2.4.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9-win-linux/LocalBrain_2.4.9_amd64.AppImage) · 2.4.9 · WSL2 Ubuntu22.04 安裝、兩種包啟動與 ext4 宿主校驗通過；不代表裸機GPU或模型推論驗收。 |
 
 [發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 校驗檔](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [驗收紀錄](VERIFICATION-2.3.7-WIN-LINUX.md)
 
@@ -556,9 +562,9 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | 檔案 | 散列 |
 | --- | --- |
 | Mac DMG | `16f32c2c8fc6f47a41ba3547cff67a0b38939d0dcf4a13f9165da75d06b48592` |
-| Windows安裝程式 | `7c8c5af46d9132a23dd56533c9974d1ad10961122ae2cc48166034122cd6213e` |
-| Linux AppImage | `132ee00849cc356968c7c7b96bfd106c2f2b75314a12fb3e04ff3d08fbdec259` |
-| Linux Debian包 | `a786efb899f275008a910863d76332544344de3f46f583aa831cfbc55dcaaba0` |
+| Windows安裝程式 | `b761c071ef9781b82da1080291db43191b053e2a9b8647897dd5fe14bc137974` |
+| Linux AppImage | `e3f4d43db7fefb7399d7f4a1c516723f2c6dc513624c6db442541558085aebf6` |
+| Linux Debian包 | `5f01bb07d44a83b27472ed8e60fd4b4a261397a4d0d732ab174e683fe6dd70ab` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
 
