@@ -25,7 +25,7 @@
 
 ## Windows / Linux 2.4.8
 
-Windows/Linux 2.4.8 已完成本机安装与真实模型目录界面验收：彻底解决新上架模型下载完毕仍显示未完成、重开发现页错落到未安装量化档位、跨档位虚报缓存字节与外部模型目录无法移除的问题。统一量化子目录（如 `Q2_K_XL/` + 根部共享 `dspark`/`mmproj`）与外部库识别、默认聚焦已安装档位、按主权重隔离断点缓存，并打通 `managed` / `library` / `reference` 三类来源的移除目标路径与确认提示，补齐覆盖全量 `CURATED_MODELS` 的跨布局回归门禁。Windows x64 安装核对（13,994 项）、CUDA 运行库校验、GGUF Q2 工具往返及本机 `Q2_K_XL` / `Strata SQ-10` 状态与外部库移除验收通过；Linux Debian/AppImage 在 WSL2 Ubuntu 22.04 安装启动与 ext4 包内 DSH 宿主校验通过。Strata 在 Windows/Linux 上的推理及 Linux 模型推理尚未实测；源码 CI 受 GitHub 账单／额度限制未运行，本地测试（Rust 501、TS 1695、DSH 60）与远端 CI 分开记录。Mac 共用模型管理源码已修复，线上 Mac 安装包与更新清单保留 2.4.7 原件，须在 macOS 本机构建验收后单独更新。
+Windows/Linux 2.4.8 已完成本机安装与真实模型目录界面验收：彻底解决新上架模型下载完毕仍显示未完成、重开发现页错落到未安装量化档位、跨档位虚报缓存字节与外部模型目录无法移除的问题。统一量化子目录（如 `Q2_K_XL/` + 根部共享 `dspark`/`mmproj`）与外部库识别、默认聚焦已安装档位、按主权重隔离断点缓存，并打通 `managed` / `library` / `reference` 三类来源的移除目标路径与确认提示，补齐覆盖全量 `CURATED_MODELS` 的跨布局回归门禁。Windows x64 安装核对（13,994 项）、CUDA 运行库校验、GGUF Q2 工具往返及本机 `Q2_K_XL` / `Strata SQ-10` 状态与外部库移除验收通过；Linux Debian/AppImage 在 WSL2 Ubuntu 22.04 安装启动与 ext4 包内 DSH 宿主校验通过。Strata 在 Windows/Linux 上的推理及 Linux 模型推理尚未实测；源码 CI 受 GitHub 账单／额度限制未运行，本地测试（Rust 501、TS 1695、DSH 60）与远端 CI 分开记录。Mac 2.4.8 已在 Apple Silicon 本机完成实盘构建与安装验收并同步上线。
 
 [Windows x64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_x64-setup.exe) · [Debian amd64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.AppImage) · [SHA-256](SHA256SUMS-2.4.8-WIN-LINUX.txt) · [验收记录](VERIFICATION-2.4.8-WIN-LINUX.md)
 

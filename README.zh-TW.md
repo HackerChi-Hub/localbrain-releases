@@ -23,7 +23,7 @@
 
 ## Windows / Linux 2.4.8
 
-Windows/Linux 2.4.8 已完成本機安裝與真實模型目錄介面驗收：徹底解決新上架模型下載完畢仍顯示未完成、重開發現頁錯落到未安裝量化檔位、跨檔位虛報快取位元組與外部模型目錄無法移除的問題。統一量化子目錄（如 `Q2_K_XL/` + 根部共享 `dspark`/`mmproj`）與外部庫辨識、預設聚焦已安裝檔位、依主權重隔離斷點快取，並打通 `managed` / `library` / `reference` 三類來源的移除目標路徑與確認提示，補齊涵蓋全量 `CURATED_MODELS` 的跨配置回歸門禁。Windows x64 安裝核對（13,994 項）、CUDA 執行環境校驗、GGUF Q2 工具往返及本機 `Q2_K_XL` / `Strata SQ-10` 狀態與外部庫移除驗收通過；Linux Debian/AppImage 在 WSL2 Ubuntu 22.04 安裝啟動與 ext4 包內 DSH 宿主校驗通過。Strata 在 Windows/Linux 上的推論及 Linux 模型推論尚未實測；原始碼 CI 受 GitHub 帳單／額度限制未執行，本機測試（Rust 501、TS 1695、DSH 60）與遠端 CI 分開記錄。Mac 共用模型管理原始碼已修復，線上 Mac 安裝包與更新清單保留 2.4.7 原件，須在 macOS 本機建置驗收後單獨更新。
+Windows/Linux 2.4.8 已完成本機安裝與真實模型目錄介面驗收：徹底解決新上架模型下載完畢仍顯示未完成、重開發現頁錯落到未安裝量化檔位、跨檔位虛報快取位元組與外部模型目錄無法移除的問題。統一量化子目錄（如 `Q2_K_XL/` + 根部共享 `dspark`/`mmproj`）與外部庫辨識、預設聚焦已安裝檔位、依主權重隔離斷點快取，並打通 `managed` / `library` / `reference` 三類來源的移除目標路徑與確認提示，補齊涵蓋全量 `CURATED_MODELS` 的跨配置回歸門禁。Windows x64 安裝核對（13,994 項）、CUDA 執行環境校驗、GGUF Q2 工具往返及本機 `Q2_K_XL` / `Strata SQ-10` 狀態與外部庫移除驗收通過；Linux Debian/AppImage 在 WSL2 Ubuntu 22.04 安裝啟動與 ext4 包內 DSH 宿主校驗通過。Strata 在 Windows/Linux 上的推論及 Linux 模型推論尚未實測；原始碼 CI 受 GitHub 帳單／額度限制未執行，本機測試（Rust 501、TS 1695、DSH 60）與遠端 CI 分開記錄。Mac 2.4.8 已在 Apple Silicon 本機完成實盤建置與安裝驗收並同步上線。
 
 [Windows x64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_x64-setup.exe) · [Debian amd64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.8-win-linux/LocalBrain_2.4.8_amd64.AppImage) · [SHA-256](SHA256SUMS-2.4.8-WIN-LINUX.txt) · [驗收紀錄](VERIFICATION-2.4.8-WIN-LINUX.md)
 
