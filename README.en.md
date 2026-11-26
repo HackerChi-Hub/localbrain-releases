@@ -14,12 +14,18 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **2.5.0** · Mac 2.5.0 adds a per-session Super-Permission toggle right next to Attach and Stop/Send in the Chat composer: requires explicit risk & full-responsibility confirmation before activation, unlocks arbitrary shell execution and full-disk file read/write/delete without per-call prompts strictly within the current session (including live mid-run toggling), and defaults to OFF on new or other sessions.
+- **2.5.0** · 2.5.0 adds a cross-platform per-session Super-Permission toggle right next to Attach and Stop/Send in the Chat composer: requires explicit risk & full-responsibility confirmation before activation, unlocks arbitrary shell execution and full-disk file read/write/delete (with OS & home root guards) without per-call prompts strictly within the current session (including live mid-run toggling), and defaults to OFF on new or other sessions.
 - **2.4.9** · 2.4.9 upgrades cross-platform isolated Inkling GGUF to Unsloth b12651 (Mac Metal / Win CUDA12·Vulkan / Linux Vulkan, Q8_0 KV unlocked) and adds Unbound v2.1 multimodal GGUF & Strata Uncensored SQ-10/15/20; Apple Silicon Mac also gains Atomic Engine cold-expert SSD streaming (6.34 GiB peak RSS on 16GB Macs) and oMLX 0.8.3 (MTP + 4-bit TurboQuant KV saving ~7 GiB RAM).
 - **2.4.8** · 2.4.8 unifies model download, external library scanning (including symlinked folders), local folder & single-file GGUF mounting, installed-quant auto-selection, mounted-path save/load authorization, single-source native vision detection, and removal targets across Mac, Windows, and Linux.
 - **2.4.7** · Windows/Linux Home uses a unified model list without the separate PolyStrata explanation card. Installation/connection actions move to Add model; status appears only while active or on error.
 - **2.4.7** · Mac 2.4.7 adds `Inkling-2-Mini-Strata` (`SQ-10/15/20` with `Vision.strata`) to Discover and fixes `inkling-omlx` shadowing local `.strata` directories alongside Strata v0.2.20 (`76.26 tok/s` 4x concurrency) and native multi-subagent parallelism.
 <!-- recent-features:end -->
+
+## Windows / Linux 2.5.0
+
+Windows/Linux 2.5.0 passed local installation, Chat Super-Permission UI/execution/isolation/guard verification, and native CUDA tool round-trip checks: adds the `54px`-aligned composer `[Super Mode]` toggle right beside `[Attach]` and `[Stop]` / `[Send]` (clickable both idle and live mid-run during `Generating...`), guarded by a mandatory full-responsibility confirmation modal (`the user assumes full responsibility for all actions and consequences`), persistent active warning banner, and one-click exit. Strictly isolated in memory by `sessionId` (OFF on new or other chats), enabling it unlocks native `run_shell_command` (`PowerShell -NoProfile -NonInteractive -ExecutionPolicy Bypass` with normalized drive paths on Windows, `bash` on Linux), `write_any_file`, and `remove_path` (with hard OS root guards for `/`, `~`, Windows `C:\Windows`·`C:\Users`·`C:\Program Files`, and Linux `/usr`·`/etc`·`/home`), while lifting `system` / `network` path & command allowlists and per-call prompts for that session. Windows x64 installation (13,994 files matched), Super-Permission modal/isolation/PowerShell execution/OS root blocking, `Unsloth b12651` CUDA 12.8 verification, and native GGUF Q2 tool round trips passed; Debian/AppImage installation, startup (14,020 resources) and ext4 native DSH host checks passed on WSL2 Ubuntu 22.04. `Atomic Engine` cold-expert streaming and `oMLX 0.8.3` remain Apple Silicon Mac only; Strata inference on Windows/Linux, Unbound v2.1 weight inference and Linux model inference remain untested locally; source CI could not run due to GitHub billing/spending limits, and local checks (Rust 508, TS full suite, DSH 60) are recorded separately from remote CI. Mac 2.5.0 packages are preserved and `latest.json` now unifies all three platforms at 2.5.0.
+
+[Windows x64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_x64-setup.exe) · [Debian amd64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_amd64.AppImage) · [SHA-256](SHA256SUMS-2.5.0-WIN-LINUX.txt) · [Verification](VERIFICATION-2.5.0-WIN-LINUX.md)
 
 ## Windows / Linux 2.4.9
 
@@ -452,7 +458,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads · Windows 2.4.9 · Mac 2.5.0 · Linux 2.4.9
+## Latest downloads · Windows 2.5.0 · Mac 2.5.0 · Linux 2.5.0
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -479,8 +485,8 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.5.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0/LocalBrain_2.5.0_aarch64.dmg) · Installed on a physical Mac. H3-Image generation and editing passed. Ad-hoc signed, without Apple notarization. |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9-win-linux/LocalBrain_2.4.9_x64-setup.exe) · 2.4.9 · Installed; Unsloth b12651 CUDA 12.8 checks, native Q2 tools, single-file mount and card-isolation checks passed. Tauri updater signature included. |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9-win-linux/LocalBrain_2.4.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9-win-linux/LocalBrain_2.4.9_amd64.AppImage) · 2.4.9 · Installed/launched on WSL2 Ubuntu22.04 with ext4 DSH host check passed; not a bare-metal GPU or model-inference validation. |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_x64-setup.exe) · 2.5.0 · Installed; Chat Super-Permission toggle/confirmation/isolation/PowerShell execution/OS root guards, Unsloth b12651 CUDA 12.8 checks, and native Q2 tools passed. Tauri updater signature included. |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_amd64.AppImage) · 2.5.0 · Installed/launched on WSL2 Ubuntu22.04 with ext4 DSH host check passed; not a bare-metal GPU or model-inference validation. |
 
 [Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 checksums](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [Verification](VERIFICATION-2.3.7-WIN-LINUX.md)
 
@@ -562,9 +568,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `35e696d9673359f92e2ef04aceafadf8164cef489af8ebeb30c97b0418ab4ef8` |
-| Windows installer | `b761c071ef9781b82da1080291db43191b053e2a9b8647897dd5fe14bc137974` |
-| Linux AppImage | `e3f4d43db7fefb7399d7f4a1c516723f2c6dc513624c6db442541558085aebf6` |
-| Linux Debian | `5f01bb07d44a83b27472ed8e60fd4b4a261397a4d0d732ab174e683fe6dd70ab` |
+| Windows installer | `3071551e59aa4a404b14d41c36562920ec4f25a203f0e80b059631626f7937e4` |
+| Linux AppImage | `532857fddc1bc133073cd88251cdc1be1ba4b961ef21ac4cf35422292785e7ec` |
+| Linux Debian | `87adca99e4cbc5ac74ecaf6b3f75afca673b6437535fe9f0f7710c403b2abffd` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

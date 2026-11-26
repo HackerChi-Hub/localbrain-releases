@@ -16,12 +16,18 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
-- **2.5.0** · Mac 2.5.0 在对话页输入框右侧（附件与停止/发送按钮旁）新增「当前会话超级权限」独立开关与常驻警示横幅：开启前强制弹出风险与后果担责确认框，开启后仅在当前会话（含生成中实时切换）解除工作区目录、命令白名单与逐条确认限制，解锁任意 Shell 命令执行与全盘读写删改能力，切换或新建其他会话默认关闭。
+- **2.5.0** · 2.5.0 全平台在对话页输入框右侧（附件与停止/发送按钮旁）新增「当前会话超级权限」独立开关与常驻警示横幅：开启前强制弹出风险与后果担责确认框，开启后仅在当前会话（含生成中实时切换）解除工作区目录、命令白名单与逐条确认限制，解锁跨平台任意 Shell 命令执行与全盘读写删改能力（内置系统与用户主目录防误删硬保护），切换或新建其他会话默认关闭。
 - **2.4.9** · 2.4.9 升级跨平台独立 Inkling GGUF 引擎至 Unsloth b12651（Mac Metal / Win CUDA12·Vulkan / Linux Vulkan，解锁 Q8_0 KV 缓存）并上线 Unbound v2.1 去拒答多模态 GGUF 与 Strata Uncensored SQ-10/15/20；Mac 专属新增 Atomic Engine 冷专家 SSD 流式（16GB Mac 仅占 6.34 GiB RSS 跑 30B Inkling）与 oMLX 0.8.3（MTP + 4-bit TurboQuant KV 省约 7 GiB 内存）。
 - **2.4.8** · 2.4.8 全平台打通模型下载、外部模型库（含软链目录）、本地目录与单文件 GGUF 挂载、档位自动优选、配置保存与加载授权、对话看图单源判定及移除闭环：修复 Locals NVFP4、Strata SQ-15 等外部模型误显未安装与挂载路径被拒加载问题，首页默认展示常用规模外部模型（Mac / Windows / Linux 2.4.8 均已实装上线）。
 - **2.4.7** · Windows/Linux 首页模型统一列表，移除 PolyStrata 独立说明；安装和接入收进添加模型，状态仅在运行或出错时显示。
 - **2.4.7** · Mac 2.4.7 在发现页上线 Strata 原生 Inkling 2 Mini（SQ-10/15/20 均带 Vision.strata），修复 `inkling-omlx` 因同款 config.json 抢占并隐藏本地 `.strata` 目录的识别冲突（同步完善 Strata v0.2.20 引擎与原生多子代理并发调度）。
 <!-- recent-features:end -->
+
+## Windows / Linux 2.5.0
+
+Windows/Linux 2.5.0 已完成本机安装、对话页「超级权限」全链路与原生 CUDA 工具往返验收：对话页输入框右侧（`[附件]` 与 `[停止]` / `[发送]` 旁）上线会话级 `[超级权限]` 独立按钮（`54px` 等高对齐，支持空闲与 `生成中...` 实时切换），开启前强制弹出后果担责确认模态框（`使用者须对一切后果负全部责任`）并展示常驻警示横幅与一键 `[退出超级权限]` 入口；按 `sessionId` 严格内存隔离（新建或切换对话默认关闭），开启后解锁原生 `run_shell_command`（Windows 采用 `PowerShell -NoProfile -NonInteractive -ExecutionPolicy Bypass` 与标准盘符路径归一化、Linux 采用 `bash`）、`write_any_file` 与 `remove_path`（内置 `/`、`~`、Windows `C:\Windows`·`C:\Users`·`C:\Program Files` 及 Linux `/usr`·`/etc`·`/home` 系统根目录防误删硬保护），同步解除本会话 `system` / `network` 目录与命令白名单及逐次确认弹窗。Windows x64 覆盖安装（13,994 项文件一致）、超级权限弹窗/会话隔离/PowerShell 执行/系统根目录拦截、`Unsloth b12651` CUDA 12.8 自检与原生 GGUF Q2 工具往返验收通过；Linux Debian/AppImage 在 WSL2 Ubuntu 22.04 安装启动（14,020 项资源）与 ext4 包内 DSH 宿主校验通过。`Atomic Engine` 冷专家流式与 `oMLX 0.8.3` 仅限 Apple Silicon Mac；Strata 在 Windows/Linux 上的推理、Unbound v2.1 权重及 Linux 模型推理尚未在本机实测；源码 CI 受 GitHub 账单／额度限制未运行，本地测试（Rust 508、TS 全套、DSH 60）与远端 CI 分开记录。Mac 2.5.0 原包保留，三平台 `latest.json` 统一对齐至 2.5.0。
+
+[Windows x64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_x64-setup.exe) · [Debian amd64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_amd64.AppImage) · [SHA-256](SHA256SUMS-2.5.0-WIN-LINUX.txt) · [验收记录](VERIFICATION-2.5.0-WIN-LINUX.md)
 
 ## Windows / Linux 2.4.9
 
@@ -456,7 +462,7 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载 · Windows 2.4.9 · Mac 2.5.0 · Linux 2.4.9
+## 最新下载 · Windows 2.5.0 · Mac 2.5.0 · Linux 2.5.0
 
 以下 2.1.3 为历史工具接入验收记录。
 
@@ -483,8 +489,8 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 | 平台 | 安装包与状态 |
 | --- | --- |
 | Apple Silicon Mac 2.5.0 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0/LocalBrain_2.5.0_aarch64.dmg) · 实机安装及 H3-Image 生图、改图通过。临时签名，未经 Apple 公证。 |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9-win-linux/LocalBrain_2.4.9_x64-setup.exe) · 2.4.9 · 已安装；Unsloth b12651 CUDA 12.8 自检、原生 Q2 工具往返、单文件挂载与卡片隔离验收通过，使用更新器签名。 |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9-win-linux/LocalBrain_2.4.9_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.4.9-win-linux/LocalBrain_2.4.9_amd64.AppImage) · 2.4.9 · WSL2 Ubuntu22.04 安装、两种包启动与 ext4 宿主校验通过；不代表裸机GPU或模型推理验收。 |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_x64-setup.exe) · 2.5.0 · 已安装；对话页超级权限开关/担责确认/会话隔离/PowerShell 放行/系统目录保护、Unsloth b12651 CUDA 12.8 自检与原生 Q2 工具往返验收通过，使用更新器签名。 |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_amd64.AppImage) · 2.5.0 · WSL2 Ubuntu22.04 安装、两种包启动与 ext4 宿主校验通过；不代表裸机GPU或模型推理验收。 |
 
 [发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 校验文件](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [验收记录](VERIFICATION-2.3.7-WIN-LINUX.md)
 
@@ -566,9 +572,9 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 | 文件 | 散列 |
 | --- | --- |
 | Mac DMG | `35e696d9673359f92e2ef04aceafadf8164cef489af8ebeb30c97b0418ab4ef8` |
-| Windows安装程序 | `b761c071ef9781b82da1080291db43191b053e2a9b8647897dd5fe14bc137974` |
-| Linux AppImage | `e3f4d43db7fefb7399d7f4a1c516723f2c6dc513624c6db442541558085aebf6` |
-| Linux Debian包 | `5f01bb07d44a83b27472ed8e60fd4b4a261397a4d0d732ab174e683fe6dd70ab` |
+| Windows安装程序 | `3071551e59aa4a404b14d41c36562920ec4f25a203f0e80b059631626f7937e4` |
+| Linux AppImage | `532857fddc1bc133073cd88251cdc1be1ba4b961ef21ac4cf35422292785e7ec` |
+| Linux Debian包 | `87adca99e4cbc5ac74ecaf6b3f75afca673b6437535fe9f0f7710c403b2abffd` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 
