@@ -466,6 +466,8 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 
 ## 最新下載 · Windows 2.5.1 · Mac 2.5.2 · Linux 2.5.1
 
+Windows 和 Linux 的更新入口目前提供 2.5.1，Apple Silicon Mac 提供 2.5.2。請依下表選擇安裝套件。
+
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
 Mac 2.1.3 恢復 Codex、Claude Code 的 MCP 一鍵工具接入，保留 DeepSeek Harness，不恢復 OpenCode。進入「集成」，按用戶端複製、寫入或個別撤銷；僅操作方寸智匣工具，保留模型、提供方、其他 MCP 與專案設定。設定預設收起，寫入後新會話生效；桌面用戶端執行時要求先結束工作再退出，不自動關閉用戶端。

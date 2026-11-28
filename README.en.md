@@ -466,6 +466,8 @@ These videos show the versions available when recorded. Use the current release 
 
 ## Latest downloads · Windows 2.5.1 · Mac 2.5.2 · Linux 2.5.1
 
+Windows and Linux update channels currently offer 2.5.1. Apple Silicon Mac is at 2.5.2. Choose your installer from the table below.
+
 The following 2.1.3 tool-integration checks are historical.
 
 Mac 2.1.3 restores one-click MCP tools for Codex and Claude Code alongside DeepSeek Harness. OpenCode is not restored. In Integrations, copy, write or undo tools separately for each client. Only LocalBrain tool entries are changed; models, providers, other MCP entries and project settings are preserved. Configuration previews are collapsed by default; new sessions pick up writes. Running desktop clients must be closed after current work finishes; LocalBrain does not terminate them.
