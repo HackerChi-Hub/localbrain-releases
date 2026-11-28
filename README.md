@@ -16,12 +16,18 @@
 <!-- recent-features:start -->
 ## 近期新增与改进（最近 5 项）
 
-- **2.5.1** · Mac 2.5.1 将长期记忆直接并入「技能卡」（内置置顶「个人长期记忆」核心卡 + 任务技能卡随卡按需加载），搭载零显存中英混合 BM25 本地检索、对话 /remember 快捷指令与网页读取防注入待确认隔离队列，并只读兼容同步 Codex、Claude Code、Antigravity、Cursor (.mdc) 与 MCP memory.jsonl。
+- **2.5.1** · 2.5.1 全平台将长期记忆直接并入「技能卡」（内置置顶「个人长期记忆」核心卡 + 任务技能卡随卡按需加载），搭载零显存中英混合 BM25 本地检索、对话 /remember 快捷指令与网页读取防注入待确认隔离队列，并只读兼容同步 Codex、Claude Code、Antigravity、Cursor (.mdc) 与 MCP memory.jsonl。
 - **2.5.0** · 2.5.0 全平台在对话页输入框右侧（附件与停止/发送按钮旁）新增「当前会话超级权限」独立开关与常驻警示横幅：开启前强制弹出风险与后果担责确认框，开启后仅在当前会话（含生成中实时切换）解除工作区目录、命令白名单与逐条确认限制，解锁跨平台任意 Shell 命令执行与全盘读写删改能力（内置系统与用户主目录防误删硬保护），切换或新建其他会话默认关闭。
 - **2.4.9** · 2.4.9 升级跨平台独立 Inkling GGUF 引擎至 Unsloth b12651（Mac Metal / Win CUDA12·Vulkan / Linux Vulkan，解锁 Q8_0 KV 缓存）并上线 Unbound v2.1 去拒答多模态 GGUF 与 Strata Uncensored SQ-10/15/20；Mac 专属新增 Atomic Engine 冷专家 SSD 流式（16GB Mac 仅占 6.34 GiB RSS 跑 30B Inkling）与 oMLX 0.8.3（MTP + 4-bit TurboQuant KV 省约 7 GiB 内存）。
 - **2.4.8** · 2.4.8 全平台打通模型下载、外部模型库（含软链目录）、本地目录与单文件 GGUF 挂载、档位自动优选、配置保存与加载授权、对话看图单源判定及移除闭环：修复 Locals NVFP4、Strata SQ-15 等外部模型误显未安装与挂载路径被拒加载问题，首页默认展示常用规模外部模型（Mac / Windows / Linux 2.4.8 均已实装上线）。
 - **2.4.7** · Windows/Linux 首页模型统一列表，移除 PolyStrata 独立说明；安装和接入收进添加模型，状态仅在运行或出错时显示。
 <!-- recent-features:end -->
+
+## Windows / Linux 2.5.1
+
+Windows/Linux 2.5.1 已完成本机安装、技能卡统一记忆与原生 CUDA 工具往返验收：「技能与记忆」升级为统一技能卡工作台，置顶内置「个人长期记忆（`personal-memory`）」核心卡，并与官方任务技能卡及自定义技能卡统一维护 `card_memories/<card>/*.md` 标准 YAML + Markdown 账本；加载技能卡时按 `1800` 字符预算自动附带本卡记忆与置顶个人记忆，内置纯 CPU 中英混合（ASCII + CJK 2-gram/3-gram + BM25）检索（零显存占用）；聊天新增 `/remember` 快捷指令与原生代理 `localbrain_skill_remember` 工具（单条 `500` 字上限、SHA-256 去重、不递增 `policy.revision`），网页读取后自动进入「待确认技能卡记忆」防注入隔离队列；并只读兼容同步 Claude Code、Codex、Antigravity、Gemini CLI、OpenCode、DSH、Cursor（`.mdc`）、Windsurf、Cline、Continue 与 MCP `memory.jsonl`。Windows x64 覆盖安装（13,994 项文件一致）、技能卡记忆写入/网页防注入隔离审批/无空格中文 BM25 检索、`Unsloth b12651` CUDA 12.8 自检与原生 GGUF Q2 工具往返验收通过；Linux Debian/AppImage 在 WSL2 Ubuntu 22.04 安装启动（14,020 项资源）与 ext4 包内 DSH 宿主校验通过。`Atomic Engine` 冷专家流式与 `oMLX 0.8.3` 仅限 Apple Silicon Mac；Strata 在 Windows/Linux 上的推理、Unbound v2.1 权重及 Linux 模型推理尚未在本机实测；源码 CI 受 GitHub 账单／额度限制未运行，本地测试（Rust 511、TS 全套、DSH 60）与远端 CI 分开记录。Mac 2.5.1 原包保留，三平台 `latest.json` 统一对齐至 2.5.1。
+
+[Windows x64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_x64-setup.exe) · [Debian amd64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.AppImage) · [SHA-256](SHA256SUMS-2.5.1-WIN-LINUX.txt) · [验收记录](VERIFICATION-2.5.1-WIN-LINUX.md)
 
 ## Windows / Linux 2.5.0
 
@@ -462,7 +468,7 @@ Windows/Linux 2.1.3 已公开发布：Windows 修复版及 WSL2 Debian 已安装
 视频演示的是拍摄时的版本；安装包与当前功能以本页正式发行信息为准。视频为中文讲解。
 <!-- evergreen:demos:end -->
 
-## 最新下载 · Windows 2.5.0 · Mac 2.5.1 · Linux 2.5.0
+## 最新下载 · Windows 2.5.1 · Mac 2.5.1 · Linux 2.5.1
 
 以下 2.1.3 为历史工具接入验收记录。
 
@@ -489,8 +495,8 @@ Windows/Linux 2.1.2 已补齐只读资源注册修复和本版界面改进。Win
 | 平台 | 安装包与状态 |
 | --- | --- |
 | Apple Silicon Mac 2.5.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1/LocalBrain_2.5.1_aarch64.dmg) · 实机安装及 H3-Image 生图、改图通过。临时签名，未经 Apple 公证。 |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_x64-setup.exe) · 2.5.0 · 已安装；对话页超级权限开关/担责确认/会话隔离/PowerShell 放行/系统目录保护、Unsloth b12651 CUDA 12.8 自检与原生 Q2 工具往返验收通过，使用更新器签名。 |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_amd64.AppImage) · 2.5.0 · WSL2 Ubuntu22.04 安装、两种包启动与 ext4 宿主校验通过；不代表裸机GPU或模型推理验收。 |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_x64-setup.exe) · 2.5.1 · 已安装；技能卡记忆合一/网页防注入隔离审批/无空格中文 BM25 检索、Unsloth b12651 CUDA 12.8 自检与原生 Q2 工具往返验收通过，使用更新器签名。 |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.AppImage) · 2.5.1 · WSL2 Ubuntu22.04 安装、两种包启动与 ext4 宿主校验通过；不代表裸机GPU或模型推理验收。 |
 
 [发行说明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 校验文件](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [验收记录](VERIFICATION-2.3.7-WIN-LINUX.md)
 
@@ -572,9 +578,9 @@ Mac支持已集成MLX、Metal llama.cpp、Splash与Prism；Windows使用适配ll
 | 文件 | 散列 |
 | --- | --- |
 | Mac DMG | `ded8f3666ddff88c5840530f473e44cd4e7f99ad24f731b97889e3372e77dd69` |
-| Windows安装程序 | `3071551e59aa4a404b14d41c36562920ec4f25a203f0e80b059631626f7937e4` |
-| Linux AppImage | `532857fddc1bc133073cd88251cdc1be1ba4b961ef21ac4cf35422292785e7ec` |
-| Linux Debian包 | `87adca99e4cbc5ac74ecaf6b3f75afca673b6437535fe9f0f7710c403b2abffd` |
+| Windows安装程序 | `a709f8441ccc669a4c2aa4a05db1ac77412516b8d63f077d232f8ba741c6728d` |
+| Linux AppImage | `b86635f592a2231b75ec21c772273ffb6a0b8b6e682e61be1f0d3aa149166de0` |
+| Linux Debian包 | `d99729eb8bc9fcf04931b029c6012810d7b7a2e08692e2a2242e93b957816d65` |
 
 本仓提供安装包与说明，不是开发源码目录。专有软件，© HyphenTech · 黑粉科技。
 

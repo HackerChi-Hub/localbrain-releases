@@ -14,12 +14,18 @@ Run supported local models, work with authorized files, and manage speech, image
 <!-- recent-features:start -->
 ## Recent features and improvements (5 items)
 
-- **2.5.1** · Mac 2.5.1 unifies long-term memory directly into Skill Cards (pinned Personal Long-Term Memory core card + on-demand per-card memories), adding zero-VRAM hybrid CJK/ASCII BM25 search, /remember chat shortcuts, web prompt-injection quarantine, and read-only cross-Agent sync with Codex, Claude Code, Antigravity, Cursor (.mdc), and MCP memory.jsonl.
+- **2.5.1** · 2.5.1 unifies long-term memory directly into Skill Cards across Mac, Windows, and Linux (pinned Personal Long-Term Memory core card + on-demand per-card memories), adding zero-VRAM hybrid CJK/ASCII BM25 search, /remember chat shortcuts, web prompt-injection quarantine, and read-only cross-Agent sync with Codex, Claude Code, Antigravity, Cursor (.mdc), and MCP memory.jsonl.
 - **2.5.0** · 2.5.0 adds a cross-platform per-session Super-Permission toggle right next to Attach and Stop/Send in the Chat composer: requires explicit risk & full-responsibility confirmation before activation, unlocks arbitrary shell execution and full-disk file read/write/delete (with OS & home root guards) without per-call prompts strictly within the current session (including live mid-run toggling), and defaults to OFF on new or other sessions.
 - **2.4.9** · 2.4.9 upgrades cross-platform isolated Inkling GGUF to Unsloth b12651 (Mac Metal / Win CUDA12·Vulkan / Linux Vulkan, Q8_0 KV unlocked) and adds Unbound v2.1 multimodal GGUF & Strata Uncensored SQ-10/15/20; Apple Silicon Mac also gains Atomic Engine cold-expert SSD streaming (6.34 GiB peak RSS on 16GB Macs) and oMLX 0.8.3 (MTP + 4-bit TurboQuant KV saving ~7 GiB RAM).
 - **2.4.8** · 2.4.8 unifies model download, external library scanning (including symlinked folders), local folder & single-file GGUF mounting, installed-quant auto-selection, mounted-path save/load authorization, single-source native vision detection, and removal targets across Mac, Windows, and Linux.
 - **2.4.7** · Windows/Linux Home uses a unified model list without the separate PolyStrata explanation card. Installation/connection actions move to Add model; status appears only while active or on error.
 <!-- recent-features:end -->
+
+## Windows / Linux 2.5.1
+
+Windows/Linux 2.5.1 passed local installation, Skill Cards + Unified Long-Term Memory verification, and native CUDA tool round-trip checks: upgrades *Skills & Memory* into a unified Skill Card workbench led by a pinned built-in **Personal Long-Term Memory (`personal-memory`)** core card alongside bundled task Skill Cards and custom cards under `card_memories/<card>/*.md`; loads per-card and pinned personal memories on demand (`1800`-char budget) with pure-CPU hybrid ASCII + CJK 2-gram/3-gram BM25 search (`0 MB` VRAM); adds `/remember` chat shortcuts and `localbrain_skill_remember` (`500`-char cap, SHA-256 deduplicated, atomic per-note writes without bumping `policy.revision`) with a **Pending Skill Card Memories** quarantine queue after web reads; and supports read-only cross-Agent discovery/import from Claude Code, Codex, Antigravity, Gemini CLI, OpenCode, DSH, Cursor (`.mdc`), Windsurf, Cline, Continue, and MCP `memory.jsonl`. Windows x64 installation (13,994 files matched), Skill Card memory write / web quarantine approval / unspaced Chinese BM25 recall, `Unsloth b12651` CUDA 12.8 verification, and native GGUF Q2 tool round trips passed; Debian/AppImage installation, startup (14,020 resources) and ext4 native DSH host checks passed on WSL2 Ubuntu 22.04. `Atomic Engine` cold-expert streaming and `oMLX 0.8.3` remain Apple Silicon Mac only; Strata inference on Windows/Linux, Unbound v2.1 weight inference and Linux model inference remain untested locally; source CI could not run due to GitHub billing/spending limits, and local checks (Rust 511, TS full suite, DSH 60) are recorded separately from remote CI. Mac 2.5.1 packages are preserved and `latest.json` now unifies all three platforms at 2.5.1.
+
+[Windows x64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_x64-setup.exe) · [Debian amd64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.AppImage) · [SHA-256](SHA256SUMS-2.5.1-WIN-LINUX.txt) · [Verification](VERIFICATION-2.5.1-WIN-LINUX.md)
 
 ## Windows / Linux 2.5.0
 
@@ -458,7 +464,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads · Windows 2.5.0 · Mac 2.5.1 · Linux 2.5.0
+## Latest downloads · Windows 2.5.1 · Mac 2.5.1 · Linux 2.5.1
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -485,8 +491,8 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.5.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1/LocalBrain_2.5.1_aarch64.dmg) · Installed on a physical Mac. H3-Image generation and editing passed. Ad-hoc signed, without Apple notarization. |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_x64-setup.exe) · 2.5.0 · Installed; Chat Super-Permission toggle/confirmation/isolation/PowerShell execution/OS root guards, Unsloth b12651 CUDA 12.8 checks, and native Q2 tools passed. Tauri updater signature included. |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.0-win-linux/LocalBrain_2.5.0_amd64.AppImage) · 2.5.0 · Installed/launched on WSL2 Ubuntu22.04 with ext4 DSH host check passed; not a bare-metal GPU or model-inference validation. |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_x64-setup.exe) · 2.5.1 · Installed; unified Skill Card memory, web quarantine approval, hybrid CJK/BM25 search, Unsloth b12651 CUDA 12.8 checks, and native Q2 tools passed. Tauri updater signature included. |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.AppImage) · 2.5.1 · Installed/launched on WSL2 Ubuntu22.04 with ext4 DSH host check passed; not a bare-metal GPU or model-inference validation. |
 
 [Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 checksums](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [Verification](VERIFICATION-2.3.7-WIN-LINUX.md)
 
@@ -568,9 +574,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `ded8f3666ddff88c5840530f473e44cd4e7f99ad24f731b97889e3372e77dd69` |
-| Windows installer | `3071551e59aa4a404b14d41c36562920ec4f25a203f0e80b059631626f7937e4` |
-| Linux AppImage | `532857fddc1bc133073cd88251cdc1be1ba4b961ef21ac4cf35422292785e7ec` |
-| Linux Debian | `87adca99e4cbc5ac74ecaf6b3f75afca673b6437535fe9f0f7710c403b2abffd` |
+| Windows installer | `a709f8441ccc669a4c2aa4a05db1ac77412516b8d63f077d232f8ba741c6728d` |
+| Linux AppImage | `b86635f592a2231b75ec21c772273ffb6a0b8b6e682e61be1f0d3aa149166de0` |
+| Linux Debian | `d99729eb8bc9fcf04931b029c6012810d7b7a2e08692e2a2242e93b957816d65` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 
