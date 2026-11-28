@@ -21,6 +21,12 @@
 - **2.4.8** · 2.4.8 全平台打通模型下載、外部模型庫（含軟連結目錄）、本機目錄與單檔案 GGUF 掛載、檔位自動優選、設定儲存與載入授權、對話看圖單源判定及移除閉環：修復 Locals NVFP4、Strata SQ-15 等外部模型誤顯未安裝與掛載路徑被拒載入問題，首頁預設顯示常用規模外部模型（Mac / Windows / Linux 2.4.8 均已實裝上線）。
 <!-- recent-features:end -->
 
+## Windows / Linux 2.5.2 · 本機技能與記憶按需讀取
+
+「技能與記憶」自動探索本機既有 Agent 技能和記憶來源，可獨立設定技能讀取與記憶讀取。外部來源以唯讀方式掛載，按需載入對話。Windows 已通過安裝、讀取開關及 Inkling GGUF Q2 工具往返驗證。Linux Debian 和 AppImage 已通過 WSL2 Ubuntu 22.04 安裝、啟動與包內宿主檢查。Linux 模型推論未實測。Mac 2.5.2 使用獨立發行套件。 原始碼 CI 因 GitHub 帳單限制未執行。
+
+[Windows x64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2-win-linux/LocalBrain_2.5.2_x64-setup.exe) · [Debian amd64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2-win-linux/LocalBrain_2.5.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2-win-linux/LocalBrain_2.5.2_amd64.AppImage)
+
 ## Windows / Linux 2.5.1
 
 Windows/Linux 2.5.1 已完成本機安裝、技能卡統一記憶與原生 CUDA 工具往返驗收：「技能與記憶」升級為統一技能卡工作台，置頂內建「個人長期記憶（`personal-memory`）」核心卡，並與官方任務技能卡及自訂技能卡統一維護 `card_memories/<card>/*.md` 標準 YAML + Markdown 帳本；載入技能卡時依 `1800` 字元預算自動附帶本卡記憶與置頂個人記憶，內建純 CPU 中英混合（ASCII + CJK 2-gram/3-gram + BM25）檢索（零顯存佔用）；聊天新增 `/remember` 快捷指令與原生代理 `localbrain_skill_remember` 工具（單條 `500` 字上限、SHA-256 去重、不遞增 `policy.revision`），網頁讀取後自動進入「待確認技能卡記憶」防注入隔離佇列；並唯讀相容同步 Claude Code、Codex、Antigravity、Gemini CLI、OpenCode、DSH、Cursor（`.mdc`）、Windsurf、Cline、Continue 與 MCP `memory.jsonl`。Windows x64 覆蓋安裝（13,994 項檔案一致）、技能卡記憶寫入/網頁防注入隔離審批/無空格中文 BM25 檢索、`Unsloth b12651` CUDA 12.8 自檢與原生 GGUF Q2 工具往返驗收通過；Linux Debian/AppImage 在 WSL2 Ubuntu 22.04 安裝啟動（14,020 項資源）與 ext4 包內 DSH 宿主校驗通過。`Atomic Engine` 冷專家串流與 `oMLX 0.8.3` 僅限 Apple Silicon Mac；Strata 在 Windows/Linux 上的推論、Unbound v2.1 權重及 Linux 模型推論尚未在本機實測；原始碼 CI 受 GitHub 帳單／額度限制未執行，本機測試（Rust 511、TS 全套、DSH 60）與遠端 CI 分開記錄。Mac 2.5.1 原包保留，三平台 `latest.json` 統一對齊至 2.5.1。
@@ -464,9 +470,7 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載 · Windows 2.5.1 · Mac 2.5.2 · Linux 2.5.1
-
-Windows 和 Linux 的更新入口目前提供 2.5.1，Apple Silicon Mac 提供 2.5.2。請依下表選擇安裝套件。
+## 最新下載 · Windows 2.5.2 · Mac 2.5.2 · Linux 2.5.2
 
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
@@ -493,8 +497,8 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 | 平台 | 安裝包與狀態 |
 | --- | --- |
 | Apple Silicon Mac 2.5.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2/LocalBrain_2.5.2_aarch64.dmg) · 實機安裝及 H3-Image 生圖、改圖通過。臨時簽章，未經 Apple 公證。 |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_x64-setup.exe) · 2.5.1 · 已安裝；技能卡記憶合一/網頁防注入隔離審批/無空格中文 BM25 檢索、Unsloth b12651 CUDA 12.8 自檢與原生 Q2 工具往返驗收通過，使用更新器簽章。 |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.AppImage) · 2.5.1 · WSL2 Ubuntu22.04 安裝、兩種包啟動與 ext4 宿主校驗通過；不代表裸機GPU或模型推論驗收。 |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2-win-linux/LocalBrain_2.5.2_x64-setup.exe) · 2.5.2 · 已覆蓋安裝，讀取開關與 GGUF Q2 工具往返通過。 |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2-win-linux/LocalBrain_2.5.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2-win-linux/LocalBrain_2.5.2_amd64.AppImage) · 2.5.2 · WSL2 Ubuntu 22.04 安裝及啟動驗證通過。 |
 
 [發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 校驗檔](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [驗收紀錄](VERIFICATION-2.3.7-WIN-LINUX.md)
 
@@ -576,9 +580,9 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 | 檔案 | 散列 |
 | --- | --- |
 | Mac DMG | `ddca07343034d492a821c9088ab7801c7d91517545c23b14fe02ca0ad3a576cd` |
-| Windows安裝程式 | `a709f8441ccc669a4c2aa4a05db1ac77412516b8d63f077d232f8ba741c6728d` |
-| Linux AppImage | `b86635f592a2231b75ec21c772273ffb6a0b8b6e682e61be1f0d3aa149166de0` |
-| Linux Debian包 | `d99729eb8bc9fcf04931b029c6012810d7b7a2e08692e2a2242e93b957816d65` |
+| Windows安裝程式 | `dc078d118f7d6322224572124e484d8c30ad8bc50bace7cc8914bc4d90f81e15` |
+| Linux AppImage | `70fa5014371000052815045d1db29ca1d4db3832f1ccb85f9434f580b08610ec` |
+| Linux Debian包 | `71dd81aa5f40546da33bc25093fefa8ee2f09916b3ed24c60c585caf7341199f` |
 
 本倉提供安裝包與說明，不是開發原始碼目錄。專有軟體，© HyphenTech · 黑粉科技。
 

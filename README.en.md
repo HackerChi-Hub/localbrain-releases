@@ -21,6 +21,12 @@ Run supported local models, work with authorized files, and manage speech, image
 - **2.4.8** · 2.4.8 unifies model download, external library scanning (including symlinked folders), local folder & single-file GGUF mounting, installed-quant auto-selection, mounted-path save/load authorization, single-source native vision detection, and removal targets across Mac, Windows, and Linux.
 <!-- recent-features:end -->
 
+## Windows / Linux 2.5.2 · On-demand local skills and memory
+
+Skills and Memory discovers existing local agent skills and memory sources. Their read controls are independent. External sources mount read-only and load into conversations on demand. Windows passed installation, read-control and Inkling GGUF Q2 tool round-trip checks. Debian and AppImage passed package, startup and embedded-host checks on WSL2 Ubuntu 22.04. Linux model inference remains untested. Mac 2.5.2 has its own release package. GitHub source CI could not start due to account billing limits.
+
+[Windows x64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2-win-linux/LocalBrain_2.5.2_x64-setup.exe) · [Debian amd64](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2-win-linux/LocalBrain_2.5.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2-win-linux/LocalBrain_2.5.2_amd64.AppImage)
+
 ## Windows / Linux 2.5.1
 
 Windows/Linux 2.5.1 passed local installation, Skill Cards + Unified Long-Term Memory verification, and native CUDA tool round-trip checks: upgrades *Skills & Memory* into a unified Skill Card workbench led by a pinned built-in **Personal Long-Term Memory (`personal-memory`)** core card alongside bundled task Skill Cards and custom cards under `card_memories/<card>/*.md`; loads per-card and pinned personal memories on demand (`1800`-char budget) with pure-CPU hybrid ASCII + CJK 2-gram/3-gram BM25 search (`0 MB` VRAM); adds `/remember` chat shortcuts and `localbrain_skill_remember` (`500`-char cap, SHA-256 deduplicated, atomic per-note writes without bumping `policy.revision`) with a **Pending Skill Card Memories** quarantine queue after web reads; and supports read-only cross-Agent discovery/import from Claude Code, Codex, Antigravity, Gemini CLI, OpenCode, DSH, Cursor (`.mdc`), Windsurf, Cline, Continue, and MCP `memory.jsonl`. Windows x64 installation (13,994 files matched), Skill Card memory write / web quarantine approval / unspaced Chinese BM25 recall, `Unsloth b12651` CUDA 12.8 verification, and native GGUF Q2 tool round trips passed; Debian/AppImage installation, startup (14,020 resources) and ext4 native DSH host checks passed on WSL2 Ubuntu 22.04. `Atomic Engine` cold-expert streaming and `oMLX 0.8.3` remain Apple Silicon Mac only; Strata inference on Windows/Linux, Unbound v2.1 weight inference and Linux model inference remain untested locally; source CI could not run due to GitHub billing/spending limits, and local checks (Rust 511, TS full suite, DSH 60) are recorded separately from remote CI. Mac 2.5.1 packages are preserved and `latest.json` now unifies all three platforms at 2.5.1.
@@ -464,9 +470,7 @@ These are historical samples from 2026-10-20. Use the latest-downloads section f
 These videos show the versions available when recorded. Use the current release information on this page for downloads and capabilities. Narration is in Chinese.
 <!-- evergreen:demos:end -->
 
-## Latest downloads · Windows 2.5.1 · Mac 2.5.2 · Linux 2.5.1
-
-Windows and Linux update channels currently offer 2.5.1. Apple Silicon Mac is at 2.5.2. Choose your installer from the table below.
+## Latest downloads · Windows 2.5.2 · Mac 2.5.2 · Linux 2.5.2
 
 The following 2.1.3 tool-integration checks are historical.
 
@@ -493,8 +497,8 @@ The author approved this Windows/Linux 2.1.2 release exception. The source GitHu
 | Platform | Package and status |
 | --- | --- |
 | Apple Silicon Mac 2.5.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2/LocalBrain_2.5.2_aarch64.dmg) · Installed on a physical Mac. H3-Image generation and editing passed. Ad-hoc signed, without Apple notarization. |
-| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_x64-setup.exe) · 2.5.1 · Installed; unified Skill Card memory, web quarantine approval, hybrid CJK/BM25 search, Unsloth b12651 CUDA 12.8 checks, and native Q2 tools passed. Tauri updater signature included. |
-| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.AppImage) · 2.5.1 · Installed/launched on WSL2 Ubuntu22.04 with ext4 DSH host check passed; not a bare-metal GPU or model-inference validation. |
+| Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2-win-linux/LocalBrain_2.5.2_x64-setup.exe) · 2.5.2 · Installed. Read controls and GGUF Q2 tool round trip passed. |
+| Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2-win-linux/LocalBrain_2.5.2_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2-win-linux/LocalBrain_2.5.2_amd64.AppImage) · 2.5.2 · Package and startup validated on WSL2 Ubuntu 22.04. |
 
 [Release notes](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.3.7-win-linux) · [SHA-256 checksums](SHA256SUMS-2.3.7-WIN-LINUX.txt) · [Verification](VERIFICATION-2.3.7-WIN-LINUX.md)
 
@@ -576,9 +580,9 @@ Local inference does not require sending conversations to the cloud; downloads, 
 | File | Hash |
 | --- | --- |
 | Mac DMG | `ddca07343034d492a821c9088ab7801c7d91517545c23b14fe02ca0ad3a576cd` |
-| Windows installer | `a709f8441ccc669a4c2aa4a05db1ac77412516b8d63f077d232f8ba741c6728d` |
-| Linux AppImage | `b86635f592a2231b75ec21c772273ffb6a0b8b6e682e61be1f0d3aa149166de0` |
-| Linux Debian | `d99729eb8bc9fcf04931b029c6012810d7b7a2e08692e2a2242e93b957816d65` |
+| Windows installer | `dc078d118f7d6322224572124e484d8c30ad8bc50bace7cc8914bc4d90f81e15` |
+| Linux AppImage | `70fa5014371000052815045d1db29ca1d4db3832f1ccb85f9434f580b08610ec` |
+| Linux Debian | `71dd81aa5f40546da33bc25093fefa8ee2f09916b3ed24c60c585caf7341199f` |
 
 This repository provides installers and documentation, not development source. Proprietary software, © HyphenTech.
 

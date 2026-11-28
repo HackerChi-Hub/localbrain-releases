@@ -1,0 +1,23 @@
+{
+  "version": "2.5.2",
+  "source": "e284bca0562537182abfb0fc8127826abf60e50e",
+  "artifacts": {
+    "LocalBrain_2.5.2_x64-setup.exe": {
+      "bytes": 43922895,
+      "sha256": "dc078d118f7d6322224572124e484d8c30ad8bc50bace7cc8914bc4d90f81e15"
+    },
+    "LocalBrain_2.5.2_amd64.deb": {
+      "bytes": 122301674,
+      "sha256": "71dd81aa5f40546da33bc25093fefa8ee2f09916b3ed24c60c585caf7341199f"
+    },
+    "LocalBrain_2.5.2_amd64.AppImage": {
+      "bytes": 195570168,
+      "sha256": "70fa5014371000052815045d1db29ca1d4db3832f1ccb85f9434f580b08610ec"
+    }
+  },
+  "scope": "Windows x64 installed, read-only fixture mounting, independent skill and memory controls, CJK lookup, GGUF Q2 CUDA and tool round trips. Linux WSL2 Ubuntu 22.04 Debian and AppImage startup plus ext4 DSH host. Linux targeted automatic discovery and read-only mounting test passed.",
+  "CI": "GitHub source CI unavailable due to account billing/spending limit; local tests are not remote CI success.",
+  "knownIssues": "Linux model inference, Strata inference and Q3/Q4 not tested. Full Linux Rust run was interrupted with exit 15. Windows Rust, TypeScript and native DSH suites passed.",
+  "Mac": "2.5.2 preserved (latest.json unified across darwin-aarch64, windows-x86_64, linux-x86_64 at 2.5.2)",
+  "docFactorySource": "e918a5012d40da3042dc18d79c7c5ccd210cd9bb"
+}
