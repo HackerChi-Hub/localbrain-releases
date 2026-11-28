@@ -1,3 +1,0 @@
-3071551e59aa4a404b14d41c36562920ec4f25a203f0e80b059631626f7937e4  LocalBrain_2.5.0_x64-setup.exe
-87adca99e4cbc5ac74ecaf6b3f75afca673b6437535fe9f0f7710c403b2abffd  LocalBrain_2.5.0_amd64.deb
-532857fddc1bc133073cd88251cdc1be1ba4b961ef21ac4cf35422292785e7ec  LocalBrain_2.5.0_amd64.AppImage

@@ -14,11 +14,11 @@
 <!-- recent-features:start -->
 ## 近期新增與改進（最近 5 項）
 
-- **2.5.1** · 2.5.1 全平台將長期記憶直接併入「技能卡」（內建置頂「個人長期記憶」核心卡 + 任務技能卡隨卡按需載入），搭載零顯存中英混合 BM25 本機檢索、對話 /remember 快捷指令與網頁讀取防注入待確認隔離佇列，並唯讀相容同步 Codex、Claude Code、Antigravity、Cursor (.mdc) 與 MCP memory.jsonl。
+- **2.5.2** · Mac 2.5.2 實作本機既有 Codex、Claude Code、Antigravity、Cursor、MCP 等技能與深層記憶啟動零點擊自動唯讀掛載（含軟連結去重、多層目錄與多 scope 標籤自動歸卡），將「技能讀取」與「記憶讀取」拆分為全域、單卡與來源目錄三級獨立開關，並全面改為零系統提示預塞的 100% 按需載入機制。
+- **2.5.1** · Mac 2.5.1 將長期記憶直接併入「技能卡」（內建核心「個人長期記憶」卡 + 任務技能卡隨卡按需載入），搭載零顯存中英混合 BM25 本機檢索、對話 /remember 快捷指令與網頁讀取防注入待確認隔離佇列，並支援一鍵匯出跨 Agent 通用 Markdown。
 - **2.5.0** · 2.5.0 全平台於對話頁輸入框右側（附件與停止/傳送按鈕旁）新增「目前對話超級權限」獨立開關與常駐警示橫幅：開啟前強制彈出風險與後果擔責確認視窗，開啟後僅於目前對話（含產生中即時切換）解除工作區目錄、命令白名單與逐條確認限制，解鎖跨平台任意 Shell 指令執行與全碟讀寫刪改能力（內建系統與使用者主目錄防誤刪硬保護），切換或新建其他對話預設關閉。
 - **2.4.9** · 2.4.9 升級跨平台獨立 Inkling GGUF 引擎至 Unsloth b12651（Mac Metal / Win CUDA12·Vulkan / Linux Vulkan，解鎖 Q8_0 KV 快取）並上線 Unbound v2.1 去拒答多模態 GGUF 與 Strata Uncensored SQ-10/15/20；Mac 專屬新增 Atomic Engine 冷專家 SSD 串流（16GB Mac 僅占 6.34 GiB RSS 跑 30B Inkling）與 oMLX 0.8.3（MTP + 4-bit TurboQuant KV 省約 7 GiB 記憶體）。
 - **2.4.8** · 2.4.8 全平台打通模型下載、外部模型庫（含軟連結目錄）、本機目錄與單檔案 GGUF 掛載、檔位自動優選、設定儲存與載入授權、對話看圖單源判定及移除閉環：修復 Locals NVFP4、Strata SQ-15 等外部模型誤顯未安裝與掛載路徑被拒載入問題，首頁預設顯示常用規模外部模型（Mac / Windows / Linux 2.4.8 均已實裝上線）。
-- **2.4.7** · Windows/Linux 首頁模型統一列表，移除 PolyStrata 獨立說明；安裝與接入收進新增模型，狀態僅在執行或出錯時顯示。
 <!-- recent-features:end -->
 
 ## Windows / Linux 2.5.1
@@ -71,7 +71,7 @@ RTX 4070 Laptop 8GB、驅動 546.26 實測（應用內受管鏈路，自動選 V
 
 方寸智匣 2.3.4 提供 Mac、Windows 和 Linux 安裝套件。MiniMax H3-Image 可在 Apple Silicon 與 macOS 26 以上使用。進入「對話 → 本機多媒體工具」即可生圖或編輯參考圖，也可選擇已有的官方提示詞擴寫模型。Mac 實測通過原生 4096×4096 生圖與參考圖編輯。
 
-[發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.1) · [SHA-256 校驗檔](SHA256SUMS-2.3.4.txt) · [驗收紀錄](VERIFICATION-2.3.4.md)
+[發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.2) · [SHA-256 校驗檔](SHA256SUMS-2.3.4.txt) · [驗收紀錄](VERIFICATION-2.3.4.md)
 
 ## Mac 2.3.3：受管 Splash 1.6.0
 
@@ -83,7 +83,7 @@ Mac 受管 Splash 的新裝基準升至 1.6.0。既有使用者可到「設定 �
 
 Mac 安裝包為 75,350,839 位元組，使用本機臨時簽章，未經 Apple 公證。Windows 和 Linux 正式版為 2.3.2。安裝包的 SHA-256 為 `50755c412ccacccbe1350aab9026aa561b137e8d7c0d161fdce8344adc8d1983`。
 
-[下載 Mac 2.5.1](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1/LocalBrain_2.5.1_aarch64.dmg) · [發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.1) · [SHA-256 校驗檔](SHA256SUMS-2.3.3-MAC.txt) · [實測範圍](VERIFICATION-2.3.3-MAC.md) · [官方發行說明](https://github.com/incoai/splash/releases/tag/1.6.0)
+[下載 Mac 2.5.2](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2/LocalBrain_2.5.2_aarch64.dmg) · [發行說明](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.2) · [SHA-256 校驗檔](SHA256SUMS-2.3.3-MAC.txt) · [實測範圍](VERIFICATION-2.3.3-MAC.md) · [官方發行說明](https://github.com/incoai/splash/releases/tag/1.6.0)
 
 ## Windows / Linux 2.3.2：線上建置與簽章
 
@@ -123,9 +123,9 @@ Mac 使用 [Drama 3 的 MLX 4bit 社群轉換版](https://huggingface.co/mlx-com
 
 15,655項安裝檔案、權限與連結和建構一致；應用程式簽章、更新套件驗章與 DMG 校驗通過，為本機簽章、未經 Apple 公證。前端1671項、Rust478項、受管 Python399條案例通過，另有跳過或忽略項。長稿鏈路已測試，數小時成品及新機器線上從零安裝環境未單獨驗收。
 
-[下載 Mac 2.3.2（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1/LocalBrain_2.5.1_aarch64.dmg) · [發行與更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.1) · [完整驗收](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.3.0-MAC.md)
+[下載 Mac 2.3.2（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2/LocalBrain_2.5.2_aarch64.dmg) · [發行與更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.2) · [完整驗收](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.3.0-MAC.md)
 
-安裝包75,327,316位元組，約75.3MB。SHA-256：`ded8f3666ddff88c5840530f473e44cd4e7f99ad24f731b97889e3372e77dd69`。本次同時提供 Windows/Linux 2.3.2 線上建置包（見上方小節，未在對應平台安裝執行）；2.2.9 原包與分平台清單保留。既有模型、環境、資料及任務不作變動。下方舊文、舊圖及各版記錄保留原日期與驗收範圍，目前下載以本節及下載表為準。
+安裝包75,327,316位元組，約75.3MB。SHA-256：`ddca07343034d492a821c9088ab7801c7d91517545c23b14fe02ca0ad3a576cd`。本次同時提供 Windows/Linux 2.3.2 線上建置包（見上方小節，未在對應平台安裝執行）；2.2.9 原包與分平台清單保留。既有模型、環境、資料及任務不作變動。下方舊文、舊圖及各版記錄保留原日期與驗收範圍，目前下載以本節及下載表為準。
 
 ## Windows / Linux 2.2.9：分開顯示已安裝環境與容器離線
 
@@ -147,7 +147,7 @@ Mac 端已獨立發布 2.2.9，本批保留其正式安裝資產及更新清單�
 
 11月5日實際安裝版識別27項受管元件及3項既有系統依賴，缺少0項、待核實0項；單選Sushi、系統依賴按鈕、舊錯誤詳細資訊與手動重新整理均已實際點選核實。15,653項安裝子項目、權限及連結一致，模型與執行環境目錄、設定及影片資料庫摘要保持。應用程式及更新套件驗簽、DMG校驗與掛載核對通過；本機簽章，未Apple公證。本輪未重新生成影片，原有影片實測與截圖保留各自日期。
 
-[下載 Mac 2.2.9（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1/LocalBrain_2.5.1_aarch64.dmg) · [發行與更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.1) · [完整驗收](VERIFICATION-2.2.9-MAC.md)
+[下載 Mac 2.2.9（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2/LocalBrain_2.5.2_aarch64.dmg) · [發行與更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.2) · [完整驗收](VERIFICATION-2.2.9-MAC.md)
 
 套件為75,310,516位元組，約75.3MB。SHA-256：`8323c521ec6d0fb39fcd838a1c38636e775381559c9211213ec24ead39dc342a`。Windows/Linux繼續使用既有2.2.8原套件、簽章及獨立更新清單；下方舊文、舊圖與歷史驗收保留，現行下載以本節及下載表為準。
 
@@ -165,7 +165,7 @@ Mac正式套件補齊後續安全修復，並公開先前候選的解析度設�
 
 11月3日新套件已安裝：15,653項檔案、權限及連結一致，應用程式、更新套件及可信簽註驗簽與DMG校驗通過；本機簽章、未Apple公證。安裝套件實際解壓實作8項回歸及系統MCP檔案讀寫通過；前端主測試1668、Rust474、Python395條單元用例及兩項腳本、DSH53項通過，另有明確略過項。原生輔助功能讀回2.2.8、既有模型與0項服務執行中；原生操作工具服務不可用，本輪未重做全部點選或生成新影片。11月2日六段影片與尺寸驗收保留為先前獨立記錄。
 
-[下載 Mac 2.2.8（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1/LocalBrain_2.5.1_aarch64.dmg) · [正式發行與更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.1) · [本輪驗收](VERIFICATION-2.2.8-MAC.md)
+[下載 Mac 2.2.8（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2/LocalBrain_2.5.2_aarch64.dmg) · [正式發行與更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.2) · [本輪驗收](VERIFICATION-2.2.8-MAC.md)
 
 DMG為75,294,743位元組，SHA-256：`4b66333e2778a637291e069fd2bd7cd7836b3e07f3877cf4bd3795e3ca2e2481`。Windows/Linux保留獨立發布2.2.8的原套件、簽章及清單。下方各版保留當時狀態，現行下載以本節和下載表為準。
 
@@ -225,7 +225,7 @@ Layout使用明確準備的25影格預演，保留原81影格素材；480對適�
 
 Apple Silicon Mac2.2.7 DMG為92,790,171位元組，約92.8MB。構建、映像及安裝的15,652項檔案、權限與連結一致，應用程式、更新簽章及映像校驗通過；本機簽章，未Apple公證。Rust474項、前端1660項通過，另有明確略過項；Python49檔通過。未重下載全部大型基模驗收全新機器，亦未在Windows/Linux驗收影片推論。
 
-[下載 Mac 2.2.7（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1/LocalBrain_2.5.1_aarch64.dmg) · [完整下載與更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest) · [驗收記錄](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.2.7-MAC.md)
+[下載 Mac 2.2.7（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2/LocalBrain_2.5.2_aarch64.dmg) · [完整下載與更新](https://github.com/HackerChi-Hub/localbrain-releases/releases/latest) · [驗收記錄](https://github.com/HackerChi-Hub/localbrain-releases/blob/main/VERIFICATION-2.2.7-MAC.md)
 
 SHA-256：`a0eea9853c6f5c8f8ff142749257c6ae4e5b426bb1a75f0646c21a9f3523c89f`。
 
@@ -268,7 +268,7 @@ Pika H3 Flex 已合併到方寸智匣主專案：可用文字描述產生短片�
 
 本次僅提供 Mac 新包。Windows/Linux 繼續使用獨立發布的 2.2.2，Mac 的 Pika 結果不代表其他平台已適配。[查看本輪核對及實際驗收範圍](VERIFICATION-2.2.4-MAC.md)。
 
-[Mac 2.5.1 發行頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.1) · [下載 Mac 2.2.4（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1/LocalBrain_2.5.1_aarch64.dmg)
+[Mac 2.5.2 發行頁](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.2) · [下載 Mac 2.2.4（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2/LocalBrain_2.5.2_aarch64.dmg)
 
 Mac DMG SHA-256：`63f040f7ea65df5afe4a28b8e7d9b64c4686db0ed2772ee81b6b70dd3a8495a0`。
 
@@ -295,7 +295,7 @@ Mac 2.2.3修復模型啟動時誤報「後端已被移除」的問題。狀態�
 
 Mac 2.2.2 已完成本機安裝驗收並正式發布。作者於2026-10-31批准本輪原始碼CI計費限制例外；本機檢查通過，不冒稱遠端CI通過。安裝版已驗證統一按鈕、六個獨立引擎升級、資料庫結果回報與 Trivy 雙向回滾；既有 Splash 1.5 模型完成一般回覆和圖片理解。圖片、文字和影片可貼入對話，手動傳送後才讀取，影片目前只引用位置。內嵌 Harness 適配到 0.2.1-rc.5。Mac 本機簽章、未 Apple 公證；Windows/Linux 維持 2.2.1，由作者另行打包。
 
-[Mac 2.5.1 詳細驗收](VERIFICATION-2.2.2-MAC.md)。以下舊版段落保留當時範圍，目前平台狀態以下載表為準。
+[Mac 2.5.2 詳細驗收](VERIFICATION-2.2.2-MAC.md)。以下舊版段落保留當時範圍，目前平台狀態以下載表為準。
 
 
 
@@ -303,7 +303,7 @@ Mac 2.2.2 已完成本機安裝驗收並正式發布。作者於2026-10-31批准
 
 Windows及WSL2 Debian已建置安裝2.2.1，另提供AppImage；保留Mac2.2.1原有安裝包。設定→執行環境與診斷僅在有效下載位元組與總量齊全時顯示百分比；準備、安裝、解壓縮、校驗與卸載顯示階段，切換時清除舊數字。主漏洞庫與Java索引庫分別說明快取、下載來源及校驗；完成、失敗或暫停先結束維護提示，再更新真實清單。Windows原生Torch校驗、既有2B模型請求、35項MCP清單與真實DOCX/Markdown通過；受控介面另驗證37.5%位元組樣本與慢更新，不冒稱Windows真實下載。Windows Rust435通過/36略過，前端1641通過/2略過，介面卡14與佇列3項通過，兩平台DSH各53通過，完整Python45檔與額外安全7項通過。Linux限Ubuntu22.04 WSL2/Xvfb；不擴大為裸機GPU、媒體生成或完整Harness8K任務已通過。作者已明確批准本批Windows/Linux2.2.1以本地驗收例外發布，並記錄原始碼CI帳戶限制；本地通過不冒稱線上原始碼CI通過。
 
-[Windows/Linux verification](VERIFICATION-2.2.1-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.1)
+[Windows/Linux verification](VERIFICATION-2.2.1-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.2)
 
 以下Mac 2.2.1段落保留2026-10-30首次發布時的獨立範圍；Windows/Linux本批狀態以上文為準。
 
@@ -323,7 +323,7 @@ Windows及WSL2 Debian已建置安裝2.2.1，另提供AppImage；保留Mac2.2.1�
 
 Windows及WSL2 Debian已安裝2.2.0，另提供Linux AppImage，保留既有Mac2.2.0安裝包。八類工具包隨軟體交付；Windows/Linux目前適用五類，安裝版全部1.0.0就緒，自訂外掛安裝入口與命令仍關閉。模型、頁面與執行環境共用能力登錄，壓縮前後統一核心計量並包含摘要包裝；保留Windows圖像環境狀態修正。既有2B模型完成真實請求，五類隨包MCP的35個工具清單一致，真實DOCX建立/讀取與Markdown匯出通過；模型請求和MCP呼叫分別驗收，不冒稱完整自主任務鏈。首次文件失敗定位到舊打包原始碼副本，最終兩平台採用2.2.0提交內文件實作重新建置。Rust435通過/36略過，兩項真實模組測試通過，TypeScript1638通過/2略過、介面卡14通過，兩平台DSH各53通過，完整Python45檔與額外安全7項、打包2項通過。Linux僅WSL2/Xvfb；Windows媒體生成、完整外部Harness8K任務與真實HTB邊界保留。本批CI限制與批准狀態見驗收記錄，下方Mac段落保留其獨立驗收範圍。
 
-[Windows/Linux verification](VERIFICATION-2.2.0-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.1)
+[Windows/Linux verification](VERIFICATION-2.2.0-WIN-LINUX.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.2)
 
 ## Mac 2.2.0：內部模組化與上下文計量修正
 
@@ -349,7 +349,7 @@ Windows及WSL2 Debian已安裝2.2.0，另提供Linux AppImage，保留既有Mac2
 
 Windows及WSL2 Debian已升級安裝。新版包含執行環境管理、下載暫停/續傳及固定0.2.1-rc.3 DSH核心；保留Node22.23.3、模型與驅動。Windows原生環境中心渲染及既有PolyStrata35B的真實唯讀工具往返通過；兩平台各53項DSH回歸及舊會話不重放遷移通過。Windows Rust427通過/34略過，TypeScript1632通過/2略過、介面卡14通過，完整Python45檔及額外安全7項通過。三個安裝包更新簽章已驗證。作者已明確批准本批原始碼CI付款/額度限制例外，不冒稱線上原始碼CI通過。Linux僅WSL2/Xvfb驗收，完整外部Harness8K超限及圖片/工具任務邊界仍見已知問題。
 
-[Windows/Linux verification](VERIFICATION-2.1.6-WIN-LINUX.md) · [Known issues](KNOWN-ISSUES-DSH-LOCAL-MODELS.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.1)
+[Windows/Linux verification](VERIFICATION-2.1.6-WIN-LINUX.md) · [Known issues](KNOWN-ISSUES-DSH-LOCAL-MODELS.md) · [Downloads](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.2)
 
 下方Mac首次發布與舊Windows/Linux段落保留當時記錄，目前平台狀態以本節及下載表為準。
 
@@ -403,7 +403,7 @@ Mac 2.1.5 已正式發布，完成封裝、安裝及本輪原生介面驗收；W
 
 Mac 沿用本機簽章，未 Apple 公證。GitHub 原始碼說明檢查因帳戶付款／支出限制未啟動，作者已明確批准本次 Mac 2.1.5 例外發布；本機通過不冒稱遠端 CI 通過。詳見[本輪驗收](VERIFICATION-2.1.5-MAC.md)及[新使用者相依步驟](SYSTEM_PREREQUISITES_2.1.5.md)。
 
-[下載 Mac 2.2.1 安裝包（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1/LocalBrain_2.5.1_aarch64.dmg)
+[下載 Mac 2.2.1 安裝包（Apple Silicon DMG）](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2/LocalBrain_2.5.2_aarch64.dmg)
 
 
 ## 歷史候選紀錄：Mac 2.1.4 候選：一鍵補齊執行環境（待發布）
@@ -422,7 +422,7 @@ Mac 沿用本機簽章，未 Apple 公證。GitHub 原始碼說明檢查因帳�
 
 兩張為同一正式元件預覽，使用唯讀清單及明確模擬的變更。修訂包已安裝，12,995 項檔案及連結一致，簽章與映像檢查通過；系統原生擷取仍失敗，原生點選、完整容器準備及真實移除未列為通過。見[驗收邊界](VERIFICATION-2.1.4-MAC.md)及[環境管理說明](RUNTIME_CENTER.md)。保留模型權重、外部工具、會話、報告與虛擬機。Harness 核心仍為 0.2.0-rc.2。安裝包仍待發布；Windows/Linux 保留 2.1.3。
 
-Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，Debian/AppImage的資源、包內DSH、20秒啟動及53條DSH測試通過，三個安裝包更新簽章已驗證。作者已明確批准本批原始碼CI帳戶限制例外，不冒稱遠端CI通過。Linux裸機GPU與完整DSH圖片/工具任務未驗收，PolyStrata 35B的8K桌面超窗仍未解決。見[本批驗收與待解項目](VERIFICATION-2.1.3-WIN-LINUX.md)及[正式下載](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.1)。下方先前本機候選與單平台初發段落保留歷史狀態，目前平台狀態以本節為準。
+Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，Debian/AppImage的資源、包內DSH、20秒啟動及53條DSH測試通過，三個安裝包更新簽章已驗證。作者已明確批准本批原始碼CI帳戶限制例外，不冒稱遠端CI通過。Linux裸機GPU與完整DSH圖片/工具任務未驗收，PolyStrata 35B的8K桌面超窗仍未解決。見[本批驗收與待解項目](VERIFICATION-2.1.3-WIN-LINUX.md)及[正式下載](https://github.com/HackerChi-Hub/localbrain-releases/releases/tag/v2.5.2)。下方先前本機候選與單平台初發段落保留歷史狀態，目前平台狀態以本節為準。
 
 ## Windows 本機修復與 DSH 接入邊界（2026-10-24）
 
@@ -464,7 +464,7 @@ Windows/Linux 2.1.3 已公開發布：Windows修復版及WSL2 Debian已安裝，
 影片示範的是拍攝時的版本；安裝套件與目前功能以本頁正式發行資訊為準。影片以中文講解。
 <!-- evergreen:demos:end -->
 
-## 最新下載 · Windows 2.5.1 · Mac 2.5.1 · Linux 2.5.1
+## 最新下載 · Windows 2.5.1 · Mac 2.5.2 · Linux 2.5.1
 
 以下 2.1.3 為歷史工具接入驗收紀錄。
 
@@ -490,7 +490,7 @@ Windows/Linux 2.1.2 已補齊唯讀資源註冊修正與本版介面改進。Win
 
 | 平台 | 安裝包與狀態 |
 | --- | --- |
-| Apple Silicon Mac 2.5.1 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1/LocalBrain_2.5.1_aarch64.dmg) · 實機安裝及 H3-Image 生圖、改圖通過。臨時簽章，未經 Apple 公證。 |
+| Apple Silicon Mac 2.5.2 | [DMG](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.2/LocalBrain_2.5.2_aarch64.dmg) · 實機安裝及 H3-Image 生圖、改圖通過。臨時簽章，未經 Apple 公證。 |
 | Windows x64 | [Installer](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_x64-setup.exe) · 2.5.1 · 已安裝；技能卡記憶合一/網頁防注入隔離審批/無空格中文 BM25 檢索、Unsloth b12651 CUDA 12.8 自檢與原生 Q2 工具往返驗收通過，使用更新器簽章。 |
 | Linux x64 | [Debian](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.deb) · [AppImage](https://github.com/HackerChi-Hub/localbrain-releases/releases/download/v2.5.1-win-linux/LocalBrain_2.5.1_amd64.AppImage) · 2.5.1 · WSL2 Ubuntu22.04 安裝、兩種包啟動與 ext4 宿主校驗通過；不代表裸機GPU或模型推論驗收。 |
 
@@ -573,7 +573,7 @@ Mac支援已整合MLX、Metal llama.cpp、Splash與Prism；Windows使用適配ll
 
 | 檔案 | 散列 |
 | --- | --- |
-| Mac DMG | `ded8f3666ddff88c5840530f473e44cd4e7f99ad24f731b97889e3372e77dd69` |
+| Mac DMG | `ddca07343034d492a821c9088ab7801c7d91517545c23b14fe02ca0ad3a576cd` |
 | Windows安裝程式 | `a709f8441ccc669a4c2aa4a05db1ac77412516b8d63f077d232f8ba741c6728d` |
 | Linux AppImage | `b86635f592a2231b75ec21c772273ffb6a0b8b6e682e61be1f0d3aa149166de0` |
 | Linux Debian包 | `d99729eb8bc9fcf04931b029c6012810d7b7a2e08692e2a2242e93b957816d65` |
